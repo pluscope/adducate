@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "NotoSansCJKkr";
+  src: url("fonts/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+
+body {
+  margin: 0px;
+}
+
+.Background {
+  background-image: url('img/background.png');
+  width: 1024px;
+  height: 768px;
+  object-fit: contain;
+}
+
+.header {
+  background-image: url('img/header.png');
+  width: 1024px;
+  height: 80px;
+  object-fit: contain;
+  position: relative;
+}
+
+.logo_header {
+  width: 188px;
+  height: 30px;
+  object-fit: contain;
+  /*positioning*/
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.Class {
+  /*width: 59px;
+  height: 20px;*/
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  /*positioning*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 390px;
+}
+
+.Team {
+  /*width: 59px;
+  height: 20px;*/
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  /*positioning*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 480px;
+}
+
+.About {
+  /*width: 59px;
+  height: 20px;*/
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  /*positioning*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 574px;
+}
+
+.Download_button {
+  width: 160px;
+  height: 55px;
+  object-fit: contain;
+  /*positioning*/
+  position: absolute;
+  top: 12px;
+  left: 675px;
+}
+
+.Sign-in {
+  /*width: 59px;
+  height: 20px;*/
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  /*positioning*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 27px;
+}
+
+.shadow_header {
+  width: 1024px;
+  height: 4px;
+  object-fit: contain;
+  opacity: 0.2;
+}
+
+.logo_content {
+  width: 324px;
+  height: 53px;
+  object-fit: contain;
+  /*positioning*/
+  position: absolute;
+  top: 230px;
+  left: 350px;
+}
+
+.Lorem-ipsum {
+  width: 867px;
+  height: 98px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  /*positioning*/
+  position: relative;
+  margin: auto;
+  top: calc(337px - 84px);
+}
+
+.Download_button_content {
+  width: 324px;
+  height: 55px;
+  object-fit: contain;
+  /*positioning*/
+  position: absolute;
+  left: 350px;
+  top: 486px;
+}
