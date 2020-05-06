@@ -5,6 +5,13 @@
 
 body {
   margin: 0px;
+  position:relative;
+  width:980px;
+  margin:0px auto;
+}
+
+.contents{
+	
 }
 
 .Background {
