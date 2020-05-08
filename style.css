@@ -30,7 +30,7 @@
 
 .container-header {
 	width: 1024px;
-	height: 80px;
+	height: 90px;
 	background-color: #ffa300;
 }
 
@@ -184,9 +184,10 @@
 	
 }
 
-.Background_page {
+.Background_white {
   width: 100%;
   height: 849px;
+  background-color:#ffffff;
   object-fit: contain;
 }
 
@@ -245,4 +246,57 @@
   width: 50px;
   height: 51px;
   object-fit: contain;
+}
+
+.divBox{
+	width:100%;
+	height:300px;
+	float: left;	
+}
+.divBox div{
+   	width:341px;
+	height:100%;
+    float: left;	
+    padding-top:30px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;	
+}
+.divBox.box1{
+	background-color: #ffa300;
+}
+.divBox.box2{
+	background-color: #419bf9;
+}
+.divBox.box3{
+	background-color: #009639;
+}
+
+.email1{
+	padding-top:500px;
+	padding-left:20px;
+	
+	object-fit: contain;
+	font-family: NotoSansCJKkr;
+	font-size: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: center;
+	color: #00a3e0;
+}
+
+.scroll-top{
+	padding-top:100px;
+	padding-left:487px;
+
 }
