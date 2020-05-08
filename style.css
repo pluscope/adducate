@@ -17,6 +17,17 @@
   }
 }
 
+.textDefault {
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
 .body{
 	width: 100%;
   height: 100%;
@@ -348,6 +359,7 @@
 	float: left;	
 }
 
+
 .array1Div{
 	width:40px;
 	height:140px;
@@ -396,4 +408,125 @@
 	width:447px;
 	height:252px;
 	background-color: #000;
+}
+
+
+.title-div{
+	padding-top:20px;
+ 	width:100%;
+ 	text-align:center;
+}
+
+.f35{
+	font-size: 24px;
+}
+
+.f36{
+    font-weight: bold;
+	font-size: 36px;
+}
+
+.f37{	
+  font-size: 24px;	
+  font-weight: 900;
+ 
+}
+
+.input-form{
+	padding-top:10px;
+	padding-left:256px;
+	width:512px;
+	height:350px;
+ 	text-align:left;	
+}
+
+.textbox {position: relative; width: 512px;  margin: 0px}
+
+.textbox input[type="text"],
+.textbox input[type="password"] {
+  width: 100%;  /* 원하는 너비 설정 */ 
+  height: 28px;  /* 높이값 초기화 */
+  line-height : normal;  /* line-height 초기화 */
+  padding: .8em .5em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+  border: 1px solid #999;
+  border-radius: 0;  /* iSO 둥근모서리 제거 */
+  outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+  -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.next{
+	width:528px;
+	height:50px;
+	margin-left:256px;
+	margin-top:30px;
+	padding-top:5px;
+	background-color: #ffa300;
+	text-align:center;
+	border-radius: 10px;
+}
+
+.label{
+	font-size: 24px;	
+  	font-weight: 900;	
+}
+
+.checks {
+	
+	position: relative;
+	word-spacing :100px;
+}
+
+.checks input[type="checkbox"] { /* 실제 체크박스는 화면에서 숨김 */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0
+}
+
+.checks input[type="checkbox"]+label {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 24px;	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.checks input[type="checkbox"]+label:before { /* 가짜 체크박스 */
+	content: ' ';
+	display: inline-block;
+	width: 21px; /* 체크박스의 너비를 지정 */
+	height: 21px; /* 체크박스의 높이를 지정 */
+	line-height: 21px; /* 세로정렬을 위해 높이값과 일치 */
+	margin: -2px 8px 0 0;
+	text-align: center;
+	vertical-align: middle;
+	background: #fafafa;
+	border: 1px solid #cacece;
+	border-radius: 3px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px
+		rgba(0, 0, 0, 0.05);
+}
+
+.checks input[type="checkbox"]+label:active:before, .checks input[type="checkbox"]:checked+label:active:before
+	{
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px
+		rgba(0, 0, 0, 0.1);
+}
+
+.checks input[type="checkbox"]:checked+label:before { /* 체크박스를 체크했을때 */
+	content: '\2714'; /* 체크표시 유니코드 사용 */
+	color: #99a1a7;
+	text-shadow: 1px 1px #fff;
+	background: #e9ecee;
+	border-color: #adb8c0;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px
+		rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
 }
