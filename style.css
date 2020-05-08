@@ -342,6 +342,18 @@
 	float: left;	
 }
 
+.divBox4{
+	padding-top:20px;
+	width:960px;
+	float: left;	
+}
+
+.array1Div{
+	width:40px;
+	height:140px;
+	float: left;	
+}
+
 .span1{
 	object-fit: contain;
 	font-family: NotoSansCJKkr;
