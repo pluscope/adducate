@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "NotoSansCJKkr";
+  src: url("fonts/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+
 @media ( max-width: 900px ) {
   container {
     width: auto;
@@ -47,6 +52,7 @@
 	margin: 0px;
 	padding: 0px;
 	line-height: 0px;
+	height:10px;
 }
 
 .menuUl {
@@ -61,7 +67,7 @@
     padding: 0 0 0 0;
     border : 0;
     float: left;
-    margin-left:20px;
+    margin-left:25px;
     display:flex; 
     align-items:center;
 
@@ -70,11 +76,12 @@
 .menuLiBlue {
     border : 0;
     float: left;
-    margin-left:20px;
+    margin-left:30px;
     border-radius: 10px;
     background-color: #00a3e0;
     width:160px;
     margin-top: 12px;
+   
 }
 
 
@@ -108,6 +115,20 @@
 
 }
 
+.menuLiSignIn a{
+  line-height:80px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #000000;
+  letter-spacing: normal;
+  text-align: center;
+  padding-left:70px;
+  color: #000000;
+}
 
 .mainLogo{
 	margin-left: 350px;
@@ -132,14 +153,17 @@
 }
 
 .mainDownload{
-	width:324px;
-	height:55px;
 	margin-top:50px;
-	margin-left:350px;
-	border-radius: 10px;
     background-color: #00a3e0;
-	text-align: center;
-	
+    border-radius: 10px;
+	width: 324px; 
+	height: 55px; 
+	margin-left: auto;
+	margin-right: auto; 
+	padding: 5px; 
+	text-align: center; 
+	line-height: 55px; 
+	vertical-align:middle;"
 	
 	
 }
