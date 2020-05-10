@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "NotoSansCJKkr";
+  src: url("fonts/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+
+@media ( max-width: 900px ) {
+  container {
+    width: auto;
+  }
+  content {
+    float: none;
+    width: auto;
+  }
+  sidebar {
+    float: none;
+    width: auto;
+  }
+}
+
+.body{
+	width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+	width: 1024px;
+    margin: auto;
+}
+
+.container-body-orange {
+	width: 1024px;
+	height: 768px;
+	background-color: #ffa300;
+}
+
+.container-body-white {
+  width: 1024px;
+  height: 849px;
+  background-color: #ffffff;
+}
+
+.container-body-blue {
+	width: 1024px;
+	height: 768px;
+	background-color: #00a3e0;
+}
+
+
+.bbtn {
+  padding-left: 487px;
+  padding-top: 19px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
