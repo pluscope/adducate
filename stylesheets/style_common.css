@@ -47,9 +47,27 @@
 	background-color: #00a3e0;
 }
 
-.bbtn {
+.bbtn_bottom {
   padding-left: 487px;
-  padding-top: 19px;
+  padding-top: 613px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.bbtn_left {
+  position: absolute;
+  padding-left: 25px;
+  padding-top: 279px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.bbtn_right {
+  position: absolute;
+  padding-left: 949px;
+  padding-top: 279px;
   width: 50px;
   height: 51px;
   object-fit: contain;
