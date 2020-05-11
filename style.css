@@ -404,6 +404,19 @@
   color: #000000;
 }
 
+.spanColor-orange{
+	object-fit: contain;
+  	font-family: NotoSansCJKkr;
+  	font-size: 36px;
+  	font-weight: bold;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.5;
+  	letter-spacing: normal;
+  	text-align: center;
+	color: #ffa300;
+}
+
 .video-class{
 	width:447px;
 	height:252px;
@@ -414,6 +427,7 @@
 .title-div{
 	padding-top:20px;
  	width:100%;
+ 	height:100px;
  	text-align:center;
 }
 
@@ -436,6 +450,14 @@
 	padding-top:10px;
 	padding-left:256px;
 	width:512px;
+	height:350px;
+ 	text-align:left;	
+}
+
+.input-form1{
+	padding-top:10px;
+	padding-left:187px;
+	width:650px;
 	height:350px;
  	text-align:left;	
 }
