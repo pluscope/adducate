@@ -76,6 +76,7 @@
 }
 
 .menuLiSignIn a{
+	text-decoration-line: none;
   line-height:80px;
   object-fit: contain;
   font-family: NotoSansCJKkr;
