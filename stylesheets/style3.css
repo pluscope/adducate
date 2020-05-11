@@ -86,7 +86,7 @@
   object-fit: contain;
   z-index: 3;
   float: left;
-  position: absolute;
+  position: relative;
   margin-left: 636px;
   margin-top: 142px;
 }
