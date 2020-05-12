@@ -47,68 +47,95 @@
   color: #ffffff;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
 .popup {
-    margin-top: 88px;
-    margin-left: 863px;
-    position: relative;
-    background: #FFF;
-    width: 256px;
-    height: 150px;
-    box-shadow: -4px 4px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  margin-left: 766px;
+  position: relative;
+  background: #FFF;
+  width: 256px;
+  height: 150px;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.popup:before{
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 180px;
-    z-index: 1;
-    border: solid 15px transparent;
-    border-bottom-color: #FFF;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
+.popup:before {
+  content: "";
   position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
+  top: -30px;
+  left: 180px;
+  z-index: 1;
+  border: solid 15px transparent;
+  border-bottom-color: #FFF;
 }
 
 .textbox1 {
-  padding-top: 21px;
+  margin-left: 25px;
+  margin-top: 21px;
+  padding-left: 10px;
   width: 206px;
+  height: 32px;
 }
 
 .textbox2 {
-  padding-top: 15px;
+  margin-left: 25px;
+  margin-top: 15px;
+  padding-left: 10px;
   width: 206px;
+  height: 32px;
 }
 
 .content {
-  padding-top: 45px;
+  margin-top: 15px;
+}
+
+.content span a {
+  text-decoration-color: black;
+  text-decoration: none;
+}
+
+.join {
+  width: 27px;
+  height: 11px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  margin-left: 25px;
+}
+
+.id_pw {
+  width: 77px;
+  height: 15px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  margin-left: 50px;
+}
+
+.ok {
+  width: 20px;
+  height: 11px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
+  margin-left: 50px;
 }

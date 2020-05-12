@@ -87,6 +87,7 @@
   color: #000000;
   letter-spacing: normal;
   text-align: center;
-  padding-left:70px;
+  margin-left:70px;
   color: #000000;
+	cursor: pointer;
 }

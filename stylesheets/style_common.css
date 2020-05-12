@@ -1,6 +1,6 @@
 @font-face {
   font-family: "NotoSansCJKkr";
-  src: url("fonts/NotoSansCJKkr-Regular.otf") format("opentype");
+  src: url("../fonts/NotoSansCJKkr-Regular.otf") format("opentype");
 }
 
 @media ( max-width: 900px ) {
