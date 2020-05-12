@@ -52,7 +52,7 @@
 }
 
 .log{
-  float: left;	
+  float: left;
   width:350px;
   margin-left: 25px;
   margin-top: 25px;
@@ -70,7 +70,7 @@
     list-style:none;
     text-align:center;
     height: 100%;
-    
+
 }
 
 .menuLi {
@@ -79,7 +79,7 @@
     border : 0;
     float: left;
     margin-left:25px;
-    display:flex; 
+    display:flex;
     align-items:center;
 
 }
@@ -92,7 +92,7 @@
     background-color: #00a3e0;
     width:160px;
     margin-top: 12px;
-   
+
 }
 
 
@@ -147,7 +147,7 @@
 
 .mainText{
 	padding-left: 79px;
-	padding-top: 50px;	
+	padding-top: 50px;
 	width: 867px;
   	height: 98px;
   	object-fit: contain;
@@ -166,19 +166,19 @@
 	margin-top:50px;
     background-color: #00a3e0;
     border-radius: 10px;
-	width: 324px; 
-	height: 55px; 
+	width: 324px;
+	height: 55px;
 	margin-left: auto;
-	margin-right: auto; 
-	padding: 5px; 
-	text-align: center; 
-	line-height: 55px; 
+	margin-right: auto;
+	padding: 5px;
+	text-align: center;
+	line-height: 55px;
 	vertical-align:middle;"
-	
-	
+
+
 }
 
-.mainDownload span{ 
+.mainDownload span{
 	width: 116px;
 	height: 20px;
 	object-fit: contain;
@@ -190,8 +190,8 @@
 	line-height: normal;
 	letter-spacing: normal;
 	color: #ffffff;
-	
-	
+
+
 }
 
 .Background_white {
@@ -206,7 +206,7 @@
   width: 140px;
   height: 55px;
   padding-top:77px;
-  
+
 }
 .Storybook{
   padding-top:48px;
@@ -254,12 +254,12 @@
 .divBox{
 	width:100%;
 	height:300px;
-	float: left;	
+	float: left;
 }
 .divBox div{
    	width:341px;
 	height:100%;
-    float: left;	
+    float: left;
     padding-top:30px;
   object-fit: contain;
   font-family: NotoSansCJKkr;
@@ -270,7 +270,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #000000;	
+  color: #000000;
 }
 .divBox.box1{
 	background-color: #ffa300;
@@ -285,7 +285,7 @@
 .email1{
 	padding-top:500px;
 	padding-left:20px;
-	
+
 	object-fit: contain;
 	font-family: NotoSansCJKkr;
 	font-size: 24px;
@@ -305,7 +305,7 @@
 .navigator-top{
 	padding-top: 25px;
 	padding-left: 25px;
-	
+
 	object-fit: contain;
 	font-family: NotoSansCJKkr;
 	font-size: 14px;
@@ -316,7 +316,7 @@
 	letter-spacing: normal;
 	text-align: left;
 	color: #000000;
-	
+
 }
 
 .divBox1{
@@ -324,7 +324,7 @@
 	padding-left: 30px;
 	width:447px;
 	height:300px;
-	float: left;	
+	float: left;
 }
 
 .divBox2{
@@ -332,7 +332,7 @@
 	padding-left:50px;
 	width:439px;
 	height:300px;
-	float: left;	
+	float: left;
 }
 
 .divBox3{
@@ -340,20 +340,20 @@
 	padding-left:40px;
 	width:100%;
 	height:100%;
-	float: left;	
+	float: left;
 }
 
 .divBox4{
 	padding-top:20px;
 	width:960px;
-	float: left;	
+	float: left;
 }
 
 
 .array1Div{
 	width:40px;
 	height:140px;
-	float: left;	
+	float: left;
 }
 
 .span1{
@@ -430,10 +430,10 @@
 	font-size: 36px;
 }
 
-.f37{	
-  font-size: 24px;	
+.f37{
+  font-size: 24px;
   font-weight: 900;
- 
+
 }
 
 .input-form{
@@ -441,7 +441,7 @@
 	padding-left:256px;
 	width:512px;
 	height:350px;
- 	text-align:left;	
+ 	text-align:left;
 }
 
 .input-form1{
@@ -449,21 +449,21 @@
 	padding-left:187px;
 	width:650px;
 	height:350px;
- 	text-align:left;	
+ 	text-align:left;
 }
 
 .textbox {position: relative; width: 512px;  margin: 0px}
 
 .textbox input[type="text"],
 .textbox input[type="password"] {
-  width: 100%;  /* ¿øÇÏ´Â ³Êºñ ¼³Á¤ */ 
-  height: 28px;  /* ³ôÀÌ°ª ÃÊ±âÈ­ */
-  line-height : normal;  /* line-height ÃÊ±âÈ­ */
-  padding: .8em .5em; /* ¿øÇÏ´Â ¿©¹é ¼³Á¤, »óÇÏ´Ü ¿©¹éÀ¸·Î ³ôÀÌ¸¦ Á¶Àý */
+  width: 100%;  /* ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Êºï¿½ ï¿½ï¿½ï¿½ï¿½ */
+  height: 28px;  /* ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ê±ï¿½È­ */
+  line-height : normal;  /* line-height ï¿½Ê±ï¿½È­ */
+  padding: .8em .5em; /* ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ */
   border: 1px solid #999;
-  border-radius: 0;  /* iSO µÕ±Ù¸ð¼­¸® Á¦°Å */
-  outline-style: none;  /* Æ÷Ä¿½º½Ã ¹ß»ýÇÏ´Â È¿°ú Á¦°Å¸¦ ¿øÇÑ´Ù¸é */
-  -webkit-appearance: none;  /* ºê¶ó¿ìÀúº° ±âº» ½ºÅ¸ÀÏ¸µ Á¦°Å */
+  border-radius: 0;  /* iSO ï¿½Õ±Ù¸ð¼­¸ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+  outline-style: none;  /* ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï´ï¿½ È¿ï¿½ï¿½ ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½Ñ´Ù¸ï¿½ */
+  -webkit-appearance: none;  /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº» ï¿½ï¿½Å¸ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ */
   -moz-appearance: none;
   appearance: none;
 }
@@ -479,18 +479,30 @@
 	border-radius: 10px;
 }
 
+
+.find{
+	width:528px;
+	height:50px;
+	margin-left:256px;
+	margin-top:30px;
+	padding-top:5px;
+	background-color: #ffa300;
+	text-align:center;
+	border-radius: 10px;
+}
+
 .label{
-	font-size: 24px;	
-  	font-weight: 900;	
+	font-size: 24px;
+  	font-weight: 900;
 }
 
 .checks {
-	
+
 	position: relative;
 	word-spacing :100px;
 }
 
-.checks input[type="checkbox"] { /* ½ÇÁ¦ Ã¼Å©¹Ú½º´Â È­¸é¿¡¼­ ¼û±è */
+.checks input[type="checkbox"] { /* ï¿½ï¿½ï¿½ï¿½ Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -505,18 +517,18 @@
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
-	font-size: 24px;	
+	font-size: 24px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
 
-.checks input[type="checkbox"]+label:before { /* °¡Â¥ Ã¼Å©¹Ú½º */
+.checks input[type="checkbox"]+label:before { /* ï¿½ï¿½Â¥ Ã¼Å©ï¿½Ú½ï¿½ */
 	content: ' ';
 	display: inline-block;
-	width: 21px; /* Ã¼Å©¹Ú½ºÀÇ ³Êºñ¸¦ ÁöÁ¤ */
-	height: 21px; /* Ã¼Å©¹Ú½ºÀÇ ³ôÀÌ¸¦ ÁöÁ¤ */
-	line-height: 21px; /* ¼¼·ÎÁ¤·ÄÀ» À§ÇØ ³ôÀÌ°ª°ú ÀÏÄ¡ */
+	width: 21px; /* Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Êºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+	height: 21px; /* Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+	line-height: 21px; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ */
 	margin: -2px 8px 0 0;
 	text-align: center;
 	vertical-align: middle;
@@ -533,8 +545,8 @@
 		rgba(0, 0, 0, 0.1);
 }
 
-.checks input[type="checkbox"]:checked+label:before { /* Ã¼Å©¹Ú½º¸¦ Ã¼Å©ÇßÀ»¶§ */
-	content: '\2714'; /* Ã¼Å©Ç¥½Ã À¯´ÏÄÚµå »ç¿ë */
+.checks input[type="checkbox"]:checked+label:before { /* Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ Ã¼Å©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+	content: '\2714'; /* Ã¼Å©Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ */
 	color: #99a1a7;
 	text-shadow: 1px 1px #fff;
 	background: #e9ecee;
@@ -557,10 +569,10 @@
 	letter-spacing: normal;
 	text-align: center;
 	color: #000000;
-	margin-left:auto; 
-	margin-right:auto; 
+	margin-left:auto;
+	margin-right:auto;
 	display:inline-block;
-	
+
 }
 
 .monthSel {
@@ -577,10 +589,10 @@
 	text-align: center;
 	color: #000000;
 	word-spacing :100px;
-	margin-left:auto; 
-	margin-right:auto; 
+	margin-left:auto;
+	margin-right:auto;
 
-  
+
 }
 
 
@@ -597,8 +609,8 @@
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-  margin-left:auto; 
-  margin-right:auto; 
+  margin-left:auto;
+  margin-right:auto;
 
 }
 
