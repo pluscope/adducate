@@ -1,77 +1,67 @@
+<!DOCTYPE html>
+<html>
 <meta charset="utf-8"></meta>
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0">
-</meta>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+<head>
 <title>Adducate Web App</title>
+<link href="style.css" rel="stylesheet"> </link>
+<script src="./js/jquery-3.5.1.min.js"></script> 
 
-<link
-  href="stylesheets/menu.css"
-  rel="stylesheet">
-</link>
+<script>
+$(document).ready( function() { 
+//	$("#page1").load("pages/page1.html");  // 원하는 파일 경로를 삽입하면 된다
+	
+//	var pageList = ["menu.html","page1.html","page2.html","page3.html","page4.html","page5.html"];
 
-<link
-  href="stylesheets/style_common.css"
-  rel="stylesheet">
-</link>
+	var pageList = ["menu.html","page1.html","page2.html","page3.html","page4.html"];
+	
+	for( var i=0; i < pageList.length; i++ ){
+		viewHtml( pageList[i] );
+	}
+        
+}); 
 
-<link
-  href="stylesheets/style1.css"
-  rel="stylesheet">
-</link>
 
-<!-- body start -->
+function viewHtml( var1 ){
+	$.ajax({
+	    type : "GET", 
+	    url : "pages/"+var1, 
+	    dataType : "html",	
+	    error : function(){
+	        alert("통신실패!!!!");
+	    },
+	    success : function(Parse_data){
+	    	$("#temp1").html(Parse_data); //div에 받아온 값을 넣는다.
+	    	if( var1 == "menu.html" ){
+	    		$("#container-menu").append( $("#temp1 .container").html() );
+	    	}else{
+	    		$("#container-page").append( 	$("#temp1 .container-body").html() ).trigger("create");
+	    	}
+	    }
+	     
+	});
+}
 
+</script>
+
+</head>
+<body>
+<div id="temp1" style="display: none"> </div>
 <div class="body">
-  <!-- content start -->
-
-  <div class="container">
-    <!-- container-header 필수 -->
-
-    <div class="container-header">
-      <div class="log">
-        <img
-          src="img/logo_header.png"
-          srcset="img/logo_header@2x.png 2x, img/logo_header@3x.png 3x"/>
-      </div>
-
-      <div class="menu">
-        <ul class="menuUl">
-          <li class="menuLi"><a>Class</a></li>
-
-          <li class="menuLi"><a>Team</a></li>
-
-          <li class="menuLi"><a>About</a></li>
-
-          <li class="menuLiBlue"><a>Download</a></li>
-
-          <li class="menuLiSignIn"><a>Sign in</a></li>
-        </ul>
-      </div>
+  	
+ 	<div class="container" id="container-menu">
+		
+	
     </div>
-
-    <!-- container-body 필수 -->
-
-    <div class="container-body-orange">
-      <div class="mainLogo">
-        <img
-          src="img/logo_content.png"
-          srcset="img/logo_content@2x.png 2x,img/logo_content@3x.png 3x"/>
-      </div>
-
-      <div class="mainText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, mi quis finibus
-        venenatis, est velit congue odio, at pellentesque odio mauris vel nulla. Vestibulum
-        venenatis tempus facilisis. Vivamus eu malesuada sapien.
-      </div>
-
-      <div class="mainDownload"><span>Download</span></div>
+    <div class="container" id="container-page">
+		
+	
     </div>
-  </div>
-
   <!-- content end -->
+  
 </div>
 
-<!-- body end -->
+</body>
+
+
+</html>
