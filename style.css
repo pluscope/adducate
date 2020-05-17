@@ -3,6 +3,11 @@
   src: url("fonts/NotoSansCJKkr-Regular.otf") format("opentype");
 }
 
+@font-faceABC {
+	font-family: "Muli-Regular";
+	src: url("fonts/Muli-Regular.ttf") format("opentype");
+}
+
 @media ( max-width: 900px ) {
   container {
     width: auto;
