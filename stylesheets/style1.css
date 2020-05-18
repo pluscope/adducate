@@ -139,3 +139,68 @@
   color: #000000;
   margin-left: 50px;
 }
+
+.popup_account {
+  visibility: hidden;
+  margin-left: 766px;
+  position: relative;
+  background: #FFF;
+  width: 256px;
+  height: 61px;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup_account:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 180px;
+  z-index: 1;
+  border: solid 15px transparent;
+  border-bottom-color: #FFF;
+}
+
+.content_account {
+  padding-top: 20px;
+}
+
+.content_account span a {
+  color: black;
+  text-decoration: none;
+}
+
+.myclass {
+  width: 27px;
+  height: 11px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  margin-left: 25px;
+}
+
+.signout {
+  width: 20px;
+  height: 11px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
+  margin-left: 90px;
+}
+
+.username {
+  color: white;
+}
