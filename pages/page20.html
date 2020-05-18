@@ -45,25 +45,46 @@
 			<div class="container-body-white-left">
 				<img class="ABC" src="../img/abc.jpg" srcset="../img/abc@2x.jpg 2x,../img/abc@3x.jpg 3x" />
 				<div class="Lorem-text-overflow">
-					<span class="selected">Alphabet</span>
-					<span>Short Vowels</span>
-					<span>Long Vowels</span>
-					<span>Blends</span>
-					<span>Sight Words</span>
+					<div class="push">
+
+						<span class="selected">Alphabet</span>
+						<span>Short Vowels</span>
+						<span>Long Vowels</span>
+						<span>Blends</span>
+						<span>Sight Words</span>
+						<br>
+						<img class="layer" src="../img/shadow_header.png" srcset="../img/shadow_header@2x.png 2x, ../img/shadow_header@3x.png 3x" />
+						<br>
+					</div>
+
 				</div>
 
 				<img class="Storybook" src="../img/storybook.png" srcset="../img/storybook@2x.png 2x,../img/storybook@3x.png 3x" />
 				<div class="Lorem-text-overflow">
-					<span>Story 1</span>
-					<span>Story 2</span>
-					<span class="selected">Story 3</span>
+					<div class="push">
+
+						<span>Story 1</span>
+						<span>Story 2</span>
+						<span class="selected">Story 3</span>
+						<br>
+						<img class="layer" src="../img/shadow_header.png" srcset="../img/shadow_header@2x.png 2x, ../img/shadow_header@3x.png 3x" />
+						<br>
+					</div>
+
 				</div>
 
 				<img class="Alivebook" src="../img/alivebook.png" srcset="../img/alivebook@2x.png 2x,../img/alivebook@3x.png 3x" />
 				<div class="Lorem-text-overflow">
-					<span>Story 1</span>
-					<span>Story 2</span>
-					<span class="selected">Story 3</span>
+					<div class="push">
+
+						<span>Story 1</span>
+						<span>Story 2</span>
+						<span class="selected">Story 3</span>
+						<br>
+						<img class="layer" src="../img/shadow_header.png" srcset="../img/shadow_header@2x.png 2x, ../img/shadow_header@3x.png 3x" />
+						<br>
+					</div>
+
 				</div>
 
 				<img class="Creation-Story" src="../img/creation-story.png" srcset="../img/creation-story@2x.png 2x,../img/creation-story@3x.png 3x" />
@@ -83,6 +104,8 @@
 						<span>Story 12</span>
 						<span>Story 13</span>
 					</div>
+					<img class="layer" src="../img/shadow_header.png" srcset="../img/shadow_header@2x.png 2x, ../img/shadow_header@3x.png 3x" />
+<br>
 					<img class="bbtn_left_move" onclick="moveleft()" src="../img/scroll-btn(left).png" srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x" />
 					<img class="bbtn_right_move" onclick="moveright()" src="../img/scroll-btn(right).png" srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x" />
 				</div>
@@ -90,32 +113,31 @@
 				<script type="text/javascript">
 					function moveleft() {
 						var push = document.getElementsByClassName("push");
-						var pxstr = push[0].style.transform.match(/(-?\d+)/);
+						var pxstr = push[3].style.transform.match(/(-?\d+)/);
 						if (pxstr == null) {
-							push[0].style.transform = "translateX(-150px)";
+							push[3].style.transform = "translateX(-170px)";
 						} else {
 							var px = parseInt(pxstr);
-							var width = push[0].offsetWidth;
-							console.log(width + px);
+							var width = push[3].offsetWidth;
 							if (width + px > 1024) {
-								var newpx = px - 150;
+								var newpx = px - 170;
 								var newpxstr = newpx.toString(10);
 								str = "translateX(".concat(newpxstr, "px)");
-								push[0].style.transform = str;
+								push[3].style.transform = str;
 							}
 						}
 					}
 
 					function moveright() {
 						var push = document.getElementsByClassName("push");
-						var pxstr = push[0].style.transform.match(/(-?\d+)/);
+						var pxstr = push[3].style.transform.match(/(-?\d+)/);
 						if (pxstr != null) {
 							var px = parseInt(pxstr);
 							if (px < 0) {
-								var newpx = px + 150;
+								var newpx = px + 170;
 								var newpxstr = newpx.toString(10);
 								str = "translateX(".concat(newpxstr, "px)");
-								push[0].style.transform = str;
+								push[3].style.transform = str;
 							}
 						}
 					}
