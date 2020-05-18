@@ -216,10 +216,10 @@
 }
 
 .Lorem-text {
-  # width: 871px;
+  width: 871px;
   height: 62px;
-  # object-fit: contain;
-  # font-family: NotoSansCJKkr;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: 300;
   font-stretch: normal;
@@ -228,6 +228,43 @@
   letter-spacing: normal;
   text-align: justify;
   color: #000000;
+}
+
+.Lorem-text-overflow span {
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
+}
+
+.Lorem-text-overflow {
+  height: 62px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Lorem-text-overflow span:not(:first-child) {
+  margin-left: 30px;
+}
+
+.Lorem-text-overflow .selected {
+  font-weight: bold;
+  color: #00a3e0;
 }
 
 .Alivebook {
@@ -625,6 +662,13 @@
   text-align: center;
 }
 
+.container-body-white-left {
+  width: 1024px;
+  height: 849px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
 .container-body-blue {
   width: 1024px;
   height: 768px;
@@ -805,6 +849,24 @@
   object-fit: contain;
 }
 
+.bbtn_left_move {
+  position: absolute;
+  padding-left: 25px;
+  padding-top: 20px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.bbtn_right_move {
+  position: absolute;
+  margin-left: 949px;
+  padding-top: 20px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
 .popup_pw {
   margin: auto;
   position: relative;
@@ -831,5 +893,11 @@
 }
 
 .password {
-  color:black;
+  color: black;
+}
+
+.push {
+  width: fit-content;
+  transition-duration: 1s;
+  transition-property: transform;
 }
