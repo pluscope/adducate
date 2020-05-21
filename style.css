@@ -241,18 +241,6 @@
   color: #000000;
 }
 
-.Lorem-text-overflow span {
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #999999;
-}
-
 .Lorem-text-overflow {
   height: 62px;
   object-fit: contain;
@@ -267,6 +255,65 @@
   color: #000000;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.Lorem-text-overflow2 {
+  position: absolute;
+  height: 62px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 87px;
+  width: 944px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Lorem-text-overflow2 span {
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
+}
+
+.Lorem-text-overflow2 span:not(:first-child) {
+  margin-left: 30px;
+}
+
+.Lorem-text-overflow2 .selected {
+  font-weight: bold;
+  color: #00a3e0;
+}
+
+.selected {
+  font-weight: bold;
+  color: #00a3e0;
+}
+
+.Lorem-text-overflow span {
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #999999;
 }
 
 .Lorem-text-overflow span:not(:first-child) {
@@ -468,6 +515,71 @@
   text-align: center;
 }
 
+.title-div2 {
+  width: 53px;
+  height: 20px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 40px;
+}
+
+.storybox {
+  display: grid;
+  grid-template-columns: 584px auto;
+  grid-gap: 16px;
+  width: 944px;
+  height: 320px;
+  border: 1px solid grey;
+  position: absolute;
+  margin-top: 204px;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.storybox2 {
+  display: flex;
+  width: 944px;
+  height: 320px;
+  border: 1px solid grey;
+  position: absolute;
+  margin-top: 204px;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.image {
+  width: 584px;
+  height: 320px;
+}
+
+.storywordbox {
+  width: 251px;
+  height: 178px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
 .f35 {
   font-size: 24px;
 }
@@ -517,17 +629,6 @@
   appearance: none;
 }
 
-.next {
-  width: 528px;
-  height: 50px;
-  margin-left: 256px;
-  margin-top: 30px;
-  padding-top: 5px;
-  background-color: #ffa300;
-  text-align: center;
-  border-radius: 10px;
-}
-
 .find {
   width: 528px;
   height: 50px;
@@ -539,12 +640,37 @@
   border-radius: 10px;
 }
 
+.nextblue {
+  position: absolute;
+  width: 218px;
+  height: 50px;
+  background-color: #00a3e0;
+  text-align: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 1;
+}
+
 .next {
   position: absolute;
   width: 528px;
   height: 50px;
   margin-left: 256px;
   margin-top: 608px;
+  padding-top: 5px;
+  background-color: #ffa300;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.storylist {
+  position: absolute;
+  width: 528px;
+  height: 50px;
+  margin-left: 256px;
+  margin-top: 656px;
   padding-top: 5px;
   background-color: #ffa300;
   text-align: center;
@@ -914,6 +1040,51 @@
   object-fit: contain;
 }
 
+.bbtn_left_story {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 135px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.bbtn_right_story {
+  position: absolute;
+  margin-left: 877px;
+  margin-top: 137px;
+  width: 50px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.greenarrows {
+  display: grid;
+  grid-template-columns: 229px 229px 229px 229px;
+  grid-gap: 10px;
+  width: 63px;
+  height: 23px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  margin-top: 553px;
+  margin-left: 39px;
+}
+
+.arrowtext {
+  position: relative;
+  top: -48px;
+  left: 15px;
+}
+
 .popup_pw {
   margin: auto;
   position: relative;
@@ -1039,6 +1210,99 @@
   width: 284px;
   height: 158px;
   border: 1px solid grey;
+}
+
+.wordbox3 {
+  width: 784px;
+  height: 277px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 784px;
+  height: 277px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #000000;
+  overflow: hidden;
+}
+
+.transparent {
+  opacity: 10%;
+}
+
+.wordmeaning2 {
+  height: 25px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00a3e0;
+  margin-top: 68px;
+}
+
+.result {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffa300;
+  z-index: 1;
+}
+
+.green {
+  color: #009639;
+}
+
+.wordselections {
+  width: 409px;
+  height: 20px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  position: absolute;
+  margin-top: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wordshadow {
+  margin-top: 18px;
+}
+
+.word {
+  font-weight: bold;
 }
 
 .boxtitle {
