@@ -1028,3 +1028,48 @@
   font-size: 24px;
   text-align: left;
 }
+
+.grid-item2 {
+  width: 288px;
+  height: 268px;
+}
+
+.wordbox2 {
+  width: 100%;
+  width: 284px;
+  height: 158px;
+  border: 1px solid grey;
+}
+
+.boxtitle {
+  width: 53px;
+  height: 20px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  margin-top: 11px;
+}
+
+.wordbox2 div {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.boxdescription2 {
+  width: 100%;
+  height: 56px;
+  margin-top: 16px;
+  font-size: 24px;
+  text-align: left;
+}
