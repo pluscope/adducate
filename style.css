@@ -614,6 +614,14 @@
   text-align: center;
 }
 
+.input-form1 {
+  padding-top: 10px;
+  padding-left: 106px;
+ 
+  height: 350px;
+  text-align: center;
+}
+
 .textbox {
   position: relative;
   width: 512px;
