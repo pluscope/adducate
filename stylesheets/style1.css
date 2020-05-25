@@ -50,6 +50,7 @@
 .popup {
   visibility: hidden;
   margin-left: 766px;
+  margin-top: 70px;
   position: relative;
   background: #FFF;
   width: 256px;

@@ -25,7 +25,8 @@ $(document).ready( function() {
 function viewHtml( var1 ){
 	$.ajax({
 	    type : "GET", 
-	    url : "pages/"+var1, 
+	    url : "pages/"+var1,
+	    async : false,
 	    dataType : "html",	
 	    error : function(){
 	        alert("통신실패!!!!");
@@ -43,6 +44,9 @@ function viewHtml( var1 ){
 }
 
 </script>
+<link href="/stylesheets/menu.css" rel="stylesheet"></link>
+<link href="/stylesheets/style_common.css" rel="stylesheet"></link>
+<link href="/stylesheets/style1.css" rel="stylesheet"></link>
 
 </head>
 <body>
