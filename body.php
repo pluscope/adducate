@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once($_SERVER["DOCUMENT_ROOT"]."/header_config.php");
 
 if( isset($_GET["pageUrl"]) ){
 	$_pageUrl = $_GET["pageUrl"]; 	
@@ -119,15 +119,16 @@ function goUrl(var1){
 <body>
 <div id="temp1" style="display: none"> </div>
 <form method="POST" id="fom" name="fom" action="body.php">
-	<input type="text" id="pageUrl" name="pageUrl"  value="<?php echo $_pageUrl;?>">
-	<input type="text" id="s_userNm" name="s_userNm" 	value="<?php echo $_userNm;?>">
-	<input type="text" id="s_userPass" name="s_userPass" value="<?php echo $_userPass;?>"/>
-	<input type="text" id="s_userSexs" name="s_userSexs" value="<?php echo $_userSex;?>"/>
-	<input type="text" id="s_userContry" name="s_userContry" value="<?php echo $_userContry;?>"/>
-	<input type="text" id="s_userMonth" name="s_userMonth" value="<?php echo $_userMonth;?>"/>
-	<input type="text" id="s_userYear" name="s_userYear" value="<?php echo $_userYear;?>"/>
-	<input type="text" id="s_userEmail" name="s_userEmail" value="<?php echo $_userEmail;?>"/>
-	<input type="text" id="s_userEmailChk" name="s_userEmailChk" value="<?php echo $_userEmailChk;?>"/>
+	<input type="hidden" id="pageUrl" name="pageUrl"  value="<?php echo $_pageUrl;?>">
+	<input type="hidden" id="s_userNm" name="s_userNm" 	value="<?php echo $_userNm;?>">
+	<input type="hidden" id="s_userPass" name="s_userPass" value="<?php echo $_userPass;?>"/>
+	<input type="hidden" id="s_userSexs" name="s_userSexs" value="<?php echo $_userSex;?>"/>
+	<input type="hidden" id="s_userContry" name="s_userContry" value="<?php echo $_userContry;?>"/>
+	<input type="hidden" id="s_userMonth" name="s_userMonth" value="<?php echo $_userMonth;?>"/>
+	<input type="hidden" id="s_userYear" name="s_userYear" value="<?php echo $_userYear;?>"/>
+	<input type="hidden" id="s_userEmail" name="s_userEmail" value="<?php echo $_userEmail;?>"/>
+	<input type="hidden" id="s_userEmailChk" name="s_userEmailChk" value="<?php echo $_userEmailChk;?>"/>
+	<input type="hidden" id="s_type" name="s_type" value="insert"/>
 </form>
 
 
