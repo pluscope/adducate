@@ -2,7 +2,7 @@
 session_start();
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/action/action_post.php");
-
+$path = "/uploads/";
 
 if( !isset($_SESSION["IS_PUT"]) )  { //접속 이력
  $_SESSION["IS_PUT"] = true;

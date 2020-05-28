@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8"></meta>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
-<head>
+<?php
+include_once( $_SERVER["DOCUMENT_ROOT"]."/header_config.php");
+
+$_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
+
+?>
+
 <title>Adducate Web App</title>
 <link href="style.css" rel="stylesheet"> </link>
-<script src="./js/jquery-3.5.1.min.js"></script> 
+<link href="/stylesheets/menu.css" rel="stylesheet"></link>
+
+
 
 <script>
+
+var logSession = '<?= $_loginYn ?>';
+
 $(document).ready( function() { 
-//	$("#page1").load("pages/page1.html");  // 원하는 파일 경로를 삽입하면 된다
-	
-//	var pageList = ["menu.html","page1.html","page2.html","page3.html","page4.html","page5.html"];
 
 	var pageList = ["menu.html","page1.html","page2.html","page3.html","page4.html"];
 	
 	for( var i=0; i < pageList.length; i++ ){
 		viewHtml( pageList[i] );
 	}
-        
+	loginYn();        
 }); 
 
 
@@ -38,15 +42,13 @@ function viewHtml( var1 ){
 	    	}else{
 	    		$("#container-page").append( 	$("#temp1 .container-body").html() ).trigger("create");
 	    	}
+	    	$("#temp1").html("");
 	    }
 	     
 	});
 }
 
 </script>
-<link href="/stylesheets/menu.css" rel="stylesheet"></link>
-<link href="/stylesheets/style_common.css" rel="stylesheet"></link>
-<link href="/stylesheets/style1.css" rel="stylesheet"></link>
 
 </head>
 <body>

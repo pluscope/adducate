@@ -1,12 +1,13 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"]."/header_config.php");
 
-if( isset($_GET["pageUrl"]) ){
-	$_pageUrl = $_GET["pageUrl"]; 	
+$_pageUrl =  isset($_GET["pageUrl"]) ? $_GET["pageUrl"]:"" ; //화면 명
+
+if( $_pageUrl == ""){
+    $_pageUrl =  isset($_POST["pageUrl"]) ? $_POST["pageUrl"]:"22222" ; //화면 명
 }
-else{
-	$_pageUrl =  isset($_POST["pageUrl"]) ? $_POST["pageUrl"]:"" ; //화면 명
-}
+
+
 
 $_userNm =  isset($_POST["s_userNm"]) ? $_POST["s_userNm"]:"";
 $_userPass =  isset($_POST["s_userPass"]) ? $_POST["s_userPass"]:"";
@@ -22,12 +23,10 @@ $_userEmailChk =  isset($_POST["s_userEmailChk"]) ? $_POST["s_userEmailChk"]:"";
 ?>
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8"></meta>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+
 <head>
 <title>Adducate Web App</title>
 <link href="style.css" rel="stylesheet"> </link>
-<script src="./js/jquery-3.5.1.min.js"></script> 
 
 <script>
 $(document).ready( function() {      
@@ -36,7 +35,17 @@ $(document).ready( function() {
 	for( var i=0; i < pageList.length; i++ ){
 		viewHtml( pageList[i] );
 	}
-	$("#temp1").html("");
+
+
+	$("#pageUrl").val("<?php echo $_pageUrl;?>");
+	$("#s_userNm").val("<?php echo $_userNm;?>");
+	$("#s_userPass").val("<?php echo $_userPass;?>");
+	$("#s_userSexs").val("<?php echo $_userSex;?>");
+	$("#s_userContry").val("<?php echo $_userContry;?>");
+	$("#s_userMonth").val("<?php echo $_userMonth;?>");
+	$("#s_userYear").val("<?php echo $_userYear;?>");
+	$("#s_userEmail").val("<?php echo $_userEmail;?>");
+	$("#s_userEmailChk").val("<?php echo $_userEmailChk;?>");
 }); 
 
 
@@ -47,7 +56,7 @@ function viewHtml( var1 ){
 	    async : false,
 	    dataType : "html",	
 	    error : function(){
-	        alert("통신실패!!!!");
+	        alert("메뉴 가져오기 실패"+var1);
 	    },
 	    success : function(Parse_data){
 	    	$("#temp1").html(Parse_data);
@@ -56,10 +65,73 @@ function viewHtml( var1 ){
 	    	}else{
 	    		$("#container-page").append( 	$("#temp1 .container-body").html() );
 	    	}
+
+	    	$("#temp1").html("");
 	    }
 	     
 	});
+
+	if( var1 == "page20.html" ){
+		b_list( 'fom',fn_abc );
+	}
 }
+
+//abc 항목 리스트 불러오기
+function fn_abc(data){
+	var abcText = "";
+	var storyText = "";
+	var aliveText = "";
+	var createText = "";
+	var t1 = 0;
+	var t2 = 0;
+	var t3 = 0;
+	var t4 = 0;
+
+	
+	for( var i=0; i < data.length; i++ ){
+
+		if(data[i]["B_TITLE"].toUpperCase() == ("abc").toUpperCase()){
+			if( t1 == 0 ){
+				abcText += "<span class='selected'>"+data[i]["B_ADDRES"]+"</span>";
+				t1++;
+			}else{
+				abcText += "<span>"+data[i]["B_ADDRES"]+"</span>";
+			}
+		}else if(data[i]["B_TITLE"].toUpperCase() == ("storybook").toUpperCase()){
+			if( t2 == 0 ){
+				storyText += "<span class='selected'>"+data[i]["B_ADDRES"]+"</span>";
+				t2++;
+			}else{
+				storyText += "<span>"+data[i]["B_ADDRES"]+"</span>";
+			}
+			
+		}else if(data[i]["B_TITLE"].toUpperCase() == ("alivebook").toUpperCase()){
+			if( t3 == 0 ){
+				aliveText += "<span class='selected'>"+data[i]["B_ADDRES"]+"</span>";
+				t3++;
+			}else{
+				aliveText += "<span>"+data[i]["B_ADDRES"]+"</span>";
+			}
+
+			
+		}else if(data[i]["B_TITLE"].toUpperCase() == ("creationstory").toUpperCase()){
+			if( t4 == 0 ){
+				createText += "<span class='selected'>"+data[i]["B_ADDRES"]+"</span>";
+				t4++;
+			}else{
+				createText += "<span>"+data[i]["B_ADDRES"]+"</span>";
+			}
+			
+		}
+
+	}
+	$("#abcPush").html( abcText );
+	$("#storyPush").html( storyText );
+	$("#alivePush").html( aliveText );
+	$("#createPush").html( createText );
+
+}
+
 
 //패스워드 체크
 function passCheck(var1){
@@ -91,6 +163,8 @@ function contry( var1 ){
 	goUrl(var1);
 }
 
+
+
 //년도 체크
 function yearMonths( var1 ){
 	$("#s_userMonth").val( $("#uMonth").val() );
@@ -102,6 +176,8 @@ function yearMonths( var1 ){
 function email( var1 ){
 	$("#s_userEmail").val( $("#uEmail").val() );
 	$("#s_userEmailChk").val( $("#uEmailChk").val() );
+
+	login_insert('fom');
 	goUrl(var1);
 }
 
@@ -109,27 +185,34 @@ function email( var1 ){
 //페이지 이동
 function goUrl(var1){
 	$("#pageUrl").val( var1 );
+	alert(  var1); 
 	$("#fom").submit();
 }
 
+//로그인 찾기
+function goLogin(){
+	$("#s_type").val("select");
+	$("#s_userNm").val($("#t_name").val());
+	$("#s_userPass").val($("#t_pass").val());
+	$("#s_userEmail").val($("#t_email").val());
 
+	login('fom');
+}
+
+function moveMp(var1){
+	var move_url = "/content/01_abc/Alphabet_Motion_300X300px_200419/";
+	$("#movie_src").attr("src", move_url+var1+"_Motion.mp4");
+	$("#move_video").load();
+	$("#move_video").trigger("play");
+	
+}
 
 </script>
 </head>
 <body>
+
+
 <div id="temp1" style="display: none"> </div>
-<form method="POST" id="fom" name="fom" action="body.php">
-	<input type="hidden" id="pageUrl" name="pageUrl"  value="<?php echo $_pageUrl;?>">
-	<input type="hidden" id="s_userNm" name="s_userNm" 	value="<?php echo $_userNm;?>">
-	<input type="hidden" id="s_userPass" name="s_userPass" value="<?php echo $_userPass;?>"/>
-	<input type="hidden" id="s_userSexs" name="s_userSexs" value="<?php echo $_userSex;?>"/>
-	<input type="hidden" id="s_userContry" name="s_userContry" value="<?php echo $_userContry;?>"/>
-	<input type="hidden" id="s_userMonth" name="s_userMonth" value="<?php echo $_userMonth;?>"/>
-	<input type="hidden" id="s_userYear" name="s_userYear" value="<?php echo $_userYear;?>"/>
-	<input type="hidden" id="s_userEmail" name="s_userEmail" value="<?php echo $_userEmail;?>"/>
-	<input type="hidden" id="s_userEmailChk" name="s_userEmailChk" value="<?php echo $_userEmailChk;?>"/>
-	<input type="hidden" id="s_type" name="s_type" value="insert"/>
-</form>
 
 
 	<div class="body">
