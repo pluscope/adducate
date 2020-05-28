@@ -49,13 +49,25 @@ $sql = "";
         $result = mysqli_query($conn, $sql);
         
         if(mysqli_num_rows($result) == 0){
-            $sql = "INSERT M_MEMBER (	M_ID,M_NAME,M_PASS,M_SEX,M_CONTRY,M_YEAR,M_MONTH,M_EMAIL,M_EMAIL_CHK) VALUES ('$_userNm','$_userNm','$_userPass','$_userSex','$_userContry','$_userYear','$_userMonth','$_userEmail','$_userEmailChk' )";
-                $result = mysqli_query($conn, $sql);
+            $sql = "INSERT INTO M_MEMBER (	M_ID,M_NAME,M_PASS,M_SEX,M_CONTRY,M_YEAR,M_MONTH,M_EMAIL,M_EMAIL_CHK) VALUES ('$_userNm','$_userNm',password('$_userPass'),'$_userSex','$_userContry','$_userYear','$_userMonth','$_userEmail','$_userEmailChk' )";
+                $result = mysqli_query($conn, $sql) ;
+                
+                if ( mysqli_connect_errno() )
+                {
+                    echo "DB 연결에 실패했습니다 " . mysqli_connect_error();
+                }
+                
+                
+                if( !$result ){
+                    echo("쿼리오류 발생: " . mysqli_error($conn));
+                }
                 $_message = "가입 완료";
+                
         }else{
             $_message = "중복 ID error";
         }
     }
 }
+
 echo $_message;
 ?>

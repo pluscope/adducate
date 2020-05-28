@@ -173,11 +173,13 @@ function yearMonths( var1 ){
 }
 
 //이메일
-function email( var1 ){
+function email1( var1 ){
+
 	$("#s_userEmail").val( $("#uEmail").val() );
 	$("#s_userEmailChk").val( $("#uEmailChk").val() );
 
 	login_insert('fom');
+
 	goUrl(var1);
 }
 
@@ -185,7 +187,6 @@ function email( var1 ){
 //페이지 이동
 function goUrl(var1){
 	$("#pageUrl").val( var1 );
-	alert(  var1); 
 	$("#fom").submit();
 }
 

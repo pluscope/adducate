@@ -32,18 +32,19 @@ function menuLogin(){
  * */
 function login_insert(var1){
 		$("#s_type").val("insert");
+	
 		var params =$("#"+var1).serializeArray();
 		$.ajax({
 		    type : "POST", 
 		    url : "/action/action_login.php",
-		    async : "true",
+		    async : false,
 		    data : params,
 		    dataType : "text",	
 		    error : function(){
 		        alert("통신실패!!!!");
 		    },
 		    success : function(data){
-		    	alert(data+"--------------");
+		    	alert(data);
 		    }
 		     
 	});
