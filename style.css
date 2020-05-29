@@ -526,7 +526,9 @@
 }
 
 .divBox8_2 {
+  position: relative;
   margin-top: 14px;
+  left: 34px;
 }
 
 .divBox8_2 img {
@@ -629,7 +631,8 @@
 
 .divBox9 {
   word-spacing: 100px;
-  padding-top: 100px;
+  margin-top: 100px;
+  margin-bottom: 160px;
   text-align: center;
 }
 
