@@ -20,10 +20,25 @@
     <!-- container-header 필수 -->
 
       <div class="container-header">
+     
+      <form method="POST" id="fom" name="fom" action="body.php">
+			<input type="hidden" id="pageUrl" name="pageUrl"  />
+			<input type="hidden" id="s_userNm" name="s_userNm"/>
+			<input type="hidden" id="s_userPass" name="s_userPass" />
+			<input type="hidden" id="s_userSexs" name="s_userSexs" />
+			<input type="hidden" id="s_userContry" name="s_userContry" />
+			<input type="hidden" id="s_userMonth" name="s_userMonth" />
+			<input type="hidden" id="s_userYear" name="s_userYear" />
+			<input type="hidden" id="s_userEmail" name="s_userEmail"/>
+			<input type="hidden" id="s_userEmailChk" name="s_userEmailChk"/>
+			<input type="hidden" id="s_type" name="s_type" value="insert"/>
+	 </form>
+		      
+     
       <div class="log">
         <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
       </div>
-
+	
       <div class="menu">
         <ul class="menuUl">
           <li class="menuLi"><a>Class</a></li>
@@ -33,29 +48,48 @@
           <li class="menuLi"><a>About</a></li>
 
           <li class="menuLiBlue"><a>Download</a></li>
-
-          <li class="menuLiSignIn" onclick="myFunction()"><a>Sign in</a></li>
+			
+          <li class="menuLiSignIn" onclick="myFunction()" id="loginIn"><a>Sign in</a></li>
+          <li class="menuLiID" onclick="myFunction1()" style="display: none" id="loginOut"><a></a></li>
+          
         </ul>
       </div>
-      <div class="popup">
-        <input class="textbox1" type="text" placeholder="ID" />
-        <input class="textbox2" type="text" placeholder="PW" />
-        <div class="content">
-          <span class="join"><a href="body.php?pageUrl=page8.html">Join</a></span>
-          <span class="id_pw"><a href="#">ID/PW</a></span>
-          <span class="ok"><a href="#">OK</a></span>
-        </div>
+      <div class="popup" id="popup" style="position: absolute;">
+	        <input class="textbox1" type="text" placeholder="ID"  id="m_id"/>
+	        <input class="textbox2" type="password" placeholder="PW"  id="m_pass"/>
+	        <div class="content">
+	          <span class="join"><a href="body.php?pageUrl=page8.html">Join</a></span>
+	          <span class="id_pw"><a href="body.php?pageUrl=page18.html">Find ID/PW</a></span>
+	          <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
+	        </div>
+      </div>
+      <div class="popup_account" style="position: absolute;margin-top:65px" >  
+
+         <div class="content_account">
+	          <span class="join"><a href="body.php?pageUrl=page20.html">My class</a></span>
+	          <span class="id_pw"><a href="/loginOut.php">Sign out</a></span>
+	     </div>
       </div>
 
       <script>
         function myFunction() {
-          var popup = document.getElementsByClassName("popup");
-          if(popup[0].style.visibility == "visible")
-            popup[0].style.visibility = "hidden";
-          else {
-            popup[0].style.visibility = "visible";
-          }
+            var popup = document.getElementsByClassName("popup");
+            if(popup[0].style.visibility == "visible")
+              popup[0].style.visibility = "hidden";
+            else {
+              popup[0].style.visibility = "visible";
+            }
         }
+        
+        function myFunction1() {
+            var popup = document.getElementsByClassName("popup_account");
+            if(popup[0].style.visibility == "visible"){
+              popup[0].style.visibility = "hidden";
+        	}else {
+              popup[0].style.visibility = "visible";
+            }
+            
+          }
       </script>
 
     </div>

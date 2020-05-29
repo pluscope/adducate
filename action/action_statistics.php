@@ -2,15 +2,21 @@
 include_once($_SERVER["DOCUMENT_ROOT"]."/header_config_json.php");
 header("Content-Type:application/json");
 
-$search = $_POST["searchYmd"];
-$searchY = $_POST["searchY"];
-$searchM = $_POST["searchM"];
+          
+$search    = isset($_POST["search"])    ? $_POST["search"]    : "";
+$searchYmd = isset($_POST["searchYmd"]) ? $_POST["searchYmd"] : "";
+$searchY   = isset($_POST["searchY"])   ? $_POST["searchY"]   : "";
+$searchM   = isset($_POST["searchM"])   ? $_POST["searchM"]   : "";
 
-$sql = "SELECT DAY ,COUNT(*) CNT FROM LOG WHERE YEAR = '$searchY' AND CAST(MONTH AS UNSIGNED) = '$searchM' GROUP BY DAY";
 if( $search == "2" ){
-    $sql = "SELECT CAST(MONTH AS UNSIGNED) as DAY,COUNT(*) CNT FROM LOG WHERE YEAR = '2020'  GROUP BY MONTH";
+    $sql = "SELECT CAST(MONTH AS UNSIGNED) as DAY,COUNT(*) CNT FROM LOG WHERE YEAR = '$searchY'  GROUP BY MONTH";
 }else if( $search == "3" ){
     $sql = "SELECT YEAR AS DAY ,COUNT(*) CNT FROM LOG GROUP BY YEAR LIMIT 0,5 ";
+}
+else if($search == "4"){
+    $sql = "SELECT PRE_URL AS DAY,count(PRE_URL) AS CNT FROM LOG GROUP BY PRE_URL";
+}else{
+    $sql = "SELECT DAY ,COUNT(*) CNT FROM LOG WHERE YEAR = '$searchY' AND CAST(MONTH AS UNSIGNED) = '$searchM' GROUP BY DAY";
 }
 
 $result = mysqli_query($conn,$sql);
@@ -22,7 +28,7 @@ for( $i=0; $row=mysqli_fetch_array($result); $i++ ){
     $list[] = array( "DAY"=> $row["DAY"],"CNT"=>$row["CNT"]);
 }
 
-$result = array("result" => $list);
+$result = array("result" => $list,"search" => $search);
 echo json_encode($result);
 
 ?>

@@ -8,7 +8,7 @@
   width: 341px;
   height: 100%;
   float: left;
-  padding-top: 30px;
+  padding-top: 95px;
   object-fit: contain;
   font-family: NotoSansCJKkr;
   font-size: 36px;
@@ -26,7 +26,7 @@
 }
 
 .divBox.box2 {
-  background-color: #419bf9;
+  background-color: #00a3e0;
 }
 
 .divBox.box3 {

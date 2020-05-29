@@ -7,17 +7,37 @@ function open_window( var1 ){
 		window.open('/bbs/write_map.php',var1,"width=900,height=800,left=100,top=100,menubar=1");
 }
 
+function loginYn(){
+	//$("#loginIn").css('display','none');
+	if( logSession != "" ){
+		$("#loginIn").hide();
+		$("#loginOut").show();
+		
+		$("#loginOut").html("<a>"+logSession+"</a>");
+		
+	}
+}
+
+
+function menuLogin(){
+	$("#s_type").val("select") ;
+	$("#s_userNm").val($("#m_id").val()) ;
+	$("#s_userPass").val( $("#m_pass").val() );
+	login('fom');
+}
 
 /**
  * 회원가입
  * var1 form id
  * */
 function login_insert(var1){
+		$("#s_type").val("insert");
+	
 		var params =$("#"+var1).serializeArray();
 		$.ajax({
 		    type : "POST", 
 		    url : "/action/action_login.php",
-		    async : "true",
+		    async : false,
 		    data : params,
 		    dataType : "text",	
 		    error : function(){
@@ -39,18 +59,19 @@ function login(var1){
 		$.ajax({
 		    type : "POST", 
 		    url : "/action/action_login.php",
-		    async : "true",
+		    async : true,
 		    data : params,
 		    dataType : "text",	
 		    error : function(){
 		        alert("통신실패!!!!");
 		    },
 		    success : function(data){
-		    	if( data == 1 ){
+		    	if( data == "Y"){
 		    		alert('로그인 되었습니다.');		
-		    		location.href="/bbs/list.php";
+		    		location.href="/index.php";
 		    	}else{
-		    		alert('아이디가 및 패스워드가 틀렸습니다.');
+		    		console.log(data);
+		    		alert('아이디 및 패스워드가 틀렸습니다.');
 		    	}
 		    }
 		     
@@ -58,26 +79,69 @@ function login(var1){
 }
 
 
+function b_wp_fn(var0,var1){
+	b_image_file(var0,var1);
+}
+
+
+function b_image_file( var0,var1 ){
+	var imgName="";
+	var datas, xhr;
+	datas = new FormData();
+ 
+
+    datas.append("B_FILE", $( '#B_FILE' )[0].files[0] );
+    
+    $.ajax({
+        url: "/action/action_file.php", // url where upload the image
+        contentType: 'multipart/form-data', 
+        type: 'POST',
+        data: datas,   
+        async : false,
+        dataType: 'json',     
+        success: function (data) {     
+        	imgName = data.fileTemp;
+
+        	if( var0 == "I" ){
+        		b_write( var1 ,imgName);
+        	}else{
+        		b_update( var1 ,imgName);
+        	}
+        	
+             
+        },
+        error : function (jqXHR, textStatus, errorThrown) {
+            alert('ERRORS: ' + textStatus);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    }); 
+    
+}
+
 /**
  * 게시판 등록
  * var1 form 이름
  * */
-function b_write( var1 ){
-		var params =$("#"+var1).serializeArray();
-		$.ajax({
-		    type : "POST", 
-		    url : "/action/action_write.php",
-		    async : "true",
-		    data : params,
-		    dataType : "text",	
-		    error : function(){
-		        alert("통신실패!!!!");
-		    },
-		    success : function(data){
-		    	alert("등록되었습니다.");
-		    }
-		     
-	});
+function b_write( var1 ,var2){
+
+		$("#B_MUL_IMAGE").val( var2 );	
+	
+		var params =$("#"+var1).serialize();
+		
+        $.ajax({
+            url: "/action/action_write.php", // url where upload the image
+            type: 'POST',
+            data: params,   
+            dataType: 'text',     
+            success: function (data) {               
+                 alert( "등록되었습니다."+data );                
+            },
+            error : function (jqXHR, textStatus, errorThrown) {
+                alert('ERRORS: ' + textStatus);
+            },
+        });         
 }
 
 
@@ -85,8 +149,10 @@ function b_write( var1 ){
  * 게시판 변경
  * var1 form 이름
  * */
-function b_update( var1 ){
+function b_update( var1,var2 ){
+		$("#B_MUL_IMAGE").val( var2 );	
 		var params =$("#"+var1).serialize();
+
 		$.ajax({
 		    type : "POST", 
 		    url : "/action/action_update.php",
@@ -94,15 +160,16 @@ function b_update( var1 ){
 		    data : params,
 		    dataType : "text",	
 		    error : function(){
-		    	alert( data );
 		        alert("통신실패!!!!");
 		    },
 		    success : function(data){
+		    	console.log( data );
 		    	alert("등록되었습니다.");
 		    }
 		     
 	});
 }
+
 
 /**
  * 게시판 상세
@@ -258,29 +325,3 @@ function logOut(var1){
 		     
 	});
 }
-
-
-/*  좌표 구학디 */
-//distance(37.275517, 127.116578, 37.276556, 127.116243);
-function distance(lat1, lon1, lat2, lon2) {
-    var theta = lon1 - lon2;
-    var dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
-
-    dist = Math.acos(dist);
-    dist = rad2deg(dist);
-	dist = dist * 60 * 1.1515;
-	dist = dist * 1609.344;
-    return dist.toFixed(0)
-}
-
-
-
-function deg2rad(deg) {
-    return (deg * Math.PI / 180.0);
-}
-
-
-function rad2deg(rad) {
-    return (rad * 180 / Math.PI);
-}
-/* 좌표 구하기 종료 */

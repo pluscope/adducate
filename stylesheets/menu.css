@@ -88,3 +88,18 @@
   text-align: center;
 	cursor: pointer;
 }
+
+.menuLiID a{
+    text-decoration-line: none;
+    line-height:80px;
+    object-fit: contain;
+    font-family: NotoSansCJKkr;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    cursor: pointer;
+}
