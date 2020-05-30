@@ -23,11 +23,11 @@
 
 				<div class="menu">
 				   		<ul class="menuUl">
-				   			<li class="menuLi"><a >Class</a></li>
-				   			<li class="menuLi"><a >Team</a></li>
-				   			<li class="menuLi"><a >About</a></li>
-				   			<li class="menuLiBlue"><a >Download</a></li>
-				   			<li class="menuLiSignIn"><a >Sign in</a></li>
+				   			<li class="menuLi"><a>Class</a></li>
+				   			<li class="menuLi"><a>Team</a></li>
+				   			<li class="menuLi"><a>About</a></li>
+				   			<li class="menuLiBlue"><a>Download</a></li>
+				   			<li class="menuLiSignIn"><a>Sign in</a></li>
 				   		</ul>
 				</div>
 			</div>
@@ -39,44 +39,48 @@
 					<div class="pointer"><span>About</span><span>>FAQ</span></div>
 
 					<div class="divBox6">
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
-						<span class="textDefault bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
+						<span class="textDefault bold" onclick="open6(this)">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
+						<div class="divBox6_2">
+							<div class="array1Div">
+								<img src="../img/arrow1.png" srcset="../img/arrow1-name@2x.png 2x, ../img/arrow1-name@3x.png 3x">
+							</div>
+							<span class="textDefault">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, mi quis finibus venenatis, est velit congue odio, at pellentesque odio mauris vel nulla. Vestibulum venenatis tempus facilisis. Vivamus eu malesuada sapien. Fusce lobortis metus vel tellus pellentesque, id egestas nulla eleifend.
+							</span>
+						</div>
+						<hr>
 						<span class="textDefault bold">Vivamus gravida, mi quis finibus venenatis, est velit congue odio?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Vivamus eu malesuada sapien?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Fusce lobortis metus vel tellus pellentesque, id egestas nulla eleifend?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Donec eget consectetur erat?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Praesent tempus iaculis massa, sit amet mattis ligula tempor in?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Nunc a ligula mattis, mollis dolor sit amet, dapibus enim?</span>
-						<br>
-						<img src="../img/01.png"  srcset="../img/01@2x.png 2x, ../img/01@3x.png 3x"class="layer">
-						<br>
+						<hr>
 						<span class="textDefault bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
+						<hr>
 					</div>
-				</div>
 
+					<script>
+						function open6(x) {
+							var box = x.nextElementSibling;
+							
+							console.log(box);
+							if (box.style.display == 'block')
+								box.style.display = 'none';
+							else
+								box.style.display = 'block';
+						}
+					</script>
+
+				</div>
 			</div>
 
 		</div>
