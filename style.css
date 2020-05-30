@@ -56,7 +56,6 @@
 }
 
 .body {
-  display: flex;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -70,11 +69,7 @@
 
 .container-body {
   width: 1024px;
-  height: calc(768px - 80px);
-}
-
-.container-expand {
-  height: 100%;
+  height: 688px;
 }
 
 .container-header {
@@ -192,20 +187,6 @@
   vertical-align: middle;
 }
 
-.mainDownload span {
-  width: 116px;
-  height: 20px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-}
-
 .Background_white {
   width: 100%;
   height: 100%;
@@ -242,7 +223,7 @@
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 62px;
   letter-spacing: normal;
   text-align: justify;
   color: #000000;
@@ -397,7 +378,7 @@
   cursor: text;
 }
 
-.divBox6 hr {
+hr {
   height: 1px;
   background-color: grey;
 }
@@ -506,6 +487,10 @@
   color: #000000;
 }
 
+.input-form {
+  margin-top: 100px;
+}
+
 .divBox8 {
   padding-top: 10px;
   margin: auto;
@@ -582,13 +567,12 @@
 }
 
 .next {
+  cursor: pointer;
   position: absolute;
   top: 613px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 528px;
   height: 50px;
-  margin: auto;
+  margin-left: 256px;
   margin-top: 41px;
   background-color: #ffa300;
   text-align: center;
@@ -746,12 +730,7 @@
   width: 512px;
   height: 55px;
   margin: auto;
-  margin-top: 100px;
   text-align: left;
-}
-
-.divBox12_1 input[type='text'] {
-  border: 1px solid #cacece;
 }
 
 .divBox12_2 {
@@ -775,6 +754,7 @@
   position: relative;
   text-align-last: center;
   -webkit-appearance: none;
+  border: 1px solid #cacece;
 }
 
 .monthSel {
@@ -804,8 +784,9 @@
 }
 
 .container-body-white-left {
-  width: 1024px;
+  width: 944px;
   height: 100%;
+  margin: auto;
   background-color: #ffffff;
   text-align: left;
 }
@@ -815,6 +796,10 @@
   height: 100%;
   background-color: #00a3e0;
   text-align: center;
+}
+
+.container-expand {
+  height: fit-content;
 }
 
 .leftPath6 {
@@ -990,22 +975,24 @@
   object-fit: contain;
 }
 
+.bbtn_move {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .bbtn_left_move {
-  position: absolute;
-  padding-left: 25px;
-  padding-top: 20px;
   width: 50px;
   height: 51px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .bbtn_right_move {
-  position: absolute;
-  margin-left: 949px;
-  padding-top: 20px;
   width: 50px;
   height: 51px;
-  object-fit: contain;
+  cursor: pointer;
 }
 
 .bbtn_left_story {
@@ -1054,13 +1041,18 @@
 }
 
 .popup_pw {
+  visibility: hidden;
+  z-index: 1;
   margin: auto;
-  position: relative;
+  position: absolute;
+  margin-left: 253px;
+  top: 564px;
   background: #fff;
-  width: 512px;
-  height: 40px;
-  border: 1px solid grey;
+  width: 516px;
+  height: 55px;
+  border: 1px solid #cacece;
   color: grey;
+  line-height: 55px;
 }
 
 .popup_pw:before {
@@ -1068,14 +1060,19 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 25px;
+  top: 40px;
   left: 248px;
   z-index: 1;
-  border: solid 1px grey;
+  border: solid 1px #cacece;
   border-top: transparent;
   border-left: transparent;
   background-color: white;
   transform: rotate(45deg);
+}
+
+.popup_pw span {
+  position: relative;
+  z-index: 2;
 }
 
 .password {
@@ -1371,7 +1368,6 @@
 .popup {
   visibility: hidden;
   margin-left: 766px;
-  margin-top: 70px;
   position: relative;
   background: #fff;
   width: 256px;
@@ -1389,7 +1385,7 @@
   border-bottom-color: #fff;
 }
 
-.textbox1 {
+.popup_textbox1 {
   margin-left: 25px;
   margin-top: 21px;
   padding-left: 10px;
@@ -1397,7 +1393,7 @@
   height: 32px;
 }
 
-.textbox2 {
+.popup_textbox2 {
   margin-left: 25px;
   margin-top: 15px;
   padding-left: 10px;
