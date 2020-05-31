@@ -187,14 +187,6 @@
   vertical-align: middle;
 }
 
-.Background_white {
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  object-fit: contain;
-  text-align: center;
-}
-
 .ABC {
   width: 140px;
   height: 55px;
@@ -580,6 +572,10 @@ hr {
   line-height: 1.8;
 }
 
+.next2 {
+  top: 730px;
+}
+
 .storylist {
   position: absolute;
   width: 528px;
@@ -595,25 +591,25 @@ hr {
 .replay {
   position: absolute;
   width: 300px;
-  height: 55px;
+  height: 50px;
   margin-left: 362px;
   margin-top: 491px;
-  padding-top: 5px;
   background-color: #00a3e0;
   text-align: center;
   border-radius: 10px;
+  line-height: 50px;
 }
 
 .sound {
   position: absolute;
   width: 300px;
-  height: 55px;
+  height: 50px;
   margin-left: 672px;
   margin-top: 491px;
-  padding-top: 5px;
   background-color: #009639;
   text-align: center;
   border-radius: 10px;
+  line-height: 50px;
 }
 
 .label {
@@ -771,21 +767,21 @@ hr {
 
 .container-body-orange {
   width: 1024px;
-  height: 100%;
+  height: fit-content;
   background-color: #ffa300;
   text-align: center;
 }
 
 .container-body-white {
   width: 1024px;
-  height: 100%;
+  height: fit-content;
   background-color: #ffffff;
   text-align: center;
 }
 
 .container-body-white-left {
   width: 944px;
-  height: 100%;
+  height: fit-content;
   margin: auto;
   background-color: #ffffff;
   text-align: left;
@@ -1130,9 +1126,9 @@ hr {
 .grid-container {
   display: grid;
   grid-gap: 44px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 284px 284px 284px;
   margin-top: 37px;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
