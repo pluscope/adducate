@@ -3,9 +3,10 @@
   src: url('fonts/NotoSansCJKkr-Regular.otf') format('opentype');
 }
 
-@font-faceabc {
-  font-family: 'Muli-Regular';
-  src: url('fonts/Muli-Regular.ttf') format('opentype');
+@font-face {
+  font-family: "Muli-Regular";
+  src: url("/fonts/Muli-Regular.ttf") format("opentype");
+  font-size: 13em;
 }
 
 @media (max-width: 900px) {
