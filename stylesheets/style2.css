@@ -1,0 +1,46 @@
+.ABC {
+  width: 140px;
+  height: 55px;
+  padding-top: 77px;
+  padding-left: 442px;
+  object-fit: contain;
+}
+
+.Storybook {
+  padding-left: 373px;
+  padding-top: 48px;
+  width: 278px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.Lorem-text {
+  padding: 16px 76px 0px 77px;
+  width: 871px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.Alivebook {
+  padding-left: 378px;
+  padding-top: 49px;
+  width: 268px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.Creation-Story {
+  padding-left: 330px;
+  padding-top: 49px;
+  width: 364px;
+  height: 56px;
+  object-fit: contain;
+}
