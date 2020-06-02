@@ -226,18 +226,6 @@
 .Lorem-text-overflow2 {
   position: relative;
   height: 62px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: justify;
-  color: #000000;
-  overflow: hidden;
-  white-space: nowrap;
   margin-top: 40px;
   width: 944px;
   left: 50%;
@@ -315,6 +303,7 @@
   width: 341px;
   height: 300px;
   float: left;
+  text-align: center;
   padding-top: 30px;
 }
 
@@ -333,21 +322,21 @@
 .email {
   padding-top: 500px;
   padding-left: 20px;
+  text-align: center;
 }
 
 .scroll-top {
   padding-top: 100px;
+  text-align: center;
 }
 
 .divBox5_1 {
   padding-top: 30px;
-  padding-left: 30px;
   text-align: left;
 }
 
 .divBox5_2 {
   padding-top: 20px;
-  padding-left: 30px;
   text-align: left;
   display: grid;
   grid-template-columns: 447px 439px;
@@ -415,21 +404,9 @@ hr {
 }
 
 .title-div2 {
-  width: 53px;
-  height: 20px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
+  margin: 40px 0px 20px 0px;
+  width: 100%;
   text-align: left;
-  color: #000000;
-  position: absolute;
-  margin-top: 160px;
-  margin-left: 40px;
 }
 
 .storybox {
@@ -439,20 +416,7 @@ hr {
   width: 944px;
   height: 320px;
   border: 1px solid grey;
-  position: absolute;
-  margin-top: 204px;
-  margin-left: 40px;
-  text-align: left;
-}
-
-.storybox2 {
-  display: flex;
-  width: 944px;
-  height: 320px;
-  border: 1px solid grey;
-  position: absolute;
-  margin-top: 204px;
-  margin-left: 40px;
+  position: relative;
   text-align: left;
 }
 
@@ -481,6 +445,7 @@ hr {
 
 .input-form {
   margin-top: 100px;
+  text-align: center;
 }
 
 .divBox8 {
@@ -535,6 +500,7 @@ hr {
   position: absolute;
   width: 218px;
   height: 50px;
+  line-height: 50px;
   background-color: #00a3e0;
   text-align: center;
   border-radius: 10px;
@@ -545,6 +511,7 @@ hr {
 }
 
 .wordblue {
+  font-size: 18px;
   height: 28px;
   background-color: #00a3e0;
   text-align: center;
@@ -552,6 +519,7 @@ hr {
 }
 
 .wordblack {
+  font-size: 18px;
   height: 28px;
   background-color: black;
   text-align: center;
@@ -593,7 +561,7 @@ hr {
   width: 300px;
   height: 50px;
   margin-left: 362px;
-  margin-top: 491px;
+  margin-top: 25px;
   background-color: #00a3e0;
   text-align: center;
   border-radius: 10px;
@@ -605,7 +573,7 @@ hr {
   width: 300px;
   height: 50px;
   margin-left: 672px;
-  margin-top: 491px;
+  margin-top: 25px;
   background-color: #009639;
   text-align: center;
   border-radius: 10px;
@@ -767,7 +735,7 @@ hr {
 
 .container-body-orange {
   width: 1024px;
-  height: fit-content;
+  height: 688px;
   background-color: #ffa300;
   text-align: center;
 }
@@ -785,6 +753,14 @@ hr {
   margin: auto;
   background-color: #ffffff;
   text-align: left;
+}
+
+.container-body-white-center {
+  width: 944px;
+  height: fit-content;
+  margin: auto;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .container-body-blue {
@@ -1015,19 +991,8 @@ hr {
   grid-gap: 10px;
   width: 63px;
   height: 23px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  position: absolute;
-  margin-top: 553px;
-  margin-left: 39px;
+  position: relative;
+  margin-top: 25px;
 }
 
 .arrowtext {
@@ -1037,6 +1002,7 @@ hr {
 }
 
 .popup_pw {
+  text-align: center;
   visibility: hidden;
   z-index: 1;
   margin: auto;
@@ -1082,7 +1048,6 @@ hr {
 }
 
 .pointer {
-  margin-left: 25px;
   position: relative;
   margin-top: 27px;
   text-align: left;
@@ -1090,10 +1055,10 @@ hr {
 
 .abc_list {
   width: 944px;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 97px;
+  margin-top: 58px;
   display: flex;
   justify-content: space-between;
 }
@@ -1102,19 +1067,20 @@ hr {
   border: 1px solid grey;
   width: 944px;
   height: 324px;
-  position: absolute;
-  margin-top: 142px;
+  position: relative;
+  margin-top: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-evenly;
 }
 
-.box {
+.alphabet_box .box {
   width: 300px;
   height: 300px;
   border: 1px solid grey;
   margin-top: 12px;
+  text-align: center;
 }
 
 .item {
@@ -1138,21 +1104,6 @@ hr {
   height: 233px;
 }
 
-.wordbox {
-  width: 100%;
-  height: 162px;
-  border: 1px solid grey;
-}
-
-.wordbox div {
-  font-weight: bold;
-  font-size: 24px;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .boxdescription {
   width: 100%;
   height: 56px;
@@ -1166,14 +1117,29 @@ hr {
   height: 268px;
 }
 
-.wordbox2 {
+.divBox22 {
+  width: 100%;
+  height: 162px;
+  border: 1px solid grey;
+}
+
+.divBox22 div {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divBox23 {
   width: 100%;
   width: 284px;
   height: 158px;
   border: 1px solid grey;
 }
 
-.wordbox3 {
+.divBox25 {
   width: 784px;
   height: 277px;
   position: absolute;
@@ -1182,17 +1148,13 @@ hr {
   transform: translate(-50%, -50%);
   width: 784px;
   height: 277px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: normal;
   text-align: justify;
-  color: #000000;
   overflow: hidden;
+}
+
+.wordmeaning {
+  line-height: 1.4;
 }
 
 .transparent {
@@ -1200,7 +1162,7 @@ hr {
 }
 
 .alivebookparagraph {
-  width: 964px;
+  width: 944px;
   height: 61px;
   margin-top: 46px;
   text-align: left;
@@ -1300,16 +1262,8 @@ hr {
 .boxtitle {
   width: 53px;
   height: 20px;
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: normal;
   text-align: left;
-  color: #000000;
   margin-top: 11px;
 }
 
