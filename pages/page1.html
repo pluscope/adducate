@@ -1,14 +1,13 @@
-<meta charset="utf-8"></meta>
+<meta charset="utf-8">
+</meta>
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </meta>
 
 <title>Adducate Web App</title>
 
-<link href="../style.css"  rel="stylesheet"></link>
-
+<link href="../style.css" rel="stylesheet">
+</link>
 
 <!-- body start -->
 
@@ -20,9 +19,7 @@
 
     <div class="container-header">
       <div class="log">
-        <img
-          src="../img/logo_header.png"
-          srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x"/>
+        <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
       </div>
 
       <div class="menu">
@@ -35,26 +32,47 @@
 
           <li class="menuLiBlue"><a>Download</a></li>
 
-          <li class="menuLiSignIn"><a>Sign in</a></li>
+          <li class="menuLiSignIn" onclick="myFunction()"><a>Sign in</a></li>
         </ul>
       </div>
+      <div class="popup">
+        <input class="popup_textbox1" type="text" placeholder="ID" />
+        <input class="popup_textbox2" type="text" placeholder="PW" />
+        <div class="content">
+          <span class="join"><a href="#">Join</a></span>
+          <span class="id_pw"><a href="#">ID/PW</a></span>
+          <span class="ok"><a href="#">OK</a></span>
+        </div>
+      </div>
+
+      <script>
+        function myFunction() {
+          var popup = document.getElementsByClassName("popup");
+          if(popup[0].style.visibility == "visible")
+            popup[0].style.visibility = "hidden";
+          else {
+            popup[0].style.visibility = "visible";
+          }
+        }
+      </script>
+
     </div>
 
     <!-- container-body 필수 -->
-	<div class="container-body">
+	  <div class="container-body">
 	    <div class="container-body-orange">
 	      <div class="mainLogo">
 	        <img
 	          src="../img/logo_content.png"
 	          srcset="../img/logo_content@2x.png 2x,../img/logo_content@3x.png 3x"/>
 	      </div>
-	
-	      <div class="mainText">
+
+	      <div class="divBox1 textDefault">
 	        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, mi quis finibus
 	        venenatis, est velit congue odio, at pellentesque odio mauris vel nulla. Vestibulum
 	        venenatis tempus facilisis. Vivamus eu malesuada sapien.
 	      </div>
-	
+
 	      <div class="mainDownload"><span>Download</span></div>
 	    </div>
 	  </div>

@@ -21,7 +21,7 @@
 
       <div class="container-header">
      
-      <form method="GET" id="fom" name="fom" action="body.php">
+      <form method="POST" id="fom" name="fom" action="body.php">
 			<input type="hidden" id="pageUrl" name="pageUrl"  />
 			<input type="hidden" id="s_userNm" name="s_userNm"/>
 			<input type="hidden" id="s_userPass" name="s_userPass" />
@@ -36,12 +36,12 @@
 		      
      
       <div class="log">
-        <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" onClick="location.href='/index.php'"/>
+        <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
       </div>
 	
       <div class="menu">
         <ul class="menuUl">
-          <li class="menuLi" onClick="location.href='body.php?pageUrl=page5.html'" ><a>Class</a></li>
+          <li class="menuLi"><a>Class</a></li>
 
           <li class="menuLi"><a>Team</a></li>
 
@@ -50,7 +50,7 @@
           <li class="menuLiBlue"><a>Download</a></li>
 			
           <li class="menuLiSignIn" onclick="myFunction()" id="loginIn"><a>Sign in</a></li>
-          <li class="menuLiSignIn" onclick="myFunction1()" style="display: none" id="loginOut"><a></a></li>
+          <li class="menuLiID" onclick="myFunction1()" style="display: none" id="loginOut"><a></a></li>
           
         </ul>
       </div>
@@ -59,11 +59,11 @@
 	        <input class="textbox2" type="password" placeholder="PW"  id="m_pass"/>
 	        <div class="content">
 	          <span class="join"><a href="body.php?pageUrl=page8.html">Join</a></span>
-	          <span class="id_pw"><a href="body.php?pageUrl=page18.html">ID/PW</a></span>
+	          <span class="id_pw"><a href="body.php?pageUrl=page18.html">Find ID/PW</a></span>
 	          <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
 	        </div>
       </div>
-      <div class="popup_account">  
+      <div class="popup_account" style="position: absolute;margin-top:65px" >  
 
          <div class="content_account">
 	          <span class="join"><a href="body.php?pageUrl=page20.html">My class</a></span>
