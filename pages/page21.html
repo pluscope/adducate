@@ -6,8 +6,8 @@
 
 <title>Adducate Web App</title>
 
-<link href="../style.css" rel="stylesheet"></link>
-<script src="../script.js"></script>
+<link href="../style.css" rel="stylesheet">
+</link>
 
 <!-- body start -->
 
@@ -35,66 +35,65 @@
       </div>
     </div>
 
-    <div class="container-body container-expand">
+    <div class="container-body">
       <div class="Background_white" style="height:630px;">
         <div class="pointer"><span>Class</span><span>>ABC</span></div>
           <div class="abc_list">
-          <span onclick="moveMp('a')">a</span>
+          <span onclick="moveMp('a',1)">a</span>
 
-          <span onclick="moveMp('b')">b</span>
+          <span onclick="moveMp('b',1)">b</span>
 
-          <span onclick="moveMp('c')">c</span>
+          <span onclick="moveMp('c',1)">c</span>
 
-          <span onclick="moveMp('d')">d</span>
+          <span onclick="moveMp('d',1)">d</span>
 
-          <span onclick="moveMp('e')">e</span>
+          <span onclick="moveMp('e',1)">e</span>
 
-          <span onclick="moveMp('f')">f</span>
+          <span onclick="moveMp('f',1)">f</span>
 
-          <span onclick="moveMp('g')">g</span>
+          <span onclick="moveMp('g',1)">g</span>
 
-          <span onclick="moveMp('h')">h</span>
+          <span onclick="moveMp('h',1)">h</span>
 
-          <span onclick="moveMp('i')">i</span>
+          <span onclick="moveMp('i',1)">i</span>
 
-          <span onclick="moveMp('j')">j</span>
+          <span onclick="moveMp('j',1)">j</span>
 
-          <span onclick="moveMp('k')">k</span>
+          <span onclick="moveMp('k',1)">k</span>
 
-          <span onclick="moveMp('l')">l</span>
+          <span onclick="moveMp('l',1)">l</span>
 
-          <span onclick="moveMp('m')">m</span>
+          <span onclick="moveMp('m',1)">m</span>
 
-          <span onclick="moveMp('n')">n</span>
+          <span onclick="moveMp('n',1)">n</span>
 
-          <span onclick="moveMp('o')">o</span>
+          <span onclick="moveMp('o',1)">o</span>
 
-          <span onclick="moveMp('p')">p</span>
+          <span onclick="moveMp('p',1)">p</span>
 
-          <span onclick="moveMp('q')">q</span>
+          <span onclick="moveMp('q',1)">q</span>
 
-          <span onclick="moveMp('r')">r</span>
+          <span onclick="moveMp('r',1)">r</span>
 
-          <span onclick="moveMp('s')">s</span>
+          <span onclick="moveMp('s',1)">s</span>
 
-          <span onclick="moveMp('t')">t</span>
+          <span onclick="moveMp('t',1)">t</span>
 
-          <span onclick="moveMp('u')">u</span>
+          <span onclick="moveMp('u',1)">u</span>
 
-          <span onclick="moveMp('v')">v</span>
+          <span onclick="moveMp('v',1)">v</span>
 
-          <span onclick="moveMp('w')">w</span>
+          <span onclick="moveMp('w',1)">w</span>
 
-          <span onclick="moveMp('x')">x</span>
+          <span onclick="moveMp('x',1)">x</span>
 
-          <span onclick="moveMp('y')">y</span>
+          <span onclick="moveMp('y',1)">y</span>
 
-          <span onclick="moveMp('z')">z</span>
+          <span onclick="moveMp('z',1)">z</span>
         </div>
         <div class="alphabet_box">
           <div class="box">
-            <img src="../img/a.png" srcset="../img/a@2x.png 2x,
-                 img/a@3x.png 3x" class="item">
+              <span id="abcFont" class="ABC-font">a</span>
           </div>
           <div class="box">
            
@@ -103,14 +102,23 @@
 	   	  </video>
           </div>
           <div class="box">
-            <img src="../img/apple.png" srcset="../img/apple@2x.png 2x,
-                 img/apple@3x.png 3x" class="item">
+            <img id="move_img" src="../img/apple.png" srcset="../img/apple@2x.png 2x, img/apple@3x.png 3x" class="item" width="300px" height="300px">
           </div>
+          
+        
+
         </div>
-        <div class="replay"><span class="textDefault whitetext bold">Replay</span></div>
-        <div class="sound"><span class="textDefault whitetext bold">Sound</span></div>
+          <div class="replay"><span class="textDefault-white f37" onclick="moveMp('',2)">Replay</span></div>
+	      <div class="sound"><span class="textDefault-white f37" onclick="moveMp('',2)">Sound</span>
+
+        
+        </div>
   	 </div>
+<<<<<<< HEAD
        <div class="next"><span class="textDefault bold">Next</span></div>
+=======
+          <div class="next"><span class="textDefault f37" onclick="goUrl('page22.html')">Next</span></div>
+>>>>>>> 9e571b37ee322f34c90f7143b2ff01f21919189d
     
     </div>
   </div>

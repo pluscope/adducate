@@ -1,4 +1,4 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "1", "test");
+$conn = mysqli_connect("localhost", "root", "1", "adducate");
 
 ?>

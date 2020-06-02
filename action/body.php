@@ -3,25 +3,22 @@ include_once($_SERVER["DOCUMENT_ROOT"]."/header_config.php");
 
 $_pageUrl =  isset($_GET["pageUrl"]) ? $_GET["pageUrl"]:"" ; //화면 명
 
-$_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
-
-
 if( $_pageUrl == ""){
-    $_pageUrl =  isset($_GET["pageUrl"]) ? $_GET["pageUrl"]:"" ; //화면 명
+    $_pageUrl =  isset($_POST["pageUrl"]) ? $_POST["pageUrl"]:"22222" ; //화면 명
 }
 
 
 
-$_userNm =  isset($_GET["s_userNm"]) ? $_GET["s_userNm"]:"";
-$_userPass =  isset($_GET["s_userPass"]) ? $_GET["s_userPass"]:"";
-$_userSex =  isset($_GET["s_userSexs"]) ? $_GET["s_userSexs"]:"";
-$_userContry =  isset($_GET["s_userContry"]) ? $_GET["s_userContry"]:"";
+$_userNm =  isset($_POST["s_userNm"]) ? $_POST["s_userNm"]:"";
+$_userPass =  isset($_POST["s_userPass"]) ? $_POST["s_userPass"]:"";
+$_userSex =  isset($_POST["s_userSexs"]) ? $_POST["s_userSexs"]:"";
+$_userContry =  isset($_POST["s_userContry"]) ? $_POST["s_userContry"]:"";
 
-$_userMonth =  isset($_GET["s_userMonth"]) ? $_GET["s_userMonth"]:"";
-$_userYear =  isset($_GET["s_userYear"]) ? $_GET["s_userYear"]:"";
+$_userMonth =  isset($_POST["s_userMonth"]) ? $_POST["s_userMonth"]:"";
+$_userYear =  isset($_POST["s_userYear"]) ? $_POST["s_userYear"]:"";
 
-$_userEmail =  isset($_GET["s_userEmail"]) ? $_GET["s_userEmail"]:"";
-$_userEmailChk =  isset($_GET["s_userEmailChk"]) ? $_GET["s_userEmailChk"]:"";
+$_userEmail =  isset($_POST["s_userEmail"]) ? $_POST["s_userEmail"]:"";
+$_userEmailChk =  isset($_POST["s_userEmailChk"]) ? $_POST["s_userEmailChk"]:"";
 
 ?>
 <!DOCTYPE html>
@@ -30,20 +27,15 @@ $_userEmailChk =  isset($_GET["s_userEmailChk"]) ? $_GET["s_userEmailChk"]:"";
 <head>
 <title>Adducate Web App</title>
 <link href="style.css" rel="stylesheet"> </link>
-<link href="/stylesheets/menu.css" rel="stylesheet"></link>
 
 <script>
-var logSession = "<?= $_loginYn ?>";
-//영상 플레이용 키
-var playVal = "a";
-var playCnt = 2;
-
 $(document).ready( function() {      
 	var pageList = ["menu.html","<?php echo $_pageUrl?>"];
 	
 	for( var i=0; i < pageList.length; i++ ){
 		viewHtml( pageList[i] );
 	}
+
 
 	$("#pageUrl").val("<?php echo $_pageUrl;?>");
 	$("#s_userNm").val("<?php echo $_userNm;?>");
@@ -54,52 +46,10 @@ $(document).ready( function() {
 	$("#s_userYear").val("<?php echo $_userYear;?>");
 	$("#s_userEmail").val("<?php echo $_userEmail;?>");
 	$("#s_userEmailChk").val("<?php echo $_userEmailChk;?>");
-
-	if( pageList[1] == "page10.html" ){
-		var str = "";
-		for( var i=0; i < isoCode.length; i++  ){
-			str += "<option value="+isoCode[i][1]+">"+isoCode[i][0]+"</option>";
-		}
-		$("#uContry").html(str);
-		
-	}
-
-	if( pageList[1] == "page11.html" ){
-		var str = "<option>Month</option>";
-		for( var i=0; i < dMonth.length; i++  ){
-			str += "<option value="+dMonth[i][1]+">"+dMonth[i][0]+"</option>";
-		}
-		$("#uMonth").html(str);
-
-		str = "";
-		for( var i=iDate.getFullYear(); i > 2000 ; i--  ){
-			str += "<option value="+i+">"+i+"</option>";
-		}
-		$("#uYear").html(str);
-	}
-
-	
-	
-	if( pageList[1] == "page20.html" ){
-		b_list( 'fom',fn_abc );
-	}
-
-	if( pageList[1] == "page13.html" ){
-		$("#loginId").html($("#s_userPass").val());
-	}
-		
-	if( pageList[1] == "page21.html" ){
-		document.getElementById('move_video').addEventListener('ended', function(){
-			playLoadCheck();
-		});
-	}
-	loginYn();
-
 }); 
 
 
 function viewHtml( var1 ){
-	var iDate = new Date();
 	$.ajax({
 	    type : "GET", 
 	    url : "pages/"+var1,
@@ -121,11 +71,11 @@ function viewHtml( var1 ){
 	     
 	});
 
+	if( var1 == "page20.html" ){
+		b_list( 'fom',fn_abc );
+	}
 }
 
-
-
-	
 //abc 항목 리스트 불러오기
 function fn_abc(data){
 	var abcText = "";
@@ -185,16 +135,6 @@ function fn_abc(data){
 
 //패스워드 체크
 function passCheck(var1){
-
-	if( $("input:checkbox[id='priChk']").is(":checked") == false ){
-		alert(" error : Privacy & Terms .. checked ");
-		return false;
-	}
-	if( $("#userPass").val().length < 4 ){
-		alert(" error :The password is more than four digits. ");
-		return false;
-	}
-
 	if($("#userPass").val() != $("#userPass1").val()){
 		alert( "Password Error." );
 	}else{
@@ -233,13 +173,11 @@ function yearMonths( var1 ){
 }
 
 //이메일
-function email1( var1 ){
-
+function email( var1 ){
 	$("#s_userEmail").val( $("#uEmail").val() );
 	$("#s_userEmailChk").val( $("#uEmailChk").val() );
 
 	login_insert('fom');
-
 	goUrl(var1);
 }
 
@@ -247,6 +185,7 @@ function email1( var1 ){
 //페이지 이동
 function goUrl(var1){
 	$("#pageUrl").val( var1 );
+	alert(  var1); 
 	$("#fom").submit();
 }
 
@@ -260,74 +199,12 @@ function goLogin(){
 	login('fom');
 }
 
-
-var move_img = "/content/01_abc/Alphabet_Images/";
-var move_sound = "/content/01_abc/Alphabet_Image_TTS/";
-var move_url = "/content/01_abc/Alphabet_Motion_300X300px_200419/";
-//글자 클릭
-function moveMp(var1,var2){
-	
-//리플레이 구분
-	if( var2 == 1 ){
-		playVal = var1;
-	}
-	$("#abcFont").html(playVal);
-	playCnt=2;
-
-	var move_src = "";
-	var move_sound_url = "";
-	for( var i = 0; i < moveArray.length; i++ ){
-		if( moveArray[i][0] == playVal ){
-			move_src = move_img+moveArray[i][1];
-			move_sound_url = move_sound+moveArray[i][2];
-			break;
-		}
-	}
-	$("#move_img").attr("src",move_src);
-//영상 변경
-	$("#movie_src").attr("src", move_url+playVal+"_Motion.mp4");
-
-	$("#audio").attr("src", move_sound_url);
-	audioPlay();
+function moveMp(var1){
+	var move_url = "/content/01_abc/Alphabet_Motion_300X300px_200419/";
+	$("#movie_src").attr("src", move_url+var1+"_Motion.mp4");
 	$("#move_video").load();
 	$("#move_video").trigger("play");
-
 	
-	
-}
-
-
-
-function playLoadCheck(){
-
-	
-	if( playCnt < 5 ){
-		var ii = 1;
-		for( var i = 0; i < moveArray.length; i++ ){
-			if( moveArray[i][0] == playVal ){
-				if( ii == playCnt ){
-					$("#move_img").attr("src",move_img+moveArray[i][1]);
-					$("#audio").attr("src",move_sound+moveArray[i][2]);
-					$("#move_video").trigger("play");
-					audioPlay();
-					playCnt++;
-					break;
-				}else{
-					ii++;
-				}
-			}
-		}
-	}else{
-		playCnt=2;
-	}
-}
-
-
-function audioPlay(){
-
-	var aud = document.getElementById("audio");
-	aud.play();
-
 }
 
 </script>
@@ -335,9 +212,9 @@ function audioPlay(){
 <body>
 
 
-<div id="temp1" style="display: none"> </div>  
-   	<audio id="audio" src="/content/01_abc/Alphabet_Image_TTS/ant--_us_1.mp3">	</audio>
-	
+<div id="temp1" style="display: none"> </div>
+
+
 	<div class="body">
 	  	<div class="container" id="container-menu"></div>
 	    <div class="container" id="container-page"></div>

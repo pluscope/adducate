@@ -1,0 +1,148 @@
+.leftPath6 {
+  width: 203px;
+  height: 324px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 1;
+  float: left;
+  position: absolute;
+  margin-left: 101px;
+  margin-top: 142px;
+}
+
+.leftPath5 {
+  width: 162px;
+  height: 324px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 2;
+  float: left;
+  position: absolute;
+  margin-left: 129px;
+  margin-top: 142px;
+}
+
+.leftPath4 {
+  width: 121px;
+  height: 324px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 3;
+  float: left;
+  position: absolute;
+  margin-left: 185px;
+  margin-top: 142px;
+}
+
+.mainPath {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  float: left;
+  z-index: 4;
+  position: absolute;
+  margin-left: 269px;
+  margin-top: 142px;
+}
+
+
+.rightPath3 {
+  width: 203px;
+  height: 325px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 3;
+  float: left;
+  position: absolute;
+  margin-left: 636px;
+  margin-top: 142px;
+}
+
+.rightPath2 {
+  width: 162px;
+  height: 325px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 2;
+  float: left;
+  position: absolute;
+  margin-left: 733px;
+  margin-top: 142px;
+}
+
+.rightPath1 {
+  width: 121px;
+  height: 325px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: inherit;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: contain;
+  z-index: 1;
+  float: left;
+  position: absolute;
+  margin-left: 802px;
+  margin-top: 142px;
+}
+
+.mainContent {
+  width: 210px;
+  height: 58px;
+  object-fit: contain;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}

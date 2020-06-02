@@ -26,6 +26,11 @@ function menuLogin(){
 	login('fom');
 }
 
+function sub_Login(){
+	$("#s_type").val("select") ;
+	login('fom');
+}
+
 /**
  * 회원가입
  * var1 form id
@@ -44,7 +49,7 @@ function login_insert(var1){
 		        alert("통신실패!!!!");
 		    },
 		    success : function(data){
-		    	alert(data);
+		    //	alert(data);
 		    }
 		     
 	});
@@ -91,33 +96,42 @@ function b_image_file( var0,var1 ){
  
 
     datas.append("B_FILE", $( '#B_FILE' )[0].files[0] );
-    
-    $.ajax({
-        url: "/action/action_file.php", // url where upload the image
-        contentType: 'multipart/form-data', 
-        type: 'POST',
-        data: datas,   
-        async : false,
-        dataType: 'json',     
-        success: function (data) {     
-        	imgName = data.fileTemp;
 
-        	if( var0 == "I" ){
-        		b_write( var1 ,imgName);
-        	}else{
-        		b_update( var1 ,imgName);
-        	}
-        	
-             
-        },
-        error : function (jqXHR, textStatus, errorThrown) {
-            alert('ERRORS: ' + textStatus);
-        },
-        cache: false,
-        contentType: false,
-        processData: false
-    }); 
-    
+   if( $( '#B_FILE' )[0].files[0] == null || $( '#B_FILE' )[0].files[0] == "null"){
+
+	   	if( var0 == "I" ){
+	   		b_write( var1 ,"");
+	   	}else{
+	   		b_update( var1 ,"");
+	   	}
+   	
+   }else{
+	    $.ajax({
+	        url: "/action/action_file.php", // url where upload the image
+	        contentType: 'multipart/form-data', 
+	        type: 'POST',
+	        data: datas,   
+	        async : false,
+	        dataType: 'json',     
+	        success: function (data) {     
+	        	imgName = data.fileTemp;
+	
+	        	if( var0 == "I" ){
+	        		b_write( var1 ,imgName);
+	        	}else{
+	        		b_update( var1 ,imgName);
+	        	}
+	        	
+	             
+	        },
+	        error : function (jqXHR, textStatus, errorThrown) {
+	            alert('image ERRORS: ' + textStatus);
+	        },
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    }); 
+   }
 }
 
 /**
@@ -139,7 +153,7 @@ function b_write( var1 ,var2){
                  alert( "등록되었습니다."+data );                
             },
             error : function (jqXHR, textStatus, errorThrown) {
-                alert('ERRORS: ' + textStatus);
+                alert('insert ERRORS: ' + textStatus);
             },
         });         
 }
