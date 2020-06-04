@@ -409,9 +409,16 @@ hr {
   text-align: left;
 }
 
+.sentence-div {
+  position: absolute;
+  width: 340px;
+  text-align: center;
+  top: 25px;
+}
+
 .storybox {
   display: grid;
-  grid-template-columns: 584px auto;
+  grid-template-columns: 584px 270px;
   grid-gap: 16px;
   width: 944px;
   height: 320px;
@@ -420,27 +427,69 @@ hr {
   text-align: left;
 }
 
+.creationbox {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 584px 360px;
+  grid-gap: 16px;
+  width: 944px;
+  height: 320px;
+  border: 1px solid grey;
+  position: relative;
+  text-align: left;
+}
+
+.black_background {
+  width: 584px;
+  height: 320px;
+  position: absolute;
+  background-color: black;
+  opacity: 50%;
+}
+
+.replay_icon {
+  position: absolute;
+  width: 584px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+}
+.alivebox {
+  display: grid;
+  grid-template-columns: auto 320px;
+  width: 944px;
+  height: 320px;
+  border: 1px solid grey;
+  position: relative;
+  text-align: center;
+}
+
 .image {
   width: 584px;
   height: 320px;
 }
 
+.alivebox .image {
+  width: 320px;
+  height: 320px;
+}
+
 .storywordbox {
-  width: 251px;
-  height: 178px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  object-fit: contain;
-  font-family: NotoSansCJKkr;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.alivewordbox {
+  margin-left: 67px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .input-form {
@@ -542,6 +591,14 @@ hr {
 
 .next2 {
   top: 730px;
+}
+
+.next3 {
+  top: 655px;
+}
+
+.next4 {
+  top: 555px;
 }
 
 .storylist {
@@ -990,7 +1047,6 @@ hr {
   grid-template-columns: 229px 229px 229px 229px;
   grid-gap: 10px;
   width: 63px;
-  height: 23px;
   position: relative;
   margin-top: 25px;
 }
@@ -1335,7 +1391,7 @@ hr {
   border-bottom-color: #fff;
 }
 
-.popup_textbox1 {
+.popup .textbox1 {
   margin-left: 25px;
   margin-top: 21px;
   padding-left: 10px;
@@ -1343,7 +1399,7 @@ hr {
   height: 32px;
 }
 
-.popup_textbox2 {
+.popup .textbox2 {
   margin-left: 25px;
   margin-top: 15px;
   padding-left: 10px;
