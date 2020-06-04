@@ -170,7 +170,6 @@
   padding-left: 79px;
   padding-top: 50px;
   width: 867px;
-  height: 98px;
 }
 
 .mainDownload {
@@ -455,8 +454,6 @@ hr {
   transform: translateY(-50%);
 }
 
-
-}
 .alivebox {
   display: grid;
   grid-template-columns: auto 320px;
@@ -792,7 +789,7 @@ hr {
 
 .container-body-orange {
   width: 1024px;
-  height: 688px;
+  height: 100%;
   background-color: #ffa300;
   text-align: center;
 }

@@ -37,3 +37,12 @@ function moveright() {
     push[3].style.transform = str;
   }
 }
+
+function popup() {
+  var popup = document.getElementsByClassName('popup');
+  if (popup[0].style.visibility == 'visible')
+    popup[0].style.visibility = 'hidden';
+  else {
+    popup[0].style.visibility = 'visible';
+  }
+}

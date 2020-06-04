@@ -8,6 +8,7 @@
 
 <link href="../style.css" rel="stylesheet">
 </link>
+<script src="../script.js"></script>
 
 <!-- body start -->
 
@@ -32,7 +33,7 @@
 
           <li class="menuLiBlue"><a>Download</a></li>
 
-          <li class="menuLiSignIn" onclick="myFunction()"><a>Sign in</a></li>
+          <li class="menuLiSignIn" onclick="popup()"><a>Sign in</a></li>
         </ul>
       </div>
       <div class="popup">
@@ -45,21 +46,10 @@
         </div>
       </div>
 
-      <script>
-        function myFunction() {
-          var popup = document.getElementsByClassName("popup");
-          if(popup[0].style.visibility == "visible")
-            popup[0].style.visibility = "hidden";
-          else {
-            popup[0].style.visibility = "visible";
-          }
-        }
-      </script>
-
     </div>
 
     <!-- container-body 필수 -->
-	  <div class="container-body">
+	  <div class="container-body container-expand">
 	    <div class="container-body-orange">
 	      <div class="mainLogo">
 	        <img
