@@ -261,7 +261,7 @@ var isoCode = [
 	['Portugal','PT'],
 	['Puerto Rico','PR'],
 	['Qatar','QA'],
-	['R챕union','RE'],
+	['Reunion','RE'],
 	['Romania','RO'],
 	['Russian Federation','RU'],
 	['Rwanda','RW'],
