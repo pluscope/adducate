@@ -304,7 +304,7 @@
 
 .divBox4 div {
   width: 341px;
-  height: 300px;
+  height: 350px;
   float: left;
   text-align: center;
   line-height: 300px;
@@ -825,7 +825,7 @@ hr {
 .container-body-blue {
   width: 1024px;
   height: 100%;
-  padding-bottom: 50px;
+  padding-top: 50px;
   background-color: #00a3e0;
   text-align: center;
 }
