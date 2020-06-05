@@ -719,7 +719,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: white;
+  background-color: rgb(248, 248, 248);
   left: 176px;
   top: 10px;
 }
@@ -743,7 +743,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: white;
+  background-color: rgb(248, 248, 248);
   left: 176px;
   top: 10px;
 }
@@ -801,6 +801,7 @@ hr {
 .container-body-white {
   width: 1024px;
   height: fit-content;
+  margin-bottom: 77px;
   background-color: #ffffff;
   text-align: center;
 }
@@ -824,6 +825,7 @@ hr {
 .container-body-blue {
   width: 1024px;
   height: 100%;
+  padding-bottom: 50px;
   background-color: #00a3e0;
   text-align: center;
 }
@@ -1219,7 +1221,7 @@ hr {
 }
 
 .alivebookparagraph {
-  width: 944px;
+  width: 900px;
   height: 61px;
   margin-top: 46px;
   text-align: left;
