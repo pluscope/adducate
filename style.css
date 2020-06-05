@@ -43,6 +43,10 @@
   line-height: 1.7;
 }
 
+.f18 {
+  font-size: 18px;
+}
+
 .f36 {
   font-size: 36px;
 }
@@ -303,7 +307,7 @@
   height: 300px;
   float: left;
   text-align: center;
-  padding-top: 30px;
+  line-height: 300px;
 }
 
 .orangeBox {
@@ -311,7 +315,7 @@
 }
 
 .blueBox {
-  background-color: #419bf9;
+  background-color: #00a3e0;
 }
 
 .greenBox {
