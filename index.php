@@ -7,7 +7,7 @@ $_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
 
 <title>Adducate Web App</title>
 <link href="style.css" rel="stylesheet"> </link>
-<link href="/stylesheets/menu.css" rel="stylesheet"></link>
+
 
 
 

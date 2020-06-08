@@ -1,11 +1,21 @@
-@font-face {
-  font-family: 'NotoSansCJKkr';
-  src: url('fonts/NotoSansCJKkr-Regular.otf') format('opentype');
-}
+body {font-family:'NotoSansKR'}
 
 @font-faceabc {
   font-family: 'Muli-Regular';
   src: url('fonts/Muli-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("fonts/NotoSans-Regular.ttf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("fonts/NotoSans-Bold.ttf") format("opentype");
+  unicode-range: U+AC00-U+D7A3;
+  font-style: normal;
 }
 
 @media (max-width: 900px) {
@@ -26,7 +36,6 @@
 
 .textDefault {
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-stretch: normal;
   font-style: normal;
   font-size: 24px;
@@ -37,6 +46,7 @@
 
 .bold {
   font-weight: bold;
+  
 }
 
 .l17 {
@@ -113,7 +123,6 @@
 .menuLi a {
   line-height: 80px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -136,7 +145,6 @@
 .menuLiBlue a {
   line-height: 60px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -156,7 +164,6 @@
   text-decoration-line: none;
   line-height: 80px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -213,7 +220,6 @@
 .Lorem-text-overflow {
   height: 62px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: 300;
   font-stretch: normal;
@@ -236,7 +242,6 @@
 }
 
 .Lorem-text-overflow2 span {
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -262,7 +267,6 @@
 }
 
 .Lorem-text-overflow span {
-  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -383,7 +387,6 @@ hr {
 
 .spanColor-orange {
   object-fit: contain;
-  font-family: NotoSansCJKkr;
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -968,7 +971,7 @@ hr {
   width: 210px;
   height: 58px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1233,7 +1236,7 @@ hr {
 .wordmeaning2 {
   height: 25px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1251,7 +1254,7 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -1271,7 +1274,7 @@ hr {
   width: 409px;
   height: 20px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1293,7 +1296,7 @@ hr {
   width: 100%;
   height: 20px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1364,7 +1367,7 @@ hr {
   width: 116px;
   height: 20px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -1423,7 +1426,7 @@ hr {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1439,7 +1442,7 @@ hr {
   width: 77px;
   height: 15px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1455,7 +1458,7 @@ hr {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1500,7 +1503,7 @@ hr {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1516,7 +1519,7 @@ hr {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
