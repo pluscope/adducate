@@ -10,7 +10,6 @@ $_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
 
 
 
-
 <script>
 
 var logSession = '<?= $_loginYn ?>';

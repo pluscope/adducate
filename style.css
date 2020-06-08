@@ -1,6 +1,8 @@
-body {font-family:'NotoSansKR'}
+body {
+	font-family:'NotoSansKR',sans-serif;
+	}
 
-@font-faceabc {
+@font-face {
   font-family: 'Muli-Regular';
   src: url('fonts/Muli-Regular.ttf') format('opentype');
 }
@@ -14,7 +16,7 @@ body {font-family:'NotoSansKR'}
 @font-face {
   font-family: "NotoSansKR";
   src: url("fonts/NotoSans-Bold.ttf") format("opentype");
-  unicode-range: U+AC00-U+D7A3;
+ unicode-range: U+0020-007E;
   font-style: normal;
 }
 
