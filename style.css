@@ -1062,6 +1062,7 @@ hr {
 
 .arrowtext {
   position: relative;
+  font-weight: bold;
   top: -48px;
   left: 15px;
 }
