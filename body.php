@@ -244,12 +244,6 @@ function email1( var1 ){
 }
 
 
-//페이지 이동
-function goUrl(var1){
-	$("#pageUrl").val( var1 );
-	$("#fom").submit();
-}
-
 //로그인 찾기
 function goLogin(){
 	$("#s_type").val("select");

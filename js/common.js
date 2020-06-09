@@ -1,4 +1,10 @@
 
+//페이지 이동
+function goUrl(var1){
+	$("#pageUrl").val( var1 );
+	$("#fom").submit();
+}
+
 /**
  * 게시판 상세
  * var1 form 이름

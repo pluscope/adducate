@@ -122,7 +122,7 @@ body {
   margin-left: 25px;
 }
 
-.menuLi a {
+.menuLi span {
   line-height: 80px;
   object-fit: contain;
   font-size: 24px;
@@ -132,7 +132,7 @@ body {
   color: #000000;
   letter-spacing: normal;
   text-align: center;
-  color: #000000;
+  cursor: pointer;
 }
 
 .menuLiBlue {
@@ -142,9 +142,10 @@ body {
   background-color: #00a3e0;
   width: 160px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
-.menuLiBlue a {
+.menuLiBlue span {
   line-height: 60px;
   object-fit: contain;
   font-size: 24px;

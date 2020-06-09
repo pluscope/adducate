@@ -21,7 +21,7 @@
 
       <div class="container-header">
      
-      <form method="POST" id="fom" name="fom" action="body.php">
+      <form method="get" id="fom" name="fom" action="body.php">
 			<input type="hidden" id="pageUrl" name="pageUrl"  />
 			<input type="hidden" id="s_userNm" name="s_userNm"/>
 			<input type="hidden" id="s_userPass" name="s_userPass" />
@@ -41,13 +41,13 @@
 	
       <div class="menu">
         <ul class="menuUl">
-          <li class="menuLi"><a>Class</a></li>
+          <li class="menuLi"><span onclick="goUrl('page5.html')">Class</span></li>
 
-          <li class="menuLi"><a>Team</a></li>
+          <li class="menuLi"><span >Team</span></li>
 
-          <li class="menuLi"><a>About</a></li>
+          <li class="menuLi"><span onclick="goUrl('page6.html')">About</span></li>
 
-          <li class="menuLiBlue"><a>Download</a></li>
+          <li class="menuLiBlue"><span>Download</span></li>
 			
           <li class="menuLiSignIn" onclick="myFunction()" id="loginIn"><a>Sign in</a></li>
           <li class="menuLiID" onclick="myFunction1()" style="display: none" id="loginOut"><a></a></li>
