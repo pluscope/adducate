@@ -9,7 +9,8 @@ $_varArr = Array(
     "B_LNG"           => isset($_POST["B_LNG"])          ? $_POST["B_LNG"] : "",
     "B_MUL_IMAGE"     => isset($_POST["B_MUL_IMAGE"])    ? $_POST["B_MUL_IMAGE"] : "",
     "B_HOME"          => isset($_POST["B_HOME"])         ? $_POST["B_HOME"] : "",
-    "B_TEL"           => isset($_POST["B_TEL"])          ? $_POST["B_TEL"] : ""
+    "B_TEL"           => isset($_POST["B_TEL"])          ? $_POST["B_TEL"] : "",
+
 );
 
 

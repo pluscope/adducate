@@ -22,7 +22,9 @@ $_userYear =  isset($_GET["s_userYear"]) ? $_GET["s_userYear"]:"";
 
 $_userEmail =  isset($_GET["s_userEmail"]) ? $_GET["s_userEmail"]:"";
 $_userEmailChk =  isset($_GET["s_userEmailChk"]) ? $_GET["s_userEmailChk"]:"";
-
+$_no =  isset($_GET["no"]) ? $_GET["no"]:"";
+$_s_index1 =  isset($_GET["s_index1"]) ? $_GET["s_index1"]:"";
+$_s_index2 =  isset($_GET["s_index2"]) ? $_GET["s_index2"]:"";
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +56,11 @@ $(document).ready( function() {
 	$("#s_userYear").val("<?php echo $_userYear;?>");
 	$("#s_userEmail").val("<?php echo $_userEmail;?>");
 	$("#s_userEmailChk").val("<?php echo $_userEmailChk;?>");
+	$("#s_index1").val("<?php echo $_s_index1;?>");
+	$("#s_index2").val("<?php echo $_s_index2;?>");
 
+	
+	$("#no").val("<?php echo $_no;?>");
 	if( pageList[1] == "page10.html" ){
 		var str = "";
 		for( var i=0; i < isoCode.length; i++  ){
@@ -93,6 +99,32 @@ $(document).ready( function() {
 			playLoadCheck();
 		});
 	}
+
+	if( pageList[1] == "page23.html" ){
+		$("#fn").val("STORY"); //화면 이동시 no는 0으로 한다
+		story_list( 'fom',fn_Story );
+	}
+
+	if( pageList[1] == "page24.html" ){
+		$("#fn").val("STORY"); //화면 이동시 no는 0으로 한다
+		$("#no").val(0); //화면 이동시 no는 0으로 한다
+		story_list( 'fom',fn_Detail );
+	}
+
+	if( pageList[1] == "page25.html" ){
+		$("#fn").val("VOC"); //화면 이동시 no는 0으로 한다
+		$("#no").val( 0 );
+		vo_ct = 0;
+		story_list( 'fom',fn_VoclistData );
+	}
+
+	if( pageList[1] == "page26.html" ){
+		$("#fn").val("VOC"); //화면 이동시 no는 0으로 한다
+		$("#no").val( 0 );
+		vo_ct = 0;
+		story_list( 'fom',fn_VoclistData );
+	}
+	
 	loginYn();
 
 }); 
@@ -284,12 +316,8 @@ function moveMp(var1,var2){
 	$("#audio").attr("src", move_sound_url);
 	audioPlay();
 	$("#move_video").load();
-	$("#move_video").trigger("play");
-
-	
-	
+	$("#move_video").trigger("play");	
 }
-
 
 
 function playLoadCheck(){
@@ -323,6 +351,122 @@ function audioPlay(){
 	aud.play();
 
 }
+
+function fn_Story( data ){
+	$("#viewList").html("");
+	var str = "";
+	for( var i=0; i < data.length; i++ ){
+	
+		str += '<div class="grid-item2" >';
+		str += '<div class="divBox23">';
+		str += "<div><img onclick=goToStoryUrl('"+data[i]["index1"]+"') src=/img/Storybook/"+data[i]["link"]+"/"+data[i]["i_index"]+".jpg width=284 height=158></div>";
+		str += '</div>';
+		str += '<div class="boxtitle textDefault bold">';
+		str += ' Title';
+		str += '</div>';
+		str += '<div class="boxdescription2">';
+		str += data[i]["story_text"];
+		str += '</div>';
+		str += ' </div>';
+	}
+	$("#viewList").html(str)
+	
+}
+
+var stroyList = "";
+function fn_Detail( data ){
+	stroyList = data;
+	fn_StoryDetail();
+}
+
+function fn_StoryDetail(){
+	var index = $("#no").val();
+	$("#viewList").html("");
+	var str = "";
+
+	if( index < 0  ){
+		index = 0;
+	}
+
+	if( index > (stroyList.length-1) ){
+		index = (stroyList.length-1);
+	}
+	
+	$("#story_title").html(stroyList[index]["story_text"]);
+	$("#story_img").attr("src","/img/Storybook/"+stroyList[index]["link"]+"/"+stroyList[index]["i_index"]+".jpg");
+	$("#story_text").html(stroyList[index]["story_text"]+" Lesson "+stroyList[index]["lesson"]);
+}
+
+
+function goToStoryUrl(var1){
+	$("#s_index").val(var1);
+	goUrl("page24.html");
+	
+}
+
+//다음버튼
+function goLeftToClickStory(var1){
+	$("#no").val( Number($("#no").val())-1 );
+	fn_StoryDetail();
+}
+
+//이전버튼
+function goRightToClickStory(var1){
+	$("#no").val( Number($("#no").val())+1 );
+	fn_StoryDetail();
+}
+
+
+var vo_ct = 0;  //클릭 인덱스
+var vo_cnt = 3;
+var vo_ccnt = 0;
+var vocListData = "";
+function fn_VoclistData(data){
+	vocListData = data;
+	fn_Voclist();
+}
+
+
+function fn_Voclist( ){
+	$("#vocList").html("");
+	var str ="";
+	var index = $("#no").val();
+	vo_ccnt = 0;
+
+	if( index  < 0 ){
+		index = 0;
+	}
+	else if(  (index*vo_cnt) >= vocListData.length ){
+		index = index-1;	
+	}
+	
+	for( var i = (index*vo_cnt); i < vocListData.length; i++ ){
+
+		if( vo_ccnt < vo_cnt ){
+        	str +="<div class='word'>"+vocListData[i]["v_list"]+"</div> ";
+        	str +="<div class='wordmeaning'> ";
+        	str += vocListData[i]["v_mng"];
+        	str +=" </div> ";
+        	vo_ccnt++;
+    	}
+	}
+
+	$("#no").val(index);
+	$("#vocList").html(str);
+}
+
+//다음버튼
+function goLeftToClickVoc(){
+	$("#no").val( Number($("#no").val())-1 );
+	fn_Voclist();
+}
+
+//이전버튼
+function goRightToClickVoc(){
+	$("#no").val( Number($("#no").val())+1 );
+	fn_Voclist();
+}
+
 
 </script>
 </head>
