@@ -57,31 +57,30 @@
           <div class="divBox25">
             <div class="word">Fill in the blanks</div>
             <hr>
-            <div class="wordmeaning2">
+            <div class="wordmeaning2" id="vocQue">
               The market is Tumaini’s
-              <img src="../img/blank.png" srcset="../img/blank@2x.png 2x,
-                           ../img/blank@3x.png 3x" class="Path">
+              
               place in her town.
             </div>
-            <div class="wordselections">
+            <div class="wordselections" id="vocQueAnsList">
               <div>market</div>
               <div class="selected">favorite</div>
               <div>errands</div>
               <div>town</div>
             </div>
           </div>
-          <img class="bbtn_left_story" src="../img/scroll-btn(left).png" srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x" />
-          <img class="bbtn_right_story" src="../img/scroll-btn(right).png" srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x" />
+          <img onclick="goLeftToClickVoc1()" class="bbtn_left_story" src="../img/scroll-btn(left).png" srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x" />
+          <img onclick="goRightToClickVoc1()" class="bbtn_right_story" src="../img/scroll-btn(right).png" srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x" />
         </div>
 
         <div class="greenarrows textDefault whitetext">
-          <div class="story">
+          <div class="story" style="cursor: pointer;" onclick="goUrl('page24.html')">
             <img class="arrow" src="../img/grayarrow_front.png" srcset="../img/grayarrow_front@2x.png 2x,
              ../img/grayarrow_front@3x.png 3x" />
             <div class="arrowtext">story</div>
           </div>
 
-          <div class="vocab">
+          <div class="vocab" style="cursor: pointer;" onclick="goUrl('page25.html')">
             <img class="arrow" src="../img/grayarrow_middle.png" srcset="../img/grayarrow_middle@2x.png 2x,
              ../img/grayarrow_middle@3x.png 3x" />
             <div class="arrowtext">Vocab</div>
@@ -93,7 +92,7 @@
             <div class="arrowtext">Vocab Quiz</div>
           </div>
 
-          <div class="Sentence">
+          <div class="Sentence" style="cursor: pointer;" onclick="goUrl('page30.html')">
             <img class="arrow" src="../img/grayarrow_last.png" srcset="../img/grayarrow_last@2x.png 2x,
              ../img/grayarrow_last@3x.png 3x" />
             <div class="arrowtext">Sentence</div>

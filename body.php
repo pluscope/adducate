@@ -122,7 +122,17 @@ $(document).ready( function() {
 		$("#fn").val("VOC"); //화면 이동시 no는 0으로 한다
 		$("#no").val( 0 );
 		vo_ct = 0;
-		story_list( 'fom',fn_VoclistData );
+		story_list( 'fom',fn_VoclistData26 );
+
+		$("#fn").val("VOCLIST"); 
+		story_list( 'fom',fn_VoclistAnswer );
+	}
+
+	if( pageList[1] == "page30.html" ){
+		$("#fn").val("VOC"); //화면 이동시 no는 0으로 한다
+		$("#no").val( 0 );
+		vo_ct = 0;
+		story_list( 'fom',fn_VoclistData30 );
 	}
 	
 	loginYn();
@@ -391,7 +401,7 @@ function fn_StoryDetail(){
 	if( index > (stroyList.length-1) ){
 		index = (stroyList.length-1);
 	}
-	
+
 	$("#story_title").html(stroyList[index]["story_text"]);
 	$("#story_img").attr("src","/img/Storybook/"+stroyList[index]["link"]+"/"+stroyList[index]["i_index"]+".jpg");
 	$("#story_text").html(stroyList[index]["story_text"]+" Lesson "+stroyList[index]["lesson"]);
@@ -421,11 +431,27 @@ var vo_ct = 0;  //클릭 인덱스
 var vo_cnt = 3;
 var vo_ccnt = 0;
 var vocListData = "";
+var vocListAns = "";
 function fn_VoclistData(data){
 	vocListData = data;
 	fn_Voclist();
 }
 
+function fn_VoclistData26(data){
+	vocListData = data;
+	fn_Voclist();
+}
+
+//정답 리스트
+function fn_VoclistAnswer(data){
+	vocListAns = data;
+	fn_Voclist1();
+}
+
+function fn_VoclistData30(data){
+	vocListData = data;
+	fn_Voclist30();
+}
 
 function fn_Voclist( ){
 	$("#vocList").html("");
@@ -465,6 +491,147 @@ function goLeftToClickVoc(){
 function goRightToClickVoc(){
 	$("#no").val( Number($("#no").val())+1 );
 	fn_Voclist();
+}
+
+
+//정답 보기
+function fn_Voclist1( ){
+
+	var index = $("#no").val();
+	
+ 	var rList = vocListAns.slice();
+
+ 	if( index < 0  ){
+		index = 0;
+ 	}
+ 	
+ 	if( index >= (vocListData.length-1) ){
+		index = (vocListData.length-1);
+ 	}
+
+ 	$("#vocQue").html(vocListData[index]["v_mng"]);
+ 	
+ 	//정답 제거
+	for(i=0; i < rList.length; i++ ){
+		if( rList[i]["v_list"] == vocListData[index]["v_list"] ){
+			rList.splice( i,(i+1) );
+		}
+	}
+	//랜점 배열
+	for(i=0; i < vocListAns.length; i++ ){
+		var iint = Math.floor(Math.random() * rList.length);	
+		if( (rList.length) > 3){
+		 	 rList.splice( iint,1 );
+		}
+		
+	}
+
+	var str = "";
+	var iint = Math.floor((Math.random() * rList.length));
+
+	for( var i=0; i < rList.length; i++ ){
+
+		if( iint == i ){
+    		str += "<div class='selected'>";
+    		str += vocListData[index]["v_list"];
+    		str += "</div>"
+		}
+			str += "<div>";
+    		str += rList[i]["v_list"];
+    		str += "</div>"		
+	}
+
+	$("#vocQueAnsList").html( str );
+	$("#no").val(index);
+
+}
+
+//다음버튼
+function goLeftToClickVoc1(){
+	$("#no").val( Number($("#no").val())-1 );
+	fn_Voclist1();
+}
+
+//이전버튼
+function goRightToClickVoc1(){
+	$("#no").val( Number($("#no").val())+1 );
+	fn_Voclist1();
+}
+
+
+//정답 보기
+function fn_Voclist30( ){
+	$("#vocWordList").html( "" );
+	$("#vocWordList1").html( "" );
+	var index = $("#no").val();
+	
+ 	var rList = vocListAns.slice();
+
+ 	if( index < 0  ){
+		index = 0;
+ 	}
+ 	
+ 	if( index >= (vocListData.length-1) ){
+		index = (vocListData.length-1);
+ 	}
+
+	$("#no").val(index);
+
+	$("#vocWordText").html(vocListData[index]["v_sen"]);
+
+	var arList = vocListData[index]["v_sen"].split(" ");
+
+	for (i = arList.length; i; i -= 1) { 
+		var j = Math.floor(Math.random() * i); 
+		var x = arList[i - 1]; 
+		arList[i - 1] = arList[j]; 
+		arList[j] = x; 
+	}
+	
+	var str1 = "";
+	for( var i=0; i < arList.length; i++ ){
+		str1 +="<div class='wordblack1 whitetext'><span class='f18'  onclick='vocAwsCheck(this)'>"+arList[i]+"</span></div>";
+	}
+	
+	$("#vocWordList1").html( str1 );
+}
+
+var vocAwsCheckList = new Array();
+
+var checkIndexId = 0;
+
+function vocAwsCheck(var1){
+	checkIndexId++;
+	var obj = Object();
+	obj.oId = "vc_"+checkIndexId;
+	obj.oText = $(var1).html();
+	vocAwsCheckList.push(obj);	
+	vocAwsCheckView();
+}
+
+function vocAwsCheckDel(var1){
+
+
+	for( var i=0; i < vocAwsCheckList.length; i++ ){
+		if( vocAwsCheckList[i]["oId"] == var1){
+			vocAwsCheckList.splice( i,1 );
+		}	
+		
+	}
+	
+	
+	vocAwsCheckView();
+}
+
+function vocAwsCheckView(var1){
+	checkIndexId++;
+	var obj = Object();
+
+	var str = "";
+	for( var i=0; i < vocAwsCheckList.length; i++ ){
+		str +="<div class='wordblue1 whitetext'><span class='f18' onclick=vocAwsCheckDel('"+vocAwsCheckList[i]['oId']+"')>"+vocAwsCheckList[i]['oText']+"</span></div>";
+	}
+	$("#vocWordList").html( str );
 }
 
 

@@ -28,6 +28,7 @@ if( $fn == "STORY" ){
     $result = mysqli_query($conn,$sql);
     
     $list = array();
+  
     while($row = mysqli_fetch_array($result)){
         array_push($list, array('no'=>$row[0],'index1'=>$row[1],'link'=>$row[2],'book'=>$row[3],'title'=>$row[4],'lesson'=>$row[5],'i_index'=>$row[6],'story_text'=>$row[7] ));
         
@@ -58,6 +59,18 @@ else if( $fn == "VOC" ){
     }
 }
 
+else if( $fn == "VOCLIST" ){
+    $sql = "select voc_list v_list ";
+    $sql    .= " from storybook_word a  ";
+    $sql    .= "   where 1=1 ";
+    
+    
+    $result = mysqli_query($conn,$sql);
+    $list = array();
+    while($row = mysqli_fetch_array($result)){
+        array_push($list, array('v_list'=>$row[0]));
+    }
+}
 echo json_encode($list);
 
 ?>
