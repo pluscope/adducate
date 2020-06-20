@@ -341,9 +341,19 @@
 .divBox5_2 {
   padding-top: 20px;
   text-align: left;
+  display: -ms-grid;
+  -ms-grid-columns: 447px 50px 439px;
   display: grid;
   grid-template-columns: 447px 439px;
   grid-gap: 50px;
+}
+
+.divBox5_2_1 {
+  -ms-grid-column: 1;
+}
+
+.divBox5_2_2 {
+  -ms-grid-column: 3;
 }
 
 .divBox6 {
@@ -421,7 +431,9 @@ hr {
 
 .storybox {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 584px 270px;
+  -ms-grid-columns: 584px 16px 270px;
   grid-gap: 16px;
   width: 944px;
   height: 320px;
@@ -696,7 +708,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: white;
+  background-color: transparent;
   left: 460px;
   top: 10px;
 }
@@ -719,7 +731,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: rgb(248, 248, 248);
+  background-color: transparent;
   left: 176px;
   top: 10px;
 }
@@ -743,7 +755,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: rgb(248, 248, 248);
+  background-color: transparent;
   left: 176px;
   top: 10px;
 }
@@ -777,6 +789,10 @@ hr {
   text-align-last: center;
   -webkit-appearance: none;
   border: 1px solid #cacece;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .monthSel {
@@ -1009,7 +1025,9 @@ hr {
 
 .bbtn_move {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 50px 50px;
+  -ms-grid-columns: 50px 844px 50px;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -1019,12 +1037,14 @@ hr {
   height: 51px;
   object-fit: contain;
   cursor: pointer;
+  -ms-grid-column: 1;
 }
 
 .bbtn_right_move {
   width: 50px;
   height: 51px;
   cursor: pointer;
+  -ms-grid-column: 3;
 }
 
 .bbtn_left_story {
@@ -1047,7 +1067,9 @@ hr {
 
 .greenarrows {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 229px 229px 229px 229px;
+  -ms-grid-columns: 229px 10px 229px 10px 229px 10px 229px;
   grid-gap: 10px;
   width: 63px;
   position: relative;
@@ -1104,6 +1126,7 @@ hr {
   width: fit-content;
   transition-duration: 1s;
   transition-property: transform;
+  text-align: left;
 }
 
 .pointer {
@@ -1131,7 +1154,7 @@ hr {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .alphabet_box .box {
@@ -1150,8 +1173,11 @@ hr {
 
 .grid-container {
   display: grid;
+  display: -ms-grid;
   grid-gap: 44px;
   grid-template-columns: 284px 284px 284px;
+  -ms-grid-columns: 284px 40px 284px 40px 284px;
+  -ms-grid-rows: 233px 71px 233px 71px 233px;
   margin-top: 37px;
   position: relative;
   left: 50%;
@@ -1163,17 +1189,58 @@ hr {
   height: 233px;
 }
 
+.grid-item1 {
+  -ms-grid-column: 1;
+}
+
+.grid-item2 {
+  -ms-grid-column: 3;
+}
+
+.grid-item3 {
+  -ms-grid-column: 5;
+}
+
+.grid-item3-2 {
+  -ms-grid-column: 7;
+}
+
+.grid-item4 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+}
+
+.grid-item5 {
+  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+}
+
+.grid-item6 {
+  -ms-grid-column: 5;
+  -ms-grid-row: 3;
+}
+
+.grid-item7 {
+  -ms-grid-column: 1;
+  -ms-grid-row: 5;
+}
+
+.grid-item8 {
+  -ms-grid-column: 3;
+  -ms-grid-row: 5;
+}
+
+.grid-item9 {
+  -ms-grid-column: 5;
+  -ms-grid-row: 5;
+}
+
 .boxdescription {
   width: 100%;
   height: 56px;
   margin-top: 11px;
   font-size: 24px;
   text-align: left;
-}
-
-.grid-item2 {
-  width: 288px;
-  height: 268px;
 }
 
 .divBox22 {
@@ -1217,7 +1284,7 @@ hr {
 }
 
 .transparent {
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .alivebookparagraph {
@@ -1268,7 +1335,6 @@ hr {
 }
 
 .wordselections {
-  width: 409px;
   height: 20px;
   object-fit: contain;
   font-family: NotoSansCJKkr;
@@ -1281,8 +1347,10 @@ hr {
   text-align: center;
   color: #000000;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
+  -ms-grid-columns: auto 10px auto 10px auto 10px auto;
   position: absolute;
   margin-top: 47px;
   left: 50%;
@@ -1303,7 +1371,7 @@ hr {
   text-align: center;
   color: #000000;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: relative;
   margin-top: 30px;
   left: 50%;
@@ -1394,7 +1462,7 @@ hr {
   border-bottom-color: #fff;
 }
 
-.popup .textbox1 {
+.popup_textbox1 {
   margin-left: 25px;
   margin-top: 21px;
   padding-left: 10px;
@@ -1402,7 +1470,7 @@ hr {
   height: 32px;
 }
 
-.popup .textbox2 {
+.popup_textbox2 {
   margin-left: 25px;
   margin-top: 15px;
   padding-left: 10px;
