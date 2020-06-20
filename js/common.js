@@ -1,4 +1,10 @@
 
+//페이지 이동
+function goUrl(var1){
+	$("#pageUrl").val( var1 );
+	$("#fom").submit();
+}
+
 /**
  * 게시판 상세
  * var1 form 이름
@@ -258,6 +264,29 @@ function b_list( var1, var2 ){
 	});
 }
 
+/**
+ * 스토리 리스트
+ * var1 form 이름
+ * var 2 callbak
+ * */
+function story_list( var1, var2 ){	
+	var params =$("#"+var1).serialize();
+		$.ajax({
+		    type : "POST", 
+		    url : "/action/action_list1.php",
+		    data : params,	
+		    dataType:"json",
+	        success : function(data, status, xhr) {
+	            var2(data);
+	         
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) {
+	          
+	        	alert(jqXHR.responseText);
+	        }
+		     
+	});
+}
 
 /**
  *  통계

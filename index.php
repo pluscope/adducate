@@ -7,7 +7,6 @@ $_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
 
 <title>Adducate Web App</title>
 <link href="style.css" rel="stylesheet"> </link>
-<link href="/stylesheets/menu.css" rel="stylesheet"></link>
 
 
 
@@ -17,7 +16,7 @@ var logSession = '<?= $_loginYn ?>';
 
 $(document).ready( function() { 
 
-	var pageList = ["menu.html","page1.html","page2.html","page3.html","page4.html"];
+	var pageList = ["menu.html","page1.html"];
 	
 	for( var i=0; i < pageList.length; i++ ){
 		viewHtml( pageList[i] );
