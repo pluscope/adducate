@@ -1,23 +1,11 @@
-body {
-	font-family:'NotoSans',sans-serif;
-	}
-
 @font-face {
+  font-family: 'NotoSansCJKkr';
+  src: url('fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+}
+
+@font-faceabc {
   font-family: 'Muli-Regular';
   src: url('fonts/Muli-Regular.ttf') format('opentype');
-}
-
-@font-face {
-  font-family: "NotoSans";
-  src: url("fonts/NotoSans-Regular.ttf") format("opentype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NotoSans";
-  src: url("fonts/NotoSans-Bold.ttf") format("opentype");
-  unicode-range: U+0020-007E;
-  font-style: normal;
 }
 
 @media (max-width: 900px) {
@@ -38,6 +26,7 @@ body {
 
 .textDefault {
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-stretch: normal;
   font-style: normal;
   font-size: 24px;
@@ -48,7 +37,6 @@ body {
 
 .bold {
   font-weight: bold;
-  
 }
 
 .l17 {
@@ -122,9 +110,10 @@ body {
   margin-left: 25px;
 }
 
-.menuLi span {
+.menuLi a {
   line-height: 80px;
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -132,7 +121,7 @@ body {
   color: #000000;
   letter-spacing: normal;
   text-align: center;
-  cursor: pointer;
+  color: #000000;
 }
 
 .menuLiBlue {
@@ -142,12 +131,12 @@ body {
   background-color: #00a3e0;
   width: 160px;
   margin-top: 12px;
-  cursor: pointer;
 }
 
-.menuLiBlue span {
+.menuLiBlue a {
   line-height: 60px;
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -167,6 +156,7 @@ body {
   text-decoration-line: none;
   line-height: 80px;
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -223,6 +213,7 @@ body {
 .Lorem-text-overflow {
   height: 62px;
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: 300;
   font-stretch: normal;
@@ -245,6 +236,7 @@ body {
 }
 
 .Lorem-text-overflow2 span {
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -270,6 +262,7 @@ body {
 }
 
 .Lorem-text-overflow span {
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -311,7 +304,7 @@ body {
 
 .divBox4 div {
   width: 341px;
-  height: 350px;
+  height: 300px;
   float: left;
   text-align: center;
   line-height: 300px;
@@ -400,6 +393,7 @@ hr {
 
 .spanColor-orange {
   object-fit: contain;
+  font-family: NotoSansCJKkr;
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -586,46 +580,12 @@ hr {
   border-radius: 20px;
 }
 
-.wordblue1 {
-  float:left;
-  font-size: 18px;
-  height: 28px;
-  background-color: #00a3e0;
-  margin-left:5px;
-  margin-right:5px;
-  margin-bottom:5px;
-  padding-left:20px;
-  padding-right:20px;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
 .wordblack {
   font-size: 18px;
   height: 28px;
-  margin-left:5px;
-  margin-right:5px;
-  padding-left:20px;
-  padding-right:20px;
   background-color: black;
   text-align: center;
-  border-radius: 10px;
-}
-
-.wordblack1 {
-  float:left;
-  font-size: 18px;
-  height: 28px;
-  margin-left:5px;
-  margin-right:5px;
-  margin-bottom:5px;
-  padding-left:20px;
-  padding-right:20px;
-  background-color: black;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 20px;
 }
 
 .next {
@@ -748,11 +708,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-<<<<<<< HEAD
   background-color: transparent;
-=======
-  background-color: rgb(248, 248, 248);
->>>>>>> 92e603de0ff570cbc9706ee087fc417c3f1ab5b6
   left: 460px;
   top: 10px;
 }
@@ -885,7 +841,7 @@ select::-ms-expand {
 .container-body-blue {
   width: 1024px;
   height: 100%;
-  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #00a3e0;
   text-align: center;
 }
@@ -1028,7 +984,7 @@ select::-ms-expand {
   width: 210px;
   height: 58px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1122,7 +1078,6 @@ select::-ms-expand {
 
 .arrowtext {
   position: relative;
-  font-weight: bold;
   top: -48px;
   left: 15px;
 }
@@ -1345,7 +1300,7 @@ select::-ms-expand {
 .wordmeaning2 {
   height: 25px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1363,7 +1318,7 @@ select::-ms-expand {
   top: 50%;
   transform: translateY(-50%);
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -1382,7 +1337,7 @@ select::-ms-expand {
 .wordselections {
   height: 20px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1404,9 +1359,9 @@ select::-ms-expand {
 
 .wordselections2 {
   width: 100%;
-  height: 60px;
+  height: 20px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1415,13 +1370,8 @@ select::-ms-expand {
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-<<<<<<< HEAD
   display: flex;
   justify-content: space-around;
-=======
- # display: flex;
-  justify-content: space-evenly;
->>>>>>> 92e603de0ff570cbc9706ee087fc417c3f1ab5b6
   position: relative;
   margin-top: 30px;
   left: 50%;
@@ -1482,7 +1432,7 @@ select::-ms-expand {
   width: 116px;
   height: 20px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -1541,7 +1491,7 @@ select::-ms-expand {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1557,7 +1507,7 @@ select::-ms-expand {
   width: 77px;
   height: 15px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1573,7 +1523,7 @@ select::-ms-expand {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1618,7 +1568,7 @@ select::-ms-expand {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1634,7 +1584,7 @@ select::-ms-expand {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  
+  font-family: NotoSansCJKkr;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
