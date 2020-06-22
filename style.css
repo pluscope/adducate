@@ -1,9 +1,10 @@
 @font-face {
   font-family: 'NotoSansCJKkr';
-  src: url('fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+  src: url('fonts/NotoSans-Regular.otf') format('opentype'),
+    url('fonts/NotoSans-Regular.eot');
 }
 
-@font-faceabc {
+@font-face {
   font-family: 'Muli-Regular';
   src: url('fonts/Muli-Regular.ttf') format('opentype');
 }
@@ -445,7 +446,9 @@ hr {
 .creationbox {
   margin-top: 80px;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 584px 360px;
+  -ms-grid-columns: 584px 16px 360px;
   grid-gap: 16px;
   width: 944px;
   height: 320px;
@@ -459,7 +462,7 @@ hr {
   height: 320px;
   position: absolute;
   background-color: black;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .replay_icon {
@@ -472,7 +475,9 @@ hr {
 
 .alivebox {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: auto 320px;
+  -ms-grid-columns: 622px 0px 320px;
   width: 944px;
   height: 320px;
   border: 1px solid grey;
