@@ -1,0 +1,80 @@
+<meta charset="utf-8">
+</meta>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</meta>
+
+<title>Adducate Web App</title>
+<link href="../style.css" rel="stylesheet">
+</link>
+
+<!-- body start -->
+
+<div class="body">
+  <!-- content start -->
+
+  <div class="container">
+    <!-- container-header 필수 -->
+
+    <div class="container-header">
+      <div class="log">
+        <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
+      </div>
+
+      <div class="menu">
+        <ul class="menuUl">
+          <li class="menuLi"><a>Class</a></li>
+
+          <li class="menuLi"><a>Team</a></li>
+
+          <li class="menuLi"><a>About</a></li>
+
+          <li class="menuLiBlue"><a>Download</a></li>
+
+          <li class="menuLiSignIn" onclick="myFunction()"><a class="username">Username</a></li>
+        </ul>
+      </div>
+      <div class="popup_account">
+        <div class="content_account">
+          <span class="myclass"><a href="#">My class</a></span>
+          <span class="signout"><a href="#">Sign out</a></span>
+        </div>
+      </div>
+
+      <script>
+        function myFunction() {
+          var popup = document.getElementsByClassName("popup_account");
+          if(popup[0].style.visibility == "visible")
+            popup[0].style.visibility = "hidden";
+          else {
+            popup[0].style.visibility = "visible";
+          }
+        }
+      </script>
+
+    </div>
+
+   <!-- container-body 필수 -->
+   <div class="container-body">
+    <div class="container-body-orange">
+      <div class="mainLogo">
+        <img
+          src="../img/logo_content.png"
+          srcset="../img/logo_content@2x.png 2x,../img/logo_content@3x.png 3x"/>
+      </div>
+
+      <div class="divBox1 textDefault">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, mi quis finibus
+        venenatis, est velit congue odio, at pellentesque odio mauris vel nulla. Vestibulum
+        venenatis tempus facilisis. Vivamus eu malesuada sapien.
+      </div>
+
+      <div class="mainDownload"><span>Download</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- content end -->
+</div>
+
+<!-- body end -->

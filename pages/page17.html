@@ -38,31 +38,45 @@
 				<div class="Background_white">
 
 					<div class="title-div">
-						<span class="textDefault f36">
+						<span class="textDefault f36 bold">
 							Forgot Password?
 						</span>
 					</div>
 
 					<div class="input-form">
 						<div class="textbox">
-						  <input type="text" placeholder="Enter your e-mail">
+						  <input class="select textDefault" type="text" placeholder="Enter your e-mail">
 						</div>
-
 						<br>
-						<span class="textDefault f35">
+						<span class="textDefault">
 							or
 						</span>
-						<br>
+						<br><br>
 						<div class="textbox">
-						  <input type="text" placeholder="Enter your username">
+						  <input class="select textDefault" type="text" placeholder="Enter your username">
 						</div>
 					</div>
 
-					<div class="find">
-							<span class="textDefault f37">Find</span>
+					<div class="popup_pw textDefault">
+						<span>
+							Your password is <span class="password">password</span>
+						</span>
 					</div>
-					
 
+					<div class="next" onclick="myFunction()">
+							<span class="textDefault bold">Find</span>
+					</div>
+
+					<script>
+						function myFunction() {
+						  var popup = document.getElementsByClassName("popup_pw");
+						  if(popup[0].style.visibility == "visible")
+							popup[0].style.visibility = "hidden";
+						  else {
+							popup[0].style.visibility = "visible";
+						  }
+						}
+					</script>
 				</div>
 
 			</div>
