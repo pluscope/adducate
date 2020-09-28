@@ -1,12 +1,23 @@
-@font-face {
-  font-family: 'NotoSans';
-  src: url('fonts/NotoSans-Regular.otf') format('opentype'),
-    url('fonts/NotoSans-Regular.eot');
-}
+body {
+	font-family:'NotoSans',sans-serif;
+	}
 
 @font-face {
   font-family: 'Muli-Regular';
   src: url('fonts/Muli-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("fonts/NotoSans-Regular.ttf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("fonts/NotoSans-Bold.ttf") format("opentype");
+  unicode-range: U+0020-007E;
+  font-style: normal;
 }
 
 @media (max-width: 900px) {
@@ -27,10 +38,8 @@
 
 .textDefault {
   object-fit: contain;
-  font-family: NotoSans;
   font-stretch: normal;
-  font-weight: bold;
-  font-style:normal;
+  font-style: normal;
   font-size: 24px;
   font-weight: 300;
   letter-spacing: normal;
@@ -39,6 +48,7 @@
 
 .bold {
   font-weight: bold;
+  
 }
 
 .l17 {
@@ -112,10 +122,9 @@
   margin-left: 25px;
 }
 
-.menuLi a {
+.menuLi span {
   line-height: 80px;
   object-fit: contain;
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -123,7 +132,7 @@
   color: #000000;
   letter-spacing: normal;
   text-align: center;
-  color: #000000;
+  cursor: pointer;
 }
 
 .menuLiBlue {
@@ -133,12 +142,12 @@
   background-color: #00a3e0;
   width: 160px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
-.menuLiBlue a {
+.menuLiBlue span {
   line-height: 60px;
   object-fit: contain;
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -158,7 +167,6 @@
   text-decoration-line: none;
   line-height: 80px;
   object-fit: contain;
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -215,7 +223,6 @@
 .Lorem-text-overflow {
   height: 62px;
   object-fit: contain;
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: 300;
   font-stretch: normal;
@@ -238,7 +245,6 @@
 }
 
 .Lorem-text-overflow2 span {
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -264,7 +270,6 @@
 }
 
 .Lorem-text-overflow span {
-  font-family: NotoSans;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -306,7 +311,7 @@
 
 .divBox4 div {
   width: 341px;
-  height: 300px;
+  height: 350px;
   float: left;
   text-align: center;
   line-height: 300px;
@@ -343,19 +348,9 @@
 .divBox5_2 {
   padding-top: 20px;
   text-align: left;
-  display: -ms-grid;
-  -ms-grid-columns: 447px 50px 439px;
   display: grid;
   grid-template-columns: 447px 439px;
   grid-gap: 50px;
-}
-
-.divBox5_2_1 {
-  -ms-grid-column: 1;
-}
-
-.divBox5_2_2 {
-  -ms-grid-column: 3;
 }
 
 .divBox6 {
@@ -395,7 +390,6 @@ hr {
 
 .spanColor-orange {
   object-fit: contain;
-  font-family: NotoSans;
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -433,9 +427,7 @@ hr {
 
 .storybox {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: 584px 270px;
-  -ms-grid-columns: 584px 16px 270px;
   grid-gap: 16px;
   width: 944px;
   height: 320px;
@@ -447,9 +439,7 @@ hr {
 .creationbox {
   margin-top: 80px;
   display: grid;
-  display: -ms-grid;
   grid-template-columns: 584px 360px;
-  -ms-grid-columns: 584px 16px 360px;
   grid-gap: 16px;
   width: 944px;
   height: 320px;
@@ -463,7 +453,7 @@ hr {
   height: 320px;
   position: absolute;
   background-color: black;
-  opacity: 0.5;
+  opacity: 50%;
 }
 
 .replay_icon {
@@ -476,9 +466,7 @@ hr {
 
 .alivebox {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: auto 320px;
-  -ms-grid-columns: 622px 0px 320px;
   width: 944px;
   height: 320px;
   border: 1px solid grey;
@@ -586,12 +574,46 @@ hr {
   border-radius: 20px;
 }
 
+.wordblue1 {
+  float:left;
+  font-size: 18px;
+  height: 28px;
+  background-color: #00a3e0;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:5px;
+  padding-left:20px;
+  padding-right:20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .wordblack {
   font-size: 18px;
   height: 28px;
+  margin-left:5px;
+  margin-right:5px;
+  padding-left:20px;
+  padding-right:20px;
   background-color: black;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.wordblack1 {
+  float:left;
+  font-size: 18px;
+  height: 28px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:5px;
+  padding-left:20px;
+  padding-right:20px;
+  background-color: black;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .next {
@@ -714,7 +736,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: transparent;
+  background-color: rgb(248, 248, 248);
   left: 460px;
   top: 10px;
 }
@@ -737,7 +759,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: transparent;
+  background-color: rgb(248, 248, 248);
   left: 176px;
   top: 10px;
 }
@@ -761,7 +783,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: transparent;
+  background-color: rgb(248, 248, 248);
   left: 176px;
   top: 10px;
 }
@@ -795,10 +817,6 @@ hr {
   text-align-last: center;
   -webkit-appearance: none;
   border: 1px solid #cacece;
-}
-
-select::-ms-expand {
-  display: none;
 }
 
 .monthSel {
@@ -847,7 +865,7 @@ select::-ms-expand {
 .container-body-blue {
   width: 1024px;
   height: 100%;
-  padding-bottom: 50px;
+  padding-top: 50px;
   background-color: #00a3e0;
   text-align: center;
 }
@@ -990,7 +1008,7 @@ select::-ms-expand {
   width: 210px;
   height: 58px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1031,9 +1049,7 @@ select::-ms-expand {
 
 .bbtn_move {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: 50px 50px;
-  -ms-grid-columns: 50px 844px 50px;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -1043,14 +1059,12 @@ select::-ms-expand {
   height: 51px;
   object-fit: contain;
   cursor: pointer;
-  -ms-grid-column: 1;
 }
 
 .bbtn_right_move {
   width: 50px;
   height: 51px;
   cursor: pointer;
-  -ms-grid-column: 3;
 }
 
 .bbtn_left_story {
@@ -1073,9 +1087,7 @@ select::-ms-expand {
 
 .greenarrows {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: 229px 229px 229px 229px;
-  -ms-grid-columns: 229px 10px 229px 10px 229px 10px 229px;
   grid-gap: 10px;
   width: 63px;
   position: relative;
@@ -1084,6 +1096,7 @@ select::-ms-expand {
 
 .arrowtext {
   position: relative;
+  font-weight: bold;
   top: -48px;
   left: 15px;
 }
@@ -1132,7 +1145,6 @@ select::-ms-expand {
   width: fit-content;
   transition-duration: 1s;
   transition-property: transform;
-  text-align: left;
 }
 
 .pointer {
@@ -1160,7 +1172,7 @@ select::-ms-expand {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .alphabet_box .box {
@@ -1179,11 +1191,8 @@ select::-ms-expand {
 
 .grid-container {
   display: grid;
-  display: -ms-grid;
   grid-gap: 44px;
   grid-template-columns: 284px 284px 284px;
-  -ms-grid-columns: 284px 40px 284px 40px 284px;
-  -ms-grid-rows: 233px 71px 233px 71px 233px;
   margin-top: 37px;
   position: relative;
   left: 50%;
@@ -1195,58 +1204,17 @@ select::-ms-expand {
   height: 233px;
 }
 
-.grid-item1 {
-  -ms-grid-column: 1;
-}
-
-.grid-item2 {
-  -ms-grid-column: 3;
-}
-
-.grid-item3 {
-  -ms-grid-column: 5;
-}
-
-.grid-item3-2 {
-  -ms-grid-column: 7;
-}
-
-.grid-item4 {
-  -ms-grid-column: 1;
-  -ms-grid-row: 3;
-}
-
-.grid-item5 {
-  -ms-grid-column: 3;
-  -ms-grid-row: 3;
-}
-
-.grid-item6 {
-  -ms-grid-column: 5;
-  -ms-grid-row: 3;
-}
-
-.grid-item7 {
-  -ms-grid-column: 1;
-  -ms-grid-row: 5;
-}
-
-.grid-item8 {
-  -ms-grid-column: 3;
-  -ms-grid-row: 5;
-}
-
-.grid-item9 {
-  -ms-grid-column: 5;
-  -ms-grid-row: 5;
-}
-
 .boxdescription {
   width: 100%;
   height: 56px;
   margin-top: 11px;
   font-size: 24px;
   text-align: left;
+}
+
+.grid-item2 {
+  width: 288px;
+  height: 268px;
 }
 
 .divBox22 {
@@ -1290,7 +1258,7 @@ select::-ms-expand {
 }
 
 .transparent {
-  opacity: 0.1;
+  opacity: 10%;
 }
 
 .alivebookparagraph {
@@ -1306,7 +1274,7 @@ select::-ms-expand {
 .wordmeaning2 {
   height: 25px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1324,7 +1292,7 @@ select::-ms-expand {
   top: 50%;
   transform: translateY(-50%);
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -1341,9 +1309,10 @@ select::-ms-expand {
 }
 
 .wordselections {
+  width: 409px;
   height: 20px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1353,10 +1322,8 @@ select::-ms-expand {
   text-align: center;
   color: #000000;
   display: grid;
-  display: -ms-grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
-  -ms-grid-columns: auto 10px auto 10px auto 10px auto;
   position: absolute;
   margin-top: 47px;
   left: 50%;
@@ -1365,9 +1332,9 @@ select::-ms-expand {
 
 .wordselections2 {
   width: 100%;
-  height: 20px;
+  height: 60px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -1376,8 +1343,8 @@ select::-ms-expand {
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;*/
+  justify-content: space-evenly;
   position: relative;
   margin-top: 30px;
   left: 50%;
@@ -1438,7 +1405,7 @@ select::-ms-expand {
   width: 116px;
   height: 20px;
   object-fit: contain;
-  font-family: NotoSansCJKkr;
+  
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -1468,7 +1435,7 @@ select::-ms-expand {
   border-bottom-color: #fff;
 }
 
-.popup_textbox1 {
+.popup .textbox1 {
   margin-left: 25px;
   margin-top: 21px;
   padding-left: 10px;
@@ -1476,7 +1443,7 @@ select::-ms-expand {
   height: 32px;
 }
 
-.popup_textbox2 {
+.popup .textbox2 {
   margin-left: 25px;
   margin-top: 15px;
   padding-left: 10px;
@@ -1497,7 +1464,7 @@ select::-ms-expand {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1513,7 +1480,7 @@ select::-ms-expand {
   width: 77px;
   height: 15px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1529,7 +1496,7 @@ select::-ms-expand {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1574,7 +1541,7 @@ select::-ms-expand {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1590,7 +1557,7 @@ select::-ms-expand {
   width: 20px;
   height: 11px;
   object-fit: contain;
-  font-family: NotoSans;
+  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;

@@ -50,47 +50,46 @@
 				<hr>
 				</div>
 
-        <div class="title-div2 textDefault bold">Title</div>
+        <div id="story_title" class="title-div2 textDefault bold">Title</div>
 
         <div class="storybox">
-          <img class="image grid-item1" src="../img/image.png" srcset="../img/image@2x.png 2x,
-                       ../img/image@3x.png 3x" />
-          <div class="storywordbox textDefault grid-item2">
+          <img id="story_img" class="image" src="../img/image.png" srcset="../img/image@2x.png 2x, ../img/image@3x.png 3x" />
+          <div id="story_text" class="storywordbox textDefault">
             Springtime has arrived all over the world. Flowers of every color paint the
             layers of the Earth.
           </div>
 
-          <img class="bbtn_left_story" src="../img/scroll-btn(left).png" srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x" />
-          <img class="bbtn_right_story" src="../img/scroll-btn(right).png" srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x" />
+          <img onClick="goLeftToClickStory()" class="bbtn_left_story" src="../img/scroll-btn(left).png" srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x" />
+          <img onClick="goRightToClickStory()" class="bbtn_right_story" src="../img/scroll-btn(right).png" srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x" />
         </div>
 
         <div class="greenarrows textDefault whitetext">
-          <div class="story grid-item1">
+          <div class="story">
             <img class="arrow" src="../img/greenarrow_front.png" srcset="../img/greenarrow_front@2x.png 2x,
              ../img/greenarrow_front@3x.png 3x" />
             <div class="arrowtext">story</div>
           </div>
 
-          <div class="vocab grid-item2">
+          <div class="vocab" style="cursor: pointer;">
             <img class="arrow" src="../img/grayarrow_middle.png" srcset="../img/grayarrow_middle@2x.png 2x,
              ../img/grayarrow_middle@3x.png 3x" />
-            <div class="arrowtext">Vocab</div>
+            <div class="arrowtext" onclick="goUrl('page25.html')">Vocab</div>
           </div>
 
-          <div class="vocabquiz grid-item3">
+          <div class="vocabquiz" >
             <img class="arrow" src="../img/grayarrow_middle.png" srcset="../img/grayarrow_middle@2x.png 2x,
              ../img/grayarrow_middle@3x.png 3x" />
             <div class="arrowtext">Vocab Quiz</div>
           </div>
 
-          <div class="Sentence grid-item3-2">
+          <div class="Sentence">
             <img class="arrow" src="../img/grayarrow_last.png" srcset="../img/grayarrow_last@2x.png 2x,
              ../img/grayarrow_last@3x.png 3x" />
             <div class="arrowtext">Sentence</div>
           </div>
         </div>
       </div>
-      <div class="next next2"><span class="textDefault bold">Story List</span></div>
+      <div class="next next2"><span class="textDefault bold" onclick="goUrl('page23.html')">Story List</span></div>
 
     </div>
   </div>
