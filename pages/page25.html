@@ -59,7 +59,7 @@
         <div class="title-div2 textDefault bold">Title</div>
 
         <div class="storybox">
-          <div class="divBox25 textDefault">
+          <div id="vocList" class="divBox25 textDefault">
             <div class="word">errands</div>
 
             <div class="wordmeaning">
@@ -77,18 +77,18 @@
 
             <div class="wordmeaning">A job that you do for somboody that involves</div>
           </div>
-        <img
+        <img onclick="goLeftToClickVoc()"
           class="bbtn_left_story"
           src="../img/scroll-btn(left).png"
           srcset="../img/scroll-btn(left)@2x.png 2x,../img/scroll-btn(left)@3x.png 3x"/>
-        <img
+        <img onclick="goRightToClickVoc()"
           class="bbtn_right_story"
           src="../img/scroll-btn(right).png"
           srcset="../img/scroll-btn(right)@2x.png 2x,../img/scroll-btn(right)@3x.png 3x"/>
       </div>
 
       <div class="greenarrows textDefault whitetext">
-        <div class="story grid-item1">
+        <div class="story" style="cursor: pointer;" onclick="goUrl('page24.html')">
           <img
             class="arrow"
             src="../img/grayarrow_front.png"
@@ -97,8 +97,8 @@
           <div class="arrowtext">story</div>
         </div>
 
-        <div class="vocab grid-item2">
-          <img
+        <div class="vocab" >
+          <img 
             class="arrow"
             src="../img/greenarrow_middle.png"
             srcset="../img/greenarrow_middle@2x.png 2x,
@@ -106,7 +106,7 @@
           <div class="arrowtext">Vocab</div>
         </div>
 
-        <div class="vocabquiz grid-item3">
+        <div class="vocabquiz" style="cursor: pointer;" onclick="goUrl('page26.html')">
           <img
             class="arrow"
             src="../img/grayarrow_middle.png"
@@ -115,7 +115,7 @@
           <div class="arrowtext">Vocab Quiz</div>
         </div>
 
-        <div class="Sentence grid-item3-2">
+        <div class="Sentence">
           <img
             class="arrow"
             src="../img/grayarrow_last.png"
@@ -131,5 +131,5 @@
 </div>
 
 <!-- content end -->
-
+</div>
 <!-- body end -->
