@@ -1,6 +1,7 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
-
+if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" || $_POST['userPass'] == "" || $_POST['priChk'] == "")
+    header("Location: /join/step1");
 ?>
 <!--From pages/page9 html-->
 <!--Sex Information-->

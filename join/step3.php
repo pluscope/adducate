@@ -2,7 +2,11 @@
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 $sql = "SELECT id, name FROM countries";
-$countries = mysqli_query($conn, $sql);
+if($conn) {
+    $countries = mysqli_query($conn, $sql);
+}else{
+    //@TODO alert message when the connection is not connected
+}
 ?>
 <!--From pages/page10 html-->
 <!--Nationality Information-->
@@ -18,7 +22,7 @@ $countries = mysqli_query($conn, $sql);
         document.getElementById("userPass").value = "<?php echo $_POST['userPass'];?>"
         document.getElementById("priChk").value = "<?php echo $_POST['priChk'];?>"
         document.getElementById("userSex").value = "<?php echo $_POST['userSex'];?>"
-        if( $("#uContry").val() === "" || $("#uContry").val() === undefined){
+        if( $("#uCountry").val() === "" || $("#uCountry").val() === undefined){
             alert("Choose your nationality.");
             return false;
         }
@@ -50,7 +54,7 @@ $countries = mysqli_query($conn, $sql);
 
                         <div class="input-form">
                             <div class="divBox10">
-                                <select class="select textDefault" name="uContry" id="uContry">
+                                <select class="select textDefault" name="uCountry" id="uCountry">
                                     <option value="">Select Country</option>
                                     <?php
                                     foreach($countries as $country){
