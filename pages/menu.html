@@ -21,7 +21,7 @@
 
       <div class="container-header">
      
-      <form method="get" id="fom" name="fom" action="body.php">
+      <form method="post" id="fom" name="fom" action="body.php">
 			<input type="hidden" id="pageUrl" name="pageUrl"  />
 			<input type="hidden" id="s_userNm" name="s_userNm"/>
 			<input type="hidden" id="s_userPass" name="s_userPass" />
@@ -41,7 +41,9 @@
 		      
      
       <div class="log">
-        <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
+          <a href="/">
+              <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
+          </a>
       </div>
 	
       <div class="menu">
@@ -63,7 +65,7 @@
 	        <input class="textbox1" type="text" placeholder="ID"  id="m_id"/>
 	        <input class="textbox2" type="password" placeholder="PW"  id="m_pass"/>
 	        <div class="content">
-	          <span class="join"><a href="join">Join</a></span>
+	          <span class="join"><a href="join/step1">Join</a></span>
 	          <span class="id_pw"><a href="body.php?pageUrl=page18.html">Find ID/PW</a></span>
 	          <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
 	        </div>

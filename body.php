@@ -1,30 +1,30 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"]."/header_config.php");
 
-$_pageUrl =  isset($_GET["pageUrl"]) ? $_GET["pageUrl"]:"" ; //화면 명
+$_pageUrl =  isset($_POST["pageUrl"]) ? $_POST["pageUrl"]:"" ; //화면 명
 
 $_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
 
 
 if( $_pageUrl == ""){
-    $_pageUrl =  isset($_GET["pageUrl"]) ? $_GET["pageUrl"]:"" ; //화면 명
+    $_pageUrl =  isset($_POST["pageUrl"]) ? $_POST["pageUrl"]:"" ; //화면 명
 }
 
 
 
-$_userNm =  isset($_GET["s_userNm"]) ? $_GET["s_userNm"]:"";
-$_userPass =  isset($_GET["s_userPass"]) ? $_GET["s_userPass"]:"";
-$_userSex =  isset($_GET["s_userSexs"]) ? $_GET["s_userSexs"]:"";
-$_userContry =  isset($_GET["s_userContry"]) ? $_GET["s_userContry"]:"";
+$_userNm =  isset($_POST["s_userNm"]) ? $_POST["s_userNm"]:"";
+$_userPass =  isset($_POST["s_userPass"]) ? $_POST["s_userPass"]:"";
+$_userSex =  isset($_POST["s_userSexs"]) ? $_POST["s_userSexs"]:"";
+$_userContry =  isset($_POST["s_userContry"]) ? $_POST["s_userContry"]:"";
 
-$_userMonth =  isset($_GET["s_userMonth"]) ? $_GET["s_userMonth"]:"";
-$_userYear =  isset($_GET["s_userYear"]) ? $_GET["s_userYear"]:"";
+$_userMonth =  isset($_POST["s_userMonth"]) ? $_POST["s_userMonth"]:"";
+$_userYear =  isset($_POST["s_userYear"]) ? $_POST["s_userYear"]:"";
 
-$_userEmail =  isset($_GET["s_userEmail"]) ? $_GET["s_userEmail"]:"";
-$_userEmailChk =  isset($_GET["s_userEmailChk"]) ? $_GET["s_userEmailChk"]:"";
-$_no =  isset($_GET["no"]) ? $_GET["no"]:"";
-$_s_index1 =  isset($_GET["s_index1"]) ? $_GET["s_index1"]:"";
-$_s_index2 =  isset($_GET["s_index2"]) ? $_GET["s_index2"]:"";
+$_userEmail =  isset($_POST["s_userEmail"]) ? $_POST["s_userEmail"]:"";
+$_userEmailChk =  isset($_POST["s_userEmailChk"]) ? $_POST["s_userEmailChk"]:"";
+$_no =  isset($_POST["no"]) ? $_POST["no"]:"";
+$_s_index1 =  isset($_POST["s_index1"]) ? $_POST["s_index1"]:"";
+$_s_index2 =  isset($_POST["s_index2"]) ? $_POST["s_index2"]:"";
 ?>
 <!DOCTYPE html>
 <html>
@@ -227,7 +227,6 @@ function fn_abc(data){
 
 //패스워드 체크
 function passCheck(var1){
-
 	if( $("input:checkbox[id='priChk']").is(":checked") == false ){
 		alert(" error : Privacy & Terms .. checked ");
 		return false;
