@@ -27,7 +27,7 @@
             <input class="textbox1" type="text" placeholder="ID"  id="m_id"/>
             <input class="textbox2" type="password" placeholder="PW"  id="m_pass"/>
             <div class="content">
-                <span class="join/step1"><a href="join">Join</a></span>
+                <span class="join"><a href="/join/step1">Join</a></span>
                 <span class="id_pw"><a href="body.php?pageUrl=page18.html">Find ID/PW</a></span>
                 <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
             </div>

@@ -6,8 +6,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 <html>
 <body>
 <script>
-    function formSubmit()
-    {
+    function formSubmit() {
         var form = document.step1;
         var pass = document.getElementById("userPass").value;
         var passConfirm = document.getElementById("userPass1").value;
