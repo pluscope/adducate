@@ -42,7 +42,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 							What is your gender?
 						</span>
                     </div>
-                    <form action="step3.php" method="post" name="step2">
+                    <form action="/join/step3" method="post" name="step2">
                         <div class="input-form" >
                             <div class="divBox9 checks">
                                 <input type="hidden" placeholder="Username" id="userNm" name="userNm">

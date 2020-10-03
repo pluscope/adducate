@@ -41,7 +41,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 							Join Adducate
 						</span>
                     </div>
-                    <form action="step2.php" method="post" name="step1">
+                    <form action="/join/step2" method="post" name="step1">
                         <div class="divBox8" style="height: auto">
                             <div class="textDefault">
                                 Create a username

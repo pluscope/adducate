@@ -1,5 +1,6 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
+print_r($_POST);
 ?>
 <!--From pages/page12 html-->
 <!--Email Information-->

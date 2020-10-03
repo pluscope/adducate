@@ -40,7 +40,7 @@ $countries = mysqli_query($conn, $sql);
                     <div class="title-div">
                         <span class="textDefault f36 bold"> Where are you from? </span>
                     </div>
-                    <form action="step4" method="post" name="step3">
+                    <form action="/join/step4" method="post" name="step3">
                         <input type="hidden" placeholder="Username" id="userNm" name="userNm">
                         <input type="hidden" placeholder="Jane" id="firstNm" name="firstNm">
                         <input type="hidden" placeholder="Doe" id="lastNm" name="lastNm">
