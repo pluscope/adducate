@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html>
 <title>Adducate Web App</title>
 <link href="../style.css" rel="stylesheet">

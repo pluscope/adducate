@@ -6,7 +6,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 <html>
 <body>
 <script>
-
+    function getStarted(){
+        var userId = <?php echo $_POST["userId"];?>;
+        var userNm = "<?php echo $_POST["userNm"];?>";
+        $("#userId").val(userId);
+        $("#userNm").val(userNm);
+        document.login.submit();
+    }
 </script>
 <div class="body">
     <div class="container" id="container-menu">
@@ -25,7 +31,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 						</span>
                         <br>
                         <span class="textDefault spanColor-orange">
-							<?php echo($_GET["userNm"]);?>
+							<?php echo($_POST["userNm"]);?>
 						</span>
                     </div>
 
@@ -39,8 +45,12 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                         </div>
 
                     </div>
+                    <form action="/welcome_login" method="post" name="login">
+                        <input type="hidden" name="userId" id="userId">
+                        <input type="hidden" name="userNm" id="userNm">
+                    </form>
                     <div class="next">
-                        <span class="textDefault bold" onClick="login_insert('fom')">Get Started</span>
+                        <span class="textDefault bold" onClick="getStarted()">Get Started</span>
                     </div>
 
                 </div>

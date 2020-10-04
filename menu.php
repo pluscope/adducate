@@ -10,7 +10,7 @@
 
         <div class="menu">
             <ul class="menuUl">
-                <li class="menuLi"><span onclick="goUrl('page5.html')">Class</span></li>
+                <li class="menuLi"><span onclick="location.href='/class'">Class</span></li>
 
                 <li class="menuLi"><span >Team</span></li>
 
@@ -18,14 +18,15 @@
 
                 <li class="menuLiBlue"><span>Download</span></li>
 
-                <li class="menuLiSignIn" onclick="myFunction()" id="loginIn"><a>Sign in</a></li>
-                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="loginOut"><a></a></li>
+                <li class="menuLiSignIn" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
+                <li class="menuLiSignIn" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
+<!--                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>-->
 
             </ul>
         </div>
         <div class="popup" id="popup" style="position: absolute;">
-            <input class="textbox1" type="text" placeholder="ID"  id="m_id"/>
-            <input class="textbox2" type="password" placeholder="PW"  id="m_pass"/>
+            <input class="textbox1" type="text" placeholder="ID"  id="userId"/>
+            <input class="textbox2" type="password" placeholder="PW"  id="userPass"/>
             <div class="content">
                 <span class="join"><a href="/join/step1">Join</a></span>
                 <span class="id_pw"><a href="body.php?pageUrl=page18.html">Find ID/PW</a></span>
@@ -36,7 +37,7 @@
 
             <div class="content_account">
                 <span class="join"><a href="body.php?pageUrl=page20.html">My class</a></span>
-                <span class="id_pw"><a href="/loginOut.php">Sign out</a></span>
+                <span class="id_pw"><a href="/logout">Sign out</a></span>
             </div>
         </div>
 
