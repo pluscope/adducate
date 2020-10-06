@@ -12,12 +12,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
-RewriteRule ^.$ index.php [QSA]
-RewriteRule ^/join.*$ body.php?pageUrl=page8.html [QSA]
-RewriteRule ^/join/step1.*$ join/step1.php [QSA]
-RewriteRule ^/join/step2.*$ join/step2.php [QSA]
-RewriteRule ^/join/step3.*$ join/step3.php [QSA]
-RewriteRule ^/join/step4.*$ join/step4.php [QSA]
-RewriteRule ^/join/step5.*$ join/step5.php [QSA]
-RewriteRule ^/welcome.*$ welcome.php [QSA]
-RewriteRule ^/logout.*$ logout.php [QSA]
+RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2 [QSA]

@@ -4,7 +4,7 @@
     <div class="container-header">
         <div class="log">
             <a href="/">
-                <img src="../img/logo_header.png" srcset="../img/logo_header@2x.png 2x, ../img/logo_header@3x.png 3x" />
+                <img src="/img/logo_header.png" srcset="/img/logo_header@2x.png 2x, /img/logo_header@3x.png 3x" />
             </a>
         </div>
 
