@@ -1360,7 +1360,7 @@ hr {
 }
 
 .boxtitle {
-  width: 53px;
+  /*width: 53px;*/
   height: 20px;
   line-height: 1.5;
   text-align: left;

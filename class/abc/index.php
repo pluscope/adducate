@@ -29,7 +29,7 @@ if($conn) {
                     <?php
                         foreach($result as $row){
                             echo "<div class='grid-item'>";
-                            echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."'\">";
+                            echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."/1'\">";
                             echo "<div>".$row["title"]."</div>";
                             echo "</div>";
                             echo "<div class='boxdescription'>";

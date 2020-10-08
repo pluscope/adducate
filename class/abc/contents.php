@@ -17,7 +17,7 @@ if($conn) {
 }
 ?>
 <!--From pages/page22 html-->
-<!--Show All ABCs-->
+<!--Show All ABC contents-->
 <html>
 <body>
 <script>

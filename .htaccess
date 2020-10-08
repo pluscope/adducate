@@ -1,15 +1,18 @@
 DirectoryIndex index.php
 
 # enable apache rewrite engine
+Options -MultiViews
 RewriteEngine on
 
 # set your rewrite base
 # Edit this in your init method too if you script lives in a subfolder
 RewriteBase /
 
+
 # Deliver the folder or file directly if it exists on the server
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
-RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2 [QSA]
+RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2
+RewriteRule ^class/storybook/story/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/story.php?storybook_id=$1&lesson_id=$2&story+id=$3
