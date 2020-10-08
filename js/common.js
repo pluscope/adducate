@@ -13,24 +13,44 @@ function open_window( var1 ){
 		window.open('/bbs/write_map.php',var1,"width=900,height=800,left=100,top=100,menubar=1");
 }
 
-function loginYn(){
-	//$("#loginIn").css('display','none');
-	if( logSession != "" ){
-		$("#loginIn").hide();
-		$("#loginOut").show();
-		
-		$("#loginOut").html("<a>"+logSession+"</a>");
+function loginYn(isLogin, userNm){
+	if( isLogin != "" ){
+		$("#signIn").hide();
+		$("#logout").show();
+		$("#logout").html("<a>"+userNm+"</a>");
 		
 	}
 }
 
-
 function menuLogin(){
-	$("#s_type").val("select") ;
-	$("#s_userNm").val($("#m_id").val()) ;
-	$("#s_userPass").val( $("#m_pass").val() );
-	login('fom');
+	var userId = $("#userId").val() ;
+	var userPass = $("#userPass").val();
+	$.ajax({
+		type : "POST",
+		url : "/login.php",
+		data : {userId: userId, userPass: userPass},
+		dataType : "text",
+		success : function(data){
+			if(data==="y"){
+				location.href = "/";
+			}else{
+				alert(data);
+			}
+		},
+		error:function(request,status,error){
+			alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		}
+
+	});
 }
+
+
+// function menuLogin(){
+// 	$("#s_type").val("select") ;
+// 	$("#s_userNm").val($("#m_id").val()) ;
+// 	$("#s_userPass").val( $("#m_pass").val() );
+// 	login('fom');
+// }
 
 function sub_Login(){
 	$("#s_type").val("select") ;

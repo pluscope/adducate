@@ -1,52 +1,18 @@
 <?php
-include_once( $_SERVER["DOCUMENT_ROOT"]."/header_config.php");
+include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 
-$_loginYn =  isset($_SESSION["M_NAME"])?$_SESSION["M_NAME"]:"";
-
+$isLogin =  isset($_SESSION["isLogin"])?$_SESSION["isLogin"]:"";
+$userNm =  isset($_SESSION["userNm"])?$_SESSION["userNm"]:"";
 ?>
 
 <title>Adducate Web App</title>
-<link href="style.css" rel="stylesheet"> </link>
-
-
-
+<link href="style.css" rel="stylesheet">
 <script>
-
-var logSession = '<?= $_loginYn ?>';
-
-$(document).ready( function() { 
-
-	var pageList = ["menu.html","page1.html"];
-	
-	for( var i=0; i < pageList.length; i++ ){
-		viewHtml( pageList[i] );
-	}
-	loginYn();        
-}); 
-
-
-function viewHtml( var1 ){
-	$.ajax({
-	    type : "GET", 
-	    url : "pages/"+var1,
-	    async : false,
-	    dataType : "html",	
-	    error : function(){
-	        alert("통신실패!!!!");
-	    },
-	    success : function(Parse_data){
-	    	$("#temp1").html(Parse_data); //div에 받아온 값을 넣는다.
-	    	if( var1 == "menu.html" ){
-	    		$("#container-menu").append( $("#temp1 .container").html() );
-	    	}else{
-	    		$("#container-page").append( 	$("#temp1 .container-body").html() ).trigger("create");
-	    	}
-	    	$("#temp1").html("");
-	    }
-	     
-	});
-}
-
+$(document).ready( function() {
+    var isLogin = '<?= $isLogin ?>';
+    var userNm = '<?= $userNm ?>';
+	loginYn(isLogin, userNm);
+});
 </script>
 
 </head>
@@ -55,12 +21,24 @@ function viewHtml( var1 ){
 <div class="body">
   	
  	<div class="container" id="container-menu">
-		
-	
+        <?php include($_SERVER["DOCUMENT_ROOT"]."/menu.php"); ?>
     </div>
     <div class="container" id="container-page">
-		
-	
+        <div class="container-body-orange">
+            <div class="mainLogo">
+                <img
+                        src="./img/logo_content.png"
+                        srcset="./img/logo_content@2x.png 2x,./img/logo_content@3x.png 3x"/>
+            </div>
+
+            <div class="divBox1 textDefault">
+                Adducate is designed to make learning more accessible and amusing for learners.
+                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
+                Adducate will empower the children without resources.
+            </div>
+
+            <div class="mainDownload"><span>Download</span></div>
+        </div>
     </div>
   <!-- content end -->
   
