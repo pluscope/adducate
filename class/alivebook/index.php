@@ -1,7 +1,7 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
-$sql = "SELECT * FROM storybooks";
+$sql = "SELECT * FROM alivebooks";
 if($conn) {
     $result = mysqli_query($conn, $sql);
     $first_lesson_ids = array();
@@ -20,8 +20,8 @@ if($conn) {
     //@TODO alert message when the connection is not connected
 }
 ?>
-<!--From pages/page23 html-->
-<!--Show All Storybooks-->
+<!--From pages/page34 html-->
+<!--Show All Alivebooks-->
 <html>
 <body>
 <script>
@@ -36,29 +36,33 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Storybook</span></div>
-                    <div class="grid-container" id="viewList">
-                        <?php
-                            $i = 0;
-                            foreach($result as $row){
-                                echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$first_lesson_ids[$i]."/".$first_story_ids[$i]."'\">";
-                                echo "<div class='divBox23'>";
-                                echo "<img src='".$row["title_image"]."' style='max-width: 100%; max-height: 100%'>";
-                                echo "</div>";
-                                echo "<div class='boxtitle textDefault bold'>";
-                                echo $row["title"];
-                                echo "</div>";
-                                echo "<div class='boxdescription2'>";
-                                echo $row["description"];
-                                echo "</div>";
-                                echo "</div>";
-                                $i++;
-                            }
-                        ?>
+                    <div class="pointer"><span>Class</span><span> > Alivebook</span></div>
+                    <div class="alivebookparagraph textDefault">
+                        Apply students’ imagination into the stories that they read previously in the "Storybook" and then make their own storybook from drawings.
                     </div>
+                    <div class="grid-container">
+                        <?php
+                        $i = 0;
+                        foreach($result as $row){
+                            echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["id"]."/".$first_story_ids[$i]."'\">";
+                            echo "<div class='divBox23'>";
+                            //@TODO 3 images?
+                            echo "<img src='".$row["image"]."' style='max-width: 100%; max-height: 100%'>";
+                            echo "</div>";
+                            echo "<div class='boxtitle textDefault bold'>";
+                            echo $row["title"];
+                            echo "</div>";
+                            echo "<div class='boxdescription2'>";
+                            echo $row["description"];
+                            echo "</div>";
+                            echo "</div>";
+                            $i++;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
+        </div>
 
         </div>
         <!-- content end-->
