@@ -51,57 +51,6 @@ if($conn) {
                                 echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
                             }
                         ?>
-<!--                        <a><span onclick="moveMp('a')">a</span></a>-->
-<!---->
-<!--                        <span onclick="moveMp('b')">b</span>-->
-<!---->
-<!--                        <span onclick="moveMp('c')">c</span>-->
-<!---->
-<!--                        <span onclick="moveMp('d')">d</span>-->
-<!---->
-<!--                        <span onclick="moveMp('e')">e</span>-->
-<!---->
-<!--                        <span onclick="moveMp('f')">f</span>-->
-<!---->
-<!--                        <span onclick="moveMp('g')">g</span>-->
-<!---->
-<!--                        <span onclick="moveMp('h')">h</span>-->
-<!---->
-<!--                        <span onclick="moveMp('i')">i</span>-->
-<!---->
-<!--                        <span onclick="moveMp('j')">j</span>-->
-<!---->
-<!--                        <span onclick="moveMp('k')">k</span>-->
-<!---->
-<!--                        <span onclick="moveMp('l')">l</span>-->
-<!---->
-<!--                        <span onclick="moveMp('m')">m</span>-->
-<!---->
-<!--                        <span onclick="moveMp('n')">n</span>-->
-<!---->
-<!--                        <span onclick="moveMp('o')">o</span>-->
-<!---->
-<!--                        <span onclick="moveMp('p')">p</span>-->
-<!---->
-<!--                        <span onclick="moveMp('q')">q</span>-->
-<!---->
-<!--                        <span onclick="moveMp('r')">r</span>-->
-<!---->
-<!--                        <span onclick="moveMp('s')">s</span>-->
-<!---->
-<!--                        <span onclick="moveMp('t')">t</span>-->
-<!---->
-<!--                        <span onclick="moveMp('u')">u</span>-->
-<!---->
-<!--                        <span onclick="moveMp('v')">v</span>-->
-<!---->
-<!--                        <span onclick="moveMp('w')">w</span>-->
-<!---->
-<!--                        <span onclick="moveMp('x')">x</span>-->
-<!---->
-<!--                        <span onclick="moveMp('y')">y</span>-->
-<!---->
-<!--                        <span onclick="moveMp('z')">z</span>-->
                       </div>
                     <div class="alphabet_box">
                         <div class="box">
@@ -115,10 +64,10 @@ if($conn) {
                         </div>
                         <div class="box">
 
-                        <video autoplay muted controls id="move_video">
+                        <video autoplay muted controls playsinline id="move_video">
                             <?php
                                 $abc_motion = mysqli_fetch_array($abc_motions);
-                                echo "<source type='video/mp4' id='movie_src' src='".$abc_motion["image"]."'></source>"
+                                echo "<source type='video/mp4' id='movie_src' src='".$abc_motion["image"]."' />"
                             ?>
                         </video><div style="display: none;">Iteration: <span id="iteration"></span></div>
                         </div>

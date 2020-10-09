@@ -14,6 +14,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
+RewriteRule ^join/step1$ join/step1.php
+RewriteRule ^join/step2$ join/step1.php
+RewriteRule ^join/step3$ join/step1.php
+RewriteRule ^join/step4$ join/step1.php
+RewriteRule ^join/step5$ join/step1.php
+RewriteRule ^join/join$ join/join.php
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
 RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2
 RewriteRule ^class/storybook/story/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/story.php?storybook_id=$1&lesson_id=$2&story_id=$3
 RewriteRule ^class/alivebook/read/([0-9]+)/([0-9]+)$ class/alivebook/read.php?alivebook_id=$1&story_id=$2
