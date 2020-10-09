@@ -88,7 +88,6 @@ $(document).ready( function() {
                     src="/img/scroll-btn.png"
                     srcset="/img/scroll-btn@2x.png 2x,/img/scroll-btn@3x.png 3x"/>
         </div>
-        <br />
         <div class="Background_white" id="aboutContainer">
 
             <div class="divBox4">
