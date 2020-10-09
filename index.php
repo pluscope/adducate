@@ -12,7 +12,7 @@ if($conn) {
 }
 ?>
 
-<title>Adducate Web App</title>
+<title>Adducate</title>
 <link href="style.css" rel="stylesheet">
 <script>
 $(document).ready( function() {
@@ -41,6 +41,7 @@ $(document).ready( function() {
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
+                <br>
                 Adducate will empower the children without resources.
             </div>
 

@@ -54,11 +54,11 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 Enter your name
                             </div>
                             <div class="divBox8_1">
-                                <input class="textDefault" type="text" placeholder="Jane" id="firstNm" name="firstNm">
+                                <input class="textDefault" type="text" placeholder="First name" id="firstNm" name="firstNm">
                             </div>
                             <br>
                             <div class="divBox8_1">
-                                <input class="textDefault" type="text" placeholder="Doe" id="lastNm" name="lastNm">
+                                <input class="textDefault" type="text" placeholder="Last name" id="lastNm" name="lastNm">
                             </div>
                             <br>
                             <div class="textDefault">
