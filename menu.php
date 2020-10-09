@@ -71,11 +71,11 @@
                 <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
             </div>
         </div>
-        <div class="popup_account" style="position: absolute;margin-top:65px" >
+        <div class="popup_account" style="position: absolute;" >
 
             <div class="content_account">
-                <span class="join"><a href="body.php?pageUrl=page20.html">My class</a></span>
-                <span class="id_pw"><a href="/logout">Sign out</a></span>
+                <span class="myclass"><a href="body.php?pageUrl=page20.html">My class</a></span>
+                <span class="signout"><a href="/logout">Sign out</a></span>
             </div>
         </div>
 

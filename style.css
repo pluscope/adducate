@@ -170,6 +170,7 @@ body {
   object-fit: contain;
   font-size: 24px;
   font-weight: bold;
+  color: white;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
@@ -737,7 +738,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: rgb(248, 248, 248);
+  /*background-color: rgb(248, 248, 248);*/
   left: 460px;
   top: 10px;
 }
@@ -760,7 +761,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: rgb(248, 248, 248);
+  /*background-color: rgb(248, 248, 248);*/
   left: 176px;
   top: 10px;
 }
@@ -784,7 +785,7 @@ hr {
   border-left: 1px solid black;
   position: absolute;
   transform: rotate(-45deg);
-  background-color: rgb(248, 248, 248);
+  /*background-color: rgb(248, 248, 248);*/
   left: 176px;
   top: 10px;
 }
@@ -801,7 +802,7 @@ hr {
   height: 55px;
   text-align: left;
   margin-left: 291px;
-  margin-top: 15px;
+  margin-top: 40px;
   margin-bottom: 130px;
 }
 
@@ -1486,7 +1487,7 @@ hr {
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 
 .ok {
@@ -1502,7 +1503,7 @@ hr {
   letter-spacing: normal;
   text-align: right;
   color: #000000;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 
 .popup_account {
@@ -1538,7 +1539,6 @@ hr {
   width: 27px;
   height: 11px;
   object-fit: contain;
-  
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -1547,7 +1547,7 @@ hr {
   letter-spacing: normal;
   text-align: left;
   color: #000000;
-  margin-left: 25px;
+  margin-left: 50px;
 }
 
 .signout {
@@ -1563,7 +1563,7 @@ hr {
   letter-spacing: normal;
   text-align: right;
   color: #000000;
-  margin-left: 90px;
+  margin-left: 45px;
 }
 
 .username {
