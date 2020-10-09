@@ -1,6 +1,7 @@
 body {
-	font-family:'NotoSans',sans-serif;
-	}
+  font-family:'NotoSans',sans-serif;
+  margin-top: 0px;
+}
 
 @font-face {
   font-family: 'Muli-Regular';
