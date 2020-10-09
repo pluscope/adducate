@@ -15,10 +15,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
 RewriteRule ^join/step1$ join/step1.php
-RewriteRule ^join/step2$ join/step1.php
-RewriteRule ^join/step3$ join/step1.php
-RewriteRule ^join/step4$ join/step1.php
-RewriteRule ^join/step5$ join/step1.php
+RewriteRule ^join/step2$ join/step2.php
+RewriteRule ^join/step3$ join/step3.php
+RewriteRule ^join/step4$ join/step4.php
+RewriteRule ^join/step5$ join/step5.php
 RewriteRule ^join/join$ join/join.php
 RewriteRule ^login$ login.php
 RewriteRule ^logout$ logout.php

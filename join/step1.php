@@ -8,8 +8,8 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 <script>
     function formSubmit() {
         var form = document.step1;
-        var pass = document.getElementById("userPass").value;
-        var passConfirm = document.getElementById("userPass1").value;
+        var pass = document.getElementById("pw").value;
+        var passConfirm = document.getElementById("pwConfirm").value;
         if( $("input:checkbox[id='priChk']").is(":checked") == false ){
             alert("Privacy & Terms Checkbox should be checked.");
             return false;
@@ -65,11 +65,11 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 Create a password
                             </div>
                             <div class="divBox8_1">
-                                <input class="textDefault" type="password" placeholder="Password" id="userPass" name="userPass">
+                                <input class="textDefault" type="password" placeholder="Password" id="pw" name="pw">
                             </div>
                             <br>
                             <div class="divBox8_1">
-                                <input class="textDefault" type="password" placeholder="Confirm password" id="userPass1" name="userPass1">
+                                <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="divBox8_2">
                                 <div class="checks">
