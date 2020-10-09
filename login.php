@@ -3,9 +3,8 @@
     include_once($_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
     $userId = $_POST["userId"];
     $userPass = $_POST["userPass"];
-    $hashedPass = hash("sha256", "ajflwkejfo239!!@094#%nf".$userPass);
     $sql = "SELECT * from users where username='%s' and pw='%s'";
-    $sql = sprintf($sql, $userId, $hashedPass);
+    $sql = sprintf($sql, $userId, $userPass);
     if($conn) {
         $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
         if(mysqli_num_rows($result) == 0){
