@@ -104,7 +104,7 @@ $(document).ready( function() {
             </div>
 
             <div class="email textDefault bluetext">
-                contact.adducate@gmail.com
+                contact@adducate.net
             </div>
             <br />
             <div class="scroll-top">
