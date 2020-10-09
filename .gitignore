@@ -1,3 +1,11 @@
 adducate.pem
 adducate.ppk
+
+# Editor directories and files 
 .idea
+_mac
+Default.xml
+debugger.xml
+github.xml
+vcs.xml
+php.xml
