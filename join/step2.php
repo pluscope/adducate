@@ -1,6 +1,6 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
-if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" || $_POST['userPass'] == "" || $_POST['priChk'] == "")
+if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" || $_POST['pw'] == "" || $_POST['priChk'] == "")
     header("Location: /join/step1");
 ?>
 <!--From pages/page9 html-->
@@ -13,7 +13,7 @@ if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" |
         document.getElementById("userNm").value = "<?php echo $_POST['userNm'];?>"
         document.getElementById("firstNm").value = "<?php echo $_POST['firstNm'];?>"
         document.getElementById("lastNm").value = "<?php echo $_POST['lastNm'];?>"
-        document.getElementById("userPass").value = "<?php echo $_POST['userPass'];?>"
+        document.getElementById("pw").value = "<?php echo $_POST['pw'];?>"
         document.getElementById("priChk").value = "<?php echo $_POST['priChk'];?>"
         if( $("input:checkbox[id='cb1']").is(":checked") == false && $("input:checkbox[id='cb2']").is(":checked") == false){
             alert("Choose your sex.");
@@ -49,7 +49,7 @@ if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" |
                                 <input type="hidden" placeholder="Username" id="userNm" name="userNm">
                                 <input type="hidden" placeholder="Jane" id="firstNm" name="firstNm">
                                 <input type="hidden" placeholder="Doe" id="lastNm" name="lastNm">
-                                <input type="hidden" placeholder="Password" id="userPass" name="userPass">
+                                <input type="hidden" placeholder="Password" id="pw" name="pw">
                                 <input type="hidden" id="priChk" name="priChk">
 
                                 <input type="checkbox" id="cb1" name="userSex" onClick="checkOnly(this)" value="1">
