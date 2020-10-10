@@ -53,14 +53,12 @@ if($conn) {
                     </div>
                     <div class="grid-container">
                         <?php
-                        //@TODO 3 images?
                         foreach($result as $row){
                             echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">";
-                            echo "<div class='divBox23'>";
-                            //@TODO 3 images?
-                            echo "<img src='".$row["image"]."' style='max-width: 100%; max-height: 100%'>";
+                            echo "<div class='divBox23' style='overflow: hidden;'>";
+                            echo "<img src='".$row["image"]."' style='max-width: 100%;' />";
                             echo "</div>";
-                            echo "<div class='boxtitle textDefault bold'>";
+                            echo "<div class=\"boxtitle textDefault bold\">";
                             echo $row["title"];
                             echo "</div>";
                             echo "<div class='boxdescription2'>";
