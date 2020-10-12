@@ -104,10 +104,10 @@ if($conn) {
                             <div class="vocab" style="cursor: pointer;" onclick="location.href='/class/storybook/vocab/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
                                 <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
              /img/grayarrow_middle@3x.png 3x" />
-                                <div class="arrowtext" onclick="goUrl('page25.html')">Vocab</div>
+                                <div class="arrowtext" >Vocab</div>
                             </div>
 
-                            <div class="vocabquiz" >
+                            <div class="vocabquiz" style="cursor: pointer;" onclick="location.href='/class/storybook/vocabquiz/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
                                 <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
              /img/grayarrow_middle@3x.png 3x" />
                                 <div class="arrowtext">Vocab Quiz</div>

@@ -116,7 +116,7 @@ if($conn) {
                                 <div class="arrowtext">Vocab</div>
                             </div>
 
-                            <div class="vocabquiz" style="cursor: pointer;" onclick="goUrl('page26.html')">
+                            <div class="vocabquiz" style="cursor: pointer;" onclick="location.href='/class/storybook/vocabquiz/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
                                 <img
                                         class="arrow"
                                         src="/img/grayarrow_middle.png"
