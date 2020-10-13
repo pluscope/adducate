@@ -12,7 +12,7 @@ if($conn) {
 }
 ?>
 
-<title>Adducate Web App</title>
+<title>Adducate</title>
 <link href="style.css" rel="stylesheet">
 <script>
 $(document).ready( function() {
@@ -41,10 +41,12 @@ $(document).ready( function() {
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
+                <br>
                 Adducate will empower the children without resources.
             </div>
 
             <div class="mainDownload"><span>Download</span></div>
+
         </div>
         <br />
         <div class="container-body-white" id = "classContainer">
@@ -103,7 +105,7 @@ $(document).ready( function() {
             </div>
 
             <div class="email textDefault bluetext">
-                contact.adducate@gmail.com
+                contact@adducate.net
             </div>
             <br />
             <div class="scroll-top">
