@@ -20,6 +20,9 @@ RewriteRule ^join/step3$ join/step3.php
 RewriteRule ^join/step4$ join/step4.php
 RewriteRule ^join/step5$ join/step5.php
 RewriteRule ^join/join$ join/join.php
+RewriteRule ^manual$ manual.php
+RewriteRule ^faq$ faq.php
+RewriteRule ^blog$ blog.php
 RewriteRule ^find$ find.php
 RewriteRule ^login$ login.php
 RewriteRule ^logout$ logout.php

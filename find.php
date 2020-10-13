@@ -1,12 +1,5 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
-include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
-$sql = "SELECT * FROM classes";
-if($conn) {
-    $result = mysqli_query($conn, $sql);
-}else{
-    //@TODO alert message when the connection is not connected
-}
 ?>
 <!--From pages/page2 html-->
 <!--Show All classes-->

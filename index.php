@@ -91,13 +91,13 @@ $(document).ready( function() {
         <div class="Background_white" id="aboutContainer">
 
             <div class="divBox4">
-                <div class="orangeBox textDefault f36 bold">
+                <div class="orangeBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/manual'">
                     Class Manual
                 </div>
-                <div class="blueBox textDefault f36 bold">
+                <div class="blueBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/faq'">
                     FAQ
                 </div>
-                <div class="greenBox textDefault f36 bold">
+                <div class="greenBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/blog'">
                     Blog
                 </div>
             </div>
