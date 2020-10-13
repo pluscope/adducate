@@ -8,8 +8,9 @@ if($conn) {
     $first_story_ids = array();
     $i = 0;
     foreach($result as $row){
+        $storybook_id = $row["storybook_id"];
         $first_lesson_sql = "SELECT id FROM storybook_lessons WHERE storybook_id = %d LIMIT 1";
-        $first_lesson_sql = sprintf($first_lesson_sql, $row["id"]);
+        $first_lesson_sql = sprintf($first_lesson_sql, $storybook_id);
         $first_lesson_ids[$i] = mysqli_fetch_array(mysqli_query($conn, $first_lesson_sql))["id"];
         $first_story_sql = "SELECT id FROM storybook_lesson_stories WHERE lesson_id = %d LIMIT 1";
         $first_story_sql = sprintf($first_story_sql, $first_lesson_ids[$i]);
@@ -44,16 +45,11 @@ if($conn) {
                         <?php
                         $i = 0;
                         foreach($result as $row){
-                            echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["id"]."/".$first_story_ids[$i]."'\">";
-                            echo "<div class='divBox23'>";
-                            //@TODO 3 images?
-                            echo "<img src='".$row["image"]."' style='max-width: 100%; max-height: 100%'>";
+                            echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["storybook_id"]."/".$first_story_ids[$i]."'\">";
+                            echo "<div class=\"divBox23\" style=\"background-image: url('".$row["image"]."'); background-position: center center; background-repeat: no-repeat; background-size: 100% auto;\">";
                             echo "</div>";
                             echo "<div class='boxtitle textDefault bold'>";
                             echo $row["title"];
-                            echo "</div>";
-                            echo "<div class='boxdescription2'>";
-                            echo $row["description"];
                             echo "</div>";
                             echo "</div>";
                             $i++;

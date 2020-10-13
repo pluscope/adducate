@@ -42,14 +42,11 @@ if($conn) {
                             $i = 0;
                             foreach($result as $row){
                                 echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$first_lesson_ids[$i]."/".$first_story_ids[$i]."'\">";
-                                echo "<div class='divBox23'>";
-                                echo "<img src='".$row["title_image"]."' style='max-width: 100%; max-height: 100%'>";
+                                echo "<div class=\"divBox23\" style=\"background-image: url('".$row["title_image"]."'); background-position: center center; background-repeat: no-repeat; background-size: 100% auto;\">";
+//                                echo "<img src='".$row["title_image"]."' style='max-width: 100%; max-height: 100%'>";
                                 echo "</div>";
                                 echo "<div class='boxtitle textDefault bold'>";
                                 echo $row["title"];
-                                echo "</div>";
-                                echo "<div class='boxdescription2'>";
-                                echo $row["description"];
                                 echo "</div>";
                                 echo "</div>";
                                 $i++;

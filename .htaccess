@@ -20,6 +20,10 @@ RewriteRule ^join/step3$ join/step3.php
 RewriteRule ^join/step4$ join/step4.php
 RewriteRule ^join/step5$ join/step5.php
 RewriteRule ^join/join$ join/join.php
+RewriteRule ^manual$ manual.php
+RewriteRule ^faq$ faq.php
+RewriteRule ^blog$ blog.php
+RewriteRule ^find$ find.php
 RewriteRule ^login$ login.php
 RewriteRule ^logout$ logout.php
 RewriteRule ^welcome$ welcome.php
@@ -27,7 +31,10 @@ RewriteRule ^welcome$ welcome.php
 RewriteRule ^welcome_login$ welcome_login.php
 RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2
 RewriteRule ^class/storybook/story/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/story.php?storybook_id=$1&lesson_id=$2&story_id=$3
-RewriteRule ^class/alivebook/read/([0-9]+)/([0-9]+)$ class/alivebook/read.php?alivebook_id=$1&story_id=$2
+RewriteRule ^class/storybook/vocab/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/vocab.php?storybook_id=$1&lesson_id=$2&page_id=$3
+RewriteRule ^class/storybook/vocabquiz/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/vocabquiz.php?storybook_id=$1&lesson_id=$2&page_id=$3
+RewriteRule ^class/alivebook/read/([0-9]+)/([0-9]+)$ class/alivebook/read.php?storybook_id=$1&story_id=$2
+RewriteRule ^class/alivebook/guide/([0-9]+)/([0-9]+)$ class/alivebook/guide.php?storybook_id=$1&page_id=$2
 RewriteRule ^class/creationstory/old$ class/creationstory/index.php?category=0
 RewriteRule ^class/creationstory/new$ class/creationstory/index.php?category=1
 RewriteRule ^class/creationstory/([0-9]+)$ class/creationstory/contents.php?id=$1
