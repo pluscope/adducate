@@ -140,7 +140,10 @@ if($conn) {
                             <hr>
                             <div class="wordmeaning2" id="vocQue">
                                 <?php
-                                    echo str_replace($vocab["vocab"],"________",$vocab["sentence"]);
+                                    if(strpos($vocab["sentence"], $vocab["vocab"]))
+                                        echo str_replace($vocab["vocab"],"________",$vocab["sentence"]);
+                                    else
+                                        echo str_replace(strtoupper($vocab["vocab"][0]).substr($vocab["vocab"], 1),"________",$vocab["sentence"]);
                                 ?>
                             </div>
                             <div class="wordselections" id="vocQueAnsList">
