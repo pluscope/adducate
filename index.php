@@ -25,9 +25,9 @@ $(document).ready( function() {
 	    if(location=='class'){
             doScrolling('#classContainer', 1000);
         }else if(location=='team'){
-            doScrolling('#teamContainer', 1000);
+            doScrolling('#teamContainer', 1500);
         }else if(location=='about'){
-            doScrolling('#aboutContainer', 1000);
+            doScrolling('#aboutContainer', 2000);
         }
     }
 });
@@ -68,6 +68,11 @@ function doScrolling(element, duration) {
         }
     })
 }
+
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
 </script>
 
 </head>
@@ -90,9 +95,9 @@ function doScrolling(element, duration) {
                     <ul class="menuUl">
                         <li class="menuLi"><span onclick="doScrolling('#classContainer', 1000)">Class</span></li>
 
-                        <li class="menuLi"><span onclick="doScrolling('#teamContainer', 1000)">Team</span></li>
+                        <li class="menuLi"><span onclick="doScrolling('#teamContainer', 1500)">Team</span></li>
 
-                        <li class="menuLi"><span onclick="doScrolling('#aboutContainer', 1000)">About</span></li>
+                        <li class="menuLi"><span onclick="doScrolling('#aboutContainer', 2000)">About</span></li>
 
                         <li class="menuLiBlue"><span>Download</span></li>
 
@@ -212,7 +217,7 @@ function doScrolling(element, duration) {
                 <div class="blueBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/faq'">
                     FAQ
                 </div>
-                <div class="greenBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/blog'">
+                <div class="greenBox textDefault f36 bold" style="cursor: pointer;" onclick="openInNewTab('https://medium.com/@contact.adducate/what-is-adducate-3c00458d6c17')">
                     Blog
                 </div>
             </div>
