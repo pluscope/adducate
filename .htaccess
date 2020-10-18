@@ -1,17 +1,16 @@
 DirectoryIndex index.php
 
 # enable apache rewrite engine
-Options -MultiViews
+Options -MultiViews -Indexes
 RewriteEngine on
 
 # set your rewrite base
 # Edit this in your init method too if you script lives in a subfolder
 RewriteBase /
 
-
 # Deliver the folder or file directly if it exists on the server
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
 
 # Push every request to index.php
 RewriteRule ^join/step1$ join/step1.php
@@ -20,6 +19,9 @@ RewriteRule ^join/step3$ join/step3.php
 RewriteRule ^join/step4$ join/step4.php
 RewriteRule ^join/step5$ join/step5.php
 RewriteRule ^join/join$ join/join.php
+RewriteRule ^team/$ index.php?location=team
+RewriteRule ^about/$ index.php?location=about
+RewriteRule ^class/$ index.php?location=class [L,QSA]
 RewriteRule ^manual$ manual.php
 RewriteRule ^faq$ faq.php
 RewriteRule ^blog$ blog.php
@@ -27,12 +29,12 @@ RewriteRule ^find$ find.php
 RewriteRule ^login$ login.php
 RewriteRule ^logout$ logout.php
 RewriteRule ^welcome$ welcome.php
-RewriteRule ^welcome$ welcome.php
 RewriteRule ^welcome_login$ welcome_login.php
 RewriteRule ^class/abc/([0-9]+)/([0-9]+)$ class/abc/contents.php?abc_id=$1&abc_contents_id=$2
 RewriteRule ^class/storybook/story/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/story.php?storybook_id=$1&lesson_id=$2&story_id=$3
 RewriteRule ^class/storybook/vocab/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/vocab.php?storybook_id=$1&lesson_id=$2&page_id=$3
 RewriteRule ^class/storybook/vocabquiz/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/vocabquiz.php?storybook_id=$1&lesson_id=$2&page_id=$3
+RewriteRule ^class/storybook/sentence/([0-9]+)/([0-9]+)/([0-9]+)$ class/storybook/sentence.php?storybook_id=$1&lesson_id=$2&page_id=$3
 RewriteRule ^class/alivebook/read/([0-9]+)/([0-9]+)$ class/alivebook/read.php?storybook_id=$1&story_id=$2
 RewriteRule ^class/alivebook/guide/([0-9]+)/([0-9]+)$ class/alivebook/guide.php?storybook_id=$1&page_id=$2
 RewriteRule ^class/creationstory/old$ class/creationstory/index.php?category=0

@@ -48,11 +48,11 @@
 
         <div class="menu">
             <ul class="menuUl">
-                <li class="menuLi"><span onclick="doScrolling('#classContainer', 1000)">Class</span></li>
+                <li class="menuLi"><span onclick="location.href='/class/'">Class</span></li>
 
-                <li class="menuLi"><span onclick="doScrolling('#teamContainer', 1000)">Team</span></li>
+                <li class="menuLi"><span onclick="location.href='/team/'">Team</span></li>
 
-                <li class="menuLi"><span onclick="doScrolling('#aboutContainer', 1000)">About</span></li>
+                <li class="menuLi"><span onclick="location.href='/about/">About</span></li>
 
                 <li class="menuLiBlue"><span>Download</span></li>
 
