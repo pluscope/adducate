@@ -107,7 +107,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
+                    <div class="pointer"><span>Class</span><span>>Storybook</span><span>>Book Name</span></div>
 
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
@@ -125,66 +125,84 @@ if($conn) {
                         <hr>
                     </div>
 
-                    <div class="title-div2 textDefault bold">Title</div>
+                    <div id="story_title" class="title-div2 textDefault bold"><?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
-                        <div class="result" id="resultWrong" style="display: none;">
-                            Try Again
-                        </div>
-                        <div class="result green" id="resultGood" style="display: none;">
-                            Good Job
-                        </div>
-                        <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
-                        <div class="divBox25" id="mainQuizBox">
-                            <div class="word">Fill in the blanks</div>
-                            <hr>
-                            <div class="wordmeaning2" id="vocQue">
-                                <?php
-                                    if(strpos($vocab["sentence"], $vocab["vocab"]))
-                                        echo str_replace($vocab["vocab"],"________",$vocab["sentence"]);
-                                    else
-                                        echo str_replace(strtoupper($vocab["vocab"][0]).substr($vocab["vocab"], 1),"________",$vocab["sentence"]);
-                                ?>
+                        <div class="divBox25">
+                            <div class="word">Make the right sentence</div>
+                            <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />
+                            <div class="wordmeaning2" id="vocWordText">
+                                Tunami is going to a market to run errands for her mother.
                             </div>
-                            <div class="wordselections" id="vocQueAnsList">
-
+                            <div class="wordselections2" id="vocWordList">
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;Tunami&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;is&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;going&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;a&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;market&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;run&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;errands&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;for&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;her&nbsp;&nbsp;</span></div>
+                                <div class="wordblue whitetext"><span class="f18">&nbsp;&nbsp;mother&nbsp;&nbsp;</span></div>
+                            </div>
+                            <div class="wordselections2" id="vocWordList1">
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;Tunami&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;is&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;going&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;a&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;market&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;run&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;errands&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;for&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;her&nbsp;&nbsp;</span></div>
+                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;mother&nbsp;&nbsp;</span></div>
                             </div>
                         </div>
-                        <?php
-                            if($page_id != 1){
-                                echo "<img onclick=\"location.href='/class/storybook/vocabquiz/".$storybook_id."/".$lesson_id."/".($page_id-1)."'\" style=\"cursor: pointer\" class=\"bbtn_left_story\" src=\"/img/scroll-btn(left).png\" srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\" />";
-                            }
-                            if($is_last_page != 1){
-                                echo "<img onclick=\"location.href='/class/storybook/vocabquiz/".$storybook_id."/".$lesson_id."/".($page_id+1)."'\" style=\"cursor: pointer\" class=\"bbtn_right_story\" src=\"/img/scroll-btn(right).png\" srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\" />";
-                            }
-                        ?>
                     </div>
-
                     <div class="greenarrows textDefault whitetext">
                         <div class="story" style="cursor: pointer;" onclick="location.href='/class/storybook/story/<?php echo $storybook_id."/".$lesson_id."/".$first_story_id; ?>'">
-                            <img class="arrow" src="/img/grayarrow_front.png" srcset="/img/grayarrow_front@2x.png 2x,
-             /img/grayarrow_front@3x.png 3x" />
-                            <div class="arrowtext">story</div>
+                            <img
+                                    class="arrow"
+                                    src="/img/grayarrow_front.png"
+                                    srcset="/img/grayarrow_front@2x.png 2x,
+             /img/grayarrow_front@3x.png 3x"/>
+                            <div class="arrowtext">Story</div>
                         </div>
 
-                        <div class="vocab" style="cursor: pointer;" onclick="location.href='/class/storybook/vocab/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
-                            <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
-             /img/grayarrow_middle@3x.png 3x" />
+                        <div class="vocab" onclick="location.href='/class/storybook/vocab/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
+                            <img
+                                    class="arrow"
+                                    src="/img/grayarrow_middle.png"
+                                    srcset="/img/grayarrow_middle@2x.png 2x,
+             /img/grayarrow_middle@3x.png 3x"/>
                             <div class="arrowtext">Vocab</div>
                         </div>
 
-                        <div class="vocabquiz">
-                            <img class="arrow" src="/img/greenarrow_middle.png" srcset="/img/greenarrow_middle@2x.png 2x,
-             /img/greenarrow_middle@3x.png 3x" />
+                        <div class="vocabquiz" style="cursor: pointer;" onclick="location.href='/class/storybook/vocabquiz/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
+                            <img
+                                    class="arrow"
+                                    src="/img/greenarrow_middle.png"
+                                    srcset="/img/greenarrow_middle@2x.png 2x,
+             /img/greenarrow_middle@3x.png 3x"/>
                             <div class="arrowtext">Vocab Quiz</div>
                         </div>
 
-                        <div class="Sentence" style="cursor: pointer;" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
-                            <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
-             /img/grayarrow_last@3x.png 3x" />
+                        <div class="Sentence">
+                            <img
+                                    class="arrow"
+                                    src="/img/grayarrow_last.png"
+                                    srcset="/img/grayarrow_last@2x.png 2x,
+             /img/grayarrow_last@3x.png 3x"/>
                             <div class="arrowtext">Sentence</div>
                         </div>
                     </div>
+
+                    <div class="storylist"><span class="textDefault f37">Story List</span></div>
 
                 </div>
                     <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>

@@ -113,7 +113,7 @@ if($conn) {
                                 <div class="arrowtext">Vocab Quiz</div>
                             </div>
 
-                            <div class="Sentence">
+                            <div class="Sentence" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
                                 <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
              /img/grayarrow_last@3x.png 3x" />
                                 <div class="arrowtext">Sentence</div>
