@@ -73,7 +73,7 @@ if($conn) {
         var wordList = document.getElementById(("answer"));
         var words = document.querySelectorAll('#answer > button');
         var sentence = '';
-        var answer = '<?php echo $sentence; ?>';
+        var answer = '<?php echo str_replace("'", "\'", $sentence); ?>';
         for(var i=0; i<words.length; ++i){
             sentence += words[i].innerText;
         }
