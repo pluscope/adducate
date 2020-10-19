@@ -30,7 +30,7 @@ if($conn) {
                             echo "<a href='/class/".$row["url_name"]."'>";
                             echo "<img class='".$row["css_name"]."' src='".'..'.$row["image1"]."' srcset='".'..'.$row["image2"]." 2x,".'..'.$row["image3"]." 3x' />";
                             echo "</a>";
-                            echo "<div class='divBox2 textDefault'>".$row["description"]."</div>";
+                            echo "<div class='divBox2 textDefault'>".$row["description"]." </div>";
                         }
                     ?>
 <!--                    <img class="ABC" src="../img/abc.jpg" srcset="../img/abc@2x.jpg 2x,../img/abc@3x.jpg 3x" />-->

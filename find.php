@@ -22,7 +22,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                     if(data=='No User')
                         alert("There is no user using this email or username.");
                     else if(data=='Error')
-                        alert("There is some errors whild finding your password");
+                        alert("There is some errors while finding your password");
                     else{
                         document.getElementById("popup_pw_span").innerHTML = data;
                         popup[0].style.visibility = "visible";
