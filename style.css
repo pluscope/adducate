@@ -202,6 +202,24 @@ body {
   vertical-align: middle;
 }
 
+.mainDownload span {
+  width: 116px;
+  height: 20px;
+  object-fit: contain;
+
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  line-height: 55px;
+}
+
+.mainDownload .selected {
+  background-color: #999999;
+}
+
 .ABC {
   width: 140px;
   height: 55px;
@@ -1386,32 +1404,32 @@ hr {
   text-align: left;
 }
 
-.mainDownload {
-  margin-top: 50px;
-  background-color: #00a3e0;
-  border-radius: 10px;
-  width: 324px;
-  height: 55px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-  text-align: center;
-  vertical-align: middle;
-}
+/*.mainDownload {*/
+/*  margin-top: 50px;*/
+/*  background-color: #00a3e0;*/
+/*  border-radius: 10px;*/
+/*  width: 324px;*/
+/*  height: 55px;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  padding: 5px;*/
+/*  text-align: center;*/
+/*  vertical-align: middle;*/
+/*}*/
 
-.mainDownload span {
-  width: 116px;
-  height: 20px;
-  object-fit: contain;
-  
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-  line-height: 55px;
-}
+/*.mainDownload span {*/
+/*  width: 116px;*/
+/*  height: 20px;*/
+/*  object-fit: contain;*/
+/*  */
+/*  font-size: 24px;*/
+/*  font-weight: bold;*/
+/*  font-stretch: normal;*/
+/*  font-style: normal;*/
+/*  letter-spacing: normal;*/
+/*  color: #ffffff;*/
+/*  line-height: 55px;*/
+/*}*/
 
 .popup {
   visibility: hidden;
