@@ -36,7 +36,11 @@ if($conn) {
     };
 
     function playAbcSound(){
-        document.getElementById('abcAudio').play();
+        var i;
+        for(i=0; i<3; ++i){
+            document.getElementById('move_video').play();
+            document.getElementById('abcAudio').play();
+        }
     }
 </script>
 <div class="body">
@@ -68,19 +72,15 @@ if($conn) {
                         </div>
                         <div class="box">
 
-                        <video autoplay muted id="move_video">
+                        <video muted id="move_video">
                             <?php
                                 $abc_motion = mysqli_fetch_array($abc_motions);
                                 echo "<source type='video/mp4' id='movie_src' src='".$abc_motion["image"]."' />"
                             ?>
                         </video><div style="display: none;">Iteration: <span id="iteration"></span></div>
-                            <audio id="abcAudio" autoplay preload="none" src="<?php echo $abc_motion["sound"]; ?>" type="audio/mp4">
+                            <audio id="abcAudio" preload="none" src="<?php echo $abc_motion["sound"]; ?>" type="audio/mp4">
                                 <source src="<?php echo $abc_motion["sound"]; ?>" type="audio/mp4">
                             </audio>
-                            <iframe src="/contents/abc/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-
-<!--                            <iframe src="--><?php //echo $abc_motion["sound"]; ?><!--" allow="autoplay" style="display:none" id="iframeAudio">-->
-<!--                            </iframe>-->
                         </div>
                         <div class="box">
                             <?php
@@ -92,8 +92,8 @@ if($conn) {
                             ?>
                         </div>
                     </div>
-                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Replay</span></div>
-                    <div class="sound"><span class="textDefault whitetext bold">Sound</span></div>
+                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Play</span></div>
+<!--                    <div class="sound"><span class="textDefault whitetext bold">Sound</span></div>-->
                     <div class="next"><span class="textDefault bold">Next</span></div>
                 </div>
             </div>
