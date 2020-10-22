@@ -1,7 +1,7 @@
 //영상
 var moveArray = [['a','apple.png','apple--_us_1.mp3'],
 	['a','ant.png','ant--_us_1.mp3'],
-	['a','axe.png','ax--_us_1.mp3'],
+	['a','ax.png','ax--_us_1.mp3'],
 	['b','baby.png','baby--_us_1.mp3'],
 	['b','box.png','box--_us_1.mp3'],
 	['b','boy.png','boy--_us_1.mp3'],
