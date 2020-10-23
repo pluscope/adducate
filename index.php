@@ -35,7 +35,7 @@ $(document).ready( function() {
     $('.carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1 ,
-        dots:true,
+        dots:false,
         infinite: true,
         cssEase: 'linear',
         prevArrow: "<img class='bbtn_left_story slick-prev' style='margin-left: 50px; top: 20%; z-index: 1;' src='/img/scroll-btn(left).png' srcset='/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />",
@@ -198,17 +198,25 @@ function openInNewTab(url) {
                         echo "<div>";
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo "<img src='".$teams[$i]["logo"]."' style='width:244px; height:44px; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
+                            echo "<div style='margin-top:80px;'>";
                             echo $teams[$i]["name"];
-                            echo "<br />";
+                            echo "</div>";
+                            echo "<div style='margin-top:10px;'>";
                             echo $teams[$i]["introduction"];
-                            echo "<br />";
-                            echo "<img src='".$teams[$i]["logo"]."' style='width:244px; height:44px; margin-left:auto; margin-right:auto; margin-top: 60px;' />";
+                            echo "</div>";
                             echo "</div>";
                         }else{
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo "<div style='height:44px; margin-left:auto; margin-right:auto; margin-top: 80px; font-size: 35px;'>";
+                            echo $teams[$i]["logo"];
+                            echo "</div>";
+                            echo "<div style='margin-top:80px;'>";
                             echo $teams[$i]["name"];
-                            echo "<br />";
+                            echo "</div>";
+                            echo "<div style='margin-top:10px;'>";
                             echo $teams[$i]["introduction"];
+                            echo "</div>";
                             echo "</div>";
                         }
                         echo "</div>";
