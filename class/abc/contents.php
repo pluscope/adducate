@@ -107,12 +107,7 @@ if($conn) {
                             <?php
                                 $abc_words = mysqli_result_to_array($abc_words);
                                 for($i=0; $i<count($abc_words); ++$i){
-                                    if($i==0){
-                                        echo "<img src='".$abc_words[$i]["image"]."' class='item' id='word1'>";
-                                    }
-                                    else{
-                                        echo "<img src='".$abc_words[$i]["image"]."' class='item' style='display:none;' id='word".($i+1)."'>";
-                                    }
+                                    echo "<img src='".$abc_words[$i]["image"]."' class='item' style='display:none;' id='word".($i+1)."'>";
                                     echo "<audio id='word".($i+1)."_sound' preload='none'>";
                                     echo "<source src = '".$abc_words[$i]["sound"]."'>";
                                     echo "</audio>";
