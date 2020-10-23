@@ -30,7 +30,8 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Creation Story</span></div>
+                    <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/creationstory/'" style="cursor: pointer;"> Creation Story</span></div>
+
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
                             <?php

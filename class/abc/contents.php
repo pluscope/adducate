@@ -73,7 +73,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > ABC</span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > ABC</span></div>
                     <div class="abc_list">
                         <?php
                             foreach($abc_contents as $row){

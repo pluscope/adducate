@@ -202,7 +202,7 @@ function openInNewTab(url) {
                             echo "<div style='margin-top:80px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
-                            echo "<div style='margin-top:10px;'>";
+                            echo "<div style='margin-top:20px;'>";
                             echo $teams[$i]["introduction"];
                             echo "</div>";
                             echo "</div>";
@@ -214,7 +214,7 @@ function openInNewTab(url) {
                             echo "<div style='margin-top:80px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
-                            echo "<div style='margin-top:10px;'>";
+                            echo "<div style='margin-top:20px;'>";
                             echo $teams[$i]["introduction"];
                             echo "</div>";
                             echo "</div>";
