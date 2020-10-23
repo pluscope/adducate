@@ -592,6 +592,7 @@ hr {
   background-color: #00a3e0;
   text-align: center;
   border-radius: 20px;
+  border-color: #00a3e0;
 }
 
 .wordblue1 {
@@ -607,6 +608,7 @@ hr {
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+  border-color: #00a3e0;
 }
 
 .wordblack {
@@ -619,6 +621,7 @@ hr {
   background-color: black;
   text-align: center;
   border-radius: 10px;
+  border-color: black;
 }
 
 .wordblack1 {
@@ -634,6 +637,7 @@ hr {
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+  border-color: black;
 }
 
 .next {
