@@ -31,6 +31,11 @@ if($conn) {
         $sql = sprintf($sql, $lessons[$i]["id"]);
         $lessons[$i]["first_story_id"] = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["id"];
     }
+    if($page_id==1){
+        $sql = "SELECT id from storybook_lesson_stories WHERE lesson_id=%d ORDER BY id DESC LIMIT 1";
+        $sql = sprintf($sql, $lesson_id);
+        $last_story_id = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["id"];
+    }
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -51,7 +56,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                     <div class="container-body-white-center">
-                        <div class="pointer"><span>Class</span><span> > Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
+                        <div class="pointer"><span onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/storybook/'" style="cursor: pointer;">Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                         <div class="Lorem-text-overflow2">
                             <div class="push" id="alivePush">
@@ -82,6 +87,12 @@ if($conn) {
                                 ?>
                             </div>
                             <?php
+                                if($page_id==1){
+                                    echo "<img onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lesson_id."/".($last_story_id)."'\"
+                                     class=\"bbtn_left_story\" style=\"cursor: pointer;\"
+                                     src=\"/img/scroll-btn(left).png\"
+                                     srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
+                                }
                                 if($page_id>1){
                                     echo "<img onclick=\"location.href='/class/storybook/vocab/".$storybook_id."/".$lesson_id."/".($page_id-1)."'\"
                                  class=\"bbtn_left_story\" style=\"cursor: pointer;\"
@@ -93,6 +104,12 @@ if($conn) {
                                  class=\"bbtn_right_story\" style=\"cursor: pointer;\"
                                  src=\"/img/scroll-btn(right).png\" 
                                  srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\"/>";
+                                }
+                                if($is_last_page==1){
+                                    echo "<img onclick=\"location.href='/class/storybook/vocabquiz/".$storybook_id."/".$lesson_id."/1'\"
+                                     class=\"bbtn_right_story\" style=\"cursor: pointer;\"
+                                     src=\"/img/scroll-btn(right).png\" 
+                                     srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\"/>";
                                 }
                             ?>
                         </div>
