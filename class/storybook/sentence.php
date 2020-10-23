@@ -57,10 +57,35 @@ if($conn) {
             new_word.innerText = word.innerText;
             wordList.appendChild(new_word);
             if((wordList.childElementCount == totalWords) && checkAnswer() && !isLast){
-                location.href='/class/storybook/sentence/'+'<?php echo $storybook_id; ?>'+'/'+'<?php echo $lesson_id; ?>'+'/'+<?php echo $page_id+1; ?>
+                var result = document.getElementById("resultGood");
+                var box = document.getElementById("mainQuizBox");
+                result.style.display = 'block';
+                box.classList.add("transparent");
+                timeOutFunc = setTimeout(function() {
+                    result.style.display = 'none';
+                    box.classList.remove("transparent");
+                    location.href='/class/storybook/sentence/'+'<?php echo $storybook_id; ?>'+'/'+'<?php echo $lesson_id; ?>'+'/'+<?php echo $page_id+1; ?>
+                } , 2000);
+            }
+            if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
+                var result = document.getElementById("resultGood");
+                var box = document.getElementById("mainQuizBox");
+                result.style.display = 'block';
+                box.classList.add("transparent");
+                timeOutFunc = setTimeout(function() {
+                    result.style.display = 'none';
+                    box.classList.remove("transparent");
+                    //@TODO how to do with the last sentence quiz?
+                } , 2000);
             }
         }else{
-            alert("Too many word!");
+            var result = document.getElementById("resultWrong");
+            var box = document.getElementById("mainQuizBox");
+            var timeOutFunc;
+            clearTimeout(timeOutFunc);
+            result.style.display = 'block';
+            box.classList.add("transparent");
+            timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
         }
     }
 
@@ -73,7 +98,7 @@ if($conn) {
         var wordList = document.getElementById(("answer"));
         var words = document.querySelectorAll('#answer > button');
         var sentence = '';
-        var answer = '<?php echo $sentence; ?>';
+        var answer = '<?php echo str_replace("'", "\'", $sentence); ?>';
         for(var i=0; i<words.length; ++i){
             sentence += words[i].innerText;
         }
@@ -92,7 +117,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/storybook/'" style="cursor: pointer;">Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
@@ -113,33 +138,31 @@ if($conn) {
                     <div id="story_title" class="title-div2 textDefault bold"><?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
-                        <div class="divBox25">
+                        <div class="result" id="resultWrong" style="display: none;">
+                            Try Again
+                        </div>
+                        <div class="result green" id="resultGood" style="display: none;">
+                            Good Job
+                        </div>
+                        <div class="divBox25" id="mainQuizBox">
                             <div class="word">Make the right sentence</div>
                             <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />
                             <div class="wordmeaning2" id="vocWordText">
                                 <?php echo $sentence; ?>
                             </div>
                             <div class="wordselections2" id="answer">
-<!--                                <button class="wordblue whitetext">Tunami</button>-->
                             </div>
                             <div class="wordselections2" id="select">
                                 <?php
+                                    $words_index = array();
                                     for($i=0; $i<count($words); $i++){
-                                        echo "<button class='wordblack whitetext' onclick='addWord(this)' value='".($i+1)."'>".$words[$i]."</button>";
+                                        $words_index[$i] = $i;
+                                    }
+                                    shuffle($words_index);
+                                    for($i=0; $i<count($words); $i++){
+                                        echo "<button class='wordblack whitetext' onclick='addWord(this)' >".$words[$words_index[$i]]."</button>";
                                     }
                                 ?>
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;Tunami&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;is&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;going&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;a&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;market&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;to&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;run&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;errands&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;for&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;her&nbsp;&nbsp;</span></div>-->
-<!--                                <div class="wordblack whitetext"><span class="f18">&nbsp;&nbsp;mother&nbsp;&nbsp;</span></div>-->
                             </div>
                         </div>
                     </div>

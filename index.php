@@ -6,8 +6,10 @@ $location =  isset($_GET["location"])?$_GET["location"]:"";
 $isLogin =  isset($_SESSION["isLogin"])?$_SESSION["isLogin"]:"";
 $userNm =  isset($_SESSION["userNm"])?$_SESSION["userNm"]:"";
 $sql = "SELECT * FROM classes";
+$sql2 = "SELECT * FROM teams";
 if($conn) {
     $result = mysqli_query($conn, $sql);
+    $teams = mysqli_result_to_array(mysqli_query($conn, $sql2));
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -30,6 +32,15 @@ $(document).ready( function() {
             doScrolling('#aboutContainer', 2000);
         }
     }
+    $('.carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1 ,
+        dots:true,
+        infinite: true,
+        cssEase: 'linear',
+        prevArrow: "<img class='bbtn_left_story slick-prev' style='margin-left: 50px; top: 20%; z-index: 1;' src='/img/scroll-btn(left).png' srcset='/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />",
+        nextArrow: "<img class='bbtn_left_story slick-next' style='margin-right: 50px; top: 20%;' src='/img/scroll-btn(right).png' srcset='/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />"
+    });
 });
 
 function getElementY(query) {
@@ -79,7 +90,6 @@ function openInNewTab(url) {
 <body>
 <div id="temp1" style="display: none"> </div>
 <div class="body" id="mainBody">
-  	
  	<div class="container" id="container-menu">
         <div class="container">
             <!-- container-header 필수 -->
@@ -181,29 +191,51 @@ function openInNewTab(url) {
         </div>
         <br />
         <div class="container-body-blue" id="teamContainer">
-
-            <div class="leftPath5" style="background-image:url('/img/leftPath5.png') ">
-
+            <div class="carousel" style="height: 80%; width: 100%">
+                <?php
+                    shuffle($teams);
+                    for($i=0; $i<count($teams); ++$i){
+                        echo "<div>";
+                        if(strstr($teams[$i]["logo"] , "/")){
+                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo $teams[$i]["name"];
+                            echo "<br />";
+                            echo $teams[$i]["introduction"];
+                            echo "<br />";
+                            echo "<img src='".$teams[$i]["logo"]."' style='width:350px; height:200px; margin:auto;' />";
+                            echo "</div>";
+                        }else{
+                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo $teams[$i]["name"];
+                            echo "<br />";
+                            echo $teams[$i]["introduction"];
+                            echo "</div>";
+                        }
+                        echo "</div>";
+                    }
+                ?>
             </div>
+<!--            <div class="leftPath5" style="background-image:url('/img/leftPath5.png') ">-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            <div class="leftPath4" style="background-image:url('/img/leftPath4.png') ">-->
+<!---->
+<!--            </div>-->
 
-            <div class="leftPath4" style="background-image:url('/img/leftPath4.png') ">
+<!--            <div class="mainPath" style="background-image:url('/img/path.png');width:500px;height:320px;">-->
+<!---->
+<!--            </div>-->
 
-            </div>
+<!--            <div class="rightPath3" style="background-image:url('/img/rightPath1.png')">-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            <div class="rightPath2" style="background-image:url('/img/rightPath2.png')">-->
+<!---->
+<!--            </div>-->
 
-            <div class="mainPath" style="background-image:url('/img/path.png');width:500px;height:320px;">
-
-            </div>
-
-
-            <div class="rightPath3" style="background-image:url('/img/rightPath1.png')">
-
-            </div>
-
-            <div class="rightPath2" style="background-image:url('/img/rightPath2.png')">
-
-            </div>
-
-            <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer;"
+            <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer; padding-top: 10px"
                  class="bbtn_bottom"
                     src="/img/scroll-btn.png"
                     srcset="/img/scroll-btn@2x.png 2x,/img/scroll-btn@3x.png 3x"/>

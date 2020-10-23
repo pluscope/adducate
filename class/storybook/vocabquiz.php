@@ -107,7 +107,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/storybook/'" style="cursor: pointer;">Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
@@ -150,14 +150,6 @@ if($conn) {
 
                             </div>
                         </div>
-                        <?php
-                            if($page_id != 1){
-                                echo "<img onclick=\"location.href='/class/storybook/vocabquiz/".$storybook_id."/".$lesson_id."/".($page_id-1)."'\" style=\"cursor: pointer\" class=\"bbtn_left_story\" src=\"/img/scroll-btn(left).png\" srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\" />";
-                            }
-                            if($is_last_page != 1){
-                                echo "<img onclick=\"location.href='/class/storybook/vocabquiz/".$storybook_id."/".$lesson_id."/".($page_id+1)."'\" style=\"cursor: pointer\" class=\"bbtn_right_story\" src=\"/img/scroll-btn(right).png\" srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\" />";
-                            }
-                        ?>
                     </div>
 
                     <div class="greenarrows textDefault whitetext">
