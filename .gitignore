@@ -3,7 +3,6 @@ adducate.ppk
 
 # Editor directories and files 
 .idea
-_mac
 Default.xml
 debugger.xml
 github.xml
@@ -12,5 +11,4 @@ php.xml
 laf.xml
 contents
 phpMyAdmin
-/img/
 /_mac/

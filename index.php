@@ -199,22 +199,22 @@ function openInNewTab(url) {
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
                             echo "<img src='".$teams[$i]["logo"]."' style='width:244px; height:44px; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
-                            echo "<div style='margin-top:80px;'>";
+                            echo "<div style='margin-top:80px;font-size: 22px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
-                            echo "<div style='margin-top:20px;'>";
+                            echo "<div style='margin-top:10px;font-size: 20px;'>";
                             echo $teams[$i]["introduction"];
                             echo "</div>";
                             echo "</div>";
                         }else{
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
-                            echo "<div style='height:44px; margin-left:auto; margin-right:auto; margin-top: 80px; font-size: 35px;'>";
+                            echo "<div style='height:44px; margin-left:auto; margin-right:auto; margin-top: 80px; font-size: 32px;'>";
                             echo $teams[$i]["logo"];
                             echo "</div>";
-                            echo "<div style='margin-top:80px;'>";
+                            echo "<div style='margin-top:80px;font-size: 22px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
-                            echo "<div style='margin-top:20px;'>";
+                            echo "<div style='margin-top:10px;font-size: 20px;'>";
                             echo $teams[$i]["introduction"];
                             echo "</div>";
                             echo "</div>";
@@ -223,25 +223,6 @@ function openInNewTab(url) {
                     }
                 ?>
             </div>
-<!--            <div class="leftPath5" style="background-image:url('/img/leftPath5.png') ">-->
-<!---->
-<!--            </div>-->
-<!---->
-<!--            <div class="leftPath4" style="background-image:url('/img/leftPath4.png') ">-->
-<!---->
-<!--            </div>-->
-
-<!--            <div class="mainPath" style="background-image:url('/img/path.png');width:500px;height:320px;">-->
-<!---->
-<!--            </div>-->
-
-<!--            <div class="rightPath3" style="background-image:url('/img/rightPath1.png')">-->
-<!---->
-<!--            </div>-->
-<!---->
-<!--            <div class="rightPath2" style="background-image:url('/img/rightPath2.png')">-->
-<!---->
-<!--            </div>-->
 
             <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer; padding-top: 10px"
                  class="bbtn_bottom"
