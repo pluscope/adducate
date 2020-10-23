@@ -37,7 +37,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Alivebook</span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > Alivebook</span></div>
                     <div class="alivebookparagraph textDefault">
                         Apply students’ imagination into the stories that they read previously in the "Storybook" and then make their own storybook from drawings.
                     </div>
