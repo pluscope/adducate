@@ -43,7 +43,7 @@ if($conn) {
                             foreach($result as $row){
                                 echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$first_lesson_ids[$i]."/".$first_story_ids[$i]."'\">";
                                 echo "<div class=\"divBox23\" style=\"\">";
-                                echo "<img src='".$row["title_image"]."' style='width: -webkit-fill-available; max-height: 100%'>";
+                                echo "<img src='".$row["title_image"]."' style='width: inherit; max-height: 100%'>";
                                 echo "</div>";
                                 echo "<div class='boxtitle textDefault bold'>";
                                 echo $row["title"];
