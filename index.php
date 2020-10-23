@@ -202,7 +202,7 @@ function openInNewTab(url) {
                             echo "<br />";
                             echo $teams[$i]["introduction"];
                             echo "<br />";
-                            echo "<img src='".$teams[$i]["logo"]."' style='width:350px; height:200px; margin:auto;' />";
+                            echo "<img src='".$teams[$i]["logo"]."' style='width:244px; height:44px; margin-left:auto; margin-right:auto; margin-top: 60px;' />";
                             echo "</div>";
                         }else{
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";

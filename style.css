@@ -1587,3 +1587,7 @@ hr {
 .username {
   color: white;
 }
+
+.hover-green:hover{
+  color: green;
+}
