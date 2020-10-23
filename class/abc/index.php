@@ -29,13 +29,25 @@ if($conn) {
                     <?php
                         foreach($result as $row){
                             echo "<div class='grid-item'>";
-                            echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."/1'\">";
-                            echo "<div>".$row["title"]."</div>";
-                            echo "</div>";
-                            echo "<div class='boxdescription'>";
-                            echo $row["description"];
-                            echo "</div>";
-                            echo "</div>";
+                            if($row["title"]=='Alphabet'){
+                                echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."/1'\">";
+                                echo "<div>".$row["title"]."</div>";
+                                echo "</div>";
+                                echo "<div class='boxdescription'>";
+                                echo $row["description"];
+                                echo "</div>";
+                                echo "</div>";
+                            }
+                            else{
+                                echo "<div class='divBox22' style='color: gray;'>";
+                                echo "<div>".$row["title"]."</div>";
+                                echo "</div>";
+                                echo "<div class='boxdescription' style='color: gray;'>";
+                                echo $row["description"];
+                                echo "</div>";
+                                echo "</div>";
+                            }
+
                         }
                     ?>
                     </div>
