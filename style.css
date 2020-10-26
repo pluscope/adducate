@@ -692,9 +692,9 @@ hr {
 
 .sound {
   position: absolute;
-  width: 300px;
+  width: 600px;
   height: 50px;
-  margin-left: 672px;
+  margin-left: 333px;
   margin-top: 25px;
   background-color: #009639;
   text-align: center;
