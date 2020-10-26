@@ -198,7 +198,7 @@ function openInNewTab(url) {
                         echo "<div>";
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
-                            echo "<img src='".$teams[$i]["logo"]."' style='width:244px; height:44px; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
+                            echo "<img src='".$teams[$i]["logo"]."' style='width:40%; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
                             echo "<div style='margin-top:80px;font-size: 22px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
