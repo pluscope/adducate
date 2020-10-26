@@ -2,7 +2,7 @@ adducate.pem
 adducate.ppk
 
 # Editor directories and files 
-.idea
+/.idea/
 Default.xml
 debugger.xml
 github.xml
