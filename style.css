@@ -593,6 +593,10 @@ hr {
   text-align: center;
   border-radius: 20px;
   border-color: #00a3e0;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .wordblue1 {
@@ -655,7 +659,7 @@ hr {
 }
 
 .next2 {
-  top: 730px;
+  top: 720px;
 }
 
 .next3 {
@@ -1370,7 +1374,7 @@ hr {
   /*display: flex;*/
   justify-content: space-evenly;
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
