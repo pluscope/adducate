@@ -57,7 +57,7 @@ if($conn) {
                         foreach($result as $row){
                             echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">";
                             echo "<div class='divBox23' style='overflow: hidden;'>";
-                            echo "<img src='".$row["image"]."' style='width: -webkit-fill-available; max-height: 100%;' />";
+                            echo "<img src='".$row["image"]."' style='width:inherit; max-height: 100%;' />";
                             echo "</div>";
                             echo "<div class=\"boxtitle textDefault bold\">";
                             echo $row["title"];

@@ -440,9 +440,10 @@ hr {
 
 .sentence-div {
   position: absolute;
-  width: 340px;
+  width: 276px;
   text-align: center;
   top: 25px;
+  color: #00a3e0;
 }
 
 .storybox {
@@ -506,6 +507,8 @@ hr {
 
 .storywordbox {
   display: flex;
+  margin-left: 7%;
+  margin-right: 14%;
   justify-content: center;
   align-content: center;
   flex-direction: column;

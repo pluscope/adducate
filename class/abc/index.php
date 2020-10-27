@@ -24,7 +24,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;"> > ABC</span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;">ABC</span></div>
                     <div class="grid-container">
                     <?php
                         foreach($result as $row){
