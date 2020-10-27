@@ -1275,7 +1275,7 @@ hr {
   height: 277px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 53%;
   transform: translate(-50%, -50%);
   width: 784px;
   height: 277px;
@@ -1286,6 +1286,7 @@ hr {
 
 .wordmeaning {
   line-height: 1.4;
+  font-size: 23px;
 }
 
 .transparent {
