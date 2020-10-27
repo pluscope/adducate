@@ -17,7 +17,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
         <div class="container">
             <div class="container-body container-expand">
 
-                <div class="container-body-white">
+                    <div class="container-body-white-center">
                     <div class="pointer"><span>About</span><span> > Class Manual</span></div>
 
                     <div class="divBox5_1">
