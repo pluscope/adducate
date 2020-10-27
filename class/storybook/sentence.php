@@ -144,6 +144,7 @@ if($conn) {
                         <div class="result green" id="resultGood" style="display: none;">
                             Good Job
                         </div>
+
                         <div class="divBox25" id="mainQuizBox">
                             <div class="word">Make the right sentence</div>
                             <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />
