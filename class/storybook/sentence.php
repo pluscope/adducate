@@ -135,7 +135,7 @@ if($conn) {
                         <hr>
                     </div>
 
-                    <div id="story_title" class="title-div2 textDefault bold">Title - <?php echo $lesson[0]["title"] ?></div>
+                    <div id="story_title" class="title-div2 textDefault bold">Topic - <?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
                         <div class="result" id="resultWrong" style="display: none;">

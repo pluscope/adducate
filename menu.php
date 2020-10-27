@@ -66,7 +66,9 @@
             <input class="textbox1" type="text" placeholder="ID"  id="userId"/>
             <input class="textbox2" type="password" placeholder="PW"  id="userPass"/>
             <div class="content">
-                <span class="join"><a href="/join/step1">Join</a></span>
+                <div class="pointer join"><span onclick="location.href='/join/step1'" class="hover-green" style="cursor: pointer;">Join</span></div>
+
+<!--                <span class="join"><a href="/join/step1">Join</a></span>-->
                 <span class="id_pw"><a href="/find">Find ID/PW</a></span>
                 <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
             </div>
