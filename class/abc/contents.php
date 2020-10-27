@@ -47,6 +47,7 @@ if($conn) {
         }, false);
     }
     function playWordSound(){
+        document.getElementById('word1').style.display = 'block';
         document.getElementById('word1_sound').play();
         document.getElementById('word1_sound').addEventListener('ended', function () {
             document.getElementById('word1').style.display = 'none';
