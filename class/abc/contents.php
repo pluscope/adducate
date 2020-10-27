@@ -41,9 +41,9 @@ if($conn) {
                 document.getElementById('abcAudio').play();
             }
             iterations ++;
-            if(iterations == 4){
-                playWordSound();
-            }
+            // if(iterations == 4){
+            //     playWordSound();
+            // }
         }, false);
     }
     function playWordSound(){
@@ -115,8 +115,8 @@ if($conn) {
                             ?>
                         </div>
                     </div>
-<!--                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Play</span></div>-->
-                    <div class="sound"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Play</span></div>
+                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Write letters</span></div>
+                    <div class="sound"><span class="textDefault whitetext bold" onclick="playWordSound()" style="cursor: pointer;">Word sound</span></div>
                     <?php
                         if($is_last_abc){
                             echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href='/class/abc/'\">List</span></div>";
