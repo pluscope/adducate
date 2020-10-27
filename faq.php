@@ -23,7 +23,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                     <div class="container-body-white-center">
-                    <div class="pointer"><span>About</span><span> > FAQ</span></div>
+                    <div class="pointer"><span class="hover-green" onclick="location.href='/about/" style="cursor: pointer;">About</span><span> > </span><span>FAQ</span></div>
 
                     <div class="divBox6">
                         <hr>
