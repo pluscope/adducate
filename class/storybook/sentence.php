@@ -135,7 +135,7 @@ if($conn) {
                         <hr>
                     </div>
 
-                    <div id="story_title" class="title-div2 textDefault bold"><?php echo $lesson[0]["title"] ?></div>
+                    <div id="story_title" class="title-div2 textDefault bold">Title - <?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
                         <div class="result" id="resultWrong" style="display: none;">
@@ -146,7 +146,7 @@ if($conn) {
                         </div>
 
                         <div class="divBox25" id="mainQuizBox">
-                            <div class="word">Make the right sentence</div>
+                            <div class="word">Complete the sentence with the blocks of words</div>
                             <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />
                             <div class="wordmeaning2" id="vocWordText">
                                 <?php echo $sentence; ?>

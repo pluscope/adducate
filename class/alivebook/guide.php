@@ -43,7 +43,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > Alivebook</span><span> > <?php echo $storybook["title"];?></span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span onclick="location.href='/class/alivebook/'" class="hover-green" style="cursor: pointer;"> > Alivebook</span><span> > <?php echo $storybook["title"];?></span></div>
 
                     <div class="title-div2 textDefault bold">Title</div>
 

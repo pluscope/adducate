@@ -125,7 +125,8 @@ if($conn) {
                         <hr>
                     </div>
 
-                    <div class="title-div2 textDefault bold">Title</div>
+                    <div id="story_title" class="title-div2 textDefault bold">Title - <?php echo $lesson[0]["title"] ?></div>
+
 
                     <div class="storybox">
                         <div class="result" id="resultWrong" style="display: none;">
@@ -136,7 +137,7 @@ if($conn) {
                         </div>
                         <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
                         <div class="divBox25" id="mainQuizBox">
-                            <div class="word">Fill in the blanks</div>
+                            <div class="word">Fill in the blank</div>
                             <hr>
                             <div class="wordmeaning2" id="vocQue">
                                 <?php

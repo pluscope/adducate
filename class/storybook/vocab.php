@@ -74,7 +74,7 @@ if($conn) {
                             <hr>
                         </div>
 
-                        <div id="story_title" class="title-div2 textDefault bold"><?php echo $lesson[0]["title"] ?></div>
+                        <div id="story_title" class="title-div2 textDefault bold">Title - <?php echo $lesson[0]["title"] ?></div>
 
                         <div class="storybox">
                             <div id="vocList" class="divBox25 textDefault">
