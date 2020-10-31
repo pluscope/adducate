@@ -116,7 +116,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/storybook/'" style="cursor: pointer;">Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
+                    <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/storybook/'" style="cursor: pointer;"> Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
@@ -134,7 +134,7 @@ if($conn) {
                         <hr>
                     </div>
 
-                    <div id="story_title" class="title-div2 textDefault bold"><?php echo $lesson[0]["title"] ?></div>
+                    <div id="story_title" class="title-div2 textDefault bold">Topic - <?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
                         <div class="result" id="resultWrong" style="display: none;">
@@ -144,8 +144,9 @@ if($conn) {
                             Good Job
                         </div>
                         <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$next_lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
+
                         <div class="divBox25" id="mainQuizBox">
-                            <div class="word">Make the right sentence</div>
+                            <div class="word">Complete the sentence with the blocks of words</div>
                             <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />
                             <div class="wordmeaning2" id="vocWordText">
                                 <?php echo $sentence; ?>
@@ -203,8 +204,8 @@ if($conn) {
                             <div class="arrowtext">Sentence</div>
                         </div>
                     </div>
-
-                    <div class="storylist"><span class="textDefault f37">Story List</span></div>
+<!---->
+<!--                    <div class="storylist"><span class="textDefault f37">Story List</span></div>-->
 
                 </div>
                     <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>

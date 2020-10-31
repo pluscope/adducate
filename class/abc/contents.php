@@ -41,12 +41,13 @@ if($conn) {
                 document.getElementById('abcAudio').play();
             }
             iterations ++;
-            if(iterations == 4){
-                playWordSound();
-            }
+            // if(iterations == 4){
+            //     playWordSound();
+            // }
         }, false);
     }
     function playWordSound(){
+        document.getElementById('word1').style.display = 'block';
         document.getElementById('word1_sound').play();
         document.getElementById('word1_sound').addEventListener('ended', function () {
             document.getElementById('word1').style.display = 'none';
@@ -73,7 +74,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > ABC</span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;">ABC</span></div>
                     <div class="abc_list">
                         <?php
                             foreach($abc_contents as $row){
@@ -115,8 +116,8 @@ if($conn) {
                             ?>
                         </div>
                     </div>
-<!--                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Play</span></div>-->
-                    <div class="sound"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Play</span></div>
+                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Write letters</span></div>
+                    <div class="sound"><span class="textDefault whitetext bold" onclick="playWordSound()" style="cursor: pointer;">Word sound</span></div>
                     <?php
                         if($is_last_abc){
                             echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href='/class/abc/'\">List</span></div>";

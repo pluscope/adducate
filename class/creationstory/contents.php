@@ -27,16 +27,19 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span>Class</span><span> > Creation Story</span><span> >
+                    <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/creationstory/'" style="cursor: pointer;"> Creation Story</span><span> >
+
+<!--                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > Creation Story</span><span> >-->
                             <?php
                                 if($result["category"]==0)
-                                    echo "Old";
+                                    echo "Old story";
                                 else if($result["category"]==1)
-                                    echo "New";
+                                    echo "New story";
                             ?></span></div>
                     <div class="creationbox">
                         <div class="first">
-                            <video autoplay muted controls style="width: 100%; height: 100%;">
+<!--                            <video autoplay muted controls style="width: 100%; height: 100%;">-->
+                                <video autoplay loop controls style="width: 100%; height: 100%;">
                                 <?php
                                     echo "<source type='video/mp4' src='".$result["video_link"]."'></source>";
                                 ?>

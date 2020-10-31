@@ -440,9 +440,11 @@ hr {
 
 .sentence-div {
   position: absolute;
-  width: 340px;
+  width: 250px;
   text-align: center;
-  top: 25px;
+  top: 40px;
+  color: #00a3e0;
+  font-size: 26px;
 }
 
 .storybox {
@@ -506,6 +508,8 @@ hr {
 
 .storywordbox {
   display: flex;
+  margin-left: 7%;
+  margin-right: 14%;
   justify-content: center;
   align-content: center;
   flex-direction: column;
@@ -592,6 +596,11 @@ hr {
   background-color: #00a3e0;
   text-align: center;
   border-radius: 20px;
+  border-color: #00a3e0;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .wordblue1 {
@@ -607,6 +616,7 @@ hr {
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+  border-color: #00a3e0;
 }
 
 .wordblack {
@@ -619,6 +629,7 @@ hr {
   background-color: black;
   text-align: center;
   border-radius: 10px;
+  border-color: black;
 }
 
 .wordblack1 {
@@ -634,6 +645,7 @@ hr {
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+  border-color: black;
 }
 
 .next {
@@ -651,7 +663,7 @@ hr {
 }
 
 .next2 {
-  top: 730px;
+  top: 720px;
 }
 
 .next3 {
@@ -676,9 +688,9 @@ hr {
 
 .replay {
   position: absolute;
-  width: 300px;
+  width: 270px;
   height: 50px;
-  margin-left: 362px;
+  margin-left: 333px;
   margin-top: 25px;
   background-color: #00a3e0;
   text-align: center;
@@ -688,9 +700,9 @@ hr {
 
 .sound {
   position: absolute;
-  width: 300px;
+  width: 270px;
   height: 50px;
-  margin-left: 672px;
+  margin-left: 652px;
   margin-top: 25px;
   background-color: #009639;
   text-align: center;
@@ -901,7 +913,7 @@ hr {
   outline: none;
   box-shadow: none;
   border-radius: 0;
-  font-family: Roboto, Helvetica, sans-serif;
+  /*font-family: Roboto, Helvetica, sans-serif;*/
   font-weight: inherit;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -920,7 +932,7 @@ hr {
   outline: none;
   box-shadow: none;
   border-radius: 0;
-  font-family: Roboto, Helvetica, sans-serif;
+  /*font-family: Roboto, Helvetica, sans-serif;*/
   font-weight: inherit;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -939,7 +951,7 @@ hr {
   outline: none;
   box-shadow: none;
   border-radius: 0;
-  font-family: Roboto, Helvetica, sans-serif;
+  /*font-family: Roboto, Helvetica, sans-serif;*/
   font-weight: inherit;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -956,7 +968,7 @@ hr {
   outline: none;
   box-shadow: none;
   border-radius: 0;
-  font-family: Roboto, Helvetica, sans-serif;
+  /*font-family: Roboto, Helvetica, sans-serif;*/
   font-weight: inherit;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -1285,7 +1297,7 @@ hr {
   height: 277px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 53%;
   transform: translate(-50%, -50%);
   width: 784px;
   height: 277px;
@@ -1296,6 +1308,7 @@ hr {
 
 .wordmeaning {
   line-height: 1.4;
+  font-size: 23px;
 }
 
 .transparent {
@@ -1387,7 +1400,7 @@ hr {
   /*display: flex;*/
   justify-content: space-evenly;
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
