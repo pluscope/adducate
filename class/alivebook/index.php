@@ -46,7 +46,8 @@ if($conn) {
                         $i = 0;
                         foreach($result as $row){
                             echo "<div class='grid-item2' style='cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["storybook_id"]."/".$first_story_ids[$i]."'\">";
-                            echo "<div class=\"divBox23\" style=\"background-image: url('".$row["image"]."'); background-position: center center; background-repeat: no-repeat; background-size: 100% auto;\">";
+                            echo "<div class=\"divBox23\">";
+                            echo "<img src='".$row["image"]."' style='width: inherit; max-height: 100%'>";
                             echo "</div>";
                             echo "<div class='boxtitle textDefault bold'>";
                             echo $row["title"];

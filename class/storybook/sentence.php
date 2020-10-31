@@ -24,6 +24,9 @@ if($conn) {
     $vocabs = mysqli_result_to_array(mysqli_query($conn, $vocab_sql));
     $vocab = $vocabs[0];
     $sentence = $vocab["sentence"];
+    if(substr($sentence, -1) == '.'){
+        $sentence = substr($sentence, 0, strlen($sentence)-1);
+    }
     $words = explode(" ", $sentence);
     $lessons = mysqli_result_to_array(mysqli_query($conn, $lessons_sql));
     $total_lessons = count($lessons);
@@ -72,11 +75,7 @@ if($conn) {
                 var box = document.getElementById("mainQuizBox");
                 result.style.display = 'block';
                 box.classList.add("transparent");
-                timeOutFunc = setTimeout(function() {
-                    result.style.display = 'none';
-                    box.classList.remove("transparent");
-                    //@TODO how to do with the last sentence quiz?
-                } , 2000);
+
             }
         }else{
             var result = document.getElementById("resultWrong");
@@ -144,6 +143,7 @@ if($conn) {
                         <div class="result green" id="resultGood" style="display: none;">
                             Good Job
                         </div>
+                        <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$next_lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
                         <div class="divBox25" id="mainQuizBox">
                             <div class="word">Make the right sentence</div>
                             <img class="wordshadow" src="/img/shadow_header.png" srcset="/img/shadow_header@2x.png 2x, /img/shadow_header@3x.png 3x" />

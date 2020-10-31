@@ -38,8 +38,7 @@ if($conn) {
                         <div class="first">
                             <video autoplay muted controls style="width: 100%; height: 100%;">
                                 <?php
-                                //@TODO You cannot play WMV files in HTML5 video.
-                                echo "<source type='video/wmv' src='".$result["video_link"]."'></source>";
+                                    echo "<source type='video/mp4' src='".$result["video_link"]."'></source>";
                                 ?>
                             </video>
                         </div>
