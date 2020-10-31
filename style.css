@@ -671,7 +671,7 @@ hr {
 }
 
 .next4 {
-  top: 555px;
+  top: 590px;
 }
 
 .storylist {
@@ -1131,6 +1131,27 @@ hr {
   font-weight: bold;
   top: -48px;
   left: 15px;
+}
+
+.popup_terms {
+  overflow:scroll;
+  visibility: hidden;
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  top: 120px;
+  background: #fff;
+  width: 516px;
+  height: 500px;
+  border: 1px solid #cacece;
+  color: grey;
+  line-height: 55px;
+  padding: 10px;
+}
+
+.popup_terms span {
+  position: relative;
+  z-index: 2;
 }
 
 .popup_pw {

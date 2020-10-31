@@ -1,6 +1,12 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
+$sql = "SELECT * from class_manuals as cm LEFT JOIN classes c ON cm.id = c.id";
+if($conn) {
+    $result = mysqli_query($conn, $sql);
+}else{
+    //@TODO alert message when the connection is not connected
+}
 ?>
 <!--From pages/page2 html-->
 <!--Show All classes-->
@@ -19,25 +25,23 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 
                     <div class="container-body-white-center">
                         <div class="pointer"><span class="hover-green" onclick="location.href='/about/" style="cursor: pointer;">About</span><span> > </span>Class Manual</span></div>
-
-                    <div class="divBox5_1">
-                        <span class="textDefault f36 bold">Class Manual</span>
-
-                        <br/>
-
-                        <span class="textDefault">Vivamus eu malesuada sapien.</span>
-                    </div>
-
-                    <div class="divBox5_2">
-                        <div class="video-class"></div>
-
-                        <div class="textDefault">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, mi quis
-                            finibus venenatis , est velit congue odio, at pellentesque odio mauris vel nulla.
-                            Vestibulum venenatis tempus facilisis. Vivamus eu malesuada sapien. Fusce lobortis metus
-                            vel nulla eleifend.
-                        </div>
-                    </div>
+                    <?php
+                        foreach($result as $row){
+                            echo "<div class=\"divBox5_1\">";
+                            echo "<span class=\"textDefault f36 bold\">".$row["name"]."</span>";
+                            echo "<br />";
+                            echo "<span class=\"textDefault\">".$row["description"]."</span>";
+                            echo "</div>";
+                            echo "<div class=\"divBox5_2\">";
+                            echo "<div class=\"video-class\"></div>";
+                            echo "<div class=\"textDefault\">";
+                            echo $row["contents"];
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                    ?>
+                        <br />
+                        <br />
                 </div>
 
             </div>
