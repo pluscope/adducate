@@ -16,7 +16,9 @@ if($conn) {
 <html>
 <body>
 <script>
-
+    function playVideo(){
+        document.getElementById('video').play();
+    }
 </script>
 <div class="body">
     <div class="container" id="container-menu">
@@ -39,11 +41,11 @@ if($conn) {
                     <div class="creationbox">
                         <div class="first">
 <!--                            <video autoplay muted controls style="width: 100%; height: 100%;">-->
-                                <video autoplay loop controls style="width: 100%; height: 100%;">
+                                <video id="video" style="width: 100%; height: 100%;" controls>
                                 <?php
                                     echo "<source type='video/mp4' src='".$result["video_link"]."'></source>";
                                 ?>
-                            </video>
+                                </video>
                         </div>
 
                         <div class="storywordbox textDefault">
@@ -54,6 +56,7 @@ if($conn) {
                         </div>
                     </div>
                 </div>
+                <div class="sound"><span class="textDefault whitetext bold" onclick="playVideo()" style="cursor: pointer;">Play</span></div>
                 <div class="next next4"><span class="textDefault bold" onclick="location.href='/class/creationstory'">Story List</span></div>
             </div>
         </div>

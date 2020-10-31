@@ -62,6 +62,8 @@ if($conn) {
                             
                             if($next_story_id != 0){
                                 echo "<img style=\"cursor: pointer;\" onclick=\"location.href='/class/alivebook/read/".$storybook_id."/".$next_story_id."'\" class=\"bbtn_right_story\" src=\"/img/scroll-btn(right).png\" srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\" />";
+                            }else{
+                                echo "<img style=\"cursor: pointer;\" onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/1'\" class=\"bbtn_right_story\" src=\"/img/scroll-btn(right).png\" srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\" />";
                             }
                             ?>
                     </div>

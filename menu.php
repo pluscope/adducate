@@ -52,7 +52,7 @@
 
                 <li class="menuLi"><span onclick="location.href='/team/'">Team</span></li>
 
-                <li class="menuLi"><span onclick="location.href='/about/">About</span></li>
+                <li class="menuLi"><span onclick="location.href='/about/'">About</span></li>
 
                 <li class="menuLiBlue"><span>Download</span></li>
 

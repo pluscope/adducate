@@ -16,6 +16,7 @@ $sql = "SELECT count(id) as cnt from storybook_lesson_vocabs WHERE lesson_id=".$
 $first_story_sql = "SELECT id from storybook_lesson_stories where lesson_id=%d ORDER BY id LIMIT 1";
 $first_story_sql = sprintf($first_story_sql, $lesson_id);
 $is_last_page = 0;
+$is_last_lesson = 0;
 if($conn) {
     $total_vocabs = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["cnt"];
     $first_story_id = mysqli_result_to_array(mysqli_query($conn, $first_story_sql))[0]["id"];
@@ -39,6 +40,8 @@ if($conn) {
     }
     $random_sql = "SELECT vocab from storybook_lesson_vocabs WHERE vocab not like '%".$vocab["vocab"]."%' ORDER BY RAND() LIMIT 3";
     $random_vocabs = mysqli_result_to_array(mysqli_query($conn, $random_sql));
+    if($lessons[$total_lessons-1]["id"] == $lesson_id)
+        $is_last_lesson = 1;
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -50,6 +53,7 @@ if($conn) {
 <script>
     var totalWords = parseInt('<?php echo count($words); ?>');
     var isLast = parseInt('<?php echo $is_last_page; ?>');
+    var isLastLesson = parseInt('<?php echo $is_last_lesson; ?>');
 
     function addWord(word){
         var wordList = document.getElementById(("answer"));
@@ -73,8 +77,14 @@ if($conn) {
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
                 var result = document.getElementById("resultGood");
                 var box = document.getElementById("mainQuizBox");
+
+                result.innerHTML = "Well Done";
                 result.style.display = 'block';
                 box.classList.add("transparent");
+                if(!isLastLesson)
+                    document.getElementById("nextDiv").style.display = 'block';
+                else
+                    document.getElementById("mainQuizBox").style.display = 'none';
 
             }
         }else{
@@ -121,8 +131,10 @@ if($conn) {
                     <div class="Lorem-text-overflow2">
                         <div class="push" id="alivePush">
                             <?php
+                            $current_lesson_idx = 0;
                             for($i=1; $i<=$total_lessons; ++$i){
                                 if($lesson_id == $lessons[$i-1]["id"]){
+                                    $current_lesson_idx = $i-1;
                                     echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\" class=\"selected\">Lesson ".$i."</span>";
                                 }else{
                                     echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\">Lesson ".$i."</span>";
@@ -143,7 +155,11 @@ if($conn) {
                         <div class="result green" id="resultGood" style="display: none;">
                             Good Job
                         </div>
-                        <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$next_lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
+                        <?php
+                            if($is_last_lesson != 1){
+                                echo "<div class=\"nextblue\" id=\"nextDiv\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$current_lesson_idx+1]["id"]."/".$lessons[$current_lesson_idx+1]["first_story_id"]."'\" style=\"display: none; cursor: pointer;\"><span class=\"textDefault bold whitetext\">Next</span></div>";
+                            }
+                        ?>
 
                         <div class="divBox25" id="mainQuizBox">
                             <div class="word">Complete the sentence with the blocks of words</div>
