@@ -174,7 +174,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     ●	Solicit support for the Site.
                                     <br />
-                                    <br />
+
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
@@ -235,8 +235,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     If we reorganize or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity. If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party. You acknowledge that such transfers may occur and that the transferee may decline honor commitments we made in this Privacy Policy.
                                     We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations. If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly.
                                     <br />
-                                    <br />
-                                    <br />
+
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
@@ -261,25 +260,35 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     You should be aware that getting a new computer, installing a new browser, upgrading an existing browser, or erasing or otherwise altering your browser’s cookies files may also clear certain opt-out cookies, plug-ins, or settings.
                                     <br />
-                                    <br />
+
+                                </span>
+                                    <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     THIRD-PARTY WEBSITES
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     The Site  may contain links to third-party websites and applications of interest, including advertisements and external services, that are not affiliated with us. Once you have used these links to leave the Site, any information you provide to these third parties is not covered by this Privacy Policy, and we cannot guarantee the safety and privacy of your information. Before visiting and providing any information to any third-party websites, you should inform yourself of the privacy policies and practices (if any) of the third party responsible for that website, and should take those steps necessary to, in your discretion, protect the privacy of your information. We are not responsible for the content or privacy and security practices and policies of any third parties, including other sites, services or applications that may be linked to or from the Site.
                                     <br />
-                                    <br />
+                                </span>
+
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     SECURITY OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
-                                    We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.
+                                   We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.
                                     <br />
+                                </span>
+
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
+                                   POLICY FOR CHILDREN
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
-                                    POLICY FOR CHILDREN
-                                    <br />
-                                    We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.
-                                    <br />
-                                    <br />
+                                   We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.
                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
@@ -289,7 +298,6 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. No uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Policy. Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. If you set the DNT signal on your browser, we will respond to such DNT browser signals.
-                                    <br />
                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
@@ -321,7 +329,6 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly.
                                     <br />
-                                    <br />
 <!--                                    <br />-->
 <!--                                    CALIFORNIA PRIVACY RIGHTS-->
 <!--                                    <br />-->
@@ -334,10 +341,10 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     CONTACT US
-                                </span>
-                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
-                                    If you have questions or comments about this Privacy Policy, please contact us at:
+                                    If you have questions about this Privacy Policy,
+                                    <br />
+                                    please contact us at:
                                     <br />
                                     contact@adducate.net
                                 </span>
