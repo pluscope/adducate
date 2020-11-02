@@ -81,19 +81,30 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
-                                <span style="font-size: 16px; line-height: 24px; margin: 36px; color:#00a3e0;">
+                                <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
                                      <br /> Website Terms
-                                     </span>
-                                <span style="font-size: 12px; line-height: 24px; margin: 5px;">
-                                    <br />
+                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:grey">
+                                     <br /> Last updated [December, 2020]
+                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
+                                         <br />
                                     INTRODUCTION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     ADDUCATE (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website ADDUCATE.net, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
                                     We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last Updated” date of this Privacy Policy. Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to receive specific notice of each such change or modification.
                                     You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Site after the date such revised Privacy Policy is posted.
                                     <br />
-                                    <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
+                                         <br />
                                     COLLECTION OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     We may collect information about you in a variety of ways. The information we may collect on the Site includes:
                                     <br />
@@ -117,8 +128,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
+
                                     <br />
                                     USE OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
                                     <br />
@@ -299,6 +315,9 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     <br />
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
+                                    <br />
                                     CONTACT US
                                     <br />
                                     If you have questions or comments about this Privacy Policy, please contact us at:
@@ -310,7 +329,6 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     Paju-si, Gyeonggi-do
                                     <br />
                                     contact.adducate@gamil.com
-
                                 </span>
                             </div>
                             <div class="divBox8_2">
