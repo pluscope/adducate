@@ -354,7 +354,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <input type="checkbox" id="priChk" name="priChk">
                                     <label class="textDefault" for="priChk">Privacy & Terms</label>
 
-                                    <img onclick="clickTerms()" style="cursor: pointer;" src="../img/quest.png"  srcset="../img/quest@2x.png 2x, ../img/invalid-name@3x.png 3x">
+                                    <img onclick="clickTerms()" style="cursor: pointer;" src="../img/quest.png"  srcset="../img/quest@2x.png 2x, ../img/quest@3x.png 3x">
                                 </div>
                             </div>
                         </div>
