@@ -40,7 +40,7 @@ if($conn) {
                             ?></span></div>
                     <div class="creationbox">
                         <div class="first">
-                            <video autoplay unmuted controls style="width: 100%; height: 100%;">
+                            <video autoplay controls style="width: 100%; height: 100%;">
 <!--                                <video id="video" style="width: 100%; height: 100%;" controls>-->
                                 <?php
                                     echo "<source type='video/mp4' src='".$result["video_link"]."'></source>";
