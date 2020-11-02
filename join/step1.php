@@ -83,14 +83,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                             <div class="textDefault popup_terms" id="popup_terms">
                                 <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
                                      <br /> Website Terms
-                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:grey">
                                      <br /> Last updated [December, 2020]
                                      <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
-                                         <br />
+                                    <br />
                                     INTRODUCTION
                                 </span>
                                 <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
@@ -101,7 +100,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
-                                         <br />
+                                    <br />
                                     COLLECTION OF YOUR INFORMATION
                                 </span>
                                 <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
@@ -130,7 +129,6 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
-
                                     <br />
                                     USE OF YOUR INFORMATION
                                 </span>
@@ -177,8 +175,12 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     ●	Solicit support for the Site.
                                     <br />
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     DISCLOSURE OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
                                     <br />
@@ -235,8 +237,12 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     <br />
                                     <br />
-                                    TRACKING TECHNOLOGIES
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
+                                    TRACKING TECHNOLOGIES
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Cookies and Web Beacons
                                     <br />
@@ -275,14 +281,23 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     <br />
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
+                                    <br />
                                     CONTROLS FOR DO-NOT-TRACK FEATURES
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. No uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Policy. Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. If you set the DNT signal on your browser, we will respond to such DNT browser signals.
                                     <br />
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     OPTIONS REGARDING YOUR INFORMATION
                                     <br />
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     [Account Information]
                                     <br />
                                     You may at any time review or change the information in your account or terminate your account by:
@@ -307,28 +322,24 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly.
                                     <br />
                                     <br />
-                                    <br />
-                                    CALIFORNIA PRIVACY RIGHTS
-                                    <br />
-                                    California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.
-                                    If you are under 18 years of age, reside in California, and have a registered account with the Site, you have the right to request removal of unwanted data that you publicly post on the Site. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Site, but please be aware that the data may not be completely or comprehensively removed from our systems.
-                                    <br />
-                                    <br />
+<!--                                    <br />-->
+<!--                                    CALIFORNIA PRIVACY RIGHTS-->
+<!--                                    <br />-->
+<!--                                    California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.-->
+<!--                                    If you are under 18 years of age, reside in California, and have a registered account with the Site, you have the right to request removal of unwanted data that you publicly post on the Site. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Site, but please be aware that the data may not be completely or comprehensively removed from our systems.-->
+<!--                                    <br />-->
+<!--                                    <br />-->
                                     <br />
                                 </span>
                                 <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     CONTACT US
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     If you have questions or comments about this Privacy Policy, please contact us at:
                                     <br />
-                                    ADDUCATE
-                                    <br />
-                                    102-12
-                                    <br />
-                                    Paju-si, Gyeonggi-do
-                                    <br />
-                                    contact.adducate@gamil.com
+                                    contact@adducate.net
                                 </span>
                             </div>
                             <div class="divBox8_2">

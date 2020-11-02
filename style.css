@@ -1148,7 +1148,10 @@ hr {
   border: 2px solid #ffa300;
   color: grey;
   line-height: 55px;
-  padding: 10px;
+  padding-top: 15px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .popup_terms span {
