@@ -1139,16 +1139,18 @@ hr {
   z-index: 1;
   margin: auto;
   position: absolute;
-  top: 120px;
+  top: 150px;
   /*right: 35px;*/
-  /*bottom: 150px;*/
   background: #fff;
-  width: 473px;
-  height: 500px;
+  width: 504px;
+  height: 445px;
   border: 2px solid #ffa300;
   color: grey;
   line-height: 55px;
-  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .popup_terms span {
