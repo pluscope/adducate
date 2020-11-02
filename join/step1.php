@@ -81,7 +81,10 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
-                                <span style="font-size: 12px; line-height: 15px; margin: 5px;">
+                                <span style="font-size: 16px; line-height: 24px; margin: 36px; color:#00a3e0;">
+                                     <br /> Website Terms
+                                     </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px;">
                                     <br />
                                     INTRODUCTION
                                     <br />

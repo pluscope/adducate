@@ -1140,10 +1140,12 @@ hr {
   margin: auto;
   position: absolute;
   top: 120px;
+  right: 35px;
+  bottom: 150px;
   background: #fff;
-  width: 516px;
+  width: 473px;
   height: 500px;
-  border: 1px solid #cacece;
+  border: 2px solid #ffa300;
   color: grey;
   line-height: 55px;
   padding: 10px;
