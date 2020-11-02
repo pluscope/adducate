@@ -1140,8 +1140,8 @@ hr {
   margin: auto;
   position: absolute;
   top: 120px;
-  right: 35px;
-  bottom: 150px;
+  /*right: 35px;*/
+  /*bottom: 150px;*/
   background: #fff;
   width: 473px;
   height: 500px;
