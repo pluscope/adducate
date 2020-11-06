@@ -19,3 +19,8 @@ while(true) {
 SDL_DestroyWindow($window);
 
 ?>
+<html>
+<body>
+</body>
+</html>
+

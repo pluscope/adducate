@@ -32,5 +32,8 @@ $confidences = array_slice($confidences, 0, 5, true);
 foreach ($confidences as $label => $confidence) {
     echo "$confidence%: {$categories[$label]}\n";
 }
-
 ?>
+<html>
+<body>
+</body>
+</html>
