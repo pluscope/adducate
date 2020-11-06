@@ -81,13 +81,13 @@ if($conn) {
                             <div class="arrowtext">Imagine & Draw</div>
                         </div>
 
-                        <div class="vocabquiz">
+                        <div class="vocabquiz"  style="cursor: pointer" onclick="location.href='/class/alivebook/capture/<?php echo $storybook_id; ?>'" >
                             <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
              /img/grayarrow_middle@3x.png 3x" />
                             <div class="arrowtext">Capture</div>
                         </div>
 
-                        <div class="Sentence">
+                        <div class="Sentence" style="cursor: pointer" onclick="location.href='/class/alivebook/play/<?php echo $storybook_id; ?>'" >
                             <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
              /img/grayarrow_last@3x.png 3x" />
                             <div class="arrowtext">Play</div>

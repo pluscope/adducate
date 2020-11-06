@@ -2,31 +2,15 @@
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 $storybook_id = $_GET["storybook_id"];
-$page_id = $_GET["page_id"];
 $storybook_sql = "SELECT title FROM storybooks WHERE id=%d";
 $storybook_sql = sprintf($storybook_sql, $storybook_id);
 $first_story_sql = "SELECT a.id FROM storybook_lesson_stories a LEFT JOIN storybook_lessons b ON a.lesson_id = b.id LEFT JOIN storybooks c ON b.storybook_id = c.id WHERE c.id=%d ORDER BY a.id LIMIT 1";
 $first_story_sql = sprintf($first_story_sql, $storybook_id);
 $first_story_id = 0;
-$last_story_sql = "SELECT a.id FROM storybook_lesson_stories a LEFT JOIN storybook_lessons b ON a.lesson_id = b.id LEFT JOIN storybooks c ON b.storybook_id = c.id WHERE c.id=%d ORDER BY a.id DESC LIMIT 1";
-$last_story_sql = sprintf($last_story_sql, $storybook_id);
-$last_story_id = 0;
-$guide_sql = "SELECT ag.id, ag.image, ag.contents FROM alivebook_guides ag LEFT JOIN alivebook_guide_mapping agm ON ag.id = agm.guide_id LEFT JOIN alivebooks a ON agm.alivebook_id=a.id WHERE a.id = %d LIMIT %d, 1";
-$guide_sql = sprintf($guide_sql, $storybook_id, ($page_id-1));
-$is_last_page = 0;
-$total_page_sql = "SELECT count(ag.id) as cnt FROM alivebook_guides ag LEFT JOIN alivebook_guide_mapping agm ON ag.id = agm.guide_id LEFT JOIN alivebooks a ON agm.alivebook_id=a.id WHERE a.id = %d";
-$total_page_sql = sprintf($total_page_sql, $storybook_id);
 if($conn) {
     $storybook = mysqli_result_to_array(mysqli_query($conn, $storybook_sql))[0];
-    $guide = mysqli_result_to_array(mysqli_query($conn, $guide_sql))[0];
-    $total_pages = mysqli_result_to_array(mysqli_query($conn, $total_page_sql))[0]["cnt"];
-    if($total_pages==$page_id)
-        $is_last_page = 1;
     if(mysqli_query($conn, $first_story_sql)->num_rows == 1){
         $first_story_id = mysqli_result_to_array(mysqli_query($conn, $first_story_sql))[0]["id"];
-    }
-    if(mysqli_query($conn, $last_story_sql)->num_rows == 1){
-        $last_story_id = mysqli_result_to_array(mysqli_query($conn, $last_story_sql))[0]["id"];
     }
     //$story = mysqli_result_to_array($result);
 }else{
@@ -55,29 +39,8 @@ if($conn) {
 
                     <div class="alivebox">
                         <div class="alivewordbox textDefault">
-                            <?php echo $guide["contents"] ?>
+
                         </div>
-                        <img class="image" src='<?php echo $guide["image"] ?>'/>
-                        <?php
-                        if ($page_id == 1){
-                            echo "<img onclick=\"location.href='/class/alivebook/read/".$storybook_id."/".$last_story_id."'\"
-                                 class=\"bbtn_left_story\" style=\"cursor: pointer;\"
-                                 src=\"/img/scroll-btn(left).png\"
-                                 srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
-                        }
-                        else if($page_id>1){
-                            echo "<img onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/".($page_id-1)."'\"
-                                 class=\"bbtn_left_story\" style=\"cursor: pointer;\"
-                                 src=\"/img/scroll-btn(left).png\"
-                                 srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
-                        }
-                        if($is_last_page!=1){
-                            echo "<img onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/".($page_id+1)."'\"
-                                 class=\"bbtn_right_story\" style=\"cursor: pointer;\"
-                                 src=\"/img/scroll-btn(right).png\" 
-                                 srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\"/>";
-                        }
-                        ?>
                     </div>
 
                     <div class="greenarrows textDefault whitetext">
@@ -87,9 +50,9 @@ if($conn) {
                             <div class="arrowtext">Read</div>
                         </div>
 
-                        <div class="vocab">
-                            <img class="arrow" src="/img/greenarrow_middle.png" srcset="/img/greenarrow_middle@2x.png 2x,
-             /img/greenarrow_middle@3x.png 3x" />
+                        <div class="vocab" style="cursor: pointer" onclick="location.href='/class/alivebook/guide/<?php echo $storybook_id."/1"; ?>'">
+                            <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
+             /img/grayarrow_middle@3x.png 3x" />
                             <div class="arrowtext">Imagine & Draw</div>
                         </div>
 
@@ -99,9 +62,9 @@ if($conn) {
                             <div class="arrowtext">Capture</div>
                         </div>
 
-                        <div class="Sentence" style="cursor: pointer" onclick="location.href='/class/alivebook/play/<?php echo $storybook_id; ?>'">
-                            <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
-             /img/grayarrow_last@3x.png 3x" />
+                        <div class="Sentence">
+                            <img class="arrow" src="/img/greenarrow_last.png" srcset="/img/greenarrow_last@2x.png 2x,
+             /img/greenarrow_last@3x.png 3x" />
                             <div class="arrowtext">Play</div>
                         </div>
                     </div>
