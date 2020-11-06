@@ -35,5 +35,22 @@ foreach ($confidences as $label => $confidence) {
 ?>
 <html>
 <body>
+<div class="body">
+    <div class="container" id="container-menu">
+        <?php include($_SERVER["DOCUMENT_ROOT"]."/menu.php"); ?>
+    </div>
+    <div class="container" id="container-page">
+        <!-- content start-->
+        <div class="container">
+            <div class="container-body container-expand">
+                <div class="container-body-white-center">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- content end-->
+</div>
+</div>
 </body>
 </html>
