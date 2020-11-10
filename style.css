@@ -8,11 +8,11 @@ body {
   src: url('fonts/Muli-Regular.ttf') format('opentype');
 }
 
-@font-face {
-  font-family: "NotoSans";
-  src: url("fonts/NotoSans-Regular.ttf") format("opentype");
-  font-style: normal;
-}
+/*@font-face {*/
+/*  font-family: "NotoSans";*/
+/*  src: url("fonts/NotoSans-Regular.ttf") format("opentype");*/
+/*  font-style: normal;*/
+/*}*/
 
 @font-face {
   font-family: "NotoSans";
@@ -1140,9 +1140,9 @@ hr {
   margin: auto;
   position: absolute;
   top: 150px;
-  /*right: 35px;*/
+  left: 46%;
   background: #fff;
-  width: 504px;
+  width: 460px;
   height: 445px;
   border: 2px solid #ffa300;
   color: grey;
@@ -1151,6 +1151,21 @@ hr {
   padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.popup_terms:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom:-30px;
+  left: 20px;
+  z-index: 4;
+  border: solid 2px #ffa300;
+  border-top: transparent;
+  border-left: transparent;
+  background-color: white;
+  transform: rotate(45deg);
 }
 
 .popup_terms span {
