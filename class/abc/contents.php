@@ -116,15 +116,22 @@ if($conn) {
                             ?>
                         </div>
                     </div>
-                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Write letters</span></div>
-                    <div class="sound"><span class="textDefault whitetext bold" onclick="playWordSound()" style="cursor: pointer;">Word sound</span></div>
+<!--                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Write letters</span></div>-->
+<!--                    <div class="sound"><span class="textDefault whitetext bold" onclick="playWordSound()" style="cursor: pointer;">Word sound</span></div>-->
+
+                    <div class="replay" style="cursor: pointer" onclick="playAbcSound()"><span class="textDefault whitetext bold">Write letters</span></div>
+                    <div class="sound" style="cursor: pointer" onclick="playWordSound()"><span class="textDefault whitetext bold">Word sound</span></div>
+
                     <?php
                         if($is_last_abc){
-                            echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href='/class/abc/'\">List</span></div>";
+//                            echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href='/class/abc/'\">List</span></div>";
+                            echo "<div class=\"next\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/'\"><span class=\"textDefault bold\">List</span></div>";
+
                         }
                         else{
                             $next_abc = mysqli_fetch_array($is_last_abc_result);
-                            echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/1/".$next_abc["id"]."'\">Next</span></div>";
+//                            echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/1/".$next_abc["id"]."'\">Next</span></div>";
+                            echo "<div class=\"next\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/1/".$next_abc["id"]."'\"><span class=\"textDefault bold\">Next</span></div>";
                         }
                     ?>
                 </div>
