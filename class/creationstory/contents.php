@@ -7,6 +7,16 @@ $sql = sprintf($sql, $id);
 if($conn) {
     $result = mysqli_query($conn, $sql);
     $result = mysqli_fetch_array($result);
+    if($isLogin){
+        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
+        $history_sql = sprintf($history_sql, $userId, 4, $id);
+        $history_result = mysqli_query($conn, $history_sql);
+        if($history_result->num_rows == 0){
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $userId, 4, $id);
+            mysqli_query($conn, $history_insert_sql);
+        }
+    }
 }else{
     //@TODO alert message when the connection is not connected
 }

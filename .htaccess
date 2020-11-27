@@ -23,6 +23,7 @@ RewriteRule ^team/$ index.php?location=team
 RewriteRule ^about/$ index.php?location=about
 RewriteRule ^class/$ index.php?location=class [L,QSA]
 RewriteRule ^manual$ manual.php
+RewriteRule ^myclass$ myclass.php
 RewriteRule ^faq$ faq.php
 RewriteRule ^blog$ blog.php
 RewriteRule ^find$ find.php
