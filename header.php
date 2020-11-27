@@ -1,5 +1,9 @@
 <?php
     session_start();
+    $location =  isset($_GET["location"])?$_GET["location"]:"";
+    $isLogin =  isset($_SESSION["isLogin"])?$_SESSION["isLogin"]:"";
+    $userNm =  isset($_SESSION["userNm"])?$_SESSION["userNm"]:"";
+    $userId =  isset($_SESSION["userId"])?$_SESSION["userId"]:"";
 ?>
 <html>
 <title>Adducate</title>
@@ -19,4 +23,12 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/slick/slick.min.js"></script>
 </head>
+<script>
+    $(document).ready( function() {
+        var location = '<?= $location ?>';
+        var isLogin = '<?= $isLogin ?>';
+        var userNm = '<?= $userNm ?>';
+        loginYn(isLogin, userNm);
+    });
+</script>
 </html>

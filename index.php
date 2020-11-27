@@ -2,9 +2,6 @@
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 
-$location =  isset($_GET["location"])?$_GET["location"]:"";
-$isLogin =  isset($_SESSION["isLogin"])?$_SESSION["isLogin"]:"";
-$userNm =  isset($_SESSION["userNm"])?$_SESSION["userNm"]:"";
 $sql = "SELECT * FROM classes";
 $sql2 = "SELECT * FROM teams";
 if($conn) {
@@ -19,10 +16,6 @@ if($conn) {
 <link href="style.css" rel="stylesheet">
 <script>
 $(document).ready( function() {
-    var location = '<?= $location ?>';
-    var isLogin = '<?= $isLogin ?>';
-    var userNm = '<?= $userNm ?>';
-	loginYn(isLogin, userNm);
 	if(location!=''){
 	    if(location=='class'){
             doScrolling('#classContainer', 1000);
@@ -129,7 +122,7 @@ function openInNewTab(url) {
                 <div class="popup_account" style="position: absolute;" >
 
                     <div class="content_account">
-                        <span class="myclass"><a href="/">My class</a></span>
+                        <span class="myclass"><a href="/myclass">My class</a></span>
                         <span class="signout"><a href="/logout">Sign out</a></span>
                     </div>
                 </div>
