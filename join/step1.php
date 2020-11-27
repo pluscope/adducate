@@ -81,16 +81,29 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
-                                <span style="font-size: 12px; line-height: 15px; margin: 5px;">
+                                <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
+                                     <br /> Website Terms
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:grey">
+                                     <br /> Last updated [December, 2020]
+                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     INTRODUCTION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     ADDUCATE (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website ADDUCATE.net, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
                                     We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last Updated” date of this Privacy Policy. Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to receive specific notice of each such change or modification.
                                     You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Site after the date such revised Privacy Policy is posted.
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     COLLECTION OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     We may collect information about you in a variety of ways. The information we may collect on the Site includes:
                                     <br />
@@ -114,8 +127,12 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.
                                     <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     USE OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
                                     <br />
@@ -157,9 +174,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     ●	Solicit support for the Site.
                                     <br />
-                                    <br />
+
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     DISCLOSURE OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
                                     <br />
@@ -214,10 +235,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     If we reorganize or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity. If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party. You acknowledge that such transfers may occur and that the transferee may decline honor commitments we made in this Privacy Policy.
                                     We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations. If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly.
                                     <br />
-                                    <br />
+
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     TRACKING TECHNOLOGIES
-                                    <br />
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Cookies and Web Beacons
                                     <br />
@@ -236,34 +260,52 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     You should be aware that getting a new computer, installing a new browser, upgrading an existing browser, or erasing or otherwise altering your browser’s cookies files may also clear certain opt-out cookies, plug-ins, or settings.
                                     <br />
-                                    <br />
+
+                                </span>
+                                    <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     THIRD-PARTY WEBSITES
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     The Site  may contain links to third-party websites and applications of interest, including advertisements and external services, that are not affiliated with us. Once you have used these links to leave the Site, any information you provide to these third parties is not covered by this Privacy Policy, and we cannot guarantee the safety and privacy of your information. Before visiting and providing any information to any third-party websites, you should inform yourself of the privacy policies and practices (if any) of the third party responsible for that website, and should take those steps necessary to, in your discretion, protect the privacy of your information. We are not responsible for the content or privacy and security practices and policies of any third parties, including other sites, services or applications that may be linked to or from the Site.
                                     <br />
-                                    <br />
+                                </span>
+
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     SECURITY OF YOUR INFORMATION
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
-                                    We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.
+                                   We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.
                                     <br />
+                                </span>
+
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
+                                   POLICY FOR CHILDREN
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
-                                    POLICY FOR CHILDREN
+                                   We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.
                                     <br />
-                                    We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.
-                                    <br />
-                                    <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     CONTROLS FOR DO-NOT-TRACK FEATURES
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     <br />
                                     Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. No uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Policy. Most web browsers and some mobile operating systems include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. If you set the DNT signal on your browser, we will respond to such DNT browser signals.
                                     <br />
-                                    <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     OPTIONS REGARDING YOUR INFORMATION
                                     <br />
+                                </span>
+                                <span style="font-size: 12px; line-height: 24px; margin: 5px; color:black">
                                     [Account Information]
                                     <br />
                                     You may at any time review or change the information in your account or terminate your account by:
@@ -287,27 +329,24 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly.
                                     <br />
+<!--                                    <br />-->
+<!--                                    CALIFORNIA PRIVACY RIGHTS-->
+<!--                                    <br />-->
+<!--                                    California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.-->
+<!--                                    If you are under 18 years of age, reside in California, and have a registered account with the Site, you have the right to request removal of unwanted data that you publicly post on the Site. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Site, but please be aware that the data may not be completely or comprehensively removed from our systems.-->
+<!--                                    <br />-->
+<!--                                    <br />-->
                                     <br />
-                                    <br />
-                                    CALIFORNIA PRIVACY RIGHTS
-                                    <br />
-                                    California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.
-                                    If you are under 18 years of age, reside in California, and have a registered account with the Site, you have the right to request removal of unwanted data that you publicly post on the Site. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Site, but please be aware that the data may not be completely or comprehensively removed from our systems.
-                                    <br />
-                                    <br />
+                                </span>
+                                <span style="font-size: 14px; line-height: 24px; margin: 5px; color:#ffa300">
                                     <br />
                                     CONTACT US
                                     <br />
-                                    If you have questions or comments about this Privacy Policy, please contact us at:
+                                    If you have questions about this Privacy Policy,
                                     <br />
-                                    ADDUCATE
+                                    please contact us at:
                                     <br />
-                                    102-12
-                                    <br />
-                                    Paju-si, Gyeonggi-do
-                                    <br />
-                                    contact.adducate@gamil.com
-
+                                    contact@adducate.net
                                 </span>
                             </div>
                             <div class="divBox8_2">
@@ -315,7 +354,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <input type="checkbox" id="priChk" name="priChk">
                                     <label class="textDefault" for="priChk">Privacy & Terms</label>
 
-                                    <img onclick="clickTerms()" style="cursor: pointer;" src="../img/quest.png"  srcset="../img/quest@2x.png 2x, ../img/invalid-name@3x.png 3x">
+                                    <img onclick="clickTerms()" style="cursor: pointer;" src="../img/quest.png"  srcset="../img/quest@2x.png 2x, ../img/quest@3x.png 3x">
                                 </div>
                             </div>
                         </div>

@@ -50,8 +50,8 @@ if($conn) {
                             ?></span></div>
                     <div class="creationbox">
                         <div class="first">
-<!--                            <video autoplay muted controls style="width: 100%; height: 100%;">-->
-                                <video id="video" style="width: 100%; height: 100%;" controls>
+                            <video autoplay controls style="width: 100%; height: 100%;">
+<!--                                <video id="video" style="width: 100%; height: 100%;" controls>-->
                                 <?php
                                     echo "<source type='video/mp4' src='".$result["video_link"]."'></source>";
                                 ?>
@@ -66,7 +66,7 @@ if($conn) {
                         </div>
                     </div>
                 </div>
-                <div class="sound"><span class="textDefault whitetext bold" onclick="playVideo()" style="cursor: pointer;">Play</span></div>
+<!--                <div class="sound"><span class="textDefault whitetext bold" onclick="playVideo()" style="cursor: pointer;">Play</span></div>-->
                 <div class="next next4"><span class="textDefault bold" onclick="location.href='/class/creationstory'">Story List</span></div>
             </div>
         </div>
