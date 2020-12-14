@@ -12,6 +12,16 @@ if($conn) {
     if(mysqli_query($conn, $first_story_sql)->num_rows == 1){
         $first_story_id = mysqli_result_to_array(mysqli_query($conn, $first_story_sql))[0]["id"];
     }
+    if($isLogin){
+        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
+        $history_sql = sprintf($history_sql, $userId, 3, $storybook_id);
+        $history_result = mysqli_query($conn, $history_sql);
+        if($history_result->num_rows == 1){
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $userId, 3, $storybook_id);
+            mysqli_query($conn, $history_insert_sql);
+        }
+    }
     //$story = mysqli_result_to_array($result);
 }else{
     //@TODO alert message when the connection is not connected

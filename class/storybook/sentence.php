@@ -17,6 +17,11 @@ $first_story_sql = "SELECT id from storybook_lesson_stories where lesson_id=%d O
 $first_story_sql = sprintf($first_story_sql, $lesson_id);
 $is_last_page = 0;
 $is_last_lesson = 0;
+$GLOBALS['isLogin'] = $isLogin;
+$GLOBALS['userId'] = $userId;
+$GLOBALS['conn'] = $conn;
+$GLOBALS['storybook_id'] = $storybook_id;
+$GLOBALS['lesson_id'] = $lesson_id;
 if($conn) {
     $total_vocabs = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["cnt"];
     $first_story_id = mysqli_result_to_array(mysqli_query($conn, $first_story_sql))[0]["id"];
@@ -44,6 +49,18 @@ if($conn) {
         $is_last_lesson = 1;
 }else{
     //@TODO alert message when the connection is not connected
+}
+function addHistory(){
+    if($GLOBALS['isLogin']){
+        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
+        $history_sql = sprintf($history_sql, $GLOBALS['userId'], 2, $GLOBALS['storybook_id']);
+        $history_result = mysqli_query($GLOBALS['conn'], $history_sql);
+        if($history_result->num_rows == 1){
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $GLOBALS['userId'], 2, $GLOBALS['storybook_id'], $GLOBALS['lesson_id']);
+            mysqli_query($GLOBALS['conn'], $history_insert_sql);
+        }
+    }
 }
 ?>
 <!--From pages/page24 html-->
@@ -75,6 +92,7 @@ if($conn) {
                 } , 2000);
             }
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
+                var add= '<?php echo addHistory();?>'
                 var result = document.getElementById("resultGood");
                 var box = document.getElementById("mainQuizBox");
 

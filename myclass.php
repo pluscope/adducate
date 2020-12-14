@@ -1,7 +1,6 @@
 <?php
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
-
 $sql = "SELECT * FROM history WHERE user_id = ".$userId;
 if($conn) {
     $result = mysqli_result_to_array(mysqli_query($conn, $sql));
@@ -13,9 +12,6 @@ if($conn) {
 
 <title>Adducate</title>
 <link href="style.css" rel="stylesheet">
-<script>
-</script>
-
 </head>
 <body>
 <div id="temp1" style="display: none"> </div>
