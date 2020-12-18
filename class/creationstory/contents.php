@@ -11,30 +11,19 @@ $GLOBALS['creationstory_id'] = $id;
 if($conn) {
     $result = mysqli_query($conn, $sql);
     $result = mysqli_fetch_array($result);
+    $GLOBALS['category'] = $result["category"];
     if($isLogin){
         $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
         $history_sql = sprintf($history_sql, $userId, 4, $id);
         $history_result = mysqli_query($conn, $history_sql);
         if($history_result->num_rows == 0){
-            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
-            $history_insert_sql = sprintf($history_insert_sql, $userId, 4, $id);
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $userId, 4, $id, $result["category"]);
             mysqli_query($conn, $history_insert_sql);
         }
     }
 }else{
     //@TODO alert message when the connection is not connected
-}
-function addHistory(){
-    if($GLOBALS['isLogin']){
-        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
-        $history_sql = sprintf($history_sql, $GLOBALS['userId'], 4, $GLOBALS['creationstory_id']);
-        $history_result = mysqli_query($GLOBALS['conn'], $history_sql);
-        if($history_result->num_rows == 1){
-            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
-            $history_insert_sql = sprintf($history_insert_sql, $GLOBALS['userId'], 4, $GLOBALS['creationstory_id']);
-            mysqli_query($GLOBALS['conn'], $history_insert_sql);
-        }
-    }
 }
 ?>
 <!--From pages/page41 html-->
@@ -46,10 +35,22 @@ function addHistory(){
         document.getElementById('video').play();
     }
     $(document).ready( function() {
+        var isLogin = '<?= $isLogin ?>';
         document.getElementById('contents_video').addEventListener('ended',whenVideoEnds,false);
+        document.getElementById('contents_video').isLogin = isLogin;
     });
     function whenVideoEnds(e) {
-        var add= '<?php echo addHistory();?>'
+        if( e.currentTarget.isLogin != "" ){
+            $.ajax({
+                type: "POST",
+                url: 'add_creationstory_history.php',
+                dataType: "text",
+                data: {id: '<? echo $id; ?>', category: '<? echo $GLOBALS['category']; ?>'},
+                success: function (obj, textstatus) {
+                    console.log('history success')
+                }
+            });
+        }
         //alert(add)
     }
 </script>

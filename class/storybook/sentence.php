@@ -50,18 +50,6 @@ if($conn) {
 }else{
     //@TODO alert message when the connection is not connected
 }
-function addHistory(){
-    if($GLOBALS['isLogin']){
-        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
-        $history_sql = sprintf($history_sql, $GLOBALS['userId'], 2, $GLOBALS['storybook_id']);
-        $history_result = mysqli_query($GLOBALS['conn'], $history_sql);
-        if($history_result->num_rows == 1){
-            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
-            $history_insert_sql = sprintf($history_insert_sql, $GLOBALS['userId'], 2, $GLOBALS['storybook_id'], $GLOBALS['lesson_id']);
-            mysqli_query($GLOBALS['conn'], $history_insert_sql);
-        }
-    }
-}
 ?>
 <!--From pages/page24 html-->
 <!--Show Storiess-->
@@ -92,7 +80,19 @@ function addHistory(){
                 } , 2000);
             }
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
-                var add= '<?php echo addHistory();?>'
+                var isLogin = '<?= $isLogin ?>';
+                if( isLogin != "" ){
+                    $.ajax({
+                        type: "POST",
+                        url: '/class/storybook/add_storybook_history.php',
+                        dataType: "text",
+                        data: {storybook_id: '<? echo $storybook_id; ?>', lesson_id: '<? echo $lesson_id; ?>'},
+                        success: function (obj, textstatus) {
+                            console.log('history success')
+                        }
+                    });
+                }
+
                 var result = document.getElementById("resultGood");
                 var box = document.getElementById("mainQuizBox");
 
