@@ -78,7 +78,7 @@ if($conn) {
                             ?>
                     </div>
 
-                    <div class="greenarrows textDefault whitetext">
+                    <div class="greenarrows textDefault whitetext bold">
                         <div class="story">
                             <img class="arrow" src="/img/greenarrow_front.png" srcset="/img/greenarrow_front@2x.png 2x,
              /img/greenarrow_front@3x.png 3x" />

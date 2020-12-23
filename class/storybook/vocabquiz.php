@@ -110,7 +110,7 @@ if($conn) {
                     <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/storybook/'" style="cursor: pointer;">Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
-                        <div class="push" id="alivePush">
+                        <div class="push title-div2" id="alivePush">
                             <?php
                             for($i=1; $i<=$total_lessons; ++$i){
                                 if($lesson_id == $lessons[$i-1]["id"]){
@@ -138,7 +138,7 @@ if($conn) {
                         <div class="nextblue" id="nextDiv" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'" style="display: none; cursor: pointer;"><span class="textDefault bold whitetext">Next</span></div>
                         <div class="divBox25" id="mainQuizBox">
                             <div class="word">Fill in the blank</div>
-                            <hr>
+                           <hr>
                             <div class="wordmeaning2" id="vocQue">
                                 <?php
                                     if(strpos($vocab["sentence"], $vocab["vocab"]))
@@ -153,7 +153,7 @@ if($conn) {
                         </div>
                     </div>
 
-                    <div class="greenarrows textDefault whitetext">
+                    <div class="greenarrows textDefault whitetext bold">
                         <div class="story" style="cursor: pointer;" onclick="location.href='/class/storybook/story/<?php echo $storybook_id."/".$lesson_id."/".$first_story_id; ?>'">
                             <img class="arrow" src="/img/grayarrow_front.png" srcset="/img/grayarrow_front@2x.png 2x,
              /img/grayarrow_front@3x.png 3x" />

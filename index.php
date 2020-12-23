@@ -96,16 +96,16 @@ function openInNewTab(url) {
 
                 <div class="menu">
                     <ul class="menuUl">
-                        <li class="menuLi"><span onclick="doScrolling('#classContainer', 1000)">Class</span></li>
+                        <li class="menuLi bold"><span onclick="doScrolling('#classContainer', 1000)">Class</span></li>
 
-                        <li class="menuLi"><span onclick="doScrolling('#teamContainer', 1500)">Team</span></li>
+                        <li class="menuLi bold"><span onclick="doScrolling('#teamContainer', 1500)">Team</span></li>
 
-                        <li class="menuLi"><span onclick="doScrolling('#aboutContainer', 2000)">About</span></li>
+                        <li class="menuLi bold"><span onclick="doScrolling('#aboutContainer', 2000)">About</span></li>
 
-                        <li class="menuLiBlue"><span>Download</span></li>
+                        <li class="menuLiBlue bold"><span>Download</span></li>
 
-                        <li class="menuLiSignIn" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
-                        <li class="menuLiSignIn" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
+                        <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
+                        <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
                         <!--                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>-->
 
                     </ul>
@@ -114,16 +114,16 @@ function openInNewTab(url) {
                     <input class="textbox1" type="text" placeholder="ID"  id="userId"/>
                     <input class="textbox2" type="password" placeholder="PW"  id="userPass"/>
                     <div class="content">
-                        <span class="join"><a href="/join/step1">Join</a></span>
-                        <span class="id_pw"><a href="/find">Find ID/PW</a></span>
-                        <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
+                        <span class="join bold"><a href="/join/step1">Join</a></span>
+                        <span class="id_pw bold"><a href="/find">Find ID/PW</a></span>
+                        <span class="ok bold"><a href="#" onclick="menuLogin()">OK</a></span>
                     </div>
                 </div>
                 <div class="popup_account" style="position: absolute;" >
 
                     <div class="content_account">
-                        <span class="myclass"><a href="/myclass">My class</a></span>
-                        <span class="signout"><a href="/logout">Sign out</a></span>
+                        <span class="myclass bold"><a href="/myclass">My class</a></span>
+                        <span class="signout bold"><a href="/logout">Sign out</a></span>
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@ function openInNewTab(url) {
                 Adducate will empower the children without resources.
             </div>
 
-            <div class="mainDownload"><span>Download</span></div>
+            <div class="mainDownload bold"><span>Alivebook Download</span></div>
 
         </div>
         <br />
