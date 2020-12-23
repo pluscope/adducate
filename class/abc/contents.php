@@ -25,6 +25,10 @@ if($conn) {
             $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
             $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id);
             mysqli_query($conn, $history_insert_sql);
+        }else if($history_result->num_rows == 1 && $is_last_abc==1){
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id);
+            mysqli_query($conn, $history_insert_sql);
         }
     }
 }else{

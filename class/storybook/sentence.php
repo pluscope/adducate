@@ -17,6 +17,11 @@ $first_story_sql = "SELECT id from storybook_lesson_stories where lesson_id=%d O
 $first_story_sql = sprintf($first_story_sql, $lesson_id);
 $is_last_page = 0;
 $is_last_lesson = 0;
+$GLOBALS['isLogin'] = $isLogin;
+$GLOBALS['userId'] = $userId;
+$GLOBALS['conn'] = $conn;
+$GLOBALS['storybook_id'] = $storybook_id;
+$GLOBALS['lesson_id'] = $lesson_id;
 if($conn) {
     $total_vocabs = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["cnt"];
     $first_story_id = mysqli_result_to_array(mysqli_query($conn, $first_story_sql))[0]["id"];
@@ -75,6 +80,19 @@ if($conn) {
                 } , 2000);
             }
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
+                var isLogin = '<?= $isLogin ?>';
+                if( isLogin != "" ){
+                    $.ajax({
+                        type: "POST",
+                        url: '/class/storybook/add_storybook_history.php',
+                        dataType: "text",
+                        data: {storybook_id: '<? echo $storybook_id; ?>', lesson_id: '<? echo $lesson_id; ?>'},
+                        success: function (obj, textstatus) {
+                            console.log('history success')
+                        }
+                    });
+                }
+
                 var result = document.getElementById("resultGood");
                 var box = document.getElementById("mainQuizBox");
 
