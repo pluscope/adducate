@@ -167,15 +167,15 @@ if($conn) {
                     <div id="story_title" class="title-div2 textDefault bold">Topic - <?php echo $lesson[0]["title"] ?></div>
 
                     <div class="storybox">
-                        <div class="result bold" id="resultWrong" style="display: none;">
+                        <div class="result" id="resultWrong" style="display: none;">
                             Try Again
                         </div>
-                        <div class="result green bold" id="resultGood" style="display: none;">
+                        <div class="result green" id="resultGood" style="display: none;">
                             Good Job
                         </div>
                         <?php
                             if($is_last_lesson != 1){
-                                echo "<div class=\"nextblue bold\" id=\"nextDiv\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$current_lesson_idx+1]["id"]."/".$lessons[$current_lesson_idx+1]["first_story_id"]."'\" style=\"display: none; cursor: pointer;\"><span class=\"textDefault bold whitetext\">Next</span></div>";
+                                echo "<div class=\"nextblue\" id=\"nextDiv\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$current_lesson_idx+1]["id"]."/".$lessons[$current_lesson_idx+1]["first_story_id"]."'\" style=\"display: none; cursor: pointer;\"><span class=\"textDefault bold whitetext\">Next</span></div>";
                             }
                         ?>
 
