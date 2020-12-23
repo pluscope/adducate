@@ -1,5 +1,5 @@
 body {
-  font-family:'NotoSans',sans-serif;
+  font-family:'NotoSans-Regular',sans-serif;
   margin-top: 0px;
 }
 
@@ -48,7 +48,8 @@ body {
 }
 
 .bold {
-  font-weight: bold;
+  font-family:'NotoSans-Bold';
+  /*font-weight: bold;*/
   
 }
 
@@ -1140,7 +1141,7 @@ hr {
   z-index: 1;
   margin: auto;
   position: absolute;
-  top: 150px;
+  top: 120px;
   left: 46%;
   background: #fff;
   width: 460px;
