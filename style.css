@@ -8,14 +8,14 @@ body {
   src: url('fonts/Muli-Regular.ttf') format('opentype');
 }
 
-/*@font-face {*/
-/*  font-family: "NotoSans";*/
-/*  src: url("fonts/NotoSans-Regular.ttf") format("opentype");*/
-/*  font-style: normal;*/
-/*}*/
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url("fonts/NotoSans-Regular.ttf") format("opentype");
+  font-style: normal;
+}
 
 @font-face {
-  font-family: "NotoSans";
+  font-family: "NotoSans-Bold";
   src: url("fonts/NotoSans-Bold.ttf") format("opentype");
   unicode-range: U+0020-007E;
   font-style: normal;
@@ -253,6 +253,7 @@ body {
   color: #000000;
   overflow: hidden;
   white-space: nowrap;
+  display: -webkit-box;
 }
 
 .Lorem-text-overflow2 {
@@ -1153,14 +1154,14 @@ hr {
   padding-right: 30px;
 }
 
-.popup_terms:before {
+.popup_terms_arrow {
   content: '';
   width: 30px;
   height: 30px;
   position: absolute;
-  bottom:-30px;
-  left: 20px;
-  z-index: 4;
+  /*bottom:-30px;*/
+  left: 50%;
+  z-index: 0;
   border: solid 2px #ffa300;
   border-top: transparent;
   border-left: transparent;
@@ -1214,9 +1215,11 @@ hr {
 }
 
 .push {
-  width: fit-content;
+  width: 840px;
   transition-duration: 1s;
   transition-property: transform;
+  display: list-item;
+  overflow: scroll;
 }
 
 .pointer {
@@ -1643,4 +1646,23 @@ hr {
 
 .hover-green:hover{
   color: green;
+}
+
+.myclass_blue {
+  list-style-type: none;
+  float: left;
+  border-radius: 10px;
+  background-color: #00a3e0;
+}
+
+.myclass_blue span {
+  line-height: 60px;
+  object-fit: contain;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
 }

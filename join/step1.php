@@ -28,11 +28,16 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 
     function clickTerms(){
         var popup = document.getElementById("popup_terms");
+        var popup_arrow = document.getElementById("popup_terms_arrow");
         console.log(popup);
-        if(popup.style.visibility == "visible")
+        if(popup.style.visibility == "visible"){
             popup.style.visibility = "hidden";
-        else
+            popup_arrow.style.visibility = "hidden";
+        }
+        else{
             popup.style.visibility = "visible";
+            popup_arrow.style.visibility = "visible";
+        }
     }
 </script>
 <div class="body">
@@ -348,6 +353,8 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                     <br />
                                     contact@adducate.net
                                 </span>
+                            </div>
+                            <div class="popup_terms_arrow" id="popup_terms_arrow" style="visibility: hidden;">
                             </div>
                             <div class="divBox8_2">
                                 <div class="checks">

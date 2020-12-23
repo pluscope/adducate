@@ -1,11 +1,190 @@
 <?php
+function find_idx_of_array($arr, $key_name, $value){
+    for($i = 0; $i < count($arr); $i++){
+        if($arr[$i][$key_name] == $value){
+            return $i;
+        }
+    }
+    return -1;
+}
+function find_idx_of_array_storybook($arr, $storybook_id, $lesson_id){
+    for($i = 0; $i < count($arr); $i++){
+        for($j = 0; $j < count($arr[$i]["lessons"]); $j++){
+            if($arr[$i]["id"] == $storybook_id && $arr[$i]["lessons"][$j]["id"] == $lesson_id){
+                return array($i, $j);
+            }
+        }
+    }
+    return array(-1, -1);
+}
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
-
 $sql = "SELECT * FROM history WHERE user_id = ".$userId;
+$abc_sql = "SELECT id, title FROM abcs";
+$storybook_sql = "SELECT id, title FROM storybooks";
+$alivebook_sql = "SELECT id, title, storybook_id FROM alivebooks";
+$creationstory_sql = "SELECT id, category, chapter FROM creationstories";
 if($conn) {
-    $result = mysqli_result_to_array(mysqli_query($conn, $sql));
-    //print_r($result);
+    $result = mysqli_query($conn, $sql);
+    $abc_result = mysqli_query($conn, $abc_sql);
+    $storybook_result = mysqli_query($conn, $storybook_sql);
+    $alivebook_result = mysqli_query($conn, $alivebook_sql);
+    $creationstory_result = mysqli_query($conn, $creationstory_sql);
+    $abc_history = array();
+    $storybook_history = array();
+    $alivebook_history = array();
+    $creationstory_old_history = array();
+    $creationstory_new_history = array();
+    foreach($abc_result as $row){
+        $temp = array();
+        $temp["id"] = $row["id"];
+        $temp["title"] = $row["title"];
+        $temp["status"] = 0;
+        array_push($abc_history, $temp);
+    }
+    foreach($storybook_result as $row){
+        $temp = array();
+        $temp["id"] = $row["id"];
+        $temp["title"] = $row["title"];
+        $temp["lessons"] = array();
+        $lesson_sql = "SELECT id FROM storybook_lessons WHERE storybook_id = ".$row["id"];
+        $lesson_result = mysqli_query($conn, $lesson_sql);
+        foreach($lesson_result as $row){
+            $temp2 = array();
+            $temp2["id"] = $row["id"];
+            $temp2["status"] = 0;
+            $first_story_sql = "SELECT id FROM storybook_lesson_stories WHERE lesson_id = %d LIMIT 1";
+            $first_story_sql = sprintf($first_story_sql, $row["id"]);
+            $temp2["first_story_id"] = mysqli_fetch_array(mysqli_query($conn, $first_story_sql))["id"];
+            array_push($temp["lessons"], $temp2);
+        }
+        array_push($storybook_history, $temp);
+    }
+    foreach($alivebook_result as $row){
+        $temp = array();
+        $temp["id"] = $row["id"];
+        $temp["storybook_id"] = $row["storybook_id"];
+        $temp["title"] = $row["title"];
+        $temp["status"] = 0;
+        $first_lesson_sql = "SELECT id FROM storybook_lessons WHERE storybook_id = %d LIMIT 1";
+        $first_lesson_sql = sprintf($first_lesson_sql, $row["storybook_id"]);
+        $first_lesson_id = mysqli_fetch_array(mysqli_query($conn, $first_lesson_sql))["id"];
+        $first_story_sql = "SELECT id FROM storybook_lesson_stories WHERE lesson_id = %d LIMIT 1";
+        $first_story_sql = sprintf($first_story_sql, $first_lesson_id);
+        $temp["first_story_id"] = mysqli_fetch_array(mysqli_query($conn, $first_story_sql))["id"];
+        array_push($alivebook_history, $temp);
+    }
+    foreach($creationstory_result as $row){
+        $temp = array();
+        $temp["id"] = $row["id"];
+        $temp["chapter"] = $row["chapter"];
+        $temp["status"] = 0;
+        if($row["category"]==0)
+            array_push($creationstory_old_history, $temp);
+        else
+            array_push($creationstory_new_history, $temp);
+    }
+
+    foreach ($result as $row){
+        if($row["class_type_id"]==1){
+            $found_idx = find_idx_of_array($abc_history, "id", $row["contents_id"]);
+            if($found_idx != -1){
+                if($abc_history[$found_idx]["status"] == 0){
+                    $abc_history[$found_idx]["status"] = 1;
+                }else if($abc_history[$found_idx]["status"] == 1){
+                    $abc_history[$found_idx]["status"] = 2;
+                }
+            }
+        }else if($row["class_type_id"]==2){
+            list($found_storybook_idx,$found_lesson_idx) = find_idx_of_array_storybook($storybook_history, $row["contents_id"], $row["lesson_id"]);
+            if($found_storybook_idx != -1){
+                if($storybook_history[$found_storybook_idx]["lessons"][$found_lesson_idx]["status"] == 0){
+                    $storybook_history[$found_storybook_idx]["lessons"][$found_lesson_idx]["status"] = 1;
+                }else if($storybook_history[$found_storybook_idx]["lessons"][$found_lesson_idx]["status"] == 1){
+                    $storybook_history[$found_storybook_idx]["lessons"][$found_lesson_idx]["status"] = 2;
+                }
+            }
+        }else if($row["class_type_id"]==3){
+            $found_idx = find_idx_of_array($alivebook_history, "id", $row["contents_id"]);
+            if($found_idx != -1){
+                if($alivebook_history[$found_idx]["status"] == 0){
+                    $alivebook_history[$found_idx]["status"] = 1;
+                }else if($abc_history[$found_idx]["status"] == 1){
+                    $alivebook_history[$found_idx]["status"] = 2;
+                }
+            }
+        }else if($row["class_type_id"]==4){
+            if($row["lesson_id"] == 0){ //old story
+                $found_idx = find_idx_of_array($creationstory_old_history, "id", $row["contents_id"]);
+                if($found_idx != -1){
+                    if($creationstory_old_history[$found_idx]["status"] == 0){
+                        $creationstory_old_history[$found_idx]["status"] = 1;
+                    }else if($creationstory_old_history[$found_idx]["status"] == 1){
+                        $creationstory_old_history[$found_idx]["status"] = 2;
+                    }
+                }
+            }else if($row["lesson_id"] == 1){ //new story
+                $found_idx = find_idx_of_array($creationstory_new_history, "id", $row["contents_id"]);
+                if($found_idx != -1){
+                    if($creationstory_new_history[$found_idx]["status"] == 0){
+                        $creationstory_new_history[$found_idx]["status"] = 1;
+                    }else if($creationstory_new_history[$found_idx]["status"] == 1){
+                        $creationstory_new_history[$found_idx]["status"] = 2;
+                    }
+                }
+            }
+        }
+    }
+
+    //sort alivebook and creation story
+    $sorted_alivebook_history = array();
+    for($i=0; $i<count($alivebook_history); ++$i){
+        if($alivebook_history[$i]["status"]==2){
+            array_push($sorted_alivebook_history, $alivebook_history[$i]);
+        }
+    }
+    for($i=0; $i<count($alivebook_history); ++$i){
+        if($alivebook_history[$i]["status"]==1){
+            array_push($sorted_alivebook_history, $alivebook_history[$i]);
+        }
+    }
+    for($i=0; $i<count($alivebook_history); ++$i){
+        if($alivebook_history[$i]["status"]==0){
+            array_push($sorted_alivebook_history, $alivebook_history[$i]);
+        }
+    }
+    $sorted_creationstory_old_history = array();
+    $sorted_creationstory_new_history = array();
+    for($i=0; $i<count($creationstory_old_history); ++$i){
+        if($creationstory_old_history[$i]["status"]==2){
+            array_push($sorted_creationstory_old_history, $creationstory_old_history[$i]);
+        }
+    }
+    for($i=0; $i<count($creationstory_old_history); ++$i){
+        if($creationstory_old_history[$i]["status"]==1){
+            array_push($sorted_creationstory_old_history, $creationstory_old_history[$i]);
+        }
+    }
+    for($i=0; $i<count($creationstory_old_history); ++$i){
+        if($creationstory_old_history[$i]["status"]==0){
+            array_push($sorted_creationstory_old_history, $creationstory_old_history[$i]);
+        }
+    }
+    for($i=0; $i<count($creationstory_new_history); ++$i){
+        if($creationstory_new_history[$i]["status"]==2){
+            array_push($sorted_creationstory_new_history, $creationstory_new_history[$i]);
+        }
+    }
+    for($i=0; $i<count($creationstory_new_history); ++$i){
+        if($creationstory_new_history[$i]["status"]==1){
+            array_push($sorted_creationstory_new_history, $creationstory_new_history[$i]);
+        }
+    }
+    for($i=0; $i<count($creationstory_new_history); ++$i){
+        if($creationstory_new_history[$i]["status"]==0){
+            array_push($sorted_creationstory_new_history, $creationstory_new_history[$i]);
+        }
+    }
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -13,9 +192,42 @@ if($conn) {
 
 <title>Adducate</title>
 <link href="style.css" rel="stylesheet">
-<script>
-</script>
+<head>
+    <script>
+        $(document).ready( function() {
+            scrollbarPosition = 0;
+            function getMaxChildWidth(elm) {
+                // var max = 0;
+                // elm.children().each(function(){
+                //     c_width = parseInt($(this).width());
+                //     max += c_width;
+                // });
+                // return max-850;
+                return elm[0].scrollWidth-750;
+            }
+            function getScrollingValue(toLeft, ctx) {
+                //var scrollbarPosition = ctx.scrollTop();
+                console.log(scrollbarPosition);
+                if (toLeft) {
+                    scrollbarPosition -= 100;
+                    if(scrollbarPosition<0)
+                        scrollbarPosition = 0
+                }else{
+                    scrollbarPosition += 100;
+                    if(scrollbarPosition > getMaxChildWidth(ctx))
+                        scrollbarPosition = getMaxChildWidth(ctx);
+                }
+                return scrollbarPosition;
+            }
+            $('.scroll-to-left').on('click', function() {
+                $(this).next().scrollLeft(getScrollingValue(true, $(this).next()));
+            });
 
+            $('.scroll-to-right').on('click', function() {
+                $(this).prev().scrollLeft(getScrollingValue(false, $(this).prev()));
+            });
+        });
+    </script>
 </head>
 <body>
 <div id="temp1" style="display: none"> </div>
@@ -31,50 +243,137 @@ if($conn) {
                 <div class="container-body-white-left">
                     <img onclick="goUrl('page21.html')" class="ABC" src="/img/abc.jpg" srcset="/img/abc@2x.jpg 2x,/img/abc@3x.jpg 3x" />
                     <div class="Lorem-text-overflow">
+                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
                         <div class="push" id="abcPush">
-                            <span class="selected">Alphabet</span>
-                            <span>Short Vowels</span>
+                            <?php
+                                foreach ($abc_history as $row){
+                                    if($row["status"]==0){
+                                        echo "<span>".$row["title"]."</span>";
+                                    }else if($row["status"]==1){
+                                        if($row["id"]==1){
+                                            echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>".$row["title"]."</span>";
+                                        }else{
+                                            echo "<span class='selected'>".$row["title"]."</span>";
+                                        }
+                                    }else if($row["status"]==2){
+                                        if($row["id"]==1){
+                                            echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/1/1'\">".$row["title"]."</span>";
+                                        }else{
+                                            echo "<span style='color: black''>".$row["title"]."</span>";
+                                        }
+                                    }
+                                }
+                            ?>
                         </div>
+                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
                     </div>
-                    <hr>
-
-                    <img onclick="goUrl('page23.html')" class="Storybook" src="/img/storybook.png" srcset="/img/storybook@2x.png 2x,/img/storybook@3x.png 3x" />
-                    <div class="Lorem-text-overflow">
-                        <div class="push" id="storyPush">
-                            <span>Story 1</span>
-                            <span>Story 2</span>
-                            <span class="selected">Story 3</span>
-                        </div>
-                    </div>
+                    <?php
+                        echo "<hr>";
+                        echo "<img onclick='' class='Storybook' src='/img/storybook.png' srcset='/img/storybook@2x.png 2x,/img/storybook@3x.png 3x' />";
+                        foreach ($storybook_history as $row){
+                            echo "<div class=\"Lorem-text-overflow\">";
+                            echo "<img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />";
+                            echo "<div class=\"push\" id=\"storyPush\">";
+                            echo "<li class='myclass_blue'>";
+                            echo "<span>&nbsp;&nbsp;".$row["title"]."&nbsp;&nbsp</span>";
+                            echo "</li>";
+                            for($i=0; $i<count($row["lessons"]); ++$i){
+                                if($row["lessons"][$i]["status"]==0){
+                                    echo "<span>Lesson ".strval($i+1)."</span>";
+                                }else if($row["lessons"][$i]["status"]==1){
+                                    echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$row["lessons"][$i]["id"]."/".$row["lessons"][$i]["first_story_id"]."'\">Lesson ".strval($i+1)."</span>";
+                                }else if($row["lessons"][$i]["status"]==2){
+                                    echo "<span style='color: black; cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$row["lessons"][$i]["id"]."/".$row["lessons"][$i]["first_story_id"]."'\">Lesson ".strval($i+1)."</span>";
+                                }
+                            }
+                            echo "</div>";
+                            echo "<img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />";
+                            echo "</div>";
+                        }
+                    ?>
+<!--                    <div class="Lorem-text-overflow">-->
+<!--                        <div class="push" id="storyPush">-->
+<!--                            <span>Story 1</span>-->
+<!--                            <span>Story 2</span>-->
+<!--                            <span class="selected">Story 3</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <hr>-->
+<!---->
+<!--                    <div class="Lorem-text-overflow">-->
+<!--                        <div class="push" id="storyPush">-->
+<!--                            <span>Story 1</span>-->
+<!--                            <span>Story 2</span>-->
+<!--                            <span class="selected">Story 3</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <hr>
 
                     <img class="Alivebook" src="/img/alivebook.png" srcset="/img/alivebook@2x.png 2x,/img/alivebook@3x.png 3x" />
-                    <div class="Lorem-text-overflow">
-                        <div class="push" id="alivePush">
-                            <span>Story 1</span>
-                            <span>Story 2</span>
-                            <span class="selected">Story 3</span>
+                    <div class="Lorem-text-overflow" style="overflow: scroll;">
+                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+                        <div class="push" id="createPush">
+                            <?php
+                            foreach ($sorted_alivebook_history as $row){
+                                if($row["status"]==0){
+                                    echo "<span>".$row["title"]."</span>";
+                                }else if($row["status"]==1){
+                                    echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["storybook_id"]."/".$row["first_story_id"]."'\">".$row["title"]."</span>";
+                                }else if($row["status"]==2){
+                                    echo "<span style='color: black; cursor: pointer;' onclick=\"location.href='/class/alivebook/read/".$row["storybook_id"]."/".$row["first_story_id"]."'\">".$row["title"]."</span>";
+                                }
+                            }
+                            ?>
                         </div>
+                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
                     </div>
                     <hr>
 
                     <img class="Creation-Story" src="/img/creation-story.png" srcset="/img/creation-story@2x.png 2x,/img/creation-story@3x.png 3x" />
-                    <div class="Lorem-text-overflow">
+                    <br />
+                    <div class="Lorem-text-overflow" style="overflow: scroll;">
                         <div class="push" id="createPush">
-                            <span>Story 1</span>
-                            <span>Story 2</span>
-                            <span class="selected">Story 3</span>
-                            <span>Story 4</span>
-                            <span>Story 5</span>
-                            <span>Story 6</span>
-                            <span>Story 7</span>
-                            <span>Story 8</span>
-                            <span>Story 9</span>
-                            <span>Story 10</span>
-                            <span>Story 11</span>
-                            <span>Story 12</span>
-                            <span>Story 13</span>
+                            <span>Old Stories</span>
                         </div>
+                    </div>
+                    <div class="Lorem-text-overflow" style="overflow: scroll;">
+                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+                        <div class="push" id="createPush">
+                            <?php
+                                foreach ($sorted_creationstory_old_history as $row){
+                                    if($row["status"]==0){
+                                        echo "<span>Chapter ".$row["chapter"]."</span>";
+                                    }else if($row["status"]==1){
+                                        echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">Chapter ".$row["chapter"]."</span>";
+                                    }else if($row["status"]==2){
+                                        echo "<span style='color: black; cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">Chapter ".$row["chapter"]."</span>";
+                                    }
+                                }
+                            ?>
+                        </div>
+                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
+                    </div>
+                    <div class="Lorem-text-overflow" style="overflow: scroll;">
+                        <div class="push" id="createPush">
+                            <span>New Stories</span>
+                        </div>
+                    </div>
+                    <div class="Lorem-text-overflow" style="overflow: scroll;">
+                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+                        <div class="push" id="createPush">
+                            <?php
+                                foreach ($sorted_creationstory_new_history as $row){
+                                    if($row["status"]==0){
+                                        echo "<span>Chapter ".$row["chapter"]."</span>";
+                                    }else if($row["status"]==1){
+                                        echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">Chapter ".$row["chapter"]."</span>";
+                                    }else if($row["status"]==2){
+                                        echo "<span style='color: black; cursor: pointer;' onclick=\"location.href='/class/creationstory/".$row["id"]."'\">Chapter ".$row["chapter"]."</span>";
+                                    }
+                                }
+                            ?>
+                        </div>
+                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
                     </div>
                     <hr>
 <!--                    <div class="bbtn_move">-->
