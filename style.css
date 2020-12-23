@@ -253,6 +253,7 @@ body {
   color: #000000;
   overflow: hidden;
   white-space: nowrap;
+  display: -webkit-box;
 }
 
 .Lorem-text-overflow2 {
@@ -1214,9 +1215,11 @@ hr {
 }
 
 .push {
-  width: fit-content;
+  width: 840px;
   transition-duration: 1s;
   transition-property: transform;
+  display: list-item;
+  overflow: scroll;
 }
 
 .pointer {
@@ -1643,4 +1646,23 @@ hr {
 
 .hover-green:hover{
   color: green;
+}
+
+.myclass_blue {
+  list-style-type: none;
+  float: left;
+  border-radius: 10px;
+  background-color: #00a3e0;
+}
+
+.myclass_blue span {
+  line-height: 60px;
+  object-fit: contain;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
 }
