@@ -30,7 +30,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 							Welcome to Adducate!
 						</span>
                         <br>
-                        <span class="textDefault spanColor-orange">
+                        <span class="textDefault spanColor-orange bold">
 							<?php echo($_POST["userNm"]);?>
 						</span>
                     </div>

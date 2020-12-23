@@ -48,16 +48,16 @@
 
         <div class="menu">
             <ul class="menuUl">
-                <li class="menuLi"><span onclick="location.href='/class/'">Class</span></li>
+                <li class="menuLi bold"><span onclick="location.href='/class/'">Class</span></li>
 
-                <li class="menuLi"><span onclick="location.href='/team/'">Team</span></li>
+                <li class="menuLi bold"><span onclick="location.href='/team/'">Team</span></li>
 
-                <li class="menuLi"><span onclick="location.href='/about/'">About</span></li>
+                <li class="menuLi bold"><span onclick="location.href='/about/'">About</span></li>
 
-                <li class="menuLiBlue"><span>Download</span></li>
+                <li class="menuLiBlue bold"><span>Download</span></li>
 
-                <li class="menuLiSignIn" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
-                <li class="menuLiSignIn" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
+                <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
+                <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
 <!--                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>-->
 
             </ul>
@@ -67,9 +67,9 @@
             <input class="textbox2" type="password" placeholder="PW"  id="userPass"/>
             <div class="content">
 
-                <span class="join"><a href="/join/step1">Join</a></span>
-                <span class="id_pw"><a href="/find">Find ID/PW</a></span>
-                <span class="ok"><a href="#" onclick="menuLogin()">OK</a></span>
+                <span class="join bold"><a href="/join/step1">Join</a></span>
+                <span class="id_pw bold"><a href="/find">Find ID/PW</a></span>
+                <span class="ok bold"><a href="#" onclick="menuLogin()">OK</a></span>
             </div>
         </div>
         <div class="popup_account" style="position: absolute;" >

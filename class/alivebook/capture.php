@@ -43,7 +43,7 @@ if($conn) {
                         </div>
                     </div>
 
-                    <div class="greenarrows textDefault whitetext">
+                    <div class="greenarrows textDefault whitetext bold">
                         <div class="story" style="cursor: pointer" onclick="location.href='/class/alivebook/read/<?php echo $storybook_id."/".$first_story_id; ?>'">
                             <img class="arrow" src="/img/grayarrow_front.png" srcset="/img/grayarrow_front@2x.png 2x,
              /img/grayarrow_front@3x.png 3x" />
