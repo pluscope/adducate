@@ -237,6 +237,8 @@ function openInNewTab(url) {
             </div>
 
             <div class="email textDefault bluetext">
+<!--                Do you want to contribute to Adducate?-->
+<!--                <br>-->
                 contact@adducate.net
             </div>
             <br />

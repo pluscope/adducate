@@ -75,8 +75,8 @@
         <div class="popup_account" style="position: absolute;" >
 
             <div class="content_account">
-                <span class="myclass"><a href="/myclass">My class</a></span>
-                <span class="signout"><a href="/logout">Sign out</a></span>
+                <span class="myclass bold"><a href="/myclass">My class</a></span>
+                <span class="signout bold"><a href="/logout">Sign out</a></span>
             </div>
         </div>
 
