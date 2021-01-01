@@ -45,9 +45,11 @@ if($conn) {
 
                     <script>
                         function open6(x) {
+                            $('.divBox6_2').each(function() {
+                                $(this).hide()
+                                //$(this).nextElementSibling.display = 'none';
+                            });
                             var box = x.nextElementSibling;
-
-                            console.log(box);
                             if (box.style.display == 'block')
                                 box.style.display = 'none';
                             else
