@@ -1221,7 +1221,9 @@ hr {
   transition-property: transform;
   display: list-item;
   overflow: scroll;
+  -ms-overflow-style: none;
 }
+.push::-webkit-scrollbar{ display:none; }
 
 .pointer {
   position: relative;
@@ -1654,10 +1656,12 @@ hr {
   float: left;
   border-radius: 10px;
   background-color: #00a3e0;
+  height: 35px;
+  margin-top: 15px;
 }
 
 .myclass_blue span {
-  line-height: 60px;
+  /*line-height: 60px;*/
   object-fit: contain;
   font-size: 24px;
   font-weight: bold;
@@ -1666,4 +1670,5 @@ hr {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+  vertical-align: super;
 }
