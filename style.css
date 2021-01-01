@@ -1141,8 +1141,8 @@ hr {
   z-index: 1;
   margin: auto;
   position: absolute;
-  top: 120px;
-  left: 46%;
+  top: 138px;
+  left: 670px;
   background: #fff;
   width: 460px;
   height: 445px;
@@ -1160,9 +1160,9 @@ hr {
   width: 30px;
   height: 30px;
   position: absolute;
-  /*bottom:-30px;*/
-  left: 50%;
-  z-index: 0;
+  margin-top: -20px;
+  left: 678px;
+  z-index: 2;
   border: solid 2px #ffa300;
   border-top: transparent;
   border-left: transparent;
