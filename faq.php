@@ -26,6 +26,10 @@ if($conn) {
                     <div class="pointer"><span class="hover-green" onclick="location.href='/about/" style="cursor: pointer;">About</span><span> > </span><span>FAQ</span></div>
 
                     <div class="divBox6">
+                        <?php
+//                        echo "<div class=\"divBox5_1\">";
+                        echo "<div class=\"textDefault f36 bold\"><span>Frequently asked questions</span>";
+                        ?>
                         <hr>
                         <?php
                             foreach ($result as $row){
