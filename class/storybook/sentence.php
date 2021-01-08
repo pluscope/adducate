@@ -106,6 +106,10 @@ if($conn) {
 
             }
         }else{
+            var wordList = document.getElementById(("answer"));
+            while (wordList.hasChildNodes()) {
+                wordList.removeChild(wordList.lastChild);
+            }
             var result = document.getElementById("resultWrong");
             var box = document.getElementById("mainQuizBox");
             var timeOutFunc;

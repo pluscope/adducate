@@ -1,3 +1,7 @@
+<?php
+include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
+include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
+?>
 <script>
     function getElementY(query) {
         return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
@@ -35,6 +39,24 @@
             }
         })
     }
+
+    function downloadAPK(){
+        var isLogin = '<?= $isLogin ?>';
+        if( isLogin != "" ){
+            var userId = '<?php echo $userId;?>';
+            $.ajax({
+                type: "POST",
+                url: '/download.php',
+                dataType: "text",
+                data: {id: userId},
+                success: function (data) {
+                    window.open('/sql.zip');
+                }
+            });
+        }else{
+            alert("Please login to adducate to download the file");
+        }
+    }
 </script>
 <div class="container">
     <!-- container-header 필수 -->
@@ -54,7 +76,7 @@
 
                 <li class="menuLi bold"><span onclick="location.href='/about/'">About</span></li>
 
-                <li class="menuLiBlue bold"><span>Download</span></li>
+                <li class="menuLiBlue bold" onclick="downloadAPK()"><span>Download</span></li>
 
                 <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
                 <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
@@ -66,7 +88,6 @@
             <input class="textbox1" type="text" placeholder="ID"  id="userId"/>
             <input class="textbox2" type="password" placeholder="PW"  id="userPass"/>
             <div class="content">
-
                 <span class="join bold"><a href="/join/step1">Join</a></span>
                 <span class="id_pw bold"><a href="/find">Find ID/PW</a></span>
                 <span class="ok bold"><a href="#" onclick="menuLogin()">OK</a></span>

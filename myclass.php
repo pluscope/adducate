@@ -271,28 +271,28 @@ if($conn) {
                             <?php
                                 $i=0;
                                 foreach ($abc_history as $row){
-                                    if(is_array($row)){
-                                        if($row["status"]==0){
-                                            if($abc_history["has_history"]==0 && $i==0){
-                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>".$row["title"]."</span>";
-                                            }else{
-                                                echo "<span>".$row["title"]."</span>";
+                                    if(is_array($row)) {
+                                        if ($row["status"] == 0) {
+                                            if ($abc_history["has_history"] == 0 && $i == 0) {
+                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>" . $row["title"] . "</span>";
+                                            } else {
+                                                echo "<span>" . $row["title"] . "</span>";
                                             }
-                                        }else if($row["status"]==1){
-                                            if($row["id"]==1){
-                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>".$row["title"]."</span>";
-                                            }else{
-                                                echo "<span class='selected'>".$row["title"]."</span>";
+                                        } else if ($row["status"] == 1) {
+                                            if ($row["id"] == 1) {
+                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>" . $row["title"] . "</span>";
+                                            } else {
+                                                echo "<span class='selected'>" . $row["title"] . "</span>";
                                             }
-                                        }else if($row["status"]==2){
-                                            if($row["id"]==1){
-                                                echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/1/1'\">".$row["title"]."</span>";
-                                            }else{
-                                                echo "<span style='color: black''>".$row["title"]."</span>";
+                                        } else if ($row["status"] == 2) {
+                                            if ($row["id"] == 1) {
+                                                echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/1/1'\">" . $row["title"] . "</span>";
+                                            } else {
+                                                echo "<span style='color: black''>" . $row["title"] . "</span>";
                                             }
                                         }
+                                        $i++;
                                     }
-                                    $i++;
                                 }
                             ?>
                         </div>

@@ -201,6 +201,7 @@ body {
   text-align: center;
   line-height: 55px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .mainDownload span {
@@ -1142,7 +1143,8 @@ hr {
   margin: auto;
   position: absolute;
   top: 138px;
-  left: 670px;
+  /*left: 670px;*/
+  margin-left: 208px;
   background: #fff;
   width: 460px;
   height: 445px;
@@ -1161,7 +1163,8 @@ hr {
   height: 30px;
   position: absolute;
   margin-top: -20px;
-  left: 678px;
+  /*left: 678px;*/
+  margin-left: 214px;
   z-index: 2;
   border: solid 2px #ffa300;
   border-top: transparent;

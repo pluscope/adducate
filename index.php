@@ -16,12 +16,13 @@ if($conn) {
 <link href="style.css" rel="stylesheet">
 <script>
 $(document).ready( function() {
-	if(location!=''){
-	    if(location=='class'){
+    var loc = '<?= $loc ?>';
+	if(loc!=''){
+	    if(loc=='class'){
             doScrolling('#classContainer', 1000);
-        }else if(location=='team'){
+        }else if(loc=='team'){
             doScrolling('#teamContainer', 1500);
-        }else if(location=='about'){
+        }else if(loc=='about'){
             doScrolling('#aboutContainer', 2000);
         }
     }
@@ -35,6 +36,24 @@ $(document).ready( function() {
         nextArrow: "<img class='bbtn_left_story slick-next' style='margin-right: 50px; top: 20%;' src='/img/scroll-btn(right).png' srcset='/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />"
     });
 });
+
+function downloadAPK(){
+    var isLogin = '<?= $isLogin ?>';
+    if( isLogin != "" ){
+        var userId = '<?php echo $userId;?>';
+        $.ajax({
+            type: "POST",
+            url: '/download.php',
+            dataType: "text",
+            data: {id: userId},
+            success: function (data) {
+                window.open('/sql.zip');
+            }
+        });
+    }else{
+        alert("Please login to adducate to download the file");
+    }
+}
 
 function getElementY(query) {
     return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top
@@ -102,7 +121,7 @@ function openInNewTab(url) {
 
                         <li class="menuLi bold"><span onclick="doScrolling('#aboutContainer', 2000)">About</span></li>
 
-                        <li class="menuLiBlue bold"><span>Download</span></li>
+                        <li class="menuLiBlue bold" onclick="downloadAPK()"><span>Download</span></li>
 
                         <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
                         <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
@@ -166,7 +185,7 @@ function openInNewTab(url) {
                 Adducate will empower the children without resources.
             </div>
 
-            <div class="mainDownload bold"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
         </div>
         <br />
