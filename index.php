@@ -181,22 +181,18 @@ function openInNewTab(url) {
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
-                <br>
+                <br/>
                 Adducate will empower the children without resources.
-                <br>
-                Currently, Adducate consists of four classes: abc, Storybooks, Alivebooks, and Creative Stories.   <br>
-                <br>
-                Students can use the Alivebook with the app, which can be download by clicking the button below.
-                <br>
-                Adducate will gradually create various classes.
-            </div>
+                <br/>
+                <br/>
+                Students can use the Alivebook with the app, which can be download by clicking the button below.      </div>
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
 
             <div class="divBox1 textDefault" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
-                <br>
+                <br/>
                 Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
             </div>
 <!--            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>-->
