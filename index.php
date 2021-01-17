@@ -185,6 +185,9 @@ function openInNewTab(url) {
                 Adducate will empower the children without resources.
             </div>
 
+            <div class="divBox1 textDefault" id="optimizedWarning">
+                Adducate properly works on PC environment.
+            </div>
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
         </div>
@@ -192,24 +195,30 @@ function openInNewTab(url) {
         <div class="container-body-white" id = "classContainer">
             <?php
             foreach($result as $row){
-                echo "<a href='/class/".$row["url_name"]."'>";
+                echo "<a class='pcLink' href='/class/".$row["url_name"]."'>";
                 echo "<img class='".$row["css_name"]."' src='".'..'.$row["image1"]."' srcset='".'..'.$row["image2"]." 2x,".'..'.$row["image3"]." 3x' />";
                 echo "</a>";
-                echo "<div class='divBox2 textDefault' style='cursor: pointer;' onclick=\"location.href='/class/".$row["url_name"]."'\">".$row["description"]."</div>";
+                echo "<div class='divBox2 textDefault pcLink' style='cursor: pointer;' onclick=\"location.href='/class/".$row["url_name"]."'\">".$row["description"]."</div>";
+            }
+            foreach($result as $row){
+                echo "<a class='mobileLink'>";
+                echo "<img class='".$row["css_name"]."' src='".'..'.$row["image1"]."' srcset='".'..'.$row["image2"]." 2x,".'..'.$row["image3"]." 3x' />";
+                echo "</a>";
+                echo "<div class='divBox2 textDefault mobileLink'>".$row["description"]."</div>";
             }
             ?>
             <br />
-            <img class="bbtn" style="cursor: pointer;" onclick="doScrolling('#teamContainer', 1000)" src="../img/scroll-btn.png" srcset="../img/scroll-btn@2x.png 2x,../img/scroll-btn@3x.png 3x" />
+            <img class="bbtn pcLink" style="cursor: pointer;" onclick="doScrolling('#teamContainer', 1000)" src="../img/scroll-btn.png" srcset="../img/scroll-btn@2x.png 2x,../img/scroll-btn@3x.png 3x" />
         </div>
         <br />
         <div class="container-body-blue" id="teamContainer">
-            <div class="carousel" style="height: 80%; width: 100%">
+            <div class="carousel pcLink" style="height: 80%; width: 100%">
                 <?php
                     shuffle($teams);
                     for($i=0; $i<count($teams); ++$i){
                         echo "<div>";
                         if(strstr($teams[$i]["logo"] , "/")){
-                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png');\">";
                             echo "<img src='".$teams[$i]["logo"]."' style='width:40%; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
                             echo "<div style='margin-top:80px;font-size: 22px;'>";
                             echo $teams[$i]["name"];
@@ -219,7 +228,7 @@ function openInNewTab(url) {
                             echo "</div>";
                             echo "</div>";
                         }else{
-                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png'); width:500px;height:320px;\">";
+                            echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png');\">";
                             echo "<div style='height:44px; margin-left:auto; margin-right:auto; margin-top: 80px; font-size: 32px;'>";
                             echo $teams[$i]["logo"];
                             echo "</div>";
@@ -235,9 +244,14 @@ function openInNewTab(url) {
                     }
                 ?>
             </div>
+            <div class="mobileLink">
+                <div class="divBox1 textDefault">
+                    Adducate is ...
+                </div>
+            </div>
 
             <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer; padding-top: 10px"
-                 class="bbtn_bottom"
+                 class="bbtn_bottom pcLink"
                     src="/img/scroll-btn.png"
                     srcset="/img/scroll-btn@2x.png 2x,/img/scroll-btn@3x.png 3x"/>
         </div>
@@ -245,13 +259,13 @@ function openInNewTab(url) {
 
             <div class="divBox4">
                 <div class="orangeBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/manual'">
-                    Class Manual
+                    <span>Class Manual</span>
                 </div>
                 <div class="blueBox textDefault f36 bold" style="cursor: pointer;" onclick="location.href='/faq'">
-                    FAQ
+                    <span>FAQ</span>
                 </div>
                 <div class="greenBox textDefault f36 bold" style="cursor: pointer;" onclick="openInNewTab('https://medium.com/@contact.adducate/what-is-adducate-3c00458d6c17')">
-                    Blog
+                    <span>Blog</span>
                 </div>
             </div>
 

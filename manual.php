@@ -24,7 +24,7 @@ if($conn) {
             <div class="container-body container-expand">
 
                     <div class="container-body-white-center">
-                        <div class="pointer"><span class="hover-green" onclick="location.href='/about/" style="cursor: pointer;">About</span><span> > </span>Class Manual</span></div>
+                        <div class="pointer pcLink"><span class="hover-green" onclick="location.href='/about/'" style="cursor: pointer;">About</span><span> > </span>Class Manual</span></div>
                     <?php
                         foreach($result as $row){
                             echo "<div class=\"divBox5_1\">";
@@ -42,6 +42,11 @@ if($conn) {
                     ?>
                         <br />
                         <br />
+                        <div class="back-to-main mobileLink">
+                            <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
+                            <br />
+                            <br />
+                        </div>
                 </div>
 
             </div>
