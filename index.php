@@ -180,19 +180,31 @@ function openInNewTab(url) {
 
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
-                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.
-<!--                They will find learning fascinating and it will accelerate their growth.-->
+                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's creativity.
+                They will find learning fascinating and it will accelerate their growth.
                 <br/>
                 Adducate will empower the children without resources.
                 <br/>
                 <br/>
-                Students can use the Alivebook with the Android app. Click the Download button below.
+                Students can use the Alivebook with the Android app.
+                <br/>Click the Download button below.
+            </div>
+
+            <div class="mobileLink">
+                <div class="divBox1 textDefault" style="font-size:22px">
+                    Adducate is designed to make learning more accessible and amusing for learners.
+                    From the sounds of each alphabet to short stories, it stimulates children's creativity.
+                    Adducate will empower the children without resources.
+                    <br/>
+                    <br/>
+                    children can play the Alivebook with the Android app. Click the Download button below.
+                </div>
             </div>
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault" style="font-size:13px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+            <div class="divBox1 textDefault bold" style="font-size:13px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet.
