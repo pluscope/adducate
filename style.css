@@ -190,7 +190,7 @@ body {
 }
 
 .mainDownload {
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: #00a3e0;
   border-radius: 10px;
   width: 324px;
@@ -1155,8 +1155,8 @@ hr {
   line-height: 55px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .popup_terms_arrow {
@@ -1175,10 +1175,10 @@ hr {
   transform: rotate(45deg);
 }
 
-.popup_terms span {
-  position: relative;
-  z-index: 2;
-}
+/*.popup_terms span {*/
+/*  position: relative;*/
+/*  z-index: 2;*/
+/*}*/
 
 .popup_pw {
   text-align: center;
@@ -1191,7 +1191,8 @@ hr {
   background: #fff;
   width: 516px;
   height: 55px;
-  border: 1px solid #cacece;
+  /*border: 1px solid #cacece;*/
+  border: 2px solid #ffa300;
   color: grey;
   line-height: 55px;
 }
@@ -1204,7 +1205,8 @@ hr {
   top: 40px;
   left: 248px;
   z-index: 1;
-  border: solid 1px #cacece;
+  /*border: solid 1px #cacece;*/
+  border: 2px solid #ffa300;
   border-top: transparent;
   border-left: transparent;
   background-color: white;
@@ -1661,7 +1663,7 @@ hr {
   float: left;
   border-radius: 10px;
   background-color: #00a3e0;
-  height: 35px;
+  height: 42px;
   margin-top: 15px;
 }
 

@@ -38,9 +38,31 @@ if($conn) {
                     <div class="title-div2 textDefault bold">Please follow the guide</div>
 
                     <div class="alivebox">
-                        <div class="alivewordbox textDefault">
 
+                        <div class="alivewordbox textDefault">
+                            <?php echo $guide["contents"] ?>
                         </div>
+                        <img class="image" src='<?php echo $guide["image"] ?>'/>
+                        <?php
+                        if ($page_id == 1){
+                            echo "<img onclick=\"location.href='/class/alivebook/read/".$storybook_id."/".$last_story_id."'\"
+                                 class=\"bbtn_left_story\" style=\"cursor: pointer;\"
+                                 src=\"/img/scroll-btn(left).png\"
+                                 srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
+                        }
+                        else if($page_id>1){
+                            echo "<img onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/".($page_id-1)."'\"
+                                 class=\"bbtn_left_story\" style=\"cursor: pointer;\"
+                                 src=\"/img/scroll-btn(left).png\"
+                                 srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
+                        }
+                        if($is_last_page!=1){
+                            echo "<img onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/".($page_id+1)."'\"
+                                 class=\"bbtn_right_story\" style=\"cursor: pointer;\"
+                                 src=\"/img/scroll-btn(right).png\" 
+                                 srcset=\"/img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x\"/>";
+                        }
+                        ?>
                     </div>
 
                     <div class="greenarrows textDefault whitetext bold">
