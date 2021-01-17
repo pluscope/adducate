@@ -180,7 +180,8 @@ function openInNewTab(url) {
 
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
-                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
+                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.
+<!--                They will find learning fascinating and it will accelerate their growth.-->
                 <br/>
                 Adducate will empower the children without resources.
                 <br/>
@@ -188,17 +189,17 @@ function openInNewTab(url) {
                 Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.
             </div>
 
-            <div class="mobileLink">
-            <div class="divBox1 textDefault" style="font-size:22px; padding-top: 20px" id="optimizedWarning">
-                Adducate is designed to make learning more accessible and amusing for learners.
-                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.
-                <br/>
-                Adducate will empower the children without resources.
-                <br/>
-                <br/>
-                Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.
-            </div>
-            </div>
+<!--            <div class="mobileLink">-->
+<!--            <div class="divBox1 textDefault" style="font-size:22px; padding-top: 20px" id="optimizedWarning">-->
+<!--                Adducate is designed to make learning more accessible and amusing for learners.-->
+<!--                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.-->
+<!--                <br/>-->
+<!--                Adducate will empower the children without resources.-->
+<!--                <br/>-->
+<!--                <br/>-->
+<!--                Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.-->
+<!--            </div>-->
+<!--            </div>-->
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
@@ -266,7 +267,7 @@ function openInNewTab(url) {
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault" style="color:#ffffff; font-size:22px; padding-top: 90px">
+                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 90px">
                     Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
                     <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
