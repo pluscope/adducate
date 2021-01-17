@@ -23,7 +23,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                     <div class="container-body-white-center">
-                    <div class="pointer"><span class="hover-green" onclick="location.href='/about/" style="cursor: pointer;">About</span><span> > </span><span>FAQ</span></div>
+                    <div class="pointer pcLink"><span class="hover-green" onclick="location.href='/about/'" style="cursor: pointer;">About</span><span> > </span><span>FAQ</span></div>
 
                     <div class="divBox6">
                         <hr>
@@ -56,6 +56,13 @@ if($conn) {
                                 box.style.display = 'block';
                         }
                     </script>
+                        <div class="back-to-main mobileLink">
+                            <br />
+                            <br />
+                            <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
+                            <br />
+                            <br />
+                        </div>
                 </div>
 
             </div>
