@@ -60,13 +60,13 @@ if($conn) {
                                 box.style.display = 'block';
                         }
                     </script>
-                        <div class="back-to-main mobileLink">
-                            <br />
-                            <br />
-                            <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
-                            <br />
-                            <br />
-                        </div>
+                </div>
+                <div class="back-to-main mobileLink">
+                    <br />
+                    <br />
+                    <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
+                    <br />
+                    <br />
                 </div>
 
             </div>
