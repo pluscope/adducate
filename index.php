@@ -252,12 +252,12 @@ function openInNewTab(url) {
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault">
+                <div class="divBox1 textDefault" style="color:#ffffff">
                     Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
-                    <br>
+                    <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
-                    <br>
-                    Let's make an impact on developing countries and students who lack educational opportunities.  </div>
+                    Let's make an impact on developing countries and students who lack educational opportunities.
+                </div>
             </div>
 
             <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer; padding-top: 10px"
@@ -279,7 +279,7 @@ function openInNewTab(url) {
                 </div>
             </div>
 
-            <div class="email textDefault bluetext">
+            <div class="email textDefault bluetext bold">
 <!--                Want to contribute to Adducate?-->
 <!--                <br>-->
                 contact@adducate.net
