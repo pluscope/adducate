@@ -183,12 +183,23 @@ function openInNewTab(url) {
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
                 <br>
                 Adducate will empower the children without resources.
+                <br>
+                Currently, Adducate consists of four classes (abc, basic English based on storybooks, alivebooks, and creative stories).
+                <br>
+                Students can learn the alivebook with the app of the download button below.
+                <br>
+                Adducate will gradually create various classes.
             </div>
 
-            <div class="divBox1 textDefault" id="optimizedWarning">
-                Adducate properly works on PC environment.
-            </div>
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
+
+
+            <div class="divBox1 textDefault" id="optimizedWarning">
+                All classes at Adducate are available on tablets and PCs.
+                <br>
+                Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
+            </div>
+<!--            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>-->
 
         </div>
         <br />
@@ -246,7 +257,11 @@ function openInNewTab(url) {
             </div>
             <div class="mobileLink">
                 <div class="divBox1 textDefault">
-                    Adducate is ...
+                    Adducate is created through talent donations by people from specialized fields such as computer science, English education, publishing storybooks, branding, UI/UX, and strategical planning.
+                    <br>
+                    We welcome people and organizations who want to further develop and solidify this project.
+                    <br>
+                    Let's make an impact on developing countries and students who lack educational opportunities.
                 </div>
             </div>
 
@@ -270,7 +285,7 @@ function openInNewTab(url) {
             </div>
 
             <div class="email textDefault bluetext">
-<!--                Do you want to contribute to Adducate?-->
+<!--                Want to contribute to Adducate?-->
 <!--                <br>-->
                 contact@adducate.net
             </div>
