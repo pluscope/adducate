@@ -181,22 +181,18 @@ function openInNewTab(url) {
             <div class="divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity. They will find learning fascinating and it will accelerate their growth.
-                <br>
+                <br/>
                 Adducate will empower the children without resources.
-                <br>
-                Currently, Adducate consists of four classes (abc, basic English based on storybooks, alivebooks, and creative stories).
-                <br>
-                Students can learn the alivebook with the app of the download button below.
-                <br>
-                Adducate will gradually create various classes.
-            </div>
+                <br/>
+                <br/>
+                Students can use the Alivebook with the app, which can be download by clicking the button below.      </div>
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
 
             <div class="divBox1 textDefault" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
-                <br>
+                <br/>
                 Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
             </div>
 <!--            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>-->
@@ -256,11 +252,10 @@ function openInNewTab(url) {
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault">
-                    Adducate is created through talent donations by people from specialized fields such as computer science, English education, publishing storybooks, branding, UI/UX, and strategical planning.
-                    <br>
+                <div class="divBox1 textDefault" style="color:#ffffff">
+                    Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
+                    <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
-                    <br>
                     Let's make an impact on developing countries and students who lack educational opportunities.
                 </div>
             </div>
@@ -284,7 +279,7 @@ function openInNewTab(url) {
                 </div>
             </div>
 
-            <div class="email textDefault bluetext">
+            <div class="email textDefault bluetext bold">
 <!--                Want to contribute to Adducate?-->
 <!--                <br>-->
                 contact@adducate.net
