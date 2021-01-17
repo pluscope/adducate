@@ -186,25 +186,13 @@ function openInNewTab(url) {
                 Adducate will empower the children without resources.
                 <br/>
                 <br/>
-                Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.
+                Students can use the Alivebook with the Android app, which can be download by clicking the button below.
             </div>
-
-<!--            <div class="mobileLink">-->
-<!--            <div class="divBox1 textDefault" style="font-size:22px; padding-top: 20px" id="optimizedWarning">-->
-<!--                Adducate is designed to make learning more accessible and amusing for learners.-->
-<!--                From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.-->
-<!--                <br/>-->
-<!--                Adducate will empower the children without resources.-->
-<!--                <br/>-->
-<!--                <br/>-->
-<!--                Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.-->
-<!--            </div>-->
-<!--            </div>-->
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 20px" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:14px; color:#ffffff; padding-top: 20px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
@@ -267,7 +255,7 @@ function openInNewTab(url) {
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 90px">
+                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 75px">
                     Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
                     <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
