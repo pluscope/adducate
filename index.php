@@ -189,7 +189,9 @@ function openInNewTab(url) {
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
-            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 20px" id="optimizedWarning">
+                Alivebook app works on Android only.
+                <br/>
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
