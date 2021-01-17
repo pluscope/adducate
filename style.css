@@ -1706,7 +1706,7 @@ hr {
     width: auto;
   }
   .mainLogo{
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .divBox1{
     padding-top: 50px;
@@ -1753,6 +1753,10 @@ hr {
     grid-template-columns: none;
   }
   .divBox6{
+    width: auto;
+  }
+
+  .video-class{
     width: auto;
   }
 }
