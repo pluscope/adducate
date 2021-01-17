@@ -186,16 +186,17 @@ function openInNewTab(url) {
                 Adducate will empower the children without resources.
                 <br/>
                 <br/>
-                Students can use the Alivebook with the Android app, which can be download by clicking the button below.
+                Students can use the Alivebook with the Android app. Click the Download button below.
             </div>
 
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault" style="font-size:14px; color:#ffffff; padding-top: 20px" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:13px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
-                Go to adducate.net on your PC or tablet (optimized for Chrome and Safari).
+                Go to adducate.net on your PC or tablet.
+                <br/>(optimized for Chrome and Safari)
             </div>
             </div>
 <!--            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>-->
