@@ -187,7 +187,7 @@ function openInNewTab(url) {
                 <br/>
                 Students can use the Alivebook with the app, which can be download by clicking the button below. Alivebook app works on Android only.     </div>
 
-            <div class="divBox1 textDefault" style="font-size:22px; padding-top: 22px" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:22px; padding-top: 20px" id="optimizedWarning">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's' creativity.
                 <br/>
