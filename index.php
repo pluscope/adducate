@@ -184,9 +184,9 @@ function openInNewTab(url) {
                 <br>
                 Adducate will empower the children without resources.
                 <br>
-                Currently, Adducate consists of four classes (abc, basic English based on storybooks, alivebooks, and creative stories).
+                Currently, Adducate consists of four classes: abc, Storybooks, Alivebooks, and Creative Stories.   <br>
                 <br>
-                Students can learn the alivebook with the app of the download button below.
+                Students can use the Alivebook with the app, which can be download by clicking the button below.
                 <br>
                 Adducate will gradually create various classes.
             </div>
@@ -257,12 +257,11 @@ function openInNewTab(url) {
             </div>
             <div class="mobileLink">
                 <div class="divBox1 textDefault">
-                    Adducate is created through talent donations by people from specialized fields such as computer science, English education, publishing storybooks, branding, UI/UX, and strategical planning.
+                    Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
                     <br>
                     We welcome people and organizations who want to further develop and solidify this project.
                     <br>
-                    Let's make an impact on developing countries and students who lack educational opportunities.
-                </div>
+                    Let's make an impact on developing countries and students who lack educational opportunities.  </div>
             </div>
 
             <img onclick="doScrolling('#aboutContainer', 1000)" style="cursor: pointer; padding-top: 10px"
