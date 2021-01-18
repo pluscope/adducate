@@ -92,7 +92,13 @@ if($conn) {
                     <div class="abc_list">
                         <?php
                             foreach($abc_contents as $row){
-                                echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                if($row["id"] == $abc_contents_id){
+                                    echo "<a style='color: #00a3e0; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }else if($row["id"] > $abc_contents_id){
+                                    echo "<a style='color: rgba(0, 0, 0, 0.2); text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }else{
+                                    echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }
                             }
                         ?>
                       </div>
