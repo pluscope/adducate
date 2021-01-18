@@ -178,7 +178,7 @@ function openInNewTab(url) {
                         srcset="/img/logo_content@2x.png 2x,/img/logo_content@3x.png 3x"/>
             </div>
 
-            <div class="divBox1 textDefault">
+            <div class="pcLink divBox1 textDefault">
                 Adducate is designed to make learning more accessible and amusing for learners.
                 From acquiring the sounds of each alphabet to understanding short stories, it stimulates children's creativity.
                 They will find learning fascinating and it will accelerate their growth.
@@ -191,7 +191,7 @@ function openInNewTab(url) {
             </div>
 
             <div class="mobileLink">
-                <div class="divBox1 textDefault" style="font-size:22px">
+                <div class="divBox1 textDefault" >
                     Adducate is designed to make learning more accessible and amusing for learners.
                     From the sounds of each alphabet to short stories, it stimulates children's creativity.
                     Adducate will empower the children without resources.
