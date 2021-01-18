@@ -21,21 +21,6 @@ body {
   font-style: normal;
 }
 
-@media (max-width: 900px) {
-  container {
-    width: auto;
-  }
-
-  content {
-    float: none;
-    width: auto;
-  }
-
-  sidebar {
-    float: none;
-    width: auto;
-  }
-}
 
 .textDefault {
   object-fit: contain;
@@ -1761,110 +1746,149 @@ hr {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px){
-  body{
+@media (min-width: 769px) and (max-width: 1023px) {
+  body {
     width: 100%;
     margin: 0;
   }
-  .container-header{
+
+  .container-header {
     width: auto;
   }
-  .container-body{
+
+  .container-body {
     width: auto;
   }
+
   .container {
     width: auto;
   }
+
   .container-body-orange {
     width: auto;
   }
-  .divBox1{
+
+  .divBox1 {
     width: auto;
   }
-  #optimizedWarning{
+
+  #optimizedWarning {
     display: block;
   }
+
   .container-body-white {
     width: auto;
   }
+
   .container-body-blue {
     width: auto;
   }
-  .divBox2{
+
+  .divBox2 {
     width: auto;
   }
-  .divBox4{
+
+  .divBox4 {
     width: 100%;
   }
-  .divBox4 div{
+
+  .divBox4 div {
     width: calc(33.333%);
   }
-  .container-body-white-center{
+
+  .container-body-white-center {
     width: auto;
     padding-left: 50px;
     padding-right: 50px;
   }
-  .divBox6{
+
+  .divBox6 {
     width: auto;
   }
-  .log{
+
+  .log {
     width: auto;
   }
-  .mainPath{
+
+  .mainPath {
     margin-left: 190px;
   }
-  .popup_account{
+
+  .popup_account {
     margin-left: calc(100% - 256px);
   }
-  .popup{
+
+  .popup {
     margin-left: calc(100% - 256px);
   }
-  .abc_list{
+
+  .abc_list {
     width: auto;
   }
-  .next{
-    margin-left: calc((100% - 528px)/2);
+
+  .next {
+    margin-left: calc((100% - 528px) / 2);
   }
-  .replay{
+
+  .replay {
     margin-left: 283px;
   }
-  .sound{
+
+  .sound {
     margin-left: 602px;
   }
 
-  .grid-container{
+  .grid-container {
     grid-template-columns: 300px 300px;
   }
 
-  .Lorem-text-overflow2{
+  .Lorem-text-overflow2 {
     width: auto;
   }
 
-  .storybox{
+  .storybox {
     width: auto;
   }
 
-  .bbtn_right_story{
+  .bbtn_right_story {
     margin-left: calc(100% - 50px);
   }
-  .storywordbox{
+
+  .storywordbox {
     margin-left: unset;
   }
-  .divBox25{
+
+  .divBox25 {
     left: 50%;
   }
-  .alivebox{
+
+  .alivebox {
     width: auto;
   }
-  .creationbox{
+
+  .creationbox {
     width: auto;
   }
-  .container-body-white-left{
+
+  .container-body-white-left {
     width: auto;
     padding-left: 50px;
     padding-right: 50px;
   }
-  .push{
+
+  .push {
     width: calc(100% - 100px);
   }
+
+  @media (min-width: 1025px) and (max-width: 1919px) {
+
+
+  }
+
+  @media (max-width: 1920px) {
+
+  }
+
+
 }
+
