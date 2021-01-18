@@ -204,7 +204,7 @@ function openInNewTab(url) {
             <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault bold" style="font-size:13px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet.
