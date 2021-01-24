@@ -232,11 +232,16 @@ if($conn) {
             $('.scroll-to-left').on('click', function() {
                 $(this).next().scrollLeft(getScrollingValue(true, $(this).next()));
                 if(scrollbarPosition==0){
+                    $(this).next().next()[0].style.marginLeft = '50px';
                     $(this).hide();
                 }
             });
 
             $('.scroll-to-right').on('click', function() {
+                // console.log($(this));
+                // console.log($(this)[0]);
+                // console.log($(this)[0].style);
+                $(this)[0].style.marginLeft = '0px';
                 $(this).parent().children('.scroll-to-left').show();
                 $(this).prev().scrollLeft(getScrollingValue(false, $(this).prev()));
             });

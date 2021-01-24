@@ -1868,3 +1868,11 @@ hr {
     width: calc(100% - 100px);
   }
 }
+
+.scroll-to-right{
+  margin-left: 50px;
+}
+
+.scroll-to-left{
+  display: none;
+}
