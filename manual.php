@@ -43,7 +43,7 @@ if($conn) {
                         <br />
                         <br />
                         <div class="back-to-main mobileLink">
-                            <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
+                            <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-back.png">
                             <br />
                             <br />
                         </div>
