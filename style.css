@@ -1876,3 +1876,16 @@ hr {
 .scroll-to-left{
   display: none;
 }
+
+.downloadPopup{
+  display: none;
+  background-color: white;
+  position: absolute;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 40%;
+  z-index: 1;
+}
