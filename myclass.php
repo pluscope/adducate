@@ -374,7 +374,7 @@ if($conn) {
                     <br />
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
                         <div class="push" id="createPush">
-                            <span>Old Stories</span>
+                            <span class="myclass_blue" style='color: #ffffff'> &nbsp;&nbsp;Old Stories&nbsp;&nbsp; </span>
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
@@ -401,8 +401,8 @@ if($conn) {
                         <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
-                        <div class="push" id="createPush">
-                            <span>New Stories</span>
+                        <div class="push"  id="createPush">
+                            <span class="myclass_blue" style='color: #ffffff'>&nbsp;&nbsp; New Stories&nbsp;&nbsp; </span>
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
