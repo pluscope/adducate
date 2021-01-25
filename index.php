@@ -4,9 +4,11 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 
 $sql = "SELECT * FROM classes";
 $sql2 = "SELECT * FROM teams";
+$countries_sql = "SELECT id, name FROM countries";
 if($conn) {
     $result = mysqli_query($conn, $sql);
     $teams = mysqli_result_to_array(mysqli_query($conn, $sql2));
+    $countries = mysqli_query($conn, $countries_sql);
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -96,6 +98,14 @@ function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
 }
+
+function hidePopup(){
+    $(".downloadPopup").hide();
+}
+
+function downloadAPKMobile(){
+    $(".downloadPopup")[0].style.display = 'table';
+}
 </script>
 
 </head>
@@ -172,6 +182,39 @@ function openInNewTab(url) {
     </div>
     <div class="container" id="container-page">
         <div class="container-body-orange" id="mainContainer">
+            <div class="mobileLink downloadPopup">
+                <div style="display: table-row; vertical-align: middle; height: 5%; text-align: right;">
+                    <button onclick="hidePopup()">X</button>
+                </div>
+                <div style="display: table-row; vertical-align: middle; height: 80%;">
+                    <div style="display: table-cell; vertical-align: middle;">
+                        <div>
+                            Select your Country
+                        </div>
+                        <div>
+                            <select name="uCountry" id="uCountry">
+                                <option value="">Select Country</option>
+                                <?php
+                                foreach($countries as $country){
+                                    echo("<option value='".$country["id"]."'>".$country["name"]."</option>");
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <br />
+                        <div>
+                            Type your email
+                        </div>
+                        <div>
+                            <input type="text" id="inputEmail" />
+                        </div>
+                    </div>
+                </div>
+                <div style="display: table-row; vertical-align: middle; height: 15%">
+                    <button onclick="submitForDownload()">Submit</button>
+                </div>
+            </div>
+
             <div class="mainLogo">
                 <img
                         src="/img/logo_content.png"
@@ -200,8 +243,8 @@ function openInNewTab(url) {
                     children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
-
-            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold pcLink" onclick="downloadAPK()"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
             <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
