@@ -61,10 +61,10 @@ if($conn) {
                         }
                     </script>
                 </div>
-                <div class="back-to-main mobileLink">
+                <div class="back-to-main">
                     <br />
                     <br />
-                    <img onclick="location.href='/'" style="cursor: pointer;" src="/img/scroll-top.png" srcset="/img/scroll-top@2x.png 2x,/img/scroll-top@3x.png 3x">
+                    <img onclick="location.href='/'" style="padding-top: 175px; cursor: pointer;" src="/img/scroll-back.png">
                     <br />
                     <br />
                 </div>

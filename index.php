@@ -247,7 +247,7 @@ function downloadAPKMobile(){
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault bold" style="font-size:13px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet.
@@ -286,7 +286,7 @@ function downloadAPKMobile(){
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png');\">";
                             echo "<img src='".$teams[$i]["logo"]."' style='width:40%; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
-                            echo "<div style='margin-top:80px;font-size: 22px;'>";
+                            echo "<div style='margin-top:48px;font-size: 22px;'>";
                             echo $teams[$i]["name"];
                             echo "</div>";
                             echo "<div style='margin-top:10px;font-size: 20px;'>";
