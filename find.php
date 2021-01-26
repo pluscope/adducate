@@ -44,7 +44,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
         <div class="container">
             <div class="container-body container-expand">
 
-                <div class="container-body-white">
+                <div class="container-body-white-center">
                     <div class="title-div">
 						<span class="textDefault f36 bold">
 							Forgot Password?

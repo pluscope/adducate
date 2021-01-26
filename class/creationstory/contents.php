@@ -82,7 +82,7 @@ if($conn) {
                                 </video>
                         </div>
 
-                        <div class="storywordbox textDefault">
+                        <div class="storywordbox2 textDefault">
                             <div class="sentence-div textDefault bold">Today's sentence</div>
                             <?php
                                 echo $result["key_sentence"];
