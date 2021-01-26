@@ -302,7 +302,7 @@ function submitForDownload(){
                 <?php
                     shuffle($teams);
                     for($i=0; $i<count($teams); ++$i){
-                        echo "<div>";
+                        echo "<div style='text-align: center; width: auto;'>";
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png');\">";
                             echo "<img src='".$teams[$i]["logo"]."' style='width:40%; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
