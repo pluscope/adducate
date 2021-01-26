@@ -106,6 +106,26 @@ function hidePopup(){
 function downloadAPKMobile(){
     $(".downloadPopup")[0].style.display = 'table';
 }
+
+function submitForDownload(){
+    var userEmail = $("#inputEmail").val();
+    var userCountry = $("#uCountry").val();
+    if(userEmail!="" && userCountry!=""){
+        $.ajax({
+            type: "POST",
+            url: '/download_mobile.php',
+            dataType: "text",
+            data: {userEmail: userEmail, userCountry: userCountry},
+            success: function (data) {
+                // console.log(data);
+                window.open('/sql.zip');
+                $(".downloadPopup").hide();
+            }
+        });
+    }else{
+        alert("Please fill the form to download the app");
+    }
+}
 </script>
 
 </head>
@@ -282,7 +302,7 @@ function downloadAPKMobile(){
                 <?php
                     shuffle($teams);
                     for($i=0; $i<count($teams); ++$i){
-                        echo "<div>";
+                        echo "<div style='text-align: center; width: auto;'>";
                         if(strstr($teams[$i]["logo"] , "/")){
                             echo "<div class=\"mainPath\" style=\"background-image:url('/img/path.png');\">";
                             echo "<img src='".$teams[$i]["logo"]."' style='width:40%; margin-left:auto; margin-right:auto; margin-top: 80px;' />";
