@@ -49,7 +49,7 @@ function downloadAPK(){
             dataType: "text",
             data: {id: userId},
             success: function (data) {
-                window.open('/sql.zip');
+                window.open('/app-release.apk');
             }
         });
     }else{
@@ -118,7 +118,7 @@ function submitForDownload(){
             data: {userEmail: userEmail, userCountry: userCountry},
             success: function (data) {
                 // console.log(data);
-                window.open('/sql.zip');
+                window.open('/app-release.apk');
                 $(".downloadPopup").hide();
             }
         });
