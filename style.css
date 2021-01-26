@@ -641,7 +641,8 @@ hr {
   cursor: pointer;
   position: absolute;
   top: 650px;
-  width: 528px;
+  /*width: 528px;*/
+  width: 448px;
   height: 50px;
   margin-left: 256px;
   margin-top: 41px;
@@ -665,7 +666,8 @@ hr {
 
 .storylist {
   position: absolute;
-  width: 528px;
+  /*width: 528px;*/
+  width: 448px;
   height: 50px;
   margin-left: 256px;
   margin-top: 656px;
@@ -1825,7 +1827,7 @@ hr {
   }
 
   .next {
-    margin-left: calc((100% - 528px) / 2);
+    margin-left: calc((100% - 448px) / 2);
   }
 
   .replay {
@@ -1877,14 +1879,6 @@ hr {
   .push {
     width: calc(100% - 100px);
   }
-}
-@media (min-width: 1025px) and (max-width: 1919px) {
-
-
-}
-
-@media (max-width: 1920px) {
-
 }
 
 .scroll-to-right{

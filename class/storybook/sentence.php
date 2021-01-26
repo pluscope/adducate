@@ -245,9 +245,9 @@ if($conn) {
                     </div>
 <!---->
 <!--                    <div class="storylist"><span class="textDefault f37">Story List</span></div>-->
-
-                </div>
                     <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
+                </div>
+
             </div>
         </div>
         <!-- content end-->
