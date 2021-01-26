@@ -106,6 +106,26 @@ function hidePopup(){
 function downloadAPKMobile(){
     $(".downloadPopup")[0].style.display = 'table';
 }
+
+function submitForDownload(){
+    var userEmail = $("#inputEmail").val();
+    var userCountry = $("#uCountry").val();
+    if(userEmail!="" && userCountry!=""){
+        $.ajax({
+            type: "POST",
+            url: '/download_mobile.php',
+            dataType: "text",
+            data: {userEmail: userEmail, userCountry: userCountry},
+            success: function (data) {
+                // console.log(data);
+                window.open('/sql.zip');
+                $(".downloadPopup").hide();
+            }
+        });
+    }else{
+        alert("Please fill the form to download the app");
+    }
+}
 </script>
 
 </head>
