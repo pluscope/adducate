@@ -58,7 +58,7 @@ if($conn) {
                         <img class="image" src='<?php echo $guide["image"] ?>'/>
                         <?php
                         if ($page_id == 1){
-                            echo "<img onclick=\"location.href='/class/alivebook/guide/".$storybook_id."/".($total_guides)."'\"
+                            echo "<img onclick=\"location.href='/class/alivebook/capture/".$storybook_id."/".($total_guides)."'\"
                                  class=\"bbtn_left_story\" style=\"cursor: pointer;\"
                                  src=\"/img/scroll-btn(left).png\"
                                  srcset=\"/img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x\"/>";
