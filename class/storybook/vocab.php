@@ -151,8 +151,9 @@ if($conn) {
                                 <div class="arrowtext">Sentence</div>
                             </div>
                         </div>
+                        <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
                     </div>
-                    <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
+
             </div>
         </div>
         <!-- content end-->

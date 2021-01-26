@@ -115,7 +115,7 @@ if($conn) {
                             </div>
 
                             <div class="vocab" style="cursor: pointer;" onclick="location.href='/class/storybook/vocab/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
-                                <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
+                                <img class="arrow"  src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
              /img/grayarrow_middle@3x.png 3x" />
                                 <div class="arrowtext" >Vocab</div>
                             </div>
@@ -132,8 +132,9 @@ if($conn) {
                                 <div class="arrowtext">Sentence</div>
                             </div>
                         </div>
+                        <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
                     </div>
-                    <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
+
             </div>
         </div>
         <!-- content end-->

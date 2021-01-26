@@ -91,7 +91,8 @@ body {
 }
 
 .menu {
-  margin-left: calc(50% - 30px);
+  /*margin-left: calc(50% - 30px);*/
+  margin-left: calc(30%);
   padding: 0px;
   line-height: 0px;
   height: 80px;
@@ -490,6 +491,8 @@ hr {
   height: 320px;
 }
 
+
+
 .alivebox .image {
   width: 320px;
   height: 320px;
@@ -641,7 +644,8 @@ hr {
   cursor: pointer;
   position: absolute;
   top: 650px;
-  width: 528px;
+  /*width: 528px;*/
+  width: 448px;
   height: 50px;
   margin-left: 256px;
   margin-top: 41px;
@@ -665,7 +669,8 @@ hr {
 
 .storylist {
   position: absolute;
-  width: 528px;
+  /*width: 528px;*/
+  width: 448px;
   height: 50px;
   margin-left: 256px;
   margin-top: 656px;
@@ -1335,12 +1340,16 @@ hr {
 }
 
 .alivebookparagraph {
-  width: 900px;
-  height: 61px;
+  /*width: 900px;*/
+  width: calc(100%);
+  /*height: 61px;*/
+  height: calc(30%);
   margin-top: 46px;
   text-align: left;
   position: relative;
-  left: 50%;
+  /*margin-left: calc(50%);*/
+  left: calc(55%);
+  /*left: 50%;*/
   transform: translateX(-50%);
 }
 
@@ -1675,6 +1684,8 @@ hr {
   display: none;
 }
 
+
+
 @media (max-width: 768px){
   body{
     width: 100%;
@@ -1746,6 +1757,7 @@ hr {
   .video-class{
     width: auto;
   }
+
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -1773,6 +1785,7 @@ hr {
   .divBox1 {
     width: auto;
   }
+
 
   #optimizedWarning {
     display: block;
@@ -1825,7 +1838,7 @@ hr {
   }
 
   .next {
-    margin-left: calc((100% - 528px) / 2);
+    margin-left: calc((100% - 448px) / 2);
   }
 
   .replay {
@@ -1838,23 +1851,31 @@ hr {
 
   .grid-container {
     grid-template-columns: 300px 300px;
+    left: calc(63%);
   }
 
   .Lorem-text-overflow2 {
     width: auto;
   }
 
+
+  .bbtn_right_story {
+    margin-left: calc(100% - 65px);
+  }
+
+
   .storybox {
+    grid-template-columns: calc(33.333%) calc(33.333%);
     width: auto;
   }
 
-  .bbtn_right_story {
-    margin-left: calc(100% - 50px);
+  .storywordbox {
+    width: 145%;
   }
 
-  .storywordbox {
-    margin-left: unset;
-  }
+  /*.image{*/
+  /*  width:calc(133.333%);*/
+  /*}*/
 
   .divBox25 {
     left: 50%;
@@ -1863,6 +1884,7 @@ hr {
   .alivebox {
     width: auto;
   }
+
 
   .creationbox {
     width: auto;
@@ -1877,14 +1899,6 @@ hr {
   .push {
     width: calc(100% - 100px);
   }
-}
-@media (min-width: 1025px) and (max-width: 1919px) {
-
-
-}
-
-@media (max-width: 1920px) {
-
 }
 
 .scroll-to-right{

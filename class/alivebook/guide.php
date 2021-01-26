@@ -110,8 +110,10 @@ if($conn) {
                             <div class="arrowtext">Play</div>
                         </div>
                     </div>
+
+                    <div class="next next3"><span class="textDefault bold" onclick="location.href='/class/alivebook'">Story List</span></div>
                 </div>
-                <div class="next next3"><span class="textDefault bold" onclick="location.href='/class/alivebook'">Story List</span></div>
+
             </div>
         </div>
 
