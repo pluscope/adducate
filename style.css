@@ -507,6 +507,16 @@ hr {
   flex-direction: column;
 }
 
+
+.storywordbox2 {
+  display: flex;
+  margin-left: 7%;
+  margin-right: 14%;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
 .alivewordbox {
   margin-left: 67px;
   display: flex;
@@ -1261,6 +1271,7 @@ hr {
   transform: translateY(-50%);
 }
 
+
 .grid-container {
   display: grid;
   grid-gap: 44px;
@@ -1828,20 +1839,31 @@ hr {
   }
 
   .replay {
-    margin-left: 283px;
+    margin-left: calc(32%);
+    width: calc(27%);
   }
 
   .sound {
-    margin-left: 602px;
+    margin-left: calc(62%);
+    width: calc(27%);
   }
 
   .grid-container {
-    grid-template-columns: 300px 300px;
-    left: calc(63%);
+    grid-template-columns: calc(38%) calc(25%);
+    left: calc(59%);
   }
 
   .Lorem-text-overflow2 {
     width: auto;
+  }
+
+  .alphabet_box{
+    width:auto;
+    border: 1px solid white;
+  }
+
+  .alphabet_box .box{
+    width:calc(33.33%);
   }
 
 
@@ -1849,6 +1871,9 @@ hr {
     margin-left: calc(100% - 65px);
   }
 
+  .creationbox{
+    grid-template-columns: calc(70%) calc(45%);
+  }
 
   .storybox {
     grid-template-columns: calc(33.333%) calc(33.333%);
@@ -1859,9 +1884,16 @@ hr {
     width: 145%;
   }
 
-  /*.image{*/
-  /*  width:calc(133.333%);*/
-  /*}*/
+  .storywordbox2 {
+    width: calc(53%);
+  }
+
+  .sentence-div{
+    position: relative;
+    width: auto;
+    top: -7%;
+  }
+
 
   .divBox25 {
     left: 50%;
