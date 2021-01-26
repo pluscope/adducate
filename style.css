@@ -667,6 +667,7 @@ hr {
   top: 590px;
 }
 
+
 .storylist {
   position: absolute;
   /*width: 528px;*/
@@ -825,7 +826,7 @@ hr {
   width: 512px;
   height: 55px;
   text-align: left;
-  margin-left: 291px;
+  margin-left: 27%;
   margin-top: 40px;
   margin-bottom: 130px;
 }
@@ -1167,23 +1168,18 @@ hr {
   transform: rotate(45deg);
 }
 
-/*.popup_terms span {*/
-/*  position: relative;*/
-/*  z-index: 2;*/
-/*}*/
-
 .popup_pw {
   text-align: center;
   visibility: hidden;
   z-index: 1;
-  margin: auto;
+  /*margin: auto;*/
   position: absolute;
-  margin-left: 253px;
+  /*margin-left: 253px;*/
+  margin-left: 210px;
   top: 564px;
   background: #fff;
   width: 516px;
   height: 55px;
-  /*border: 1px solid #cacece;*/
   border: 2px solid #ffa300;
   color: grey;
   line-height: 55px;
@@ -1197,7 +1193,6 @@ hr {
   top: 40px;
   left: 248px;
   z-index: 1;
-  /*border: solid 1px #cacece;*/
   border: 2px solid #ffa300;
   border-top: transparent;
   border-left: transparent;
@@ -1466,32 +1461,6 @@ hr {
   text-align: left;
 }
 
-/*.mainDownload {*/
-/*  margin-top: 50px;*/
-/*  background-color: #00a3e0;*/
-/*  border-radius: 10px;*/
-/*  width: 324px;*/
-/*  height: 55px;*/
-/*  margin-left: auto;*/
-/*  margin-right: auto;*/
-/*  padding: 5px;*/
-/*  text-align: center;*/
-/*  vertical-align: middle;*/
-/*}*/
-
-/*.mainDownload span {*/
-/*  width: 116px;*/
-/*  height: 20px;*/
-/*  object-fit: contain;*/
-/*  */
-/*  font-size: 24px;*/
-/*  font-weight: bold;*/
-/*  font-stretch: normal;*/
-/*  font-style: normal;*/
-/*  letter-spacing: normal;*/
-/*  color: #ffffff;*/
-/*  line-height: 55px;*/
-/*}*/
 
 .popup {
   visibility: hidden;
@@ -1783,9 +1752,16 @@ hr {
   }
 
   .divBox1 {
+    padding-right: 5%;
+    padding-left: 5%;
     width: auto;
   }
 
+
+
+  .menuLiBlue{
+    display:none;
+  }
 
   #optimizedWarning {
     display: block;
@@ -1801,6 +1777,8 @@ hr {
 
   .divBox2 {
     width: auto;
+    padding-right: 5%;
+    padding-left: 5%;
   }
 
   .divBox4 {
@@ -1833,12 +1811,20 @@ hr {
     margin-left: calc(100% - 256px);
   }
 
+  .popup_terms {
+    width: calc(40%);
+  }
+
   .abc_list {
     width: auto;
   }
 
   .next {
-    margin-left: calc((100% - 448px) / 2);
+    margin-left: calc((100% - 550px) / 2);
+  }
+
+  .popup_pw{
+    margin-left: calc((100% - 620px) / 2);
   }
 
   .replay {

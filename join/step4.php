@@ -34,7 +34,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
     <div class="container" id="container-page">
         <!-- content start-->
         <div class="container">
-            <div class="container-body">
+            <div class="container-body-white-center">
                 <div class="Background_white">
 
                     <div class="title-div">
