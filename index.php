@@ -262,7 +262,7 @@ function submitForDownload(){
                     children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
-            <div class="mainDownload bold pcLink" " onclick="downloadAPK()"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold pcLink"  onclick="downloadAPK()"><span>Alivebook Download</span></div>
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
