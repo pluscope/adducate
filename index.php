@@ -155,7 +155,6 @@ function submitForDownload(){
 
                         <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
                         <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
-                        <!--                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>-->
 
                     </ul>
                 </div>
@@ -203,17 +202,17 @@ function submitForDownload(){
     <div class="container" id="container-page">
         <div class="container-body-orange" id="mainContainer">
             <div class="mobileLink downloadPopup">
-                <div style="display: table-row; vertical-align: middle; height: 5%; text-align: right;">
-                    <button onclick="hidePopup()">X</button>
+                <div style="display: table-row; vertical-align: middle; height: 10%; text-align: right;">
+                    <button class="button_popup"onclick="hidePopup()">X</button>
                 </div>
-                <div style="display: table-row; vertical-align: middle; height: 80%;">
+                <div style="display: table-row; vertical-align: middle; height: 70%;">
                     <div style="display: table-cell; vertical-align: middle;">
-                        <div>
-                            Select your Country
+                        <div style="font-size: 20px; color: #00a3e0; padding-bottom: 15px;">
+                            Select your country
                         </div>
                         <div>
-                            <select name="uCountry" id="uCountry">
-                                <option value="">Select Country</option>
+                            <select style="font-size: 16px; color: #999999; border-color: #999999; width: 60%; height: 30px;" name="uCountry" id="uCountry" >
+                                <option value="" >Select Country</option>
                                 <?php
                                 foreach($countries as $country){
                                     echo("<option value='".$country["id"]."'>".$country["name"]."</option>");
@@ -222,16 +221,16 @@ function submitForDownload(){
                             </select>
                         </div>
                         <br />
-                        <div>
+                        <div style="font-size: 20px; color: #00a3e0; padding-bottom: 15px;">
                             Type your email
                         </div>
                         <div>
-                            <input type="text" id="inputEmail" />
+                            <input style="font-size: 16px; color: #999999; border-color: #999999; width:55%; height: 30px;" type="text" id="inputEmail"/>
                         </div>
                     </div>
                 </div>
-                <div style="display: table-row; vertical-align: middle; height: 15%">
-                    <button onclick="submitForDownload()">Submit</button>
+                <div style="display: table-row; vertical-align: middle; height: 20%">
+                    <button class="button_popup"  onclick="submitForDownload()">Submit</button>
                 </div>
             </div>
 
@@ -263,7 +262,7 @@ function submitForDownload(){
                     children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
-            <div class="mainDownload bold pcLink" onclick="downloadAPK()"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold pcLink" " onclick="downloadAPK()"><span>Alivebook Download</span></div>
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
@@ -274,7 +273,6 @@ function submitForDownload(){
                 <br/>(optimized for Chrome and Safari)
             </div>
             </div>
-<!--            <div class="mainDownload bold" onclick="downloadAPK()"><span>Alivebook Download</span></div>-->
 
         </div>
         <br />

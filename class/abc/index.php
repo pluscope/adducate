@@ -51,57 +51,16 @@ if($conn) {
                         }
                     ?>
                     </div>
-<!--                    <div class="grid-container">-->
-<!--                        <div class="grid-item">-->
-<!--                            <div class="divBox22">-->
-<!--                                <div>Alphabets</div>-->
-<!--                            </div>-->
-<!--                            <div class="boxdescription">-->
-<!--                                Learn 26 single sounds-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="grid-item">-->
-<!--                            <div class="divBox22">-->
-<!--                                <div>-->
-<!--                                    Short Vowels-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="boxdescription">-->
-<!--                                Learn combination of short vowels and consonants-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="grid-item">-->
-<!--                            <div class="divBox22">-->
-<!--                                <div>-->
-<!--                                    Long Vowels-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="boxdescription">-->
-<!--                                Learn long vowel sounds-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="grid-item">-->
-<!--                            <div class="divBox22">-->
-<!--                                <div>-->
-<!--                                    Blends-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="boxdescription">-->
-<!--                                Learn basic speech sounds with two letters-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="grid-item">-->
-<!--                            <div class="divBox22">-->
-<!--                                <div>-->
-<!--                                    Sight Words-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="boxdescription">-->
-<!--                                Learn sight words through stories-->
-<!--                            </div>-->
-<!--                        </div>-->
+                    <div class="back-to-main">
+                        <br />
+                        <br />
+                        <img onclick="location.href='/'" style="padding-top: 175px; cursor: pointer;" src="/img/scroll-back.png">
+                        <br />
+                        <br />
+                    </div>
                     </div>
                 </div>
+
             </div>
 
         </div>

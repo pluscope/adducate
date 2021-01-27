@@ -59,6 +59,13 @@ if($conn) {
                         }
                         ?>
                     </div>
+                    <div class="back-to-main">
+                        <br />
+                        <br />
+                        <img onclick="location.href='/'" style="padding-top: 175px; cursor: pointer;" src="/img/scroll-back.png">
+                        <br />
+                        <br />
+                    </div>
                 </div>
             </div>
         </div>
