@@ -8,6 +8,7 @@
 <html>
 <title>Adducate</title>
 <link href="/style.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/ico" href="/img/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
 <head>
