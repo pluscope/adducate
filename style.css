@@ -1796,7 +1796,9 @@ hr {
     width: auto;
   }
 
-
+  .menu {
+    margin-left: calc(33%);
+  }
 
   .menuLiBlue{
     display:none;
