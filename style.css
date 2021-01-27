@@ -53,6 +53,15 @@ body {
   height:55px;
 }
 
+.button_popup{
+  font-size: 18px;
+  background-color: #00a3e0;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  border-color: #00a3e0;
+  color:#ffffff
+}
+
 .l17 {
   line-height: 1.7;
 }
@@ -506,6 +515,10 @@ hr {
   height: 320px;
 }
 
+/*.video {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
 
 
 .alivebox .image {
@@ -1886,6 +1899,11 @@ hr {
     height:auto;
   }
 
+  /*.video {*/
+  /*  height: auto;*/
+  /*  width: 270px;*/
+  /*}*/
+
 
   .arrow {
     width:calc(100%);
@@ -1991,6 +2009,7 @@ hr {
   margin-bottom: 30%;
   margin-left: 10%;
   margin-right: 10%;
+  border-radius: 5px;
   width: 80%;
   height: 40%;
   z-index: 1;
