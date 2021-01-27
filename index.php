@@ -155,7 +155,6 @@ function submitForDownload(){
 
                         <li class="menuLiSignIn bold" onclick="myFunction()" id="signIn"><a>Sign in</a></li>
                         <li class="menuLiSignIn bold" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>
-                        <!--                <li class="menuLiID" onclick="myFunction1()" style="display: none" id="logout"><a></a></li>-->
 
                     </ul>
                 </div>
@@ -263,7 +262,7 @@ function submitForDownload(){
                     children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
-            <div class="mainDownload bold pcLink" onclick="downloadAPK()"><span>Alivebook Download</span></div>
+            <div class="mainDownload bold pcLink" " onclick="downloadAPK()"><span>Alivebook Download</span></div>
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">

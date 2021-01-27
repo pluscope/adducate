@@ -114,7 +114,7 @@ if($conn) {
                         </div>
                         <div class="box">
 
-                        <video muted id="move_video">
+                        <video muted id="move_video" style="width: 100%; height: 100%;">
                             <?php
                                 $abc_motion = mysqli_fetch_array($abc_motions);
                                 echo "<source type='video/mp4' id='movie_src' src='".$abc_motion["image"]."' />"
@@ -128,7 +128,7 @@ if($conn) {
                             <?php
                                 $abc_words = mysqli_result_to_array($abc_words);
                                 for($i=0; $i<count($abc_words); ++$i){
-                                    echo "<img src='".$abc_words[$i]["image"]."' class='img item' style='display:none;' id='word".($i+1)."'>";
+                                    echo "<img src='".$abc_words[$i]["image"]."' class='img item' style='display:none; padding-left:5%' id='word".($i+1)."'>";
                                     echo "<audio id='word".($i+1)."_sound' preload='none'>";
                                     echo "<source src = '".$abc_words[$i]["sound"]."'>";
                                     echo "</audio>";

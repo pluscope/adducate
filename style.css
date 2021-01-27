@@ -32,6 +32,7 @@ body {
   color: #000000;
 }
 
+
 .bold {
   font-family:'NotoSans-Bold';
   /*font-weight: bold;*/
@@ -1879,19 +1880,22 @@ hr {
   }
 
   .storybox {
-    grid-template-columns: calc(33.333%) calc(33.333%);
+    grid-template-columns: calc(20%) calc(65%);
     width: auto;
   }
 
   .image{
-    width:auto;
+    width: calc(500%);
   }
+
   .storywordbox {
-    width: 145%;
+    margin-left: 0px;
+    margin-right:0px;
   }
 
   .storywordbox2 {
-    width: calc(53%);
+    width: calc(50%);
+    margin-left: 3%;
   }
 
   .sentence-div{
@@ -2024,13 +2028,13 @@ hr {
   }
 
   .replay {
-    margin-left: calc(32%);
-    width: calc(27%);
+    margin-left: calc(31%);
+    width: calc(26%);
   }
 
   .sound {
     margin-left: calc(62%);
-    width: calc(27%);
+    width: calc(26%);
   }
 
   .grid-container {
@@ -2108,19 +2112,21 @@ hr {
   }
 
   .storybox {
-    grid-template-columns: calc(33.333%) calc(33.333%);
+    grid-template-columns: calc(20%) calc(65%);
     width: auto;
   }
 
   .image{
-    width:auto;
+    width: calc(500%);
   }
   .storywordbox {
-    width: 145%;
+    margin-left: 0px;
+    margin-right:0px;
   }
 
   .storywordbox2 {
-    width: calc(53%);
+    width: calc(50%);
+    margin-left: 3%;
   }
 
   .sentence-div{
@@ -2171,3 +2177,4 @@ hr {
   height: 40%;
   z-index: 1;
 }
+

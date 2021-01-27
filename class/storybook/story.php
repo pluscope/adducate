@@ -91,7 +91,7 @@ if($conn) {
                                 echo "<img id='story_img' class='image' src='".$story[0]["image"]."' />";
                             ?>
 <!--                            <img id="story_img" class="image" src="/img/image.png" srcset="/img/image@2x.png 2x, /img/image@3x.png 3x" />-->
-                            <div id="story_text" class="storywordbox textDefault">
+                                <div id="story_text" class="storywordbox textDefault">
                                 <?php echo $story[0]["contents"] ?>
                             </div>
                             <?php
