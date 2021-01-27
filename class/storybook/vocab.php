@@ -144,7 +144,7 @@ if($conn) {
 
                             <div class="Sentence"onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
                                 <img
-                                        class="arrow"
+                                        class="arrow_last"
                                         src="/img/grayarrow_last.png"
                                         srcset="/img/grayarrow_last@2x.png 2x,
              /img/grayarrow_last@3x.png 3x"/>

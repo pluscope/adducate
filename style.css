@@ -38,6 +38,21 @@ body {
   
 }
 
+.img {
+  max-width:100%;
+  height:auto;
+}
+
+.arrow {
+  width:257px;
+  height:55px;
+}
+
+.arrow_last {
+  width:229px;
+  height:55px;
+}
+
 .l17 {
   line-height: 1.7;
 }
@@ -599,33 +614,33 @@ hr {
   text-align: center;
   border-radius: 20px;
   border-color: #00a3e0;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px 5px 5px 5px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.wordblue1 {
-  float:left;
-  font-size: 18px;
-  height: 28px;
-  background-color: #00a3e0;
-  margin-left:5px;
-  margin-right:5px;
-  margin-bottom:5px;
-  padding-left:20px;
-  padding-right:20px;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
-  border-color: #00a3e0;
-}
+/*.wordblue1 {*/
+/*  float:left;*/
+/*  font-size: 18px;*/
+/*  height: 28px;*/
+/*  background-color: #00a3e0;*/
+/*  margin-left:5px;*/
+/*  margin-right:5px;*/
+/*  margin-bottom:5px;*/
+/*  padding-left:20px;*/
+/*  padding-right:20px;*/
+/*  text-align: center;*/
+/*  border-radius: 10px;*/
+/*  cursor: pointer;*/
+/*  border-color: #00a3e0;*/
+/*}*/
 
 .wordblack {
   font-size: 18px;
   height: 28px;
-  margin-left:5px;
-  margin-right:5px;
+  /*margin-left:5px;*/
+  /*margin-right:5px;*/
+  margin:5px 5px 5px 5px;
   padding-left:20px;
   padding-right:20px;
   background-color: black;
@@ -1236,7 +1251,7 @@ hr {
 }
 
 .abc_list {
-  width: 944px;
+  width: 951px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1247,7 +1262,7 @@ hr {
 
 .alphabet_box {
   border: 1px solid grey;
-  width: 944px;
+  width: 951px;
   height: 324px;
   position: relative;
   margin-top: 20px;
@@ -1371,7 +1386,7 @@ hr {
   letter-spacing: normal;
   text-align: center;
   color: #00a3e0;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .result {
@@ -1863,7 +1878,49 @@ hr {
   }
 
   .alphabet_box .box{
-    width:calc(33.33%);
+    width:calc(33%);
+  }
+
+  .img {
+    max-width:93%;
+    height:auto;
+  }
+
+
+  .arrow {
+    width:calc(100%);
+
+  }
+
+  .arrow_last {
+    width:calc(100%);
+  }
+
+  .arrowtext {
+    position: relative;
+    font-weight: bold;
+    left: calc(2%);
+  }
+
+  .greenarrows{
+    display: grid;
+    grid-template-columns: calc(100%) calc(100%) calc(100%) calc(100%);
+    grid-gap:0px;
+    width: calc(25%);
+  }
+
+  .divBox25{
+    width:calc(100%);
+    /*padding-left:195px;*/
+    left: 50%;
+  }
+
+  .word {
+    padding-left:85px;
+  }
+
+  .wordmeaning {
+    padding-left:85px;
   }
 
 
@@ -1880,6 +1937,9 @@ hr {
     width: auto;
   }
 
+  .image{
+    width:auto;
+  }
   .storywordbox {
     width: 145%;
   }
@@ -1894,10 +1954,6 @@ hr {
     top: -7%;
   }
 
-
-  .divBox25 {
-    left: 50%;
-  }
 
   .alivebox {
     width: auto;
