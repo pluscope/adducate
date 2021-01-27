@@ -236,7 +236,7 @@ if($conn) {
 
                         <div class="Sentence">
                             <img
-                                    class="arrow"
+                                    class="arrow_last"
                                     src="/img/greenarrow_last.png"
                                     srcset="/img/greenarrow_last@2x.png 2x,
              /img/greenarrow_last@3x.png 3x"/>

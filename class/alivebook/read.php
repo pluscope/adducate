@@ -88,7 +88,7 @@ if($conn) {
                         <div class="vocab" style="cursor: pointer" onclick="location.href='/class/alivebook/guide/<?php echo $storybook_id."/1"; ?>'">
                             <img class="arrow" src="/img/grayarrow_middle.png" srcset="/img/grayarrow_middle@2x.png 2x,
              /img/grayarrow_middle@3x.png 3x" />
-                            <div class="arrowtext">Imagine & Draw</div>
+                            <div class="arrowtext">Draw</div>
                         </div>
 
                         <div class="vocabquiz"  style="cursor: pointer" onclick="location.href='/class/alivebook/capture/<?php echo $storybook_id."/1"; ?>'" >
@@ -98,7 +98,7 @@ if($conn) {
                         </div>
 
                         <div class="Sentence" style="cursor: pointer" onclick="location.href='/class/alivebook/play/<?php echo $storybook_id."/1"; ?>'" >
-                            <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
+                            <img class="arrow_last" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
              /img/grayarrow_last@3x.png 3x" />
                             <div class="arrowtext">Play</div>
                         </div>

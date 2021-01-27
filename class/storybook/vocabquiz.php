@@ -173,7 +173,7 @@ if($conn) {
                         </div>
 
                         <div class="Sentence" style="cursor: pointer;" onclick="location.href='/class/storybook/sentence/<?php echo $storybook_id."/".$lesson_id."/1"; ?>'">
-                            <img class="arrow" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
+                            <img class="arrow_last" src="/img/grayarrow_last.png" srcset="/img/grayarrow_last@2x.png 2x,
              /img/grayarrow_last@3x.png 3x" />
                             <div class="arrowtext">Sentence</div>
                         </div>
