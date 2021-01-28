@@ -1258,6 +1258,16 @@ hr {
 }
 .push::-webkit-scrollbar{ display:none; }
 
+
+.pushStory{
+  width: 840px;
+  transition-duration: 1s;
+  transition-property: transform;
+  display: list-item;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
 .pointer {
   position: relative;
   margin-top: 27px;
@@ -1923,6 +1933,10 @@ hr {
   .push {
     width: calc(100% - 100px);
   }
+
+  .pushStory {
+    width: calc(100%);
+  }
   /*  unused asset, but sometimes needed, Here ends */
 
 }
@@ -2153,6 +2167,10 @@ hr {
 
   .push {
     width: calc(100% - 100px);
+  }
+
+  .pushStory {
+    width: calc(100%);
   }
 }
 
