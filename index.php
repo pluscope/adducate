@@ -103,6 +103,10 @@ function hidePopup(){
     $(".downloadPopup").hide();
 }
 
+function hideAlertPopup(){
+    $(".alertPopup").hide();
+}
+
 function downloadAPKMobile(){
     $(".downloadPopup")[0].style.display = 'table';
 }
@@ -123,7 +127,8 @@ function submitForDownload(){
             }
         });
     }else{
-        alert("Please fill the form to download the app");
+        $(".alertPopup").show();
+        //alert("Please fill the form to download the app");
     }
 }
 </script>
@@ -234,7 +239,19 @@ function submitForDownload(){
                     <button onclick="submitForDownload()">Submit</button>
                 </div>
             </div>
-
+            <div class="mobileLink alertPopup">
+                <div style="vertical-align: middle; height: 5%; text-align: right;">
+                    <button onclick="hideAlertPopup()">X</button>
+                </div>
+                <div style="display: -webkit-inline-box; vertical-align: middle; height: 80%;">
+                    <div style="display: table-cell; vertical-align: middle;">
+                        <div>
+                            Please fill the form
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
             <div class="mainLogo">
                 <img
                         src="/img/logo_content.png"

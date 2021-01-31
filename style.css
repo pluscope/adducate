@@ -1908,3 +1908,18 @@ hr {
   height: 40%;
   z-index: 1;
 }
+
+.alertPopup{
+  display: none;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  position: absolute;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 40%;
+  /*height: 20%;*/
+  z-index: 2;
+}
