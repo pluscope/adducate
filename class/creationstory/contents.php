@@ -82,16 +82,16 @@ if($conn) {
                                 </video>
                         </div>
 
-                        <div class="storywordbox textDefault">
+                        <div class="storywordbox2 textDefault">
                             <div class="sentence-div textDefault bold">Today's sentence</div>
                             <?php
                                 echo $result["key_sentence"];
                             ?>
                         </div>
                     </div>
+                    <div class="next next4"><span class="textDefault bold" onclick="location.href='/class/creationstory'">Story List</span></div>
                 </div>
 <!--                <div class="sound"><span class="textDefault whitetext bold" onclick="playVideo()" style="cursor: pointer;">Play</span></div>-->
-                <div class="next next4"><span class="textDefault bold" onclick="location.href='/class/creationstory'">Story List</span></div>
             </div>
         </div>
 

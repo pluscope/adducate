@@ -151,7 +151,7 @@ if($conn) {
                     <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/storybook/'" style="cursor: pointer;"> Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
-                        <div class="push title-div2" id="alivePush">
+                        <div class="pushStory title-div2" id="alivePush">
                             <?php
                             $current_lesson_idx = 0;
                             for($i=1; $i<=$total_lessons; ++$i){
@@ -236,7 +236,7 @@ if($conn) {
 
                         <div class="Sentence">
                             <img
-                                    class="arrow"
+                                    class="arrow_last"
                                     src="/img/greenarrow_last.png"
                                     srcset="/img/greenarrow_last@2x.png 2x,
              /img/greenarrow_last@3x.png 3x"/>
@@ -245,9 +245,9 @@ if($conn) {
                     </div>
 <!---->
 <!--                    <div class="storylist"><span class="textDefault f37">Story List</span></div>-->
-
-                </div>
                     <div class="next next2"><span class="textDefault bold" onclick="location.href='/class/storybook'">Story List</span></div>
+                </div>
+
             </div>
         </div>
         <!-- content end-->

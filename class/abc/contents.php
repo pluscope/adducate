@@ -107,20 +107,20 @@ if($conn) {
                             <?php
                                 $abc_image = mysqli_fetch_array($abc_images);
                                 if($abc_image["image1"] && $abc_image["image2"])
-                                    echo "<img src='".$abc_image["image1"]."' srcset='".$abc_image["image2"]." 2x, ".$abc_image["image3"]." 3x' class='item'>";
+                                    echo "<img src='".$abc_image["image1"]."' srcset='".$abc_image["image2"]." 2x, ".$abc_image["image3"]." 3x' class='img item'>";
                                 else
-                                    echo "<img src='".$abc_image["image1"]."' class='item'>";
+                                    echo "<img src='".$abc_image["image1"]."' class='img item'>";
                             ?>
                         </div>
                         <div class="box">
 
-                        <video muted id="move_video">
+                        <video muted id="move_video" style="width: 100%; height: 100%;">
                             <?php
                                 $abc_motion = mysqli_fetch_array($abc_motions);
                                 echo "<source type='video/mp4' id='movie_src' src='".$abc_motion["image"]."' />"
                             ?>
                         </video><div style="display: none;">Iteration: <span id="iteration"></span></div>
-                            <audio id="abcAudio" preload="none" type="audio/mp4">
+                                <audio id="abcAudio"  preload="none" type="audio/mp4">
                                 <source src="<?php echo $abc_motion["sound"]; ?>" type="audio/mp4">
                             </audio>
                         </div>
@@ -128,7 +128,7 @@ if($conn) {
                             <?php
                                 $abc_words = mysqli_result_to_array($abc_words);
                                 for($i=0; $i<count($abc_words); ++$i){
-                                    echo "<img src='".$abc_words[$i]["image"]."' class='item' style='display:none;' id='word".($i+1)."'>";
+                                    echo "<img src='".$abc_words[$i]["image"]."' class='img item' style='display:none; padding-left:5%' id='word".($i+1)."'>";
                                     echo "<audio id='word".($i+1)."_sound' preload='none'>";
                                     echo "<source src = '".$abc_words[$i]["sound"]."'>";
                                     echo "</audio>";
