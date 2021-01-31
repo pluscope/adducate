@@ -208,7 +208,7 @@ function submitForDownload(){
         <div class="container-body-orange" id="mainContainer">
             <div class="mobileLink downloadPopup">
                 <div style="display: table-row; vertical-align: middle; height: 10%; text-align: right;">
-                    <button class="button_popup_x"onclick="hidePopup()">X</button>
+                    <button class="button_popup_x" onclick="hidePopup()">X</button>
                 </div>
                 <div style="display: table-row; vertical-align: middle; height: 70%;">
                     <div style="display: table-cell; vertical-align: middle;">
@@ -230,7 +230,7 @@ function submitForDownload(){
                             Type your email
                         </div>
                         <div>
-                            <input style="font-size: 16px; color: #999999; border-color: #999999; width:55%; height: 30px;" type="text" id="inputEmail"/>
+                            <input style="font-size: 16px; color: #999999; border-width: 1px; border-color: #999999; width:55%; height: 30px;" type="text" id="inputEmail"/>
                         </div>
                     </div>
                 </div>
@@ -240,10 +240,10 @@ function submitForDownload(){
             </div>
             <div class="mobileLink alertPopup">
                 <div style="vertical-align: middle; height: 5%; text-align: right;">
-                    <button onclick="hideAlertPopup()">X</button>
+                    <button class="button_popup_x" onclick="hideAlertPopup()">X</button>
                 </div>
                 <div style="display: -webkit-inline-box; vertical-align: middle; height: 80%;">
-                    <div style="display: table-cell; vertical-align: middle;">
+                    <div style="display: table-cell; vertical-align: middle; color: #999999; font-size: 16px;">
                         <div>
                             Please fill the form
                         </div>

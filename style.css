@@ -60,7 +60,8 @@ body {
   padding: 3px 10px 3px 10px;
   border-radius: 5px;
   /*border-color: #00a3e0;*/
-  color:#ffffff
+  color:#ffffff;
+  border-style: none;
 }
 
 .button_popup_x{
@@ -70,6 +71,7 @@ body {
   border-radius: 5px;
   border-color: #ffffff;
   color:#000000;
+  border-style: none;
 }
 
 .l17 {
@@ -637,6 +639,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   border-color: #00a3e0;
+  border-style: none;
   margin: 5px 5px 5px 5px;
   padding-left: 20px;
   padding-right: 20px;
@@ -670,6 +673,7 @@ hr {
   text-align: center;
   border-radius: 10px;
   border-color: black;
+  border-style: none;
 }
 
 .wordblack1 {
@@ -686,6 +690,7 @@ hr {
   border-radius: 10px;
   cursor: pointer;
   border-color: black;
+  border-style: none;
 }
 
 .next {
