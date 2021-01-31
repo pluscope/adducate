@@ -1258,14 +1258,15 @@ hr {
 }
 
 .push {
-  width: 840px;
+  /*width: 840px;*/
+  width: 100%;
   transition-duration: 1s;
   transition-property: transform;
   display: list-item;
   overflow: scroll;
   -ms-overflow-style: none;
 }
-.push::-webkit-scrollbar{ display:none; }
+/*.push::-webkit-scrollbar{ display:none; }*/
 
 
 .pushStory{
@@ -1730,6 +1731,7 @@ hr {
   }
   .container-body-orange {
     width: auto;
+    height: 100%;
   }
   .mainLogo{
     padding-top: 50px;
@@ -1970,6 +1972,7 @@ hr {
 
   .container-body-orange {
     width: auto;
+    height: 100%;
   }
 
   .divBox1 {
@@ -2174,13 +2177,16 @@ hr {
     padding-right: 50px;
   }
 
-  .push {
-    width: calc(100% - 100px);
-  }
+  /*.push {*/
+  /*  width: calc(100% - 100px);*/
+  /*}*/
 
   .pushStory {
     width: calc(100%);
   }
+}
+@media (min-width: 1025px) and (max-width: 1919px) {
+
 }
 
 .scroll-to-right{
@@ -2205,3 +2211,17 @@ hr {
   z-index: 1;
 }
 
+.alertPopup{
+  display: none;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  position: absolute;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 40%;
+  /*height: 20%;*/
+  z-index: 2;
+}
