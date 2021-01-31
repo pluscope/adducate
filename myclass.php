@@ -271,7 +271,7 @@ if($conn) {
                 <div class="container-body-white-left">
                     <img onclick="goUrl('page21.html')" class="ABC" src="/img/abc.jpg" srcset="/img/abc@2x.jpg 2x,/img/abc@3x.jpg 3x" />
                     <div class="Lorem-text-overflow">
-                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+<!--                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />-->
                         <div class="push" id="abcPush">
                             <?php
                                 $i=0;
@@ -301,14 +301,14 @@ if($conn) {
                                 }
                             ?>
                         </div>
-                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
+<!--                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />-->
                     </div>
                     <?php
                         echo "<hr>";
                         echo "<img onclick='' class='Storybook' src='/img/storybook.png' srcset='/img/storybook@2x.png 2x,/img/storybook@3x.png 3x' />";
                         foreach ($storybook_history as $row){
                             echo "<div class=\"Lorem-text-overflow\">";
-                            echo "<img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />";
+//                            echo "<img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />";
                             echo "<div class=\"push\" id=\"storyPush\">";
                             echo "<li class='myclass_blue'>";
                             echo "<span>&nbsp;&nbsp;".$row["title"]."&nbsp;&nbsp</span>";
@@ -327,7 +327,7 @@ if($conn) {
                                 }
                             }
                             echo "</div>";
-                            echo "<img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />";
+//                            echo "<img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />";
                             echo "</div>";
                         }
                     ?>
@@ -351,7 +351,7 @@ if($conn) {
 
                     <img class="Alivebook" src="/img/alivebook.png" srcset="/img/alivebook@2x.png 2x,/img/alivebook@3x.png 3x" />
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
-                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+<!--                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />-->
                         <div class="push" id="createPush">
                             <?php
                             $i=0;
@@ -371,7 +371,7 @@ if($conn) {
                             }
                             ?>
                         </div>
-                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
+<!--                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />-->
                     </div>
                     <hr>
 
@@ -383,7 +383,7 @@ if($conn) {
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
-                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+<!--                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />-->
                         <div class="push" id="createPush">
                             <?php
                                 $i=0;
@@ -403,7 +403,7 @@ if($conn) {
                                 }
                             ?>
                         </div>
-                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
+<!--                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />-->
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
                         <div class="push"  id="createPush">
@@ -411,7 +411,7 @@ if($conn) {
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
-                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />
+<!--                        <img class='scroll-to-left' src='/img/scroll-btn(left).png' srcset='img/scroll-btn(left)@2x.png 2x,/img/scroll-btn(left)@3x.png 3x' />-->
                         <div class="push" id="createPush">
                             <?php
                             $i=0;
@@ -431,7 +431,7 @@ if($conn) {
                                 }
                             ?>
                         </div>
-                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />
+<!--                        <img class='scroll-to-right' src='/img/scroll-btn(right).png' srcset='img/scroll-btn(right)@2x.png 2x,/img/scroll-btn(right)@3x.png 3x' />-->
                     </div>
                     <hr>
 <!--                    <div class="bbtn_move">-->
