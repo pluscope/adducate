@@ -241,9 +241,9 @@ function submitForDownload(){
             </div>
             <div class="mobileLink alertPopup">
                 <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">
-                    <button class="button_popup_x" style="background-color: #ffa300;" onclick="hideAlertPopup()">X</button>
+                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>
                 </div>
-                <div style="display: -webkit-inline-box; vertical-align: middle; height: 80%;">
+                <div style="display: -webkit-inline-box; vertical-align: middle; height: 90%;">
                     <div style="display: table-cell; vertical-align: middle; font-size: 16px;">
                         <div>
                             Please fill the form to download!
