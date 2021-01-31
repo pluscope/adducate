@@ -203,7 +203,7 @@ function submitForDownload(){
         <div class="container-body-orange" id="mainContainer">
             <div class="mobileLink downloadPopup">
                 <div style="display: table-row; vertical-align: middle; height: 10%; text-align: right;">
-                    <button class="button_popup"onclick="hidePopup()">X</button>
+                    <button class="button_popup_x"onclick="hidePopup()">X</button>
                 </div>
                 <div style="display: table-row; vertical-align: middle; height: 70%;">
                     <div style="display: table-cell; vertical-align: middle;">
@@ -358,7 +358,7 @@ function submitForDownload(){
                 </div>
             </div>
 
-            <div class="email textDefault bluetext bold">
+            <div class="email textDefault bluetext">
 <!--                Want to contribute to Adducate?-->
 <!--                <br>-->
                 contact@adducate.net

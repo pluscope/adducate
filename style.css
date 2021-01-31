@@ -59,8 +59,17 @@ body {
   background-color: #00a3e0;
   padding: 3px 10px 3px 10px;
   border-radius: 5px;
-  border-color: #00a3e0;
+  /*border-color: #00a3e0;*/
   color:#ffffff
+}
+
+.button_popup_x{
+  font-size: 18px;
+  background-color: #ffffff;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  border-color: #ffffff;
+  color:#000000;
 }
 
 .l17 {
@@ -580,7 +589,7 @@ hr {
   height: 28px;
   line-height: normal;
   padding: 18px 0;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border-radius: 0;
   outline-style: none;
   appearance: none;
@@ -1678,7 +1687,7 @@ hr {
   float: left;
   border-radius: 10px;
   background-color: #00a3e0;
-  height: 42px;
+  height: 46px;
   margin-top: 15px;
 }
 
