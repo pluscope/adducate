@@ -588,6 +588,7 @@ hr {
   position: relative;
   width: 512px;
   margin: 0px;
+  color:lightgray;
 }
 
 .divBox8_1 input {
@@ -1922,6 +1923,7 @@ hr {
   .storywordbox {
     margin-left: 0px;
     margin-right:0px;
+    text-align: center;
   }
 
   .storywordbox2 {
@@ -2158,6 +2160,7 @@ hr {
   .storywordbox {
     margin-left: 0px;
     margin-right:0px;
+    text-align: center;
   }
 
   .storywordbox2 {
