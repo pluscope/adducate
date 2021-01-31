@@ -61,7 +61,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 Create a username
                             </div>
                             <div class="divBox8_1">
-                                <input class="textDefault" type="text" placeholder="Username" id="userNm" name="userNm">
+                                <input class="textDefault" style="color=lightgray" type="text" placeholder="Username" id="userNm" name="userNm">
                             </div>
                             <br>
                             <div class="textDefault"">
