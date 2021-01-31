@@ -276,7 +276,7 @@ function submitForDownload(){
                     From the sounds of each alphabet to short stories, Adducate will empower the children without resources.
                     <br/>
                     <br/>
-                    Children can play the Alivebook with the Android app. Click the Download button below.
+                    Students can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
 
