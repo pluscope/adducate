@@ -64,7 +64,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="text" placeholder="Username" id="userNm" name="userNm">
                             </div>
                             <br>
-                            <div class="textDefault">
+                            <div class="textDefault"">
                                 Enter your name
                             </div>
                             <div class="divBox8_1">

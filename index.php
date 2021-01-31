@@ -53,6 +53,7 @@ function downloadAPK(){
             }
         });
     }else{
+        // $(".alertPopup").show();
         alert("Please login to adducate to download the file");
     }
 }
@@ -128,7 +129,7 @@ function submitForDownload(){
         });
     }else{
         $(".alertPopup").show();
-        //alert("Please fill the form to download the app");
+        // alert("Please fill the form to download the app");
     }
 }
 </script>
@@ -208,7 +209,7 @@ function submitForDownload(){
         <div class="container-body-orange" id="mainContainer">
             <div class="mobileLink downloadPopup">
                 <div style="display: table-row; vertical-align: middle; height: 10%; text-align: right;">
-                    <button class="button_popup"onclick="hidePopup()">X</button>
+                    <button class="button_popup_x" onclick="hidePopup()">X</button>
                 </div>
                 <div style="display: table-row; vertical-align: middle; height: 70%;">
                     <div style="display: table-cell; vertical-align: middle;">
@@ -230,7 +231,7 @@ function submitForDownload(){
                             Type your email
                         </div>
                         <div>
-                            <input style="font-size: 16px; color: #999999; border-color: #999999; width:55%; height: 30px;" type="text" id="inputEmail"/>
+                            <input style="font-size: 16px; color: #999999; border-width: 1px; border-color: #999999; width:55%; height: 30px;" type="text" id="inputEmail"/>
                         </div>
                     </div>
                 </div>
@@ -239,13 +240,13 @@ function submitForDownload(){
                 </div>
             </div>
             <div class="mobileLink alertPopup">
-                <div style="vertical-align: middle; height: 5%; text-align: right;">
-                    <button onclick="hideAlertPopup()">X</button>
+                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">
+                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>
                 </div>
-                <div style="display: -webkit-inline-box; vertical-align: middle; height: 80%;">
-                    <div style="display: table-cell; vertical-align: middle;">
+                <div style="display: -webkit-inline-box; vertical-align: middle; height: 90%;">
+                    <div style="display: table-cell; vertical-align: middle; font-size: 16px;">
                         <div>
-                            Please fill the form
+                            Please fill the form to download!
                         </div>
                         <br />
                     </div>
@@ -272,23 +273,30 @@ function submitForDownload(){
             <div class="mobileLink">
                 <div class="divBox1 textDefault" >
                     Adducate is designed to make learning more accessible and amusing for learners.
-                    From the sounds of each alphabet to short stories, it stimulates children's creativity.
+                    From the sounds of each alphabet to short stories,
                     Adducate will empower the children without resources.
                     <br/>
                     <br/>
                     children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
+
             <div class="mainDownload bold pcLink"  onclick="downloadAPK()"><span>Alivebook Download</span></div>
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1 textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+            <div class="divBox1_attention textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet.
                 <br/>(optimized for Chrome and Safari)
             </div>
+            </div>
+
+            <div class="pcLink">
+                <div class="divBox1 textDefault" style="font-size:16px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+                    All classes at Adducate are available on tablets and PCs optimized for Chrome and Safari.
+                </div>
             </div>
 
         </div>
@@ -375,7 +383,7 @@ function submitForDownload(){
                 </div>
             </div>
 
-            <div class="email textDefault bluetext bold">
+            <div class="email textDefault bluetext">
 <!--                Want to contribute to Adducate?-->
 <!--                <br>-->
                 contact@adducate.net
