@@ -379,7 +379,7 @@ if($conn) {
                     <br />
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
                         <div class="push" id="createPush">
-                            <span class="myclass_blue" style='color: #ffffff'> &nbsp;&nbsp;Old Stories&nbsp;&nbsp; </span>
+                            <span class="myclass_blue" style='color: #ffffff; line-height: 1.8;'> &nbsp;&nbsp;Old Stories&nbsp;&nbsp; </span>
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
@@ -407,7 +407,7 @@ if($conn) {
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
                         <div class="push"  id="createPush">
-                            <span class="myclass_blue" style='color: #ffffff'>&nbsp;&nbsp; New Stories&nbsp;&nbsp; </span>
+                            <span class="myclass_blue" style='color: #ffffff; line-height: 1.8;'>&nbsp;&nbsp; New Stories&nbsp;&nbsp; </span>
                         </div>
                     </div>
                     <div class="Lorem-text-overflow" style="overflow: scroll;">
