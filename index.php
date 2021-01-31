@@ -273,11 +273,10 @@ function submitForDownload(){
             <div class="mobileLink">
                 <div class="divBox1 textDefault" >
                     Adducate is designed to make learning more accessible and amusing for learners.
-                    From the sounds of each alphabet to short stories,
-                    Adducate will empower the children without resources.
+                    From the sounds of each alphabet to short stories, Adducate will empower the children without resources.
                     <br/>
                     <br/>
-                    children can play the Alivebook with the Android app. Click the Download button below.
+                    Children can play the Alivebook with the Android app. Click the Download button below.
                 </div>
             </div>
 
