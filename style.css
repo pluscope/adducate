@@ -1748,12 +1748,13 @@ hr {
     padding-top: 50px;
   }
   .divBox1{
-    padding-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-left: 0px;
+    padding-top: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
     width: auto;
+    padding-left: 0px;
   }
+
   .mobileLink{
     display: block;
   }
