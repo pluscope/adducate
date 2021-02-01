@@ -42,7 +42,17 @@ if($conn) {
 <html>
 <body>
 <script>
-
+    $(document).ready( function() {
+        const colorThief = new ColorThief();
+        const img = document.getElementById('story_img');
+        var color = colorThief.getColor(img);
+        var yiq = ((color[0]*299)+(color[1]*587)+(color[2]*114))/1000;
+        var result = (yiq >= 128) ? 'black' : 'white';
+        if(result=='black'){
+            $(".storywordbox").children("span")[0].style.backgroundColor = 'white';
+        }
+        //console.log(window.getComputedStyle($(".storywordbox").children("span")[0]).backgroundColor);
+    });
 </script>
 <div class="body">
     <div class="container" id="container-menu">
@@ -63,7 +73,7 @@ if($conn) {
                         ?>
                         <!--                            <img id="story_img" class="image" src="/img/image.png" srcset="/img/image@2x.png 2x, /img/image@3x.png 3x" />-->
                         <div id="story_text" class="storywordbox textDefault">
-                            <?php echo $story["contents"] ?>
+                            <span><?php echo $story["contents"] ?></span>
                         </div>
                         <?php
                             if($prev_story_id != 0){
