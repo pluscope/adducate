@@ -2164,6 +2164,11 @@ hr {
     text-align: center;
   }
 
+  .storywordbox span {
+    width: -webkit-fit-content;
+    background-color: inherit;
+  }
+
   .storywordbox2 {
     width: calc(50%);
     margin-left: 3%;
