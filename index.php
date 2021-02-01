@@ -53,7 +53,8 @@ function downloadAPK(){
             }
         });
     }else{
-        // $(".alertPopup").show();
+        // $(".alertPopupLogin").show()
+        // setTimeout(function (){$(".alertPopupLogin").hide();}, 1500);
         alert("Please login to adducate to download the file");
     }
 }
@@ -129,7 +130,7 @@ function submitForDownload(){
         });
     }else{
         $(".alertPopup").show()
-        setTimeout(function (){$(".alertPopup").hide();}, 1000);
+        setTimeout(function (){$(".alertPopup").hide();}, 1500);
         // alert("Please fill the form to download the app");
     }
 }
@@ -241,11 +242,11 @@ function submitForDownload(){
                 </div>
             </div>
             <div class="mobileLink alertPopup">
-                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">
-                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>
-                </div>
-                <div style="display: -webkit-inline-box; vertical-align: middle; height: 90%;">
-                    <div style="display: table-cell; vertical-align: middle; font-size: 16px;">
+<!--                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">-->
+<!--                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>-->
+<!--                </div>-->
+                <div style="display: -webkit-inline-box; vertical-align: middle; height: 100%;">
+                    <div style="display: table-cell; vertical-align: middle; font-size: 18px; padding-top:7%;">
                         <div>
                             Please fill the form to download!
                         </div>
@@ -253,6 +254,7 @@ function submitForDownload(){
                     </div>
                 </div>
             </div>
+
             <div class="mainLogo">
                 <img
                         src="/img/logo_content.png"
