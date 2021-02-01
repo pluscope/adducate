@@ -271,7 +271,7 @@ function submitForDownload(){
             </div>
 
             <div class="mobileLink">
-                <div class="divBox1 textDefault" >
+                <div class=" divBox1 textDefault" >
                     Adducate is designed to make learning more accessible and amusing for learners.
                     From the sounds of each alphabet to short stories, Adducate will empower the children without resources.
                     <br/>
@@ -284,7 +284,7 @@ function submitForDownload(){
             <div class="mainDownload bold mobileLink" onclick="downloadAPKMobile()"><span>Alivebook Download</span></div>
 
             <div class="mobileLink">
-            <div class="divBox1_attention textDefault" style="font-size:12px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
+            <div class="divBox1_attention textDefault" style="font-size:12px; color:#ffffff; padding-top: 12px" id="optimizedWarning">
                 All classes at Adducate are available on tablets and PCs.
                 <br/>
                 Go to adducate.net on your PC or tablet.
@@ -353,7 +353,7 @@ function submitForDownload(){
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 75px">
+                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 70px">
                     Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
                     <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
