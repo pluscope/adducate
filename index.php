@@ -128,7 +128,8 @@ function submitForDownload(){
             }
         });
     }else{
-        $(".alertPopup").show();
+        $(".alertPopup").show()
+        setTimeout(function (){$(".alertPopup").hide();}, 1000);
         // alert("Please fill the form to download the app");
     }
 }
