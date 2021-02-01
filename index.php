@@ -293,8 +293,10 @@ function submitForDownload(){
             </div>
 
             <div class="pcLink">
-                <div class="divBox1 textDefault" style="font-size:16px; color:#ffffff; padding-top: 15px" id="optimizedWarning">
-                    All classes at Adducate are available on tablets and PCs optimized for Chrome and Safari.
+                <div class="divBox1 textDefault" style="font-size:16px; color:#ffffff; padding-top: 20px" id="optimizedWarning">
+                    All classes at Adducate are available on tablets and PCs.
+                    <br/>
+                    Optimized for Chrome and Safari browser.
                 </div>
             </div>
 
