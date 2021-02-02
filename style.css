@@ -2099,12 +2099,6 @@ hr {
     height:auto;
   }
 
-  /*.video {*/
-  /*  height: auto;*/
-  /*  width: 270px;*/
-  /*}*/
-
-
   .arrow {
     width:calc(107%);
 
@@ -2229,7 +2223,6 @@ hr {
 
 .alertPopup{
   display: none;
-  /*background-color: white;*/
   border-style: none;
   border-width: thin;
   position: absolute;
@@ -2240,23 +2233,20 @@ hr {
   width: 60%;
   color:#ffffff;
   background-color: #ffa300;
-  /*background-color: #ffffff;*/
   z-index: 2;
 }
 
 .alertLoginPopup{
   display: none;
-  /*background-color: white;*/
   border-style: none;
   border-width: thin;
   position: absolute;
   margin-top: 10%;
-  /*margin-bottom: 50%;*/
-  margin-left: 35%;
-  margin-right: 35%;
-  width: 30%;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
   color:black;
-  /*background-color: #ffa300;*/
   background-color: #ffffff;
   z-index: 2;
 }
+
