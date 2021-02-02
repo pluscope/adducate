@@ -32,12 +32,17 @@ if($conn) {
                             echo "<br />";
                             echo "<span class=\"textDefault\">".$row["description"]."</span>";
                             echo "</div>";
-                            echo "<div class=\"divBox5_2\">";
-                            echo "<div class=\"video-class\"></div>";
-                            echo "<div class=\"textDefault\">";
-                            echo $row["contents"];
-                            echo "</div>";
-                            echo "</div>";
+                            $contents = explode( ';', $row["contents"]);
+                            $video_links = explode( ';', $row["video_link"]);
+                            for($i=0; $i<count($contents); ++$i){
+                                echo "<div class=\"divBox5_2\">";
+                                echo "<iframe src='".$video_links[$i]."'>";
+                                echo "</iframe>";
+                                echo "<div class=\"textDefault\">";
+                                echo $contents[$i];
+                                echo "</div>";
+                                echo "</div>";
+                            }
                         }
                     ?>
                         <iframe class="divBox5_2" width="560" height="315" src="https://www.youtube.com/embed/EkapnPHRyeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
