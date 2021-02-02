@@ -88,6 +88,7 @@ if($conn) {
                         dataType: "text",
                         data: {storybook_id: '<? echo $storybook_id; ?>', lesson_id: '<? echo $lesson_id; ?>'},
                         success: function (obj, textstatus) {
+                            console.log(obj);
                             console.log('history success')
                         }
                     });
