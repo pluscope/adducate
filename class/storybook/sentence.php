@@ -92,7 +92,7 @@ if($conn) {
                         dataType: "text",
                         data: {storybook_id: storybook, lesson_id: lesson},
                         success: function (obj, textstatus) {
-                            console.log(obj);
+                            //console.log(obj);
                             console.log('history success')
                         }
                     });

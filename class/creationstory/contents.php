@@ -45,7 +45,7 @@ if($conn) {
                 type: "POST",
                 url: 'add_creationstory_history.php',
                 dataType: "text",
-                data: {id: '<? echo $id; ?>', category: '<? echo $GLOBALS['category']; ?>'},
+                data: {id: '<?php echo $id; ?>', category: '<?php echo $GLOBALS['category']; ?>'},
                 success: function (obj, textstatus) {
                     console.log('history success')
                 }

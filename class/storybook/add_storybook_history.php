@@ -10,13 +10,13 @@ function addHistory($storybook_id, $lesson_id, $conn, $isLogin, $userId){
         if($history_result->num_rows == 1){
             $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
             $history_insert_sql = sprintf($history_insert_sql, $userId, 2, $storybook_id, $lesson_id);
-            echo json_encode((array($history_insert_sql)));
-            //mysqli_query($conn, $history_insert_sql);
+            //echo json_encode((array($history_insert_sql)));
+            mysqli_query($conn, $history_insert_sql);
         }
         return $history_sql;
     }
 }
 addHistory(intval($_POST["storybook_id"]), intval($_POST["lesson_id"]), $conn, $isLogin, $userId);
 //echo json_encode((array(intval($_POST["storybook_id"]), intval($_POST["lesson_id"]))))
-//echo json_encode(array(1));
+echo json_encode(array(1));
 ?>
