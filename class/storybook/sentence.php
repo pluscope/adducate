@@ -81,12 +81,16 @@ if($conn) {
             }
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
                 var isLogin = '<?= $isLogin ?>';
+
                 if( isLogin != "" ){
-                    $.ajax({
+                    var storybook = '<? echo $storybook_id; ?>';
+                    var lesson = '<? echo $lesson_id; ?>';
+                    console.log({storybook_id: storybook, lesson_id: lesson});
+                        $.ajax({
                         type: "POST",
                         url: '/class/storybook/add_storybook_history.php',
                         dataType: "text",
-                        data: {storybook_id: '<? echo $storybook_id; ?>', lesson_id: '<? echo $lesson_id; ?>'},
+                        data: {storybook_id: storybook, lesson_id: lesson},
                         success: function (obj, textstatus) {
                             console.log(obj);
                             console.log('history success')
