@@ -36,7 +36,8 @@ if($conn) {
                             $video_links = explode( ';', $row["video_link"]);
                             for($i=0; $i<count($contents); ++$i){
                                 echo "<div class=\"divBox5_2\">";
-                                echo "<iframe width=\"480\" height=\"260\" src='".$video_links[$i]."'>";
+                                echo "<iframe width=\"100%\" height=\"280px\" src='".$video_links[$i]."'>";
+//                                echo "<iframe class=\"youtube\" src='".$video_links[$i]."'>";
                                 echo "</iframe>";
                                 echo "<div class=\"textDefault\">";
                                 echo $contents[$i];
