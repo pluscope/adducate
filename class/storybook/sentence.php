@@ -83,8 +83,8 @@ if($conn) {
                 var isLogin = '<?= $isLogin ?>';
 
                 if( isLogin != "" ){
-                    var storybook = '<? echo $storybook_id; ?>';
-                    var lesson = '<? echo $lesson_id; ?>';
+                    var storybook = '<?php echo $storybook_id; ?>';
+                    var lesson = '<?php echo $lesson_id; ?>';
                     console.log({storybook_id: storybook, lesson_id: lesson});
                         $.ajax({
                         type: "POST",
