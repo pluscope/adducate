@@ -85,7 +85,7 @@ if($conn) {
                 if( isLogin != "" ){
                     var storybook = '<?php echo $storybook_id; ?>';
                     var lesson = '<?php echo $lesson_id; ?>';
-                    console.log({storybook_id: storybook, lesson_id: lesson});
+                    //console.log({storybook_id: storybook, lesson_id: lesson});
                         $.ajax({
                         type: "POST",
                         url: '/class/storybook/add_storybook_history.php',

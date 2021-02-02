@@ -61,7 +61,7 @@ if($conn) {
         var yiq = ((color[0]*299)+(color[1]*587)+(color[2]*114))/1000;
         var result = (yiq >= 128) ? 'black' : 'white';
         if(result=='black'){
-            $(".storywordbox").children("span")[0].style.backgroundColor = 'white';
+            $(".storywordbox").children("span")[0].style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
         }
         //console.log(window.getComputedStyle($(".storywordbox").children("span")[0]).backgroundColor);
     });
