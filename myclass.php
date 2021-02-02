@@ -117,7 +117,7 @@ if($conn) {
                 $alivebook_history["has_history"] = 1;
                 if($alivebook_history[$found_idx]["status"] == 0){
                     $alivebook_history[$found_idx]["status"] = 1;
-                }else if($abc_history[$found_idx]["status"] == 1){
+                }else if($alivebook_history[$found_idx]["status"] == 1){
                     $alivebook_history[$found_idx]["status"] = 2;
                 }
             }
@@ -145,7 +145,6 @@ if($conn) {
             }
         }
     }
-
     //sort alivebook and creation story
     $sorted_alivebook_history = array();
     for($i=0; $i<count($alivebook_history); ++$i){

@@ -110,6 +110,19 @@ if($conn) {
                     document.getElementById("mainQuizBox").style.display = 'none';
 
             }
+            if((wordList.childElementCount == totalWords) && !checkAnswer()){
+                var wordList = document.getElementById(("answer"));
+                while (wordList.hasChildNodes()) {
+                    wordList.removeChild(wordList.lastChild);
+                }
+                var result = document.getElementById("resultWrong");
+                var box = document.getElementById("mainQuizBox");
+                var timeOutFunc;
+                clearTimeout(timeOutFunc);
+                result.style.display = 'block';
+                box.classList.add("transparent");
+                timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
+            }
         }else{
             var wordList = document.getElementById(("answer"));
             while (wordList.hasChildNodes()) {
