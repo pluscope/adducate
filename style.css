@@ -2243,3 +2243,20 @@ hr {
   /*background-color: #ffffff;*/
   z-index: 2;
 }
+
+.alertLoginPopup{
+  display: none;
+  /*background-color: white;*/
+  border-style: none;
+  border-width: thin;
+  position: absolute;
+  margin-top: 10%;
+  /*margin-bottom: 50%;*/
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  color:black;
+  /*background-color: #ffa300;*/
+  background-color: #ffffff;
+  z-index: 2;
+}

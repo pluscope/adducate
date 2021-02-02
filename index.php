@@ -53,9 +53,9 @@ function downloadAPK(){
             }
         });
     }else{
-        // $(".alertPopupLogin").show()
-        // setTimeout(function (){$(".alertPopupLogin").hide();}, 1500);
-        alert("Please login to adducate to download the file");
+        $(".alertLoginPopup").show()
+        setTimeout(function (){$(".alertLoginPopup").hide();}, 1000);
+        //alert("Please login to adducate to download the file");
     }
 }
 
@@ -254,7 +254,19 @@ function submitForDownload(){
                     </div>
                 </div>
             </div>
-
+            <div class="alertLoginPopup">
+                <!--                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">-->
+                <!--                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>-->
+                <!--                </div>-->
+                <div style="display: -webkit-inline-box; vertical-align: middle; height: 100%;">
+                    <div style="display: table-cell; vertical-align: middle; font-size: 18px; padding-top:7%;">
+                        <div>
+                            Please fill the form to download!
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
             <div class="mainLogo">
                 <img
                         src="/img/logo_content.png"
