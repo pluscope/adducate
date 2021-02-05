@@ -708,6 +708,7 @@ hr {
   height: 50px;
   margin-left: 256px;
   margin-top: 41px;
+  padding-top: 8px;
   background-color: #ffa300;
   text-align: center;
   border-radius: 10px;
@@ -1188,6 +1189,7 @@ hr {
   font-weight: bold;
   top: -48px;
   left: 15px;
+  padding-top: 2px;
 }
 
 .popup_terms {
@@ -1901,6 +1903,7 @@ hr {
 
   .wordmeaning {
     padding-left:85px;
+    padding-right: 85px;
   }
 
 
@@ -2133,6 +2136,7 @@ hr {
 
   .wordmeaning {
     padding-left:85px;
+    padding-right: 85px;
   }
 
 
