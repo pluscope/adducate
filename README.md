@@ -20,6 +20,10 @@
 - Database architecture (initially, the current version is changed while writing codes) 
   : https://dbdiagram.io/d/5f700e067da1ea736e2f7a27
 
+■ Alivebook apk environment
+- Only working on Android 8.1 or higher and ARCore installed
+- ARCore supported devices  |  Google Developers - https://developers.google.com/ar/discover/supported-devices#android_play
+
 ■ Adducate Wiki
 - For beginners, all information related to writing, modifying and distributing code is organized in order on the Adducate wiki.
 
