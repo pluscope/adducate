@@ -13,9 +13,18 @@
 ■ Adducate contact point
 : contact@adducate.net
 
-■ Development
+■ Adducate Development
 - Front-end : javascript, css, html
-- Back-end : php 7.3, ubuntu, AWS
+- Back-end : php 7.3
+- Databas server : 
+    * Server: Localhost via UNIX socket
+    * Server type: MySQL
+    * Server version: 5.7.33-0ubuntu0.18.04.1 - (Ubuntu)
+    * Protocol version: 10
+    * Server charset: UTF-8 Unicode (utf8)
+- Web server : 
+    * Apache/2.4.29 (Ubuntu)
+    * AWS
 - Google analytics working
 - Database architecture (initially, the current version is changed while writing codes) 
   : https://dbdiagram.io/d/5f700e067da1ea736e2f7a27
