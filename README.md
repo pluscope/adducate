@@ -2,7 +2,7 @@
 
 
 ■ Adducate Info 
-- Webapp : adducate.net 
+- Webapp : https://adducate.net 
 - Code : https://github.com/pluscope/adducate
 - DB : http://adducate.net/phpmyadmin/
 - Purpose & Planning : https://www.dropbox.com/s/45m7f3gu3m2e3of/Pluscope_Adducate_Purpose_05062020.pdf?dl=0
@@ -15,7 +15,9 @@
 ■ Development
 - Front-end : css, html
 - Back-end : php 7.3, ubuntu, AWS
-- Google analytics 
+- Google analytics working
+- Database architecture (initially, the current version is changed while writing codes) 
+  : https://dbdiagram.io/d/5f700e067da1ea736e2f7a27
 
 
 
