@@ -9,6 +9,8 @@
 - UI/UX architecture : https://www.dropbox.com/s/3soqnqojwibhnfs/Adducate_UXUI_final_05222020.pdf?dl=0
 - Blog : https://medium.com/@contact.adducate/what-is-adducate-3c00458d6c17
 - Education contents : abc, storybook, alivebook, creation story
+     * All classes at Adducate are available on tablets and PCs. Go to adducate.net on your PC or tablet. (optimized for Chrome and Safari)
+     * Classes are optimized for tablets over 768 in width. Appears only as a simple description homepage on mobile.
 
 ■ Adducate contact point
 : contact@adducate.net
