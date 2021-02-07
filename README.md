@@ -14,7 +14,7 @@
 : contact@adducate.net
 
 ■ Development
-- Front-end : css, html
+- Front-end : javascript, css, html
 - Back-end : php 7.3, ubuntu, AWS
 - Google analytics working
 - Database architecture (initially, the current version is changed while writing codes) 
