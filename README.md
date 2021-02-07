@@ -18,7 +18,7 @@
 ■ Adducate Development
 - Front-end : javascript, css, html
 - Back-end : php 7.3
-- Databas server : 
+- Database server : 
     * Server: Localhost via UNIX socket
     * Server type: MySQL
     * Server version: 5.7.33-0ubuntu0.18.04.1 - (Ubuntu)
