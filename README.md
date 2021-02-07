@@ -2,7 +2,7 @@
 
 
 ■ Adducate Info 
-- Webapp : https://adducate.net 
+- Webapp : http://adducate.net/
 - Code : https://github.com/pluscope/adducate
 - DB : http://adducate.net/phpmyadmin/
 - Purpose & Planning : https://www.dropbox.com/s/45m7f3gu3m2e3of/Pluscope_Adducate_Purpose_05062020.pdf?dl=0
