@@ -19,5 +19,10 @@
 - Database architecture (initially, the current version is changed while writing codes) 
   : https://dbdiagram.io/d/5f700e067da1ea736e2f7a27
 
+■ Adducate Wiki
+- For beginners, all information related to writing, modifying and distributing code is organized in order on the Adducate wiki.
+
+============================================================
+
 
 
