@@ -39,7 +39,7 @@ if($conn) {
                                 echo "<iframe width=\"100%\" height=\"280px\" src='".$video_links[$i]."'allowfullscreen>";
 //                                echo "<iframe class=\"youtube\" src='".$video_links[$i]."'>";
                                 echo "</iframe>";
-                                echo "<div class=\"textDefault\">";
+                                echo "<div class=\"textDefault\" style=\"font-size:22px; color:#00a3e0;\">";
                                 echo $contents[$i];
                                 echo "</div>";
                                 echo "</div>";
