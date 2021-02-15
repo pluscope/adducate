@@ -2037,6 +2037,10 @@ hr {
     padding-right: 50px;
   }
 
+  .divBox5_2{
+    grid-template-columns: 447px calc(80%);
+  }
+
   .divBox6 {
     width: auto;
   }
