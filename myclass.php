@@ -321,7 +321,9 @@ if($conn) {
                                 if($row["lessons"][$i]["status"]==0){
                                     if($row["has_history"]==0 && $i==0){
                                         echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$row["lessons"][$i]["id"]."/".$row["lessons"][$i]["first_story_id"]."'\">Lesson ".strval($i+1)."</span>";
-                                    }else{
+                                    }else if($i>0 && $row["lessons"][$i-1]["status"]==2){
+                                        echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/storybook/story/".$row["id"]."/".$row["lessons"][$i]["id"]."/".$row["lessons"][$i]["first_story_id"]."'\">Lesson ".strval($i+1)."</span>";
+                                    } else{
                                         echo "<span>Lesson ".strval($i+1)."</span>";
                                     }
                                 }else if($row["lessons"][$i]["status"]==1){
