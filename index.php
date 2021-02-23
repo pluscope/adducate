@@ -299,6 +299,8 @@ function submitForDownload(){
                 <br/>
                 Go to adducate.net on your PC or tablet.
                 <br/>(optimized for Chrome and Safari)
+                <br />
+                <br />
             </div>
             </div>
 
@@ -308,6 +310,8 @@ function submitForDownload(){
                     <br/>
                     Optimized for Chrome and Safari browser.
                 </div>
+                <br />
+                <br />
             </div>
 
         </div>
