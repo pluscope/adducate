@@ -82,9 +82,11 @@ if($conn) {
             if((wordList.childElementCount == totalWords) && checkAnswer() && !isLast){
                 var result = document.getElementById("resultGood");
                 var box = document.getElementById("mainQuizBox");
+                $(".wordselections2 button").each(function () {this.style.pointerEvents = 'none';});
                 result.style.display = 'block';
                 box.classList.add("transparent");
                 timeOutFunc = setTimeout(function() {
+                    $(".wordselections2 button").each(function () {this.style.pointerEvents = 'auto';});
                     result.style.display = 'none';
                     box.classList.remove("transparent");
                     location.href='/class/storybook/sentence/'+'<?php echo $storybook_id; ?>'+'/'+'<?php echo $lesson_id; ?>'+'/'+<?php echo $page_id+1; ?>
@@ -92,7 +94,7 @@ if($conn) {
             }
             if((wordList.childElementCount == totalWords) && checkAnswer() && isLast){
                 var isLogin = '<?= $isLogin ?>';
-
+                $(".wordselections2 button").each(function () {this.style.pointerEvents = 'none';});
                 if( isLogin != "" ){
                     var storybook = '<?php echo $storybook_id; ?>';
                     var lesson = '<?php echo $lesson_id; ?>';
@@ -132,7 +134,8 @@ if($conn) {
                 clearTimeout(timeOutFunc);
                 result.style.display = 'block';
                 box.classList.add("transparent");
-                timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
+                $(".wordselections2 button").each(function () {this.style.pointerEvents = 'none';});
+                timeOutFunc = setTimeout(function() { $(".wordselections2 button").each(function () {this.style.pointerEvents = 'auto';}); result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
             }
         }else{
             var wordList = document.getElementById(("answer"));
@@ -145,7 +148,8 @@ if($conn) {
             clearTimeout(timeOutFunc);
             result.style.display = 'block';
             box.classList.add("transparent");
-            timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
+            $(".wordselections2 button").each(function () {this.style.pointerEvents = 'none';});
+            timeOutFunc = setTimeout(function() { $(".wordselections2 button").each(function () {this.style.pointerEvents = 'auto';}); result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
         }
     }
 
@@ -182,8 +186,10 @@ if($conn) {
                     <div class="Lorem-text-overflow2">
                         <div class="pushStory title-div2" id="alivePush">
                             <?php
+                            $current_lesson_idx = 0;
                             for($i=1; $i<=$total_lessons; ++$i){
                                 if($lesson_id == $lessons[$i-1]["id"]){
+                                    $current_lesson_idx = $i-1;
                                     echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\" class=\"selected\">Lesson ".$i."</span>";
                                 }else if($lessons[$i-1]["status"]==2){
                                     echo "<span style=\"cursor: pointer; color: black;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\">Lesson ".$i."</span>";
