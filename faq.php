@@ -31,6 +31,8 @@ if($conn) {
                         echo "<div class=\"textDefault f36 bold\"><span>Frequently asked questions</span>";
                         ?>
                         <hr>
+                    </div>
+                        <div>
                         <?php
                             foreach ($result as $row){
                                 echo "<span class=\"textDefault bold\" onclick=\"open6(this)\">".$row["question"]."</span>";

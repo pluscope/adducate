@@ -49,12 +49,13 @@ function downloadAPK(){
             dataType: "text",
             data: {id: userId},
             success: function (data) {
-                window.open('/app-release.apk');
+                // window.open('/app-release.apk');
+                window.open('/Alivebook-release-20210214.apk');
             }
         });
     }else{
         $(".alertLoginPopup").show()
-        setTimeout(function (){$(".alertLoginPopup").hide();}, 1000);
+        setTimeout(function (){$(".alertLoginPopup").hide();}, 3000);
         //alert("Please login to adducate to download the file");
     }
 }
@@ -124,7 +125,7 @@ function submitForDownload(){
             data: {userEmail: userEmail, userCountry: userCountry},
             success: function (data) {
                 // console.log(data);
-                window.open('/app-release.apk');
+                window.open('/Alivebook-release-20210214.apk');
                 $(".downloadPopup").hide();
             }
         });
@@ -242,9 +243,6 @@ function submitForDownload(){
                 </div>
             </div>
             <div class="mobileLink alertPopup">
-<!--                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">-->
-<!--                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>-->
-<!--                </div>-->
                 <div style="display: -webkit-inline-box; vertical-align: middle; height: 100%;">
                     <div style="display: table-cell; vertical-align: middle; font-size: 18px; padding-top:7%;">
                         <div>
@@ -255,13 +253,10 @@ function submitForDownload(){
                 </div>
             </div>
             <div class="alertLoginPopup">
-                <!--                <div style="vertical-align: middle; height: 5%; text-align: right; background-color: #ffa300;">-->
-                <!--                    <button class="button_popup_x" style="background-color: #ffa300; color:#ffffff;" onclick="hideAlertPopup()">X</button>-->
-                <!--                </div>-->
                 <div style="display: -webkit-inline-box; vertical-align: middle; height: 100%;">
                     <div style="display: table-cell; vertical-align: middle; font-size: 18px; padding-top:7%;">
                         <div>
-                            Please fill the form to download!
+                            Please login to adducate to download the file!
                         </div>
                         <br />
                     </div>
