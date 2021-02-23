@@ -32,6 +32,7 @@ if($conn) {
     $creationstory_result = mysqli_query($conn, $creationstory_sql);
     $abc_history = array();
     $abc_history["has_history"] = 0;
+    $total_abc_history = 0;
     $storybook_history = array();
     $alivebook_history = array();
     $alivebook_history["has_history"] = 0;
@@ -96,14 +97,11 @@ if($conn) {
             $found_idx = find_idx_of_array($abc_history, "id", $row["contents_id"]);
             if($found_idx != -1){
                 $abc_history["has_history"] = 1;
-                if($abc_history[$found_idx]["last_contents_id"] < $row["lesson_id"]){
-                    $abc_history[$found_idx]["last_contents_id"] = $row["lesson_id"];
-                }
+                $abc_history[$found_idx]["last_contents_id"] = $row["lesson_id"];
                 if($abc_history[$found_idx]["status"] == 0){
                     $abc_history[$found_idx]["status"] = 1;
-                }else if($abc_history[$found_idx]["last_contents_id"] == 26){
-                    $abc_history[$found_idx]["status"] = 2;
                 }
+                $total_abc_history += 1;
             }
         }else if($row["class_type_id"]==2){
             list($found_storybook_idx,$found_lesson_idx) = find_idx_of_array_storybook($storybook_history, $row["contents_id"], $row["lesson_id"]);
@@ -197,6 +195,9 @@ if($conn) {
         if($creationstory_new_history[$i]["status"]==0){
             array_push($sorted_creationstory_new_history, $creationstory_new_history[$i]);
         }
+    }
+    if($total_abc_history == 26){
+        $abc_history[0]["status"] = 2;
     }
 }else{
     //@TODO alert message when the connection is not connected
