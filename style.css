@@ -2265,5 +2265,12 @@ hr {
     background-color: #ffa300;
     text-align: center;
   }
+  .container-body-blue {
+    width: auto;
+    height: 600px;
+    padding-top: 50px;
+    background-color: #00a3e0;
+    text-align: center;
+  }
 }
 
