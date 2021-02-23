@@ -9,14 +9,20 @@ $abc_images_sql = "SELECT * FROM abc_images where abc_contents_id = ".$abc_conte
 $abc_motions_sql = "SELECT * FROM abc_motions where abc_contents_id = ".$abc_contents_id;
 $abc_words_sql = "SELECT * FROM abc_words where abc_contents_id = ".$abc_contents_id;
 $is_last_abc_sql = "SELECT id FROM abc_contents where id > ".$abc_contents_id." LIMIT 1";
+$blue_contents_id = $abc_contents_id+1;
+if($blue_contents_id == 27)
+    $blue_contents_id = 0;
 if($conn) {
-    $abc_contents = mysqli_query($conn, $abc_contents_sql);
+    $abc_contents = mysqli_result_to_array(mysqli_query($conn, $abc_contents_sql));
     $abc_images = mysqli_query($conn, $abc_images_sql);
     $abc_motions = mysqli_query($conn, $abc_motions_sql);
     $abc_words = mysqli_query($conn, $abc_words_sql);
     $is_last_abc_result = mysqli_query($conn, $is_last_abc_sql);
     if($is_last_abc_result->num_rows == 0)
         $is_last_abc = 1;
+    for($i=0; $i<count($abc_contents); ++$i){
+        $abc_contents[$i]["status"] = 0;
+    }
     if($isLogin){
         $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d and lesson_id=%d";
         $history_sql = sprintf($history_sql, $userId, 1, $abc_id, $abc_contents_id);
@@ -25,6 +31,25 @@ if($conn) {
             $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
             $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id, $abc_contents_id);
             mysqli_query($conn, $history_insert_sql);
+        }
+        $visited_contents_id = [];
+        $history_check_sql = "SELECT lesson_id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
+        $history_check_sql = sprintf($history_check_sql, $userId, 1, 1);
+        $history_check_result = mysqli_query($conn, $history_check_sql);
+        foreach ($history_check_result as $row){
+            array_push($visited_contents_id, $row["lesson_id"]);
+        }
+        sort($visited_contents_id);
+        $blue_contents_id = $visited_contents_id[0]+1;
+        for($i=$visited_contents_id[0]+1; $i<27; ++$i){
+            if(in_array($blue_contents_id, $visited_contents_id))
+                $blue_contents_id += 1;
+        }
+        if($blue_contents_id>26)
+            $blue_contents_id = 0;
+        for($i=0; $i<count($abc_contents); ++$i){
+            if(in_array($abc_contents[$i]["id"], $visited_contents_id))
+                $abc_contents[$i]["status"] = 1;
         }
     }
 }else{
@@ -88,12 +113,12 @@ if($conn) {
                     <div class="abc_list">
                         <?php
                             foreach($abc_contents as $row){
-                                if($row["id"] == $abc_contents_id){
-                                    echo "<a style='color: #00a3e0; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
-                                }else if($row["id"] > $abc_contents_id){
-                                    echo "<a style='color: rgba(0, 0, 0, 0.2); text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
-                                }else{
+                                if($row["id"] == $abc_contents_id || $row["status"]==1){
                                     echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }else if($row["id"]==$blue_contents_id){
+                                    echo "<a style='color: #00a3e0; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }else if($row["status"]==0){
+                                    echo "<a style='color: rgba(0, 0, 0, 0.2); text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
                                 }
                             }
                         ?>

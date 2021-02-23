@@ -2,8 +2,17 @@
 include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
 include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 $sql = "SELECT * FROM abcs";
+$last_contents_id = 1;
 if($conn) {
     $result = mysqli_query($conn, $sql);
+    if($isLogin){
+        $history_sql = "SELECT lesson_id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d ORDER BY created_at DESC LIMIT 1";
+        $history_sql = sprintf($history_sql, $userId, 1, 1);
+        $history_result = mysqli_query($conn, $history_sql);
+        if($history_result->num_rows == 1){
+            $last_contents_id = mysqli_result_to_array($history_result)[0]["lesson_id"];
+        }
+    }
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -30,7 +39,7 @@ if($conn) {
                         foreach($result as $row){
                             echo "<div class='grid-item'>";
                             if($row["title"]=='Alphabet'){
-                                echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."/1'\">";
+                                echo "<div class='divBox22' style='cursor: pointer;' onclick=\"location.href='/class/abc/".$row["id"]."/".$last_contents_id."'\">";
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
