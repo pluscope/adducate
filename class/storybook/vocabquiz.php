@@ -75,6 +75,7 @@ if($conn) {
             var result = document.getElementById("resultGood");
             var box = document.getElementById("mainQuizBox");
             var timeOutFunc;
+            $("#vocQueAnsList div").each(function () {this.style.pointerEvents = 'none';});
             clearTimeout(timeOutFunc);
             if(isLast){
                 result.innerHTML = "Well Done";
@@ -84,7 +85,7 @@ if($conn) {
             }else{
                 result.style.display = 'block';
                 box.classList.add("transparent");
-                timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent"); location.href='/class/storybook/vocabquiz/'+'<?php echo $storybook_id;?>'+"/"+'<?php echo $lesson_id;?>'+"/"+'<?php echo ($page_id+1);?>';
+                timeOutFunc = setTimeout(function() { result.style.display = 'none'; location.href='/class/storybook/vocabquiz/'+'<?php echo $storybook_id;?>'+"/"+'<?php echo $lesson_id;?>'+"/"+'<?php echo ($page_id+1);?>';
                 } , 2000);
             }
         }else{
@@ -94,7 +95,8 @@ if($conn) {
             clearTimeout(timeOutFunc);
             result.style.display = 'block';
             box.classList.add("transparent");
-            timeOutFunc = setTimeout(function() { result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
+            $("#vocQueAnsList div").each(function () {this.style.pointerEvents = 'none';});
+            timeOutFunc = setTimeout(function() { $("#vocQueAnsList div").each(function () {this.style.pointerEvents = 'auto';}); result.style.display = 'none'; box.classList.remove("transparent") } , 2000);
         }
     }
 </script>

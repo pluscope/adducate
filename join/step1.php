@@ -15,7 +15,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
             alert("Privacy & Terms Checkbox should be checked.");
             return false;
         }
-        if(pass.length<5) {
+        if(pass.length<6) {
             alert("Password is too short");
             return false;
         }
