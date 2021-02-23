@@ -18,16 +18,12 @@ if($conn) {
     if($is_last_abc_result->num_rows == 0)
         $is_last_abc = 1;
     if($isLogin){
-        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d";
-        $history_sql = sprintf($history_sql, $userId, 1, $abc_id);
+        $history_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d and lesson_id=%d";
+        $history_sql = sprintf($history_sql, $userId, 1, $abc_id, $abc_contents_id);
         $history_result = mysqli_query($conn, $history_sql);
         if($history_result->num_rows == 0){
-            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
-            $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id);
-            mysqli_query($conn, $history_insert_sql);
-        }else if($history_result->num_rows == 1 && $is_last_abc==1){
-            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id) VALUES (%d, %d, %d)";
-            $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id);
+            $history_insert_sql = "INSERT INTO history (user_id, class_type_id, contents_id, lesson_id) VALUES (%d, %d, %d, %d)";
+            $history_insert_sql = sprintf($history_insert_sql, $userId, 1, $abc_id, $abc_contents_id);
             mysqli_query($conn, $history_insert_sql);
         }
     }
