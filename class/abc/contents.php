@@ -113,10 +113,10 @@ if($conn) {
                     <div class="abc_list">
                         <?php
                             foreach($abc_contents as $row){
-                                if($row["id"] == $abc_contents_id || $row["status"]==1){
-                                    echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
-                                }else if($row["id"]==$blue_contents_id){
+                                if($row["id"] == $abc_contents_id){
                                     echo "<a style='color: #00a3e0; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
+                                }else if($row["status"]==1){
+                                    echo "<a style='color: black; text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
                                 }else if($row["status"]==0){
                                     echo "<a style='color: rgba(0, 0, 0, 0.2); text-decoration: none;' href='/class/abc/".$abc_id."/".$row["id"]."'><span>".$row["description"]."</span></a>";
                                 }
