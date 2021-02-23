@@ -30,6 +30,17 @@ if($conn) {
         $sql = "SELECT id from storybook_lesson_stories WHERE lesson_id=%d ORDER BY id LIMIT 1";
         $sql = sprintf($sql, $lessons[$i]["id"]);
         $lessons[$i]["first_story_id"] = mysqli_result_to_array(mysqli_query($conn, $sql))[0]["id"];
+        $lessons[$i]["status"] = 0;
+        if($isLogin){
+            $history_check_sql = "SELECT id FROM history WHERE user_id=%d and class_type_id=%d and contents_id=%d and lesson_id=%d";
+            $history_check_sql = sprintf($history_check_sql, $userId, 2, $storybook_id, $lessons[$i]["id"]);
+            $history_check_result = mysqli_query($conn, $history_check_sql);
+            if($history_check_result->num_rows == 2){
+                $lessons[$i]["status"] = 2;
+            }else if($history_check_result->num_rows == 1){
+                $lessons[$i]["status"] = 1;
+            }
+        }
     }
     if($page_id==1){
         $sql = "SELECT id from storybook_lesson_stories WHERE lesson_id=%d ORDER BY id DESC LIMIT 1";
@@ -61,13 +72,15 @@ if($conn) {
                         <div class="Lorem-text-overflow2">
                             <div class="pushStory title-div2" id="alivePush">
                                 <?php
-                                    for($i=1; $i<=$total_lessons; ++$i){
-                                        if($lesson_id == $lessons[$i-1]["id"]){
-                                            echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\" class=\"selected\">Lesson ".$i."</span>";
-                                        }else{
-                                            echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\">Lesson ".$i."</span>";
-                                        }
+                                for($i=1; $i<=$total_lessons; ++$i){
+                                    if($lesson_id == $lessons[$i-1]["id"]){
+                                        echo "<span style=\"cursor: pointer;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\" class=\"selected\">Lesson ".$i."</span>";
+                                    }else if($lessons[$i-1]["status"]==2){
+                                        echo "<span style=\"cursor: pointer; color: black;\" onclick=\"location.href='/class/storybook/story/".$storybook_id."/".$lessons[$i-1]["id"]."/".$lessons[$i-1]["first_story_id"]."'\">Lesson ".$i."</span>";
+                                    } else{
+                                        echo "<span>Lesson ".$i."</span>";
                                     }
+                                }
 
                                 ?>
                             </div>
