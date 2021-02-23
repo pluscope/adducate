@@ -54,6 +54,11 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
             popup_arrow.style.visibility = "visible";
         }
     }
+
+    function hideTermsPopup(){
+        document.getElementById("popup_terms").style.visibility = "hidden";
+        document.getElementById("popup_terms_arrow").style.visibility = "hidden";
+    }
 </script>
 <div class="body">
     <div class="container" id="container-menu">
@@ -101,6 +106,9 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
+                                <button type="button" style="display: block; float: right;" onclick="hideTermsPopup()">
+                                    X
+                                </button>
                                 <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
                                      <br /> Website Terms
                                 </span>
