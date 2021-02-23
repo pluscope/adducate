@@ -9,12 +9,13 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
     function formSubmit() {
         var form = document.step1;
         var pass = document.getElementById("pw").value;
+        var username = document.getElementById("userNm").value;
         var passConfirm = document.getElementById("pwConfirm").value;
         if( $("input:checkbox[id='priChk']").is(":checked") == false ){
             alert("Privacy & Terms Checkbox should be checked.");
             return false;
         }
-        if(pass.length<5) {
+        if(pass.length<6) {
             alert("Password is too short");
             return false;
         }
@@ -22,7 +23,21 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
             alert("Confirm password field is different from password field.");
             return false;
         }
-        form.submit();
+        $.ajax({
+            type : "POST",
+            url : "id_check.php",
+            data : {username: username},
+            dataType : "text",
+            success : function(data){
+                if(data=='ok')
+                    form.submit();
+                else
+                    alert("This username is already taken by another user.");
+            },
+            error:function(request,status,error){
+                alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+            }
+        });
 
     }
 
@@ -38,6 +53,11 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
             popup.style.visibility = "visible";
             popup_arrow.style.visibility = "visible";
         }
+    }
+
+    function hideTermsPopup(){
+        document.getElementById("popup_terms").style.visibility = "hidden";
+        document.getElementById("popup_terms_arrow").style.visibility = "hidden";
     }
 </script>
 <div class="body">
@@ -86,6 +106,9 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
+                                <button type="button" style="display: block; float: right;" onclick="hideTermsPopup()">
+                                    X
+                                </button>
                                 <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
                                      <br /> Website Terms
                                 </span>
