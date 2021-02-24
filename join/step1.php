@@ -106,7 +106,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <input class="textDefault" type="password" placeholder="Confirm password" id="pwConfirm" name="pwConfirm">
                             </div>
                             <div class="textDefault popup_terms" id="popup_terms">
-                                <button type="button" style="display:block; position:fixed; font-size: 25px; margin-left:32%; color:#ffa300; float: right; background-color: #ffffff; border-color: #ffffff; border-style: none;" onclick="hideTermsPopup()">
+                                <button type="button" style="display:block; position:fixed; margin-left: 32.5%; font-size: 25px; color:#ffa300; float: right; background-color: #ffffff; border-color: #ffffff; border-style: none;" onclick="hideTermsPopup()">
                                     X
                                 </button>
                                 <span style="font-size: 16px; line-height: 30px; margin: 5px; color:#00a3e0;">
