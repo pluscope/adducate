@@ -369,7 +369,7 @@ function submitForDownload(){
                 ?>
             </div>
             <div class="mobileLink">
-                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 10%">
+                <div class="divBox1 textDefault" style="color:#ffffff; padding-top: 7%">
                     Adducate is created through talent donations by people from specialized fields such as computer science, English education, children's book publication, branding, UI/UX, and strategical planning.   <br>
                     <br/>
                     We welcome people and organizations who want to further develop and solidify this project.
