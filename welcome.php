@@ -50,7 +50,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                         <input type="hidden" name="userNm" id="userNm">
                     </form>
 
-                    <div class="next">
+                    <div class="next" onClick="getStarted()">
                         <span class="textDefault bold" onClick="getStarted()">Get Started</span>
                     </div>
                 </div>
