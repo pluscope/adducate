@@ -389,7 +389,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                             </div>
                         </div>
 
-                        <div class="next">
+                        <div class="next" onclick="formSubmit()">
                             <span class="textDefault bold" onclick="formSubmit()">Next</span>
                         </div>
                     </form>

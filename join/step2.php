@@ -61,7 +61,7 @@ if($_POST['userNm'] == "" || $_POST['firstNm'] == "" || $_POST['lastNm'] == "" |
                         </div>
                     </form>
 
-                    <div class="next">
+                    <div class="next" onclick="formSubmit()">
                         <span class="textDefault bold" onclick="formSubmit()">Next</span>
                     </div>
 

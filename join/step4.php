@@ -66,7 +66,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                                 <select class="yearSel textDefault"  id="uYear" name="uYear">
                                     <option value="" selected>Year</option>
                                     <?php
-                                    for($i=1980; $i<=2020; ++$i){
+                                    for($i=1940; $i<=2020; ++$i){
                                         echo("<option value='".$i."'>".$i."</option>");
                                     }
                                     ?>
@@ -75,7 +75,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/header.php");
                         </div>
                     </form>
 
-                    <div class="next">
+                    <div class="next" onclick="formSubmit()">
                         <span class="textDefault bold" onClick="formSubmit()">Next</span>
                     </div>
 
