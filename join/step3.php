@@ -65,7 +65,7 @@ if($conn) {
                             </div>
                         </div>
                     </form>
-                    <div class="next">
+                    <div class="next" onclick="formSubmit()">
                         <span class="textDefault bold" onClick="formSubmit()">Next</span>
                     </div>
 
