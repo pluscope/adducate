@@ -73,7 +73,7 @@ if($conn) {
                                     echo "New story";
                             ?></span></div>
                     <div class="creationbox">
-                        <div class="first">
+                        <div class="first" style="height:inherit;">
                             <video id="contents_video" autoplay controls style="width: 100%; height: 100%;">
 <!--                                <video id="video" style="width: 100%; height: 100%;" controls>-->
                                 <?php
