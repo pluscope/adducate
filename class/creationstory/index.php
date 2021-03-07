@@ -33,7 +33,7 @@ if($conn) {
                     <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/creationstory/'" style="cursor: pointer;"> Creation Story</span></div>
 
                     <div class="Lorem-text-overflow2">
-                        <div class="push title-div2" id="alivePush">
+                        <div class="push title-div2" id="alivePush" style="overflow: hidden;">
                             <?php
                                 if($category==-1){
                                     echo "<span class='selected' style='cursor: pointer;' onclick=\"location.href='/class/creationstory/'\">All</span>";
