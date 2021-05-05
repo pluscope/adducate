@@ -126,7 +126,7 @@ if($conn) {
                         else{
                             $next_abc = mysqli_fetch_array($is_last_abc_result);
 //                            echo "<div class=\"next\"><span class=\"textDefault bold\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/1/".$next_abc["id"]."'\">Next</span></div>";
-                            echo "<div class=\"next\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/1/".$next_abc["id"]."'\"><span class=\"textDefault bold\">Next</span></div>";
+                            echo "<div class=\"next\" style=\"cursor: pointer\" onclick=\"location.href ='/class/abc/phonics/".$abc_id."/".$next_abc["id"]."'\"><span class=\"textDefault bold\">Next</span></div>";
                         }
                     ?>
                 </div>
