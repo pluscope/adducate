@@ -1,4 +1,5 @@
 <?php
+ini_set('memory_limit','1024M');
 function find_idx_of_array($arr, $key_name, $value){
     for($i = 0; $i < count($arr); $i++){
         if($arr[$i][$key_name] == $value){
@@ -32,7 +33,6 @@ if($conn) {
     $creationstory_result = mysqli_query($conn, $creationstory_sql);
     $abc_history = array();
     $abc_history["has_history"] = 0;
-    $total_abc_history = 0;
     $storybook_history = array();
     $alivebook_history = array();
     $alivebook_history["has_history"] = 0;
@@ -40,13 +40,31 @@ if($conn) {
     $creationstory_new_history = array();
     $creationstory_old_history["has_history"] = 0;
     $creationstory_new_history["has_history"] = 0;
+    $j=0;
     foreach($abc_result as $row){
         $temp = array();
         $temp["id"] = $row["id"];
         $temp["title"] = $row["title"];
         $temp["status"] = 0;
         $temp["last_contents_id"] = 0;
+        //$temp["has_history"] = 0;
+        $temp["total_contents"] = 0;
+        $temp["total_history"] = 0;
+        if($j!=0){
+            $phonics_sql = "SELECT * FROM phonics_contents where abc_id=%d LIMIT 1";
+            $phonics_sql = sprintf($phonics_sql, $row["id"]);
+            $phonics_result = mysqli_result_to_array(mysqli_query($conn, $phonics_sql))[0];
+            $temp["first_contents_id"] = $phonics_result["id"];
+            $phonics_sql = "SELECT count(*) as cnt FROM phonics_contents where abc_id=%d";
+            $phonics_sql = sprintf($phonics_sql, $row["id"]);
+            $phonics_result = mysqli_result_to_array(mysqli_query($conn, $phonics_sql))[0];
+            $temp["total_contents"] = $phonics_result['cnt'];
+        }else{
+            $temp["first_contents_id"] = 1;
+            $temp["total_contents"] = 26;
+        }
         array_push($abc_history, $temp);
+        ++$j;
     }
     foreach($storybook_result as $row){
         $temp = array();
@@ -97,11 +115,11 @@ if($conn) {
             $found_idx = find_idx_of_array($abc_history, "id", $row["contents_id"]);
             if($found_idx != -1){
                 $abc_history["has_history"] = 1;
+                $abc_history[$found_idx]["total_history"] += 1;
                 $abc_history[$found_idx]["last_contents_id"] = $row["lesson_id"];
                 if($abc_history[$found_idx]["status"] == 0){
                     $abc_history[$found_idx]["status"] = 1;
                 }
-                $total_abc_history += 1;
             }
         }else if($row["class_type_id"]==2){
             list($found_storybook_idx,$found_lesson_idx) = find_idx_of_array_storybook($storybook_history, $row["contents_id"], $row["lesson_id"]);
@@ -196,9 +214,6 @@ if($conn) {
             array_push($sorted_creationstory_new_history, $creationstory_new_history[$i]);
         }
     }
-    if($total_abc_history == 26){
-        $abc_history[0]["status"] = 2;
-    }
 }else{
     //@TODO alert message when the connection is not connected
 }
@@ -282,23 +297,23 @@ if($conn) {
                                 foreach ($abc_history as $row){
                                     if(is_array($row)) {
                                         if ($row["status"] == 0) {
-                                            if ($abc_history["has_history"] == 0 && $i == 0) {
+                                            if($abc_history["has_history"]==0 && $i==0){
                                                 echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\" class='selected'>" . $row["title"] . "</span>";
+                                            } else if($i==0){
+                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/1'\">" . $row["title"] . "</span>";
                                             } else {
-                                                echo "<span>" . $row["title"] . "</span>";
+                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/phonics/".$row["id"]."/".$row["first_contents_id"]."'\">" . $row["title"] . "</span>";
                                             }
+                                        }else if ($row["total_contents"] == $row["total_history"]) {
+                                            if($i==0)
+                                                echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/1/".$row["last_contents_id"]."\">" . $row["title"] . "</span>";
+                                            else
+                                                echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/phonics/".$row["id"]."/".$row["last_contents_id"]."\">" . $row["title"] . "</span>";
                                         } else if ($row["status"] == 1) {
-                                            if ($row["id"] == 1) {
+                                            if($i==0)
                                                 echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/1/".$row["last_contents_id"]."'\" class='selected'>" . $row["title"] . "</span>";
-                                            } else {
-                                                echo "<span class='selected'>" . $row["title"] . "</span>";
-                                            }
-                                        } else if ($row["status"] == 2) {
-                                            if ($row["id"] == 1) {
-                                                echo "<span style='cursor: pointer; color: black;' onclick=\"location.href='/class/abc/1/26'\">" . $row["title"] . "</span>";
-                                            } else {
-                                                echo "<span style='color: black''>" . $row["title"] . "</span>";
-                                            }
+                                            else
+                                                echo "<span style='cursor: pointer' onclick=\"location.href='/class/abc/phonics/".$row["id"]."/".$row["last_contents_id"]."'\" class='selected'>" . $row["title"] . "</span>";
                                         }
                                         $i++;
                                     }
