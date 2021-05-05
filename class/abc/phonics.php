@@ -4,6 +4,7 @@ include_once( $_SERVER["DOCUMENT_ROOT"]."/config/db_config.php");
 $abc_id = $_GET["abc_id"];
 $phonics_contents_id = $_GET["phonics_contents_id"];
 $is_last_abc = 0;
+$title_sql = "SELECT title FROM abcs where id = ".$abc_id;
 $abc_contents_sql = "SELECT id, contents FROM phonics_contents where abc_id = ".$abc_id;
 $phonics_contents_sql = "SELECT * FROM phonics_contents where abc_id = %d and id = %d";
 $phonics_contents_sql = sprintf($phonics_contents_sql, $abc_id, $phonics_contents_id);
@@ -14,6 +15,7 @@ if($blue_contents_id == 27)
     $blue_contents_id = 0;
 if($conn) {
     $abc_contents = mysqli_result_to_array(mysqli_query($conn, $abc_contents_sql));
+    $title = mysqli_result_to_array(mysqli_query($conn, $title_sql))[0]["title"];
     $phonics_contents = mysqli_result_to_array(mysqli_query($conn, $phonics_contents_sql))[0];
     $is_last_abc_result = mysqli_query($conn, $is_last_abc_sql);
     if($is_last_abc_result->num_rows == 0)
@@ -79,7 +81,7 @@ if($conn) {
         <div class="container">
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
-                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;">ABC</span></div>
+                    <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;">ABC</span><span> > </span><span class="hover-green" style="cursor: pointer;"><?php echo $title; ?></span></div>
                     <div class="abc_list">
                         <?php
                             for($i=0; $i<count($abc_contents); ++$i){
