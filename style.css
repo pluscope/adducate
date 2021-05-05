@@ -753,11 +753,35 @@ hr {
   line-height: 50px;
 }
 
-.sound {
+.replay_phonics {
   position: absolute;
   width: 270px;
   height: 50px;
-  margin-left: 652px;
+  margin-left: 25px;
+  margin-top: 25px;
+  background-color: #00a3e0;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 50px;
+}
+
+.sound {
+   position: absolute;
+   width: 270px;
+   height: 50px;
+   margin-left: 652px;
+   margin-top: 25px;
+   background-color: #009639;
+   text-align: center;
+   border-radius: 10px;
+   line-height: 50px;
+ }
+
+.sound2 {
+  position: absolute;
+  width: 270px;
+  height: 50px;
+  margin-left: 550px;
   margin-top: 25px;
   background-color: #009639;
   text-align: center;
@@ -1840,6 +1864,11 @@ hr {
     width: calc(27%);
   }
 
+  .replay_phonics {
+    margin-left: calc(32%);
+    width: calc(27%);
+  }
+
   .sound {
     margin-left: calc(62%);
     width: calc(27%);
@@ -2074,6 +2103,11 @@ hr {
   }
 
   .replay {
+    margin-left: calc(31%);
+    width: calc(26%);
+  }
+
+  .replay_phonics {
     margin-left: calc(31%);
     width: calc(26%);
   }

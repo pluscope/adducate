@@ -61,7 +61,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; border: none; background-color: #00a3e0; cursor: pointer; height: 30px; border-radius: 10px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook</a></button>";
+                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }else{
@@ -70,7 +70,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; border: none; background-color: #00a3e0; cursor: pointer; height: 30px; border-radius: 10px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook</a></button>";
+                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }

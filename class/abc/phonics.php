@@ -94,7 +94,7 @@ if($conn) {
                         ?>
                       </div>
                     <div class="alphabet_box">
-                        <div class="box">
+                        <div class="box"">
                             <?php
                                 echo "<img src='".$phonics_contents["image"]."' class='img item'>";
                                 echo "<audio id='phonics_sound' preload='none'>";
@@ -111,11 +111,10 @@ if($conn) {
                             ?>
                         </div>
                     </div>
-<!--                    <div class="replay"><span class="textDefault whitetext bold" onclick="playAbcSound()" style="cursor: pointer;">Write letters</span></div>-->
-<!--                    <div class="sound"><span class="textDefault whitetext bold" onclick="playWordSound()" style="cursor: pointer;">Word sound</span></div>-->
 
-                    <div class="replay" style="cursor: pointer" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
-                    <div class="sound" style="cursor: pointer" onclick="playWordSound()"><span class="textDefault whitetext bold">Replay</span></div>
+<!--                    <div class="replay_phonics" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>-->
+                <div class="replay" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
+                    <div class="sound" style="cursor: pointer" onclick="playWordSound()"><span class="textDefault whitetext bold">Word sound</span></div>
 
                     <?php
                         if($is_last_abc){
