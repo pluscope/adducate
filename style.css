@@ -1537,7 +1537,8 @@ hr {
   /*width: 53px;*/
   height: 20px;
   line-height: 1.5;
-  text-align: left;
+  /*text-align: left;*/
+  text-align: center;
   margin-top: 11px;
 }
 
