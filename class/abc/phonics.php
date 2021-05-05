@@ -114,8 +114,7 @@ if($conn) {
                         </div>
                     </div>
 
-<!--                    <div class="replay_phonics" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>-->
-                <div class="replay_phonics" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
+                    <div class="replay" style="cursor: pointer;  margin-left: 2%;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
                     <div class="sound" style="cursor: pointer" onclick="playWordSound()"><span class="textDefault whitetext bold">Word sound</span></div>
 
                     <?php
