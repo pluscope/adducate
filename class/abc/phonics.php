@@ -82,7 +82,7 @@ if($conn) {
             <div class="container-body container-expand">
                 <div class="container-body-white-center">
                     <div class="pointer"><span onclick="location.href='/class/'" class="hover-green" style="cursor: pointer;">Class</span><span> > </span><span onclick="location.href='/class/abc'" class="hover-green" style="cursor: pointer;">ABC</span><span> > </span><span class="hover-green" style="cursor: pointer;"><?php echo $title; ?></span></div>
-                    <div class="abc_list">
+                    <div class="abc_list" <?php if(count($abc_contents) <= 5) echo "style='left: 30%; width: 30%; transform: translateX(-100%);'" ?>>
                         <?php
                             for($i=0; $i<count($abc_contents); ++$i){
                                 if($abc_contents[$i]["id"] == $phonics_contents_id){
@@ -115,7 +115,7 @@ if($conn) {
                     </div>
 
 <!--                    <div class="replay_phonics" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>-->
-                <div class="replay" style="cursor: pointer;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
+                <div class="replay" style="cursor: pointer; margin-left: 100px;" onclick="playAbcSound()"><span class="textDefault whitetext bold">Sound</span></div>
                     <div class="sound" style="cursor: pointer" onclick="playWordSound()"><span class="textDefault whitetext bold">Word sound</span></div>
 
                     <?php

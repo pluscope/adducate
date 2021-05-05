@@ -39,7 +39,10 @@ if($conn) {
 <html>
 <body>
 <script>
-
+    function down(obj){
+        var a = obj.children[0];
+        a.click();
+    }
 </script>
 <div class="body">
     <div class="container" id="container-menu">
@@ -61,7 +64,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
+                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }else{
@@ -70,7 +73,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
+                                echo "<button style='width: 100%; margin-top: 15px; border: none; background-color: #00a3e0; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: white;' download>Workbook Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }
