@@ -256,7 +256,7 @@ function submitForDownload(){
                 <div style="display: -webkit-inline-box; vertical-align: middle; height: 100%;">
                     <div style="display: table-cell; vertical-align: middle; font-size: 18px; padding-top:7%;">
                         <div>
-                            Please login to adducate to download the file!
+                            Please login to adducate to download the alivebook apk!
                         </div>
                         <br />
                     </div>
