@@ -14,20 +14,26 @@ if($conn) {
             $last_contents_id = 1;
             if($history_result->num_rows == 1){
                 $last_contents_id = mysqli_result_to_array($history_result)[0]["lesson_id"];
-            }else{
+            }else if($i!=0){
                 $phonics_sql = "SELECT * FROM phonics_contents where abc_id=%d LIMIT 1";
                 $phonics_sql = sprintf($phonics_sql, $result_array[$i]["id"]);
                 $phonics_result = mysqli_result_to_array(mysqli_query($conn, $phonics_sql))[0];
                 $last_contents_id = $phonics_result["id"];
+            }else{
+                $last_contents_id = 1;
             }
             array_push($last_contents_ids, $last_contents_id);
         }
     }else{
         for($i=0; $i<count($result_array); ++$i){
-            $phonics_sql = "SELECT * FROM phonics_contents where abc_id=%d LIMIT 1";
-            $phonics_sql = sprintf($phonics_sql, $result_array[$i]["id"]);
-            $phonics_result = mysqli_result_to_array(mysqli_query($conn, $phonics_sql))[0];
-            array_push($last_contents_ids, $phonics_result["id"]);
+            if($i!=0){
+                $phonics_sql = "SELECT * FROM phonics_contents where abc_id=%d LIMIT 1";
+                $phonics_sql = sprintf($phonics_sql, $result_array[$i]["id"]);
+                $phonics_result = mysqli_result_to_array(mysqli_query($conn, $phonics_sql))[0];
+                array_push($last_contents_ids, $phonics_result["id"]);
+            }else{
+                array_push($last_contents_ids, 1);
+            }
         }
     }
 }else{
