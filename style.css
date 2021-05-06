@@ -163,7 +163,7 @@ body {
   margin-left: 30px;
   border-radius: 10px;
   background-color: #00a3e0;
-  width: 160px;
+  width: 170px;
   margin-top: 12px;
   cursor: pointer;
 }
@@ -1537,7 +1537,8 @@ hr {
   /*width: 53px;*/
   height: 20px;
   line-height: 1.5;
-  text-align: left;
+  /*text-align: left;*/
+  text-align: center;
   margin-top: 11px;
 }
 
@@ -1861,12 +1862,12 @@ hr {
 
   .replay {
     margin-left: calc(32%);
-    width: calc(27%);
+    width: calc(23%);
   }
 
   .replay_phonics {
-    margin-left: calc(32%);
-    width: calc(27%);
+    margin-left: calc(4%);
+    width: calc(21%);
   }
 
   .sound {
@@ -2104,12 +2105,12 @@ hr {
 
   .replay {
     margin-left: calc(31%);
-    width: calc(26%);
+    width: calc(23%);
   }
 
   .replay_phonics {
-    margin-left: calc(31%);
-    width: calc(26%);
+    margin-left: calc(1%);
+    width: calc(21%);
   }
 
   .sound {
