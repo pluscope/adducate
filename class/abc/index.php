@@ -70,7 +70,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; margin-top: 7px; border-style: double; border-color: #ffa300; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: #ffa300;' download>Workbook Download</a></button>";
+                                echo "<button style='width: 100%; margin-top: 7px; border-style: double; border-color: #ffa300; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: #ffa300;' download>".$row["title"]." Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }else{
@@ -79,7 +79,7 @@ if($conn) {
                                 echo "<div>".$row["title"]."</div>";
                                 echo "</div>";
                                 echo "<div class='boxdescription'>";
-                                echo "<button style='width: 100%; margin-top: 7px; border-style: double; border-color: #ffa300; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: #ffa300;' download>Workbook Download</a></button>";
+                                echo "<button style='width: 100%; margin-top: 7px; border-style: double; border-color: #ffa300; cursor: pointer; height: 50px; border-radius: 4px;' onclick='down(this)'><a href='".$row["workbook"]."' style='font-size: 20px; text-decoration: none; color: #ffa300;' download>".$row["title"]." Download</a></button>";
                                 echo "</div>";
                                 echo "</div>";
                             }
