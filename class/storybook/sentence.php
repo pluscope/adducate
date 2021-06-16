@@ -184,7 +184,7 @@ if($conn) {
                     <div class="pointer"><span class="hover-green" onclick="location.href='/class/'" style="cursor: pointer;">Class</span><span> > </span><span class="hover-green" onclick="location.href='/class/storybook/'" style="cursor: pointer;"> Storybook</span><span> > <?php echo $storybook["title"] ?></span></div>
 
                     <div class="Lorem-text-overflow2">
-                        <div class="pushStory title-div2" id="alivePush">
+                        <div class="pushStory title-div2" id="alivePush" style="overflow: hidden;">
                             <?php
                             $current_lesson_idx = 0;
                             for($i=1; $i<=$total_lessons; ++$i){
